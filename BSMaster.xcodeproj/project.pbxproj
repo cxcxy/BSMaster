@@ -12,6 +12,18 @@
 		2DDD35791F7DD2E1005DED82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35771F7DD2E1005DED82 /* Main.storyboard */; };
 		2DDD357B1F7DD2E1005DED82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD357A1F7DD2E1005DED82 /* Assets.xcassets */; };
 		2DDD357E1F7DD2E1005DED82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD357C1F7DD2E1005DED82 /* LaunchScreen.storyboard */; };
+		2DDD358F1F7DE3BF005DED82 /* BSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD358E1F7DE3BF005DED82 /* BSBaseViewController.swift */; };
+		2DDD35931F7DE489005DED82 /* BSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35921F7DE489005DED82 /* BSConfig.swift */; };
+		2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35941F7DE8F8005DED82 /* BSApiPath.swift */; };
+		2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35961F7DE90C005DED82 /* BSNetManager.swift */; };
+		2DDD35991F7DE91A005DED82 /* BSRequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35981F7DE91A005DED82 /* BSRequestApi.swift */; };
+		2DDD35BD1F7DF324005DED82 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35BC1F7DF324005DED82 /* UIViewController+Extension.swift */; };
+		2DDD35C01F7DF3BA005DED82 /* BSUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35BF1F7DF3BA005DED82 /* BSUtil.swift */; };
+		2DDD35C21F7DF413005DED82 /* BSHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35C11F7DF413005DED82 /* BSHud.swift */; };
+		2DDD35C41F7DF586005DED82 /* BSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35C31F7DF586005DED82 /* BSImageView.swift */; };
+		2DDD35C71F7E0C91005DED82 /* BSBaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35C61F7E0C91005DED82 /* BSBaseNavigation.swift */; };
+		2DDD35C91F7E0D59005DED82 /* BSBaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35C81F7E0D59005DED82 /* BSBaseTabBar.swift */; };
+		67B1322242825BD17484678C /* Pods_BSMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95CB83FB92F115C73212760 /* Pods_BSMaster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +34,21 @@
 		2DDD357A1F7DD2E1005DED82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DDD357D1F7DD2E1005DED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DDD357F1F7DD2E1005DED82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DDD35851F7DDDE3005DED82 /* BSMaster-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BSMaster-Bridging-Header.h"; sourceTree = "<group>"; };
+		2DDD358E1F7DE3BF005DED82 /* BSBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseViewController.swift; sourceTree = "<group>"; };
+		2DDD35921F7DE489005DED82 /* BSConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSConfig.swift; sourceTree = "<group>"; };
+		2DDD35941F7DE8F8005DED82 /* BSApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSApiPath.swift; sourceTree = "<group>"; };
+		2DDD35961F7DE90C005DED82 /* BSNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSNetManager.swift; sourceTree = "<group>"; };
+		2DDD35981F7DE91A005DED82 /* BSRequestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSRequestApi.swift; sourceTree = "<group>"; };
+		2DDD35BC1F7DF324005DED82 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		2DDD35BF1F7DF3BA005DED82 /* BSUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSUtil.swift; sourceTree = "<group>"; };
+		2DDD35C11F7DF413005DED82 /* BSHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSHud.swift; sourceTree = "<group>"; };
+		2DDD35C31F7DF586005DED82 /* BSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSImageView.swift; sourceTree = "<group>"; };
+		2DDD35C61F7E0C91005DED82 /* BSBaseNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseNavigation.swift; sourceTree = "<group>"; };
+		2DDD35C81F7E0D59005DED82 /* BSBaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseTabBar.swift; sourceTree = "<group>"; };
+		4E6456A2F94F2B67C0EF0857 /* Pods-BSMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster.release.xcconfig"; sourceTree = "<group>"; };
+		E65DAFDC7E304D6EAB0C3BA1 /* Pods-BSMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		F95CB83FB92F115C73212760 /* Pods_BSMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B1322242825BD17484678C /* Pods_BSMaster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +68,8 @@
 			children = (
 				2DDD35721F7DD2E1005DED82 /* BSMaster */,
 				2DDD35711F7DD2E1005DED82 /* Products */,
+				EBD12A8A03B3A06BB1563CFB /* Pods */,
+				A7AF20D4C1C06F0F39947CB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +84,115 @@
 		2DDD35721F7DD2E1005DED82 /* BSMaster */ = {
 			isa = PBXGroup;
 			children = (
+				2DDD35BE1F7DF396005DED82 /* Util */,
+				2DDD35891F7DE39E005DED82 /* Expand */,
+				2DDD358B1F7DE39E005DED82 /* ViewControllers */,
+				2DDD358A1F7DE39E005DED82 /* WebService */,
+				2DDD358D1F7DE39F005DED82 /* Resource */,
 				2DDD35731F7DD2E1005DED82 /* AppDelegate.swift */,
 				2DDD35751F7DD2E1005DED82 /* ViewController.swift */,
-				2DDD35771F7DD2E1005DED82 /* Main.storyboard */,
 				2DDD357A1F7DD2E1005DED82 /* Assets.xcassets */,
 				2DDD357C1F7DD2E1005DED82 /* LaunchScreen.storyboard */,
 				2DDD357F1F7DD2E1005DED82 /* Info.plist */,
+				2DDD35851F7DDDE3005DED82 /* BSMaster-Bridging-Header.h */,
 			);
 			path = BSMaster;
+			sourceTree = "<group>";
+		};
+		2DDD35891F7DE39E005DED82 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35911F7DE454005DED82 /* BSConfig */,
+				2DDD35901F7DE454005DED82 /* BSExtension */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		2DDD358A1F7DE39E005DED82 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35941F7DE8F8005DED82 /* BSApiPath.swift */,
+				2DDD35981F7DE91A005DED82 /* BSRequestApi.swift */,
+				2DDD35961F7DE90C005DED82 /* BSNetManager.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		2DDD358B1F7DE39E005DED82 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD358C1F7DE39E005DED82 /* BaseViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2DDD358C1F7DE39E005DED82 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD358E1F7DE3BF005DED82 /* BSBaseViewController.swift */,
+				2DDD35C61F7E0C91005DED82 /* BSBaseNavigation.swift */,
+				2DDD35C81F7E0D59005DED82 /* BSBaseTabBar.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		2DDD358D1F7DE39F005DED82 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35C51F7DF962005DED82 /* StoryBoards */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2DDD35901F7DE454005DED82 /* BSExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35BC1F7DF324005DED82 /* UIViewController+Extension.swift */,
+			);
+			path = BSExtension;
+			sourceTree = "<group>";
+		};
+		2DDD35911F7DE454005DED82 /* BSConfig */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35921F7DE489005DED82 /* BSConfig.swift */,
+			);
+			path = BSConfig;
+			sourceTree = "<group>";
+		};
+		2DDD35BE1F7DF396005DED82 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35BF1F7DF3BA005DED82 /* BSUtil.swift */,
+				2DDD35C11F7DF413005DED82 /* BSHud.swift */,
+				2DDD35C31F7DF586005DED82 /* BSImageView.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		2DDD35C51F7DF962005DED82 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35771F7DD2E1005DED82 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		A7AF20D4C1C06F0F39947CB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F95CB83FB92F115C73212760 /* Pods_BSMaster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBD12A8A03B3A06BB1563CFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E65DAFDC7E304D6EAB0C3BA1 /* Pods-BSMaster.debug.xcconfig */,
+				4E6456A2F94F2B67C0EF0857 /* Pods-BSMaster.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DDD35821F7DD2E1005DED82 /* Build configuration list for PBXNativeTarget "BSMaster" */;
 			buildPhases = (
+				0867139059A9B39C8DFD3561 /* [CP] Check Pods Manifest.lock */,
 				2DDD356C1F7DD2E1005DED82 /* Sources */,
 				2DDD356D1F7DD2E1005DED82 /* Frameworks */,
 				2DDD356E1F7DD2E1005DED82 /* Resources */,
+				410BB840823AA9F761847EAD /* [CP] Embed Pods Frameworks */,
+				5389712643DFC88CE815E298 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +230,7 @@
 				TargetAttributes = {
 					2DDD356F1F7DD2E1005DED82 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,13 +266,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0867139059A9B39C8DFD3561 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BSMaster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		410BB840823AA9F761847EAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
+				"${BUILT_PRODUCTS_DIR}/VTMagic/VTMagic.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZSwiftExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VTMagic.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5389712643DFC88CE815E298 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2DDD356C1F7DD2E1005DED82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDD35BD1F7DF324005DED82 /* UIViewController+Extension.swift in Sources */,
+				2DDD35C71F7E0C91005DED82 /* BSBaseNavigation.swift in Sources */,
+				2DDD35C91F7E0D59005DED82 /* BSBaseTabBar.swift in Sources */,
+				2DDD35931F7DE489005DED82 /* BSConfig.swift in Sources */,
+				2DDD358F1F7DE3BF005DED82 /* BSBaseViewController.swift in Sources */,
 				2DDD35761F7DD2E1005DED82 /* ViewController.swift in Sources */,
+				2DDD35C21F7DF413005DED82 /* BSHud.swift in Sources */,
+				2DDD35C41F7DF586005DED82 /* BSImageView.swift in Sources */,
+				2DDD35991F7DE91A005DED82 /* BSRequestApi.swift in Sources */,
+				2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */,
+				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
 				2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */,
+				2DDD35C01F7DF3BA005DED82 /* BSUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -272,29 +506,38 @@
 		};
 		2DDD35831F7DD2E1005DED82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E65DAFDC7E304D6EAB0C3BA1 /* Pods-BSMaster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BSMaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.BSMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = "BSMaster/BSMaster-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2DDD35841F7DD2E1005DED82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E6456A2F94F2B67C0EF0857 /* Pods-BSMaster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BSMaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.BSMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = "BSMaster/BSMaster-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

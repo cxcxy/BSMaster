@@ -1,0 +1,82 @@
+PODS:
+  - Alamofire (4.5.1)
+  - DZNEmptyDataSet (1.8.1)
+  - ESTabBarController-swift (2.5)
+  - EZSwiftExtensions (1.11)
+  - IQKeyboardManagerSwift (5.0.2)
+  - Kingfisher (4.1.0)
+  - MJRefresh (3.1.13)
+  - Moya (8.0.5):
+    - Moya/Core (= 8.0.5)
+  - Moya/Core (8.0.5):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (8.0.5):
+    - Moya/Core
+    - RxSwift (~> 3.0)
+  - ObjectMapper (3.0.0)
+  - Result (3.2.4)
+  - RxCocoa (3.6.1):
+    - RxSwift (~> 3.6)
+  - RxDataSources (1.0.4):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxSwift (3.6.1)
+  - SnapKit (3.0.2)
+  - SVProgressHUD (2.2.1)
+  - SwiftyUserDefaults (3.0.0)
+  - UITableView+FDTemplateLayoutCell (1.6)
+  - VTMagic (1.2.4):
+    - VTMagic/Core (= 1.2.4)
+  - VTMagic/Core (1.2.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - DZNEmptyDataSet
+  - ESTabBarController-swift
+  - EZSwiftExtensions
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - MJRefresh
+  - Moya (~> 8.0.5)
+  - Moya/RxSwift
+  - ObjectMapper
+  - RxDataSources
+  - SnapKit (~> 3.0.0)
+  - SVProgressHUD
+  - SwiftyUserDefaults
+  - UITableView+FDTemplateLayoutCell (~> 1.5.beta)
+  - VTMagic (from `https://github.com/aycgithub/VTMagic.git`)
+
+EXTERNAL SOURCES:
+  VTMagic:
+    :git: https://github.com/aycgithub/VTMagic.git
+
+CHECKOUT OPTIONS:
+  VTMagic:
+    :commit: 4767af132ffe1d20833886e61fc8af36877b9e9c
+    :git: https://github.com/aycgithub/VTMagic.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  ESTabBarController-swift: 8daa432f2a9be8ebd25101dc46c84472fd760512
+  EZSwiftExtensions: 84000042202d9fd574f626cda3064143f27fa767
+  IQKeyboardManagerSwift: e580da046d804d2836ee84668cc17e43a850a35d
+  Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
+  MJRefresh: 56a28aa628c9895e97a518dabaecf70b18f92f32
+  Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
+  RxDataSources: b3389acc5fe2eefb8fcd81a2b76a876ad08bc82a
+  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
+  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
+
+PODFILE CHECKSUM: ecd511c1e2aa5b417177572ad6791903d736811a
+
+COCOAPODS: 1.4.0.beta.1
