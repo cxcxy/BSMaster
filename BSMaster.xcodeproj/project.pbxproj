@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D6BDE9E1F7E34DE00E64452 /* BSTransactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6BDE9C1F7E34DE00E64452 /* BSTransactCell.swift */; };
+		2D6BDE9F1F7E34DE00E64452 /* BSTransactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6BDE9D1F7E34DE00E64452 /* BSTransactCell.xib */; };
+		2D6BDEA11F7E3BF400E64452 /* BSBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6BDEA01F7E3BF400E64452 /* BSBaseTableViewController.swift */; };
+		2D6BDEA31F7E449F00E64452 /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6BDEA21F7E449F00E64452 /* NSObject+Rx.swift */; };
 		2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35731F7DD2E1005DED82 /* AppDelegate.swift */; };
 		2DDD35761F7DD2E1005DED82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35751F7DD2E1005DED82 /* ViewController.swift */; };
 		2DDD35791F7DD2E1005DED82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35771F7DD2E1005DED82 /* Main.storyboard */; };
@@ -17,7 +21,7 @@
 		2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35941F7DE8F8005DED82 /* BSApiPath.swift */; };
 		2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35961F7DE90C005DED82 /* BSNetManager.swift */; };
 		2DDD35991F7DE91A005DED82 /* BSRequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35981F7DE91A005DED82 /* BSRequestApi.swift */; };
-		2DDD35BD1F7DF324005DED82 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35BC1F7DF324005DED82 /* UIViewController+Extension.swift */; };
+		2DDD35BD1F7DF324005DED82 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35BC1F7DF324005DED82 /* UIViewController+.swift */; };
 		2DDD35C01F7DF3BA005DED82 /* BSUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35BF1F7DF3BA005DED82 /* BSUtil.swift */; };
 		2DDD35C21F7DF413005DED82 /* BSHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35C11F7DF413005DED82 /* BSHud.swift */; };
 		2DDD35C41F7DF586005DED82 /* BSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35C31F7DF586005DED82 /* BSImageView.swift */; };
@@ -32,10 +36,20 @@
 		2DE330601F7E289A00048D3D /* BSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305F1F7E289A00048D3D /* BSMainViewController.swift */; };
 		2DE330621F7E28A900048D3D /* BSOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE330611F7E28A900048D3D /* BSOrderViewController.swift */; };
 		2DE330641F7E28B700048D3D /* BSTransactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE330631F7E28B700048D3D /* BSTransactViewController.swift */; };
+		2DE330661F7E29B500048D3D /* UIStoryboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE330651F7E29B500048D3D /* UIStoryboard+.swift */; };
+		2DE330681F7E2A2600048D3D /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE330671F7E2A2600048D3D /* UITableView+.swift */; };
+		2DE3306A1F7E2BCE00048D3D /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE330691F7E2BCE00048D3D /* String+.swift */; };
+		2DE3306C1F7E2C3100048D3D /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3306B1F7E2C3100048D3D /* UIImage+.swift */; };
+		2DE3306E1F7E2C5700048D3D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3306D1F7E2C5700048D3D /* UIView+.swift */; };
+		2DE330701F7E2EBC00048D3D /* BSTransactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3306F1F7E2EBC00048D3D /* BSTransactDetailViewController.swift */; };
 		67B1322242825BD17484678C /* Pods_BSMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95CB83FB92F115C73212760 /* Pods_BSMaster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D6BDE9C1F7E34DE00E64452 /* BSTransactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTransactCell.swift; sourceTree = "<group>"; };
+		2D6BDE9D1F7E34DE00E64452 /* BSTransactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSTransactCell.xib; sourceTree = "<group>"; };
+		2D6BDEA01F7E3BF400E64452 /* BSBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseTableViewController.swift; sourceTree = "<group>"; };
+		2D6BDEA21F7E449F00E64452 /* NSObject+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
 		2DDD35701F7DD2E1005DED82 /* BSMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDD35731F7DD2E1005DED82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DDD35751F7DD2E1005DED82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +63,7 @@
 		2DDD35941F7DE8F8005DED82 /* BSApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSApiPath.swift; sourceTree = "<group>"; };
 		2DDD35961F7DE90C005DED82 /* BSNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSNetManager.swift; sourceTree = "<group>"; };
 		2DDD35981F7DE91A005DED82 /* BSRequestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSRequestApi.swift; sourceTree = "<group>"; };
-		2DDD35BC1F7DF324005DED82 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		2DDD35BC1F7DF324005DED82 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		2DDD35BF1F7DF3BA005DED82 /* BSUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSUtil.swift; sourceTree = "<group>"; };
 		2DDD35C11F7DF413005DED82 /* BSHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSHud.swift; sourceTree = "<group>"; };
 		2DDD35C31F7DF586005DED82 /* BSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSImageView.swift; sourceTree = "<group>"; };
@@ -64,6 +78,12 @@
 		2DE3305F1F7E289A00048D3D /* BSMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMainViewController.swift; sourceTree = "<group>"; };
 		2DE330611F7E28A900048D3D /* BSOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSOrderViewController.swift; sourceTree = "<group>"; };
 		2DE330631F7E28B700048D3D /* BSTransactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTransactViewController.swift; sourceTree = "<group>"; };
+		2DE330651F7E29B500048D3D /* UIStoryboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+.swift"; sourceTree = "<group>"; };
+		2DE330671F7E2A2600048D3D /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		2DE330691F7E2BCE00048D3D /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		2DE3306B1F7E2C3100048D3D /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		2DE3306D1F7E2C5700048D3D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		2DE3306F1F7E2EBC00048D3D /* BSTransactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTransactDetailViewController.swift; sourceTree = "<group>"; };
 		4E6456A2F94F2B67C0EF0857 /* Pods-BSMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster.release.xcconfig"; sourceTree = "<group>"; };
 		E65DAFDC7E304D6EAB0C3BA1 /* Pods-BSMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster.debug.xcconfig"; sourceTree = "<group>"; };
 		F95CB83FB92F115C73212760 /* Pods_BSMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D6BDE9B1F7E34A900E64452 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2D6BDE9C1F7E34DE00E64452 /* BSTransactCell.swift */,
+				2D6BDE9D1F7E34DE00E64452 /* BSTransactCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2DDD35671F7DD2E1005DED82 = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				2DDD35BE1F7DF396005DED82 /* Util */,
+				2DDD358A1F7DE39E005DED82 /* WebService */,
 				2DDD35891F7DE39E005DED82 /* Expand */,
 				2DDD358B1F7DE39E005DED82 /* ViewControllers */,
-				2DDD358A1F7DE39E005DED82 /* WebService */,
 				2DDD358D1F7DE39F005DED82 /* Resource */,
 				2DDD35731F7DD2E1005DED82 /* AppDelegate.swift */,
 				2DDD35751F7DD2E1005DED82 /* ViewController.swift */,
@@ -153,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDD358E1F7DE3BF005DED82 /* BSBaseViewController.swift */,
+				2D6BDEA01F7E3BF400E64452 /* BSBaseTableViewController.swift */,
 				2DDD35C61F7E0C91005DED82 /* BSBaseNavigation.swift */,
 				2DDD35C81F7E0D59005DED82 /* BSBaseTabBar.swift */,
 			);
@@ -170,7 +200,12 @@
 		2DDD35901F7DE454005DED82 /* BSExtension */ = {
 			isa = PBXGroup;
 			children = (
-				2DDD35BC1F7DF324005DED82 /* UIViewController+Extension.swift */,
+				2DDD35BC1F7DF324005DED82 /* UIViewController+.swift */,
+				2DE330651F7E29B500048D3D /* UIStoryboard+.swift */,
+				2DE330671F7E2A2600048D3D /* UITableView+.swift */,
+				2DE330691F7E2BCE00048D3D /* String+.swift */,
+				2DE3306B1F7E2C3100048D3D /* UIImage+.swift */,
+				2DE3306D1F7E2C5700048D3D /* UIView+.swift */,
 			);
 			path = BSExtension;
 			sourceTree = "<group>";
@@ -186,6 +221,7 @@
 		2DDD35BE1F7DF396005DED82 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2D6BDEA21F7E449F00E64452 /* NSObject+Rx.swift */,
 				2DDD35BF1F7DF3BA005DED82 /* BSUtil.swift */,
 				2DDD35C11F7DF413005DED82 /* BSHud.swift */,
 				2DDD35C31F7DF586005DED82 /* BSImageView.swift */,
@@ -263,6 +299,7 @@
 		2DDD35DE1F7E2043005DED82 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2D6BDE9B1F7E34A900E64452 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				2DE330631F7E28B700048D3D /* BSTransactViewController.swift */,
+				2DE3306F1F7E2EBC00048D3D /* BSTransactDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -485,6 +523,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6BDE9F1F7E34DE00E64452 /* BSTransactCell.xib in Resources */,
 				2DDD35CF1F7E1E5C005DED82 /* Order.storyboard in Resources */,
 				2DDD357E1F7DD2E1005DED82 /* LaunchScreen.storyboard in Resources */,
 				2DDD35FA1F7E20C3005DED82 /* Purse.storyboard in Resources */,
@@ -590,24 +629,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DDD35BD1F7DF324005DED82 /* UIViewController+Extension.swift in Sources */,
+				2DDD35BD1F7DF324005DED82 /* UIViewController+.swift in Sources */,
 				2DDD35C71F7E0C91005DED82 /* BSBaseNavigation.swift in Sources */,
 				2DDD35C91F7E0D59005DED82 /* BSBaseTabBar.swift in Sources */,
 				2DDD35931F7DE489005DED82 /* BSConfig.swift in Sources */,
 				2DDD358F1F7DE3BF005DED82 /* BSBaseViewController.swift in Sources */,
 				2DDD35761F7DD2E1005DED82 /* ViewController.swift in Sources */,
+				2DE330701F7E2EBC00048D3D /* BSTransactDetailViewController.swift in Sources */,
 				2DDD35C21F7DF413005DED82 /* BSHud.swift in Sources */,
+				2D6BDE9E1F7E34DE00E64452 /* BSTransactCell.swift in Sources */,
 				2DDD35C41F7DF586005DED82 /* BSImageView.swift in Sources */,
 				2DE3305C1F7E282400048D3D /* BSPurseViewController.swift in Sources */,
+				2DE330661F7E29B500048D3D /* UIStoryboard+.swift in Sources */,
 				2DDD35991F7DE91A005DED82 /* BSRequestApi.swift in Sources */,
 				2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */,
 				2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */,
+				2DE330681F7E2A2600048D3D /* UITableView+.swift in Sources */,
 				2DE330621F7E28A900048D3D /* BSOrderViewController.swift in Sources */,
+				2D6BDEA31F7E449F00E64452 /* NSObject+Rx.swift in Sources */,
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
 				2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */,
 				2DE330641F7E28B700048D3D /* BSTransactViewController.swift in Sources */,
 				2DE330601F7E289A00048D3D /* BSMainViewController.swift in Sources */,
+				2DE3306C1F7E2C3100048D3D /* UIImage+.swift in Sources */,
+				2DE3306A1F7E2BCE00048D3D /* String+.swift in Sources */,
+				2D6BDEA11F7E3BF400E64452 /* BSBaseTableViewController.swift in Sources */,
 				2DDD35C01F7DF3BA005DED82 /* BSUtil.swift in Sources */,
+				2DE3306E1F7E2C5700048D3D /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,12 +794,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BSMaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.BSMaster;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.BSMaste;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BSMaster/BSMaster-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -765,12 +816,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BSMaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.BSMaster;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.BSMaste;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BSMaster/BSMaster-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

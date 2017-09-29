@@ -31,13 +31,4 @@ public class BSUtil {
         return rootViewController
     }
     
-    //url 编码
-    public class func URLEncode(string: String) -> String {
-        return string.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-    }
-    
-    //url 解码
-    public class func URLDecode(string: String) -> String {
-        return string.removingPercentEncoding!
-    }
 }

@@ -10,10 +10,10 @@ import Foundation
 
 //MARK:  print -- log
 let BSDEBUG = true
-public func BSLog (_ value: Any , fileName : String = #file, line : Int32 = #line ){
-    /// Debug Log
+public func BSLog<T> (_ value: T , fileName : String = #file, function:String = #function, line : Int32 = #line ){
+ 
     if BSDEBUG {
-        print("file：\(URL(string: fileName)!.lastPathComponent)  line：\(line) \(value)\n")
+        print("file：\(URL(string: fileName)!.lastPathComponent) line:- \(line) function:- \(function) | \(value)\n")
     }
 }
 //MARK:   延迟多少秒 回掉
@@ -25,18 +25,9 @@ struct BSDelay {
     }
     
 }
-
-enum StoryBoardNames: String {
-
-    case Main
-    case Store
-
-}
-
-
-let currentPageSize = 10   // 全局分页数
-
-
-
+//MARK: 全局统一  Color  风格
+    //TODO: 全局tableView 背景色
+let tableColor = UIColor.darkGray
+let SeprateColor = UIColor.blue // 系统分割线颜色
 
 

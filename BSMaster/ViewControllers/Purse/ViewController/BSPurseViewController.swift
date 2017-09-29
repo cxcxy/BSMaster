@@ -13,7 +13,7 @@ class BSPurseViewController: BSBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        self.title = "钱包"
     }
 
     override func didReceiveMemoryWarning() {

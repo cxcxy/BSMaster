@@ -8,7 +8,7 @@
 
 import Foundation
 extension UIViewController {
-    
+    // 反射拿到类名
     func identifier() -> String {
         let mirror = Mirror(reflecting: self)
         return String(describing: mirror.subjectType)

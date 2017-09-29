@@ -12,7 +12,7 @@ class BSMainViewController: BSBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "加号"
 
     }
 

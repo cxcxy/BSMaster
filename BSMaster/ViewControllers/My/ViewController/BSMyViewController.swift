@@ -12,7 +12,7 @@ class BSMyViewController: BSBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "我的"
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="B9K-me-0Fj" kind="relationship" relationship="rootViewController" id="aib-bE-6Bi"/>
+                        <segue destination="TfN-2q-gyV" kind="relationship" relationship="rootViewController" id="yE1-IQ-x4T"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJi-dn-wXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -26,23 +26,41 @@
             <point key="canvasLocation" x="-1804" y="-44"/>
         </scene>
         <!--Transact View Controller-->
-        <scene sceneID="g7G-Ab-5by">
+        <scene sceneID="a9h-k7-239">
             <objects>
-                <viewController storyboardIdentifier="BSTransactViewController" id="B9K-me-0Fj" customClass="BSTransactViewController" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BSTransactViewController" id="TfN-2q-gyV" customClass="BSTransactViewController" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9lf-t3-Tuy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="TfN-2q-gyV" id="Yt0-Zi-pO1"/>
+                            <outlet property="delegate" destination="TfN-2q-gyV" id="mXr-7R-1T4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="pif-eH-wWP"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEW-uQ-2M0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-642" y="-690"/>
+        </scene>
+        <!--Transact Detail View Controller-->
+        <scene sceneID="xwn-h9-cdd">
+            <objects>
+                <viewController storyboardIdentifier="BSTransactDetailViewController" id="qwn-RE-ypU" customClass="BSTransactDetailViewController" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Krl-lO-1NP"/>
-                        <viewControllerLayoutGuide type="bottom" id="AJL-U9-rJp"/>
+                        <viewControllerLayoutGuide type="top" id="k0n-6k-sg4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aqi-7H-E3N"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5F4-KZ-RjZ">
+                    <view key="view" contentMode="scaleToFill" id="8Br-Z3-uY3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="H85-c7-mEg"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w5O-7E-epY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m80-1X-Edu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-814" y="-45"/>
+            <point key="canvasLocation" x="-199" y="101"/>
         </scene>
     </scenes>
 </document>
