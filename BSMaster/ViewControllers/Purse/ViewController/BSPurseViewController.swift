@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BSOneViewController.swift
 //  BSMaster
 //
 //  Created by 陈旭 on 2017/9/29.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BSPurseViewController: BSBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.red
-        BSLog("111")
+
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,4 +23,3 @@ class ViewController: UIViewController {
 
 
 }
-

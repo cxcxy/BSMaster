@@ -23,6 +23,15 @@
 		2DDD35C41F7DF586005DED82 /* BSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35C31F7DF586005DED82 /* BSImageView.swift */; };
 		2DDD35C71F7E0C91005DED82 /* BSBaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35C61F7E0C91005DED82 /* BSBaseNavigation.swift */; };
 		2DDD35C91F7E0D59005DED82 /* BSBaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35C81F7E0D59005DED82 /* BSBaseTabBar.swift */; };
+		2DDD35CD1F7E1B98005DED82 /* Transact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35CC1F7E1B98005DED82 /* Transact.storyboard */; };
+		2DDD35CF1F7E1E5C005DED82 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35CE1F7E1E5C005DED82 /* Order.storyboard */; };
+		2DDD35FA1F7E20C3005DED82 /* Purse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35F91F7E20C3005DED82 /* Purse.storyboard */; };
+		2DDD35FC1F7E20CD005DED82 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35FB1F7E20CD005DED82 /* My.storyboard */; };
+		2DE3305C1F7E282400048D3D /* BSPurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305B1F7E282400048D3D /* BSPurseViewController.swift */; };
+		2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305D1F7E288500048D3D /* BSMyViewController.swift */; };
+		2DE330601F7E289A00048D3D /* BSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305F1F7E289A00048D3D /* BSMainViewController.swift */; };
+		2DE330621F7E28A900048D3D /* BSOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE330611F7E28A900048D3D /* BSOrderViewController.swift */; };
+		2DE330641F7E28B700048D3D /* BSTransactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE330631F7E28B700048D3D /* BSTransactViewController.swift */; };
 		67B1322242825BD17484678C /* Pods_BSMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95CB83FB92F115C73212760 /* Pods_BSMaster.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +55,15 @@
 		2DDD35C31F7DF586005DED82 /* BSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSImageView.swift; sourceTree = "<group>"; };
 		2DDD35C61F7E0C91005DED82 /* BSBaseNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseNavigation.swift; sourceTree = "<group>"; };
 		2DDD35C81F7E0D59005DED82 /* BSBaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseTabBar.swift; sourceTree = "<group>"; };
+		2DDD35CC1F7E1B98005DED82 /* Transact.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transact.storyboard; sourceTree = "<group>"; };
+		2DDD35CE1F7E1E5C005DED82 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		2DDD35F91F7E20C3005DED82 /* Purse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Purse.storyboard; sourceTree = "<group>"; };
+		2DDD35FB1F7E20CD005DED82 /* My.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
+		2DE3305B1F7E282400048D3D /* BSPurseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPurseViewController.swift; sourceTree = "<group>"; };
+		2DE3305D1F7E288500048D3D /* BSMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyViewController.swift; sourceTree = "<group>"; };
+		2DE3305F1F7E289A00048D3D /* BSMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMainViewController.swift; sourceTree = "<group>"; };
+		2DE330611F7E28A900048D3D /* BSOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSOrderViewController.swift; sourceTree = "<group>"; };
+		2DE330631F7E28B700048D3D /* BSTransactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTransactViewController.swift; sourceTree = "<group>"; };
 		4E6456A2F94F2B67C0EF0857 /* Pods-BSMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster.release.xcconfig"; sourceTree = "<group>"; };
 		E65DAFDC7E304D6EAB0C3BA1 /* Pods-BSMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster.debug.xcconfig"; sourceTree = "<group>"; };
 		F95CB83FB92F115C73212760 /* Pods_BSMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +140,11 @@
 			isa = PBXGroup;
 			children = (
 				2DDD358C1F7DE39E005DED82 /* BaseViewController */,
+				2DDD35D01F7E1EFB005DED82 /* Transact */,
+				2DDD35D11F7E1EFB005DED82 /* Order */,
+				2DDD35D41F7E1EFC005DED82 /* Main */,
+				2DDD35D31F7E1EFC005DED82 /* Purse */,
+				2DDD35D21F7E1EFC005DED82 /* My */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -174,8 +197,212 @@
 			isa = PBXGroup;
 			children = (
 				2DDD35771F7DD2E1005DED82 /* Main.storyboard */,
+				2DDD35CC1F7E1B98005DED82 /* Transact.storyboard */,
+				2DDD35CE1F7E1E5C005DED82 /* Order.storyboard */,
+				2DDD35F91F7E20C3005DED82 /* Purse.storyboard */,
+				2DDD35FB1F7E20CD005DED82 /* My.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		2DDD35D01F7E1EFB005DED82 /* Transact */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35E01F7E2043005DED82 /* ViewController */,
+				2DDD35E21F7E2043005DED82 /* Model */,
+				2DDD35DE1F7E2043005DED82 /* View */,
+				2DDD35DF1F7E2043005DED82 /* ViewModel */,
+			);
+			path = Transact;
+			sourceTree = "<group>";
+		};
+		2DDD35D11F7E1EFB005DED82 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35E31F7E204B005DED82 /* Model */,
+				2DDD35E71F7E204B005DED82 /* View */,
+				2DDD35E51F7E204B005DED82 /* ViewController */,
+				2DDD35E41F7E204B005DED82 /* ViewModel */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		2DDD35D21F7E1EFC005DED82 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35F61F7E206B005DED82 /* Model */,
+				2DDD35F21F7E206A005DED82 /* View */,
+				2DDD35F41F7E206A005DED82 /* ViewController */,
+				2DDD35F31F7E206A005DED82 /* ViewModel */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		2DDD35D31F7E1EFC005DED82 /* Purse */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35EF1F7E205F005DED82 /* Model */,
+				2DDD35ED1F7E205F005DED82 /* View */,
+				2DDD35F01F7E205F005DED82 /* ViewController */,
+				2DDD35EE1F7E205F005DED82 /* ViewModel */,
+			);
+			path = Purse;
+			sourceTree = "<group>";
+		};
+		2DDD35D41F7E1EFC005DED82 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2DDD35EA1F7E2057005DED82 /* Model */,
+				2DDD35EB1F7E2057005DED82 /* View */,
+				2DDD35E81F7E2057005DED82 /* ViewController */,
+				2DDD35EC1F7E2057005DED82 /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2DDD35DE1F7E2043005DED82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DDD35DF1F7E2043005DED82 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DDD35E01F7E2043005DED82 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DE330631F7E28B700048D3D /* BSTransactViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2DDD35E21F7E2043005DED82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DDD35E31F7E204B005DED82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DDD35E41F7E204B005DED82 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DDD35E51F7E204B005DED82 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DE330611F7E28A900048D3D /* BSOrderViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2DDD35E71F7E204B005DED82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DDD35E81F7E2057005DED82 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DE3305F1F7E289A00048D3D /* BSMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2DDD35EA1F7E2057005DED82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DDD35EB1F7E2057005DED82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DDD35EC1F7E2057005DED82 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DDD35ED1F7E205F005DED82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DDD35EE1F7E205F005DED82 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DDD35EF1F7E205F005DED82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DDD35F01F7E205F005DED82 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DE3305B1F7E282400048D3D /* BSPurseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2DDD35F21F7E206A005DED82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DDD35F31F7E206A005DED82 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DDD35F41F7E206A005DED82 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DE3305D1F7E288500048D3D /* BSMyViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2DDD35F61F7E206B005DED82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A7AF20D4C1C06F0F39947CB6 /* Frameworks */ = {
@@ -258,9 +485,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDD35CF1F7E1E5C005DED82 /* Order.storyboard in Resources */,
 				2DDD357E1F7DD2E1005DED82 /* LaunchScreen.storyboard in Resources */,
+				2DDD35FA1F7E20C3005DED82 /* Purse.storyboard in Resources */,
 				2DDD357B1F7DD2E1005DED82 /* Assets.xcassets in Resources */,
+				2DDD35CD1F7E1B98005DED82 /* Transact.storyboard in Resources */,
 				2DDD35791F7DD2E1005DED82 /* Main.storyboard in Resources */,
+				2DDD35FC1F7E20CD005DED82 /* My.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,10 +598,15 @@
 				2DDD35761F7DD2E1005DED82 /* ViewController.swift in Sources */,
 				2DDD35C21F7DF413005DED82 /* BSHud.swift in Sources */,
 				2DDD35C41F7DF586005DED82 /* BSImageView.swift in Sources */,
+				2DE3305C1F7E282400048D3D /* BSPurseViewController.swift in Sources */,
 				2DDD35991F7DE91A005DED82 /* BSRequestApi.swift in Sources */,
+				2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */,
 				2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */,
+				2DE330621F7E28A900048D3D /* BSOrderViewController.swift in Sources */,
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
 				2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */,
+				2DE330641F7E28B700048D3D /* BSTransactViewController.swift in Sources */,
+				2DE330601F7E289A00048D3D /* BSMainViewController.swift in Sources */,
 				2DDD35C01F7DF3BA005DED82 /* BSUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
