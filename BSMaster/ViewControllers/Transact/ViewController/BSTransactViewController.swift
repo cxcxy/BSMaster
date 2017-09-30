@@ -15,7 +15,7 @@ class BSTransactViewController: BSBaseTableViewController {
         self.title = "交易"
         tableView.delegate      = nil
         tableView.dataSource    = nil
-        tableView.register(UINib.nibName("BSTransactCell"), forCellReuseIdentifier: "BSTransactCell")
+        tableView.cellId_register("BSTransactCell")
 
         dataSource.configureCell = {(_ , tableView , indexPath , element) in
             

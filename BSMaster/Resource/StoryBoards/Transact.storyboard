@@ -18,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="TfN-2q-gyV" kind="relationship" relationship="rootViewController" id="yE1-IQ-x4T"/>
+                        <segue destination="J4a-mK-Wai" kind="relationship" relationship="rootViewController" id="eVZ-Ns-l1D"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJi-dn-wXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1804" y="-44"/>
+            <point key="canvasLocation" x="-2905" y="-315"/>
         </scene>
         <!--Transact View Controller-->
         <scene sceneID="a9h-k7-239">
@@ -43,6 +43,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEW-uQ-2M0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-642" y="-690"/>
+        </scene>
+        <!--Transact View Controllers-->
+        <scene sceneID="Lae-W4-wNh">
+            <objects>
+                <viewController storyboardIdentifier="BSTransactViewControllers" id="J4a-mK-Wai" customClass="BSTransactViewControllers" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9PR-g0-koC"/>
+                        <viewControllerLayoutGuide type="bottom" id="HCM-PT-j4m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GbZ-cK-saj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kca-h7-avW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ye7-qY-wZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1697" y="-246"/>
         </scene>
         <!--Transact Detail View Controller-->
         <scene sceneID="xwn-h9-cdd">

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class BSOrderViewController: BSBaseViewController {
+class BSOrderViewController: BSBaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "订单"
+     
     }
 
     override func didReceiveMemoryWarning() {

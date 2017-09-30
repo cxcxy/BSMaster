@@ -21,7 +21,7 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         super.viewDidLoad()
         setCustomerBack()
         setUI()
-        request()
+//        request()
     }
     
     func setCustomerBack() {

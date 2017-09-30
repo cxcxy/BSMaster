@@ -20,8 +20,7 @@ target 'BSMaster' do
     pod 'ESTabBarController-swift'
 	pod 'MJRefresh'
 	pod 'DZNEmptyDataSet'
-   
-
+    pod 'KMNavigationBarTransition'
 
 end
 

@@ -13,7 +13,7 @@ class BSBaseNavigation: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.isTranslucent                 = false // 取消半透明效果
-        interactivePopGestureRecognizer?.delegate   = nil // 使用系统返回手势
+        interactivePopGestureRecognizer?.delegate   = nil   // 使用系统返回手势
         
     }
     
