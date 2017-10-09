@@ -40,12 +40,16 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         self.view.backgroundColor = UIColor.white
         self.tableView.backgroundColor      = tableColor
         self.tableView.tableFooterView      = UIView(frame:CGRect.zero)
+        self.tableView.tableHeaderView      = UIView(frame:CGRect.zero)
         self.tableView.emptyDataSetDelegate = self
         self.tableView.emptyDataSetSource   = self
         tableView.estimatedRowHeight        = estimatedRowHeight ?? 44
         tableView.rowHeight                 = UITableViewAutomaticDimension
         self.tableView.separatorColor       = SeprateColor
         self.tableView.mj_header            = mj_header
+        self.tableView.sectionFooterHeight  = 0.01
+        self.tableView.sectionHeaderHeight  = 0.01
+        
     }
     //MARK:网络请求 isLoding --- 是否弹出loading框
     func request(){

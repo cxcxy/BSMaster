@@ -1,31 +1,19 @@
 //
-//  BSOrderViewControllers.swift
+//  BSPhoneLoginViewController.swift
 //  BSMaster
 //
-//  Created by 陈旭 on 2017/9/30.
+//  Created by 陈旭 on 2017/10/9.
 //  Copyright © 2017年 陈旭. All rights reserved.
 //
 
 import UIKit
 
-class BSOrderViewControllers: BSBaseSegmentedControl {
+class BSPhoneLoginViewController: BSBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configViewControllers()
-        self.segmentStyle = .none
-    }
-    
-    func configViewControllers()  {
-        self.titleSegmentArray = ["进行中","已结束"]
-        var vcArray:[UIViewController] = []
-        for _ in titleSegmentArray {
-            let HomeTabVC = BSOrderViewController()
-            vcArray.append(HomeTabVC)
-        }
-        self.controllerArray = vcArray
-        self.updateUI()
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

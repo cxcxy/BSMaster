@@ -11,6 +11,7 @@ public enum StoryBoardName:String {
     case Main     = "Main"
     case Purse    = "Purse"
     case My       = "My"
+    case Login    = "Login"
 }
 public extension UIStoryboard {
     // 根据stroyboard名称返回初始控制器

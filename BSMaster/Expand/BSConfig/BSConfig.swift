@@ -25,6 +25,11 @@ struct BSDelay {
     }
     
 }
+public let MGScreenWidth:CGFloat = UIScreen.main.bounds.size.width
+public let MGScreenHeight:CGFloat = UIScreen.main.bounds.size.height
+public let MGScreenWidthHalf:CGFloat = MGScreenWidth / 2
+public let MGScreenHeightHalf:CGFloat = MGScreenHeight / 2
+
 //MARK: 全局统一  Color  风格
     //TODO: 全局tableView 背景色
 let tableColor = UIColor.darkGray

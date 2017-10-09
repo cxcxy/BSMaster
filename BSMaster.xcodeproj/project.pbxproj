@@ -10,6 +10,12 @@
 		2D61A9981F7F372E004AD2B8 /* BSSegmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A9971F7F372E004AD2B8 /* BSSegmented.swift */; };
 		2D61A9BF1F7F61DC004AD2B8 /* BSBaseSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A9BE1F7F61DC004AD2B8 /* BSBaseSegmentedControl.swift */; };
 		2D61A9C11F7F62C9004AD2B8 /* BSOrderViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A9C01F7F62C9004AD2B8 /* BSOrderViewControllers.swift */; };
+		2D61A9C41F7F6D58004AD2B8 /* BSMyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A9C21F7F6D58004AD2B8 /* BSMyTableViewCell.swift */; };
+		2D61A9C51F7F6D58004AD2B8 /* BSMyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D61A9C31F7F6D58004AD2B8 /* BSMyTableViewCell.xib */; };
+		2D61A9C81F7F8494004AD2B8 /* BAMySetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A9C61F7F8494004AD2B8 /* BAMySetTableViewCell.swift */; };
+		2D61A9C91F7F8494004AD2B8 /* BAMySetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D61A9C71F7F8494004AD2B8 /* BAMySetTableViewCell.xib */; };
+		2D61A9D01F8B0A19004AD2B8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D61A9CF1F8B0A19004AD2B8 /* Login.storyboard */; };
+		2D61A9D21F8B0AA9004AD2B8 /* BSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A9D11F8B0AA9004AD2B8 /* BSLoginViewController.swift */; };
 		2D6BDE9E1F7E34DE00E64452 /* BSTransactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6BDE9C1F7E34DE00E64452 /* BSTransactCell.swift */; };
 		2D6BDE9F1F7E34DE00E64452 /* BSTransactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6BDE9D1F7E34DE00E64452 /* BSTransactCell.xib */; };
 		2D6BDEA11F7E3BF400E64452 /* BSBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6BDEA01F7E3BF400E64452 /* BSBaseTableViewController.swift */; };
@@ -34,6 +40,7 @@
 		2DDD35CF1F7E1E5C005DED82 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35CE1F7E1E5C005DED82 /* Order.storyboard */; };
 		2DDD35FA1F7E20C3005DED82 /* Purse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35F91F7E20C3005DED82 /* Purse.storyboard */; };
 		2DDD35FC1F7E20CD005DED82 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35FB1F7E20CD005DED82 /* My.storyboard */; };
+		2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE0E2481F8B219700DB225C /* BSPhoneLoginViewController.swift */; };
 		2DE3305C1F7E282400048D3D /* BSPurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305B1F7E282400048D3D /* BSPurseViewController.swift */; };
 		2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305D1F7E288500048D3D /* BSMyViewController.swift */; };
 		2DE330601F7E289A00048D3D /* BSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305F1F7E289A00048D3D /* BSMainViewController.swift */; };
@@ -71,6 +78,12 @@
 		2D61A9BB1F7F4958004AD2B8 /* UIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
 		2D61A9BE1F7F61DC004AD2B8 /* BSBaseSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseSegmentedControl.swift; sourceTree = "<group>"; };
 		2D61A9C01F7F62C9004AD2B8 /* BSOrderViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSOrderViewControllers.swift; sourceTree = "<group>"; };
+		2D61A9C21F7F6D58004AD2B8 /* BSMyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyTableViewCell.swift; sourceTree = "<group>"; };
+		2D61A9C31F7F6D58004AD2B8 /* BSMyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSMyTableViewCell.xib; sourceTree = "<group>"; };
+		2D61A9C61F7F8494004AD2B8 /* BAMySetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAMySetTableViewCell.swift; sourceTree = "<group>"; };
+		2D61A9C71F7F8494004AD2B8 /* BAMySetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BAMySetTableViewCell.xib; sourceTree = "<group>"; };
+		2D61A9CF1F8B0A19004AD2B8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		2D61A9D11F8B0AA9004AD2B8 /* BSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSLoginViewController.swift; sourceTree = "<group>"; };
 		2D6BDE9C1F7E34DE00E64452 /* BSTransactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTransactCell.swift; sourceTree = "<group>"; };
 		2D6BDE9D1F7E34DE00E64452 /* BSTransactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSTransactCell.xib; sourceTree = "<group>"; };
 		2D6BDEA01F7E3BF400E64452 /* BSBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseTableViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +111,7 @@
 		2DDD35CE1F7E1E5C005DED82 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		2DDD35F91F7E20C3005DED82 /* Purse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Purse.storyboard; sourceTree = "<group>"; };
 		2DDD35FB1F7E20CD005DED82 /* My.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
+		2DE0E2481F8B219700DB225C /* BSPhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPhoneLoginViewController.swift; sourceTree = "<group>"; };
 		2DE3305B1F7E282400048D3D /* BSPurseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPurseViewController.swift; sourceTree = "<group>"; };
 		2DE3305D1F7E288500048D3D /* BSMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyViewController.swift; sourceTree = "<group>"; };
 		2DE3305F1F7E289A00048D3D /* BSMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMainViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +302,47 @@
 			path = "UIViewController+";
 			sourceTree = "<group>";
 		};
+		2D61A9CA1F8B09B9004AD2B8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2D61A9CB1F8B09B9004AD2B8 /* Model */,
+				2D61A9CC1F8B09B9004AD2B8 /* View */,
+				2D61A9CD1F8B09B9004AD2B8 /* ViewController */,
+				2D61A9CE1F8B09B9004AD2B8 /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2D61A9CB1F8B09B9004AD2B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D61A9CC1F8B09B9004AD2B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D61A9CD1F8B09B9004AD2B8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D61A9D11F8B0AA9004AD2B8 /* BSLoginViewController.swift */,
+				2DE0E2481F8B219700DB225C /* BSPhoneLoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2D61A9CE1F8B09B9004AD2B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2D6BDE9B1F7E34A900E64452 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +416,7 @@
 				2DDD35D41F7E1EFC005DED82 /* Main */,
 				2DDD35D31F7E1EFC005DED82 /* Purse */,
 				2DDD35D21F7E1EFC005DED82 /* My */,
+				2D61A9CA1F8B09B9004AD2B8 /* Login */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -426,6 +482,7 @@
 				2DDD35CE1F7E1E5C005DED82 /* Order.storyboard */,
 				2DDD35F91F7E20C3005DED82 /* Purse.storyboard */,
 				2DDD35FB1F7E20CD005DED82 /* My.storyboard */,
+				2D61A9CF1F8B0A19004AD2B8 /* Login.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -609,6 +666,10 @@
 		2DDD35F21F7E206A005DED82 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2D61A9C21F7F6D58004AD2B8 /* BSMyTableViewCell.swift */,
+				2D61A9C31F7F6D58004AD2B8 /* BSMyTableViewCell.xib */,
+				2D61A9C61F7F8494004AD2B8 /* BAMySetTableViewCell.swift */,
+				2D61A9C71F7F8494004AD2B8 /* BAMySetTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -719,10 +780,13 @@
 				2DDD35CF1F7E1E5C005DED82 /* Order.storyboard in Resources */,
 				2DDD357E1F7DD2E1005DED82 /* LaunchScreen.storyboard in Resources */,
 				2DDD35FA1F7E20C3005DED82 /* Purse.storyboard in Resources */,
+				2D61A9C51F7F6D58004AD2B8 /* BSMyTableViewCell.xib in Resources */,
+				2D61A9C91F7F8494004AD2B8 /* BAMySetTableViewCell.xib in Resources */,
 				2DDD357B1F7DD2E1005DED82 /* Assets.xcassets in Resources */,
 				2DDD35CD1F7E1B98005DED82 /* Transact.storyboard in Resources */,
 				2DDD35791F7DD2E1005DED82 /* Main.storyboard in Resources */,
 				2DDD35FC1F7E20CD005DED82 /* My.storyboard in Resources */,
+				2D61A9D01F8B0A19004AD2B8 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,15 +903,19 @@
 				2DDD35991F7DE91A005DED82 /* BSRequestApi.swift in Sources */,
 				2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */,
 				2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */,
+				2D61A9C41F7F6D58004AD2B8 /* BSMyTableViewCell.swift in Sources */,
 				2DE330681F7E2A2600048D3D /* UITableView+.swift in Sources */,
 				2DE330621F7E28A900048D3D /* BSOrderViewController.swift in Sources */,
 				2D6BDEA31F7E449F00E64452 /* NSObject+Rx.swift in Sources */,
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
+				2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */,
 				2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */,
 				2DE330641F7E28B700048D3D /* BSTransactViewController.swift in Sources */,
 				2DE330601F7E289A00048D3D /* BSMainViewController.swift in Sources */,
+				2D61A9C81F7F8494004AD2B8 /* BAMySetTableViewCell.swift in Sources */,
 				2D61A9C11F7F62C9004AD2B8 /* BSOrderViewControllers.swift in Sources */,
 				2DE3306C1F7E2C3100048D3D /* UIImage+.swift in Sources */,
+				2D61A9D21F8B0AA9004AD2B8 /* BSLoginViewController.swift in Sources */,
 				2D61A9BF1F7F61DC004AD2B8 /* BSBaseSegmentedControl.swift in Sources */,
 				2DE3306A1F7E2BCE00048D3D /* String+.swift in Sources */,
 				2D61A9981F7F372E004AD2B8 /* BSSegmented.swift in Sources */,
@@ -927,7 +995,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -978,7 +1046,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -990,17 +1058,61 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E65DAFDC7E304D6EAB0C3BA1 /* Pods-BSMaster.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = B4WSDTADTT;
 				INFOPLIST_FILE = BSMaster/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"DZNEmptyDataSet\"",
+					"-framework",
+					"\"ESTabBarController_swift\"",
+					"-framework",
+					"\"EZSwiftExtensions\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"KMNavigationBarTransition\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyUserDefaults\"",
+					"-framework",
+					"\"UITableView_FDTemplateLayoutCell\"",
+					"-framework",
+					"\"VTMagic\"",
+					"-Objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.BSMaste;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos11.0;
 				SWIFT_OBJC_BRIDGING_HEADER = "BSMaster/BSMaster-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1012,17 +1124,61 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E6456A2F94F2B67C0EF0857 /* Pods-BSMaster.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = B4WSDTADTT;
 				INFOPLIST_FILE = BSMaster/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"DZNEmptyDataSet\"",
+					"-framework",
+					"\"ESTabBarController_swift\"",
+					"-framework",
+					"\"EZSwiftExtensions\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"KMNavigationBarTransition\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyUserDefaults\"",
+					"-framework",
+					"\"UITableView_FDTemplateLayoutCell\"",
+					"-framework",
+					"\"VTMagic\"",
+					"-Objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.BSMaste;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos11.0;
 				SWIFT_OBJC_BRIDGING_HEADER = "BSMaster/BSMaster-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

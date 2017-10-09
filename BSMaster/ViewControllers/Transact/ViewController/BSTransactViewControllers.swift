@@ -14,7 +14,9 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configViewControllers()
+        self.segmentStyle = .none
     }
 
     func configViewControllers()  {
@@ -25,6 +27,7 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
             vcArray.append(HomeTabVC)
         }
         self.controllerArray = vcArray
+        self.updateUI()
 
     }
    

@@ -34,7 +34,9 @@ class BSTransactViewController: BSBaseTableViewController {
         
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-            let vc = UIStoryboard.getStoryVC(.Transact, identifier: "BSTransactDetailViewController")
+            let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSLoginViewController")
+//            let vc = BSLoginViewController()
+//            self.presentVC(vc)
             self.pushVC(vc)
             
         }.addDisposableTo(rx_disposeBag)
