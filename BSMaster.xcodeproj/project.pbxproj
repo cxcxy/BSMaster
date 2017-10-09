@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D61A4441F8B4CCA00071D80 /* UIViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */; };
+		2D61A4461F8B66DB00071D80 /* BSMyAdverteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */; };
+		2D61A4CA1F8B7CEC00071D80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D61A4C91F8B7CEC00071D80 /* InfoPlist.strings */; };
+		2D61A4CD1F8B7D0B00071D80 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D61A4CF1F8B7D0B00071D80 /* Localizable.strings */; };
+		2D61A4D51F8B89BD00071D80 /* BSSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A4D41F8B89BD00071D80 /* BSSettingViewController.swift */; };
+		2D61A4D81F8B8E8700071D80 /* BSSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A4D61F8B8E8700071D80 /* BSSettingCell.swift */; };
+		2D61A4D91F8B8E8700071D80 /* BSSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D61A4D71F8B8E8700071D80 /* BSSettingCell.xib */; };
 		2D61A9981F7F372E004AD2B8 /* BSSegmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A9971F7F372E004AD2B8 /* BSSegmented.swift */; };
 		2D61A9BF1F7F61DC004AD2B8 /* BSBaseSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A9BE1F7F61DC004AD2B8 /* BSBaseSegmentedControl.swift */; };
 		2D61A9C11F7F62C9004AD2B8 /* BSOrderViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A9C01F7F62C9004AD2B8 /* BSOrderViewControllers.swift */; };
@@ -57,6 +64,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRouter.swift; sourceTree = "<group>"; };
+		2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyAdverteViewController.swift; sourceTree = "<group>"; };
+		2D61A4C31F8B7CAB00071D80 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		2D61A4C41F8B7CAB00071D80 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		2D61A4C61F8B7CBC00071D80 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		2D61A4C71F8B7CBC00071D80 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		2D61A4C91F8B7CEC00071D80 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		2D61A4CE1F8B7D0B00071D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2D61A4D01F8B7D0C00071D80 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2D61A4D11F8B7D0D00071D80 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2D61A4D31F8B80DA00071D80 /* AutoGenStrings.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = AutoGenStrings.py; sourceTree = "<group>"; };
+		2D61A4D41F8B89BD00071D80 /* BSSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSettingViewController.swift; sourceTree = "<group>"; };
+		2D61A4D61F8B8E8700071D80 /* BSSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSettingCell.swift; sourceTree = "<group>"; };
+		2D61A4D71F8B8E8700071D80 /* BSSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSSettingCell.xib; sourceTree = "<group>"; };
 		2D61A9971F7F372E004AD2B8 /* BSSegmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSegmented.swift; sourceTree = "<group>"; };
 		2D61A99B1F7F4958004AD2B8 /* Array+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Add.swift"; sourceTree = "<group>"; };
 		2D61A99C1F7F4958004AD2B8 /* MacroFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroFunctions.swift; sourceTree = "<group>"; };
@@ -141,6 +162,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D61A4421F8B4C8300071D80 /* BSRoute */ = {
+			isa = PBXGroup;
+			children = (
+				2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */,
+			);
+			name = BSRoute;
+			path = BSMaster/Expand/BSRoute;
+			sourceTree = SOURCE_ROOT;
+		};
+		2D61A4D21F8B80DA00071D80 /* RunScript */ = {
+			isa = PBXGroup;
+			children = (
+				2D61A4D31F8B80DA00071D80 /* AutoGenStrings.py */,
+			);
+			path = RunScript;
+			sourceTree = "<group>";
+		};
 		2D61A9961F7F370A004AD2B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +429,7 @@
 		2DDD35891F7DE39E005DED82 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				2D61A4421F8B4C8300071D80 /* BSRoute */,
 				2DDD35911F7DE454005DED82 /* BSConfig */,
 				2DDD35901F7DE454005DED82 /* BSExtension */,
 			);
@@ -437,6 +476,8 @@
 			isa = PBXGroup;
 			children = (
 				2DDD35C51F7DF962005DED82 /* StoryBoards */,
+				2D61A4CF1F8B7D0B00071D80 /* Localizable.strings */,
+				2D61A4C91F8B7CEC00071D80 /* InfoPlist.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -466,6 +507,7 @@
 		2DDD35BE1F7DF396005DED82 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2D61A4D21F8B80DA00071D80 /* RunScript */,
 				2D6BDEA21F7E449F00E64452 /* NSObject+Rx.swift */,
 				2DDD35BF1F7DF3BA005DED82 /* BSUtil.swift */,
 				2DDD35C11F7DF413005DED82 /* BSHud.swift */,
@@ -670,6 +712,8 @@
 				2D61A9C31F7F6D58004AD2B8 /* BSMyTableViewCell.xib */,
 				2D61A9C61F7F8494004AD2B8 /* BAMySetTableViewCell.swift */,
 				2D61A9C71F7F8494004AD2B8 /* BAMySetTableViewCell.xib */,
+				2D61A4D61F8B8E8700071D80 /* BSSettingCell.swift */,
+				2D61A4D71F8B8E8700071D80 /* BSSettingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -685,6 +729,8 @@
 			isa = PBXGroup;
 			children = (
 				2DE3305D1F7E288500048D3D /* BSMyViewController.swift */,
+				2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */,
+				2D61A4D41F8B89BD00071D80 /* BSSettingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -760,6 +806,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 2DDD35671F7DD2E1005DED82;
 			productRefGroup = 2DDD35711F7DD2E1005DED82 /* Products */;
@@ -777,13 +825,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D6BDE9F1F7E34DE00E64452 /* BSTransactCell.xib in Resources */,
+				2D61A4CA1F8B7CEC00071D80 /* InfoPlist.strings in Resources */,
 				2DDD35CF1F7E1E5C005DED82 /* Order.storyboard in Resources */,
+				2D61A4D91F8B8E8700071D80 /* BSSettingCell.xib in Resources */,
 				2DDD357E1F7DD2E1005DED82 /* LaunchScreen.storyboard in Resources */,
 				2DDD35FA1F7E20C3005DED82 /* Purse.storyboard in Resources */,
 				2D61A9C51F7F6D58004AD2B8 /* BSMyTableViewCell.xib in Resources */,
 				2D61A9C91F7F8494004AD2B8 /* BAMySetTableViewCell.xib in Resources */,
 				2DDD357B1F7DD2E1005DED82 /* Assets.xcassets in Resources */,
 				2DDD35CD1F7E1B98005DED82 /* Transact.storyboard in Resources */,
+				2D61A4CD1F8B7D0B00071D80 /* Localizable.strings in Resources */,
 				2DDD35791F7DD2E1005DED82 /* Main.storyboard in Resources */,
 				2DDD35FC1F7E20CD005DED82 /* My.storyboard in Resources */,
 				2D61A9D01F8B0A19004AD2B8 /* Login.storyboard in Resources */,
@@ -901,6 +952,7 @@
 				2DE3305C1F7E282400048D3D /* BSPurseViewController.swift in Sources */,
 				2DE330661F7E29B500048D3D /* UIStoryboard+.swift in Sources */,
 				2DDD35991F7DE91A005DED82 /* BSRequestApi.swift in Sources */,
+				2D61A4D81F8B8E8700071D80 /* BSSettingCell.swift in Sources */,
 				2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */,
 				2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */,
 				2D61A9C41F7F6D58004AD2B8 /* BSMyTableViewCell.swift in Sources */,
@@ -916,11 +968,14 @@
 				2D61A9C11F7F62C9004AD2B8 /* BSOrderViewControllers.swift in Sources */,
 				2DE3306C1F7E2C3100048D3D /* UIImage+.swift in Sources */,
 				2D61A9D21F8B0AA9004AD2B8 /* BSLoginViewController.swift in Sources */,
+				2D61A4441F8B4CCA00071D80 /* UIViewControllerRouter.swift in Sources */,
+				2D61A4461F8B66DB00071D80 /* BSMyAdverteViewController.swift in Sources */,
 				2D61A9BF1F7F61DC004AD2B8 /* BSBaseSegmentedControl.swift in Sources */,
 				2DE3306A1F7E2BCE00048D3D /* String+.swift in Sources */,
 				2D61A9981F7F372E004AD2B8 /* BSSegmented.swift in Sources */,
 				2D6BDEA11F7E3BF400E64452 /* BSBaseTableViewController.swift in Sources */,
 				2DDD35C01F7DF3BA005DED82 /* BSUtil.swift in Sources */,
+				2D61A4D51F8B89BD00071D80 /* BSSettingViewController.swift in Sources */,
 				2DE3306E1F7E2C5700048D3D /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -928,10 +983,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2D61A4CF1F8B7D0B00071D80 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D61A4CE1F8B7D0B00071D80 /* en */,
+				2D61A4D01F8B7D0C00071D80 /* zh-Hans */,
+				2D61A4D11F8B7D0D00071D80 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2DDD35771F7DD2E1005DED82 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2DDD35781F7DD2E1005DED82 /* Base */,
+				2D61A4C31F8B7CAB00071D80 /* zh-Hans */,
+				2D61A4C61F8B7CBC00071D80 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -940,6 +1007,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				2DDD357D1F7DD2E1005DED82 /* Base */,
+				2D61A4C41F8B7CAB00071D80 /* zh-Hans */,
+				2D61A4C71F8B7CBC00071D80 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -951,6 +1020,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1008,6 +1078,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -20,7 +20,7 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
     }
 
     func configViewControllers()  {
-        self.titleSegmentArray = ["买币","卖币"]
+        self.titleSegmentArray = [NSLocalizedString("BuyCoins", comment: ""),"卖币"]
         var vcArray:[UIViewController] = []
         for _ in titleSegmentArray {
             let HomeTabVC = UIStoryboard.getStoryVC(.Transact, identifier: "BSTransactViewController")

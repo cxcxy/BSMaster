@@ -42,8 +42,39 @@ class BSMyViewController: BSBaseTableViewController {
             .addDisposableTo(rx_disposeBag)
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-            let vc = UIStoryboard.getStoryVC(.Transact, identifier: "BSTransactDetailViewController")
-            self.pushVC(vc)
+
+            let row         = indexpath.element?.row
+            let section     = indexpath.element?.section
+            
+            switch section ?? 0 {
+                case 0:
+                    switch row ?? 0{
+                    case 0:   VCRouter.toADVC(.Adverted)
+                    default:
+                        break
+                }
+                case 1:
+                    switch row ?? 0{
+                    case 0: VCRouter.toADVC(.Trust)
+                        
+                    default:
+                        break
+                }
+                case 2:
+                    switch row ?? 0{
+                    case 0: VCRouter.toSettingVC()
+
+                    default:
+                        break
+                }
+                default:break
+                
+            }
+            
+            
+
+ 
+            
             
             }.addDisposableTo(rx_disposeBag)
         

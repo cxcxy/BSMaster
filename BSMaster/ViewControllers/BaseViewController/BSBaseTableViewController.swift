@@ -58,8 +58,8 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         self.tableView.mj_header            = mj_header
         self.tableView.sectionFooterHeight  = 0.01
         self.tableView.sectionHeaderHeight  = 0.01
-        self.edgesForExtendedLayout         = UIRectEdge()
-        self.tableView.keyboardDismissMode  = .onDrag
+//        self.edgesForExtendedLayout         = UIRectEdge()
+//        self.tableView.keyboardDismissMode  = .onDrag
         
     }
     //MARK:网络请求 isLoding --- 是否弹出loading框

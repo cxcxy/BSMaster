@@ -8,33 +8,35 @@
 
 import Foundation
 extension UIView {
+    //MARK: 添加顶部线条
     func addTopBorderWithColor(_ color: UIColor, width: CGFloat) {
         let border = CALayer()
         border.backgroundColor = color.cgColor
         border.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: width)
         self.layer.addSublayer(border)
     }
-    
+    //MARK: 添加右边线条
     func addRightBorderWithColor(_ color: UIColor, width: CGFloat) {
         let border = CALayer()
         border.backgroundColor = color.cgColor
         border.frame = CGRect(x: self.frame.size.width - width, y: 0, width: width, height: self.frame.size.height)
         self.layer.addSublayer(border)
     }
-    
+     //MARK: 添加底部线条
     func addBottomBorderWithColor(_ color: UIColor, width: CGFloat) {
         let border = CALayer()
         border.backgroundColor = color.cgColor
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: width)
         self.layer.addSublayer(border)
     }
-    
+     //MARK: 添加左边线条
     func addLeftBorderWithColor(_ color: UIColor, width: CGFloat) {
         let border = CALayer()
         border.backgroundColor = color.cgColor
         border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.size.height)
         self.layer.addSublayer(border)
     }
+    // 根据View 返回图片
     func createViewImage() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
@@ -43,6 +45,8 @@ extension UIView {
         return image!
     }
 }
+
+//MARK: UIView Xib 扩展
 extension UIView: NibLoadable {
 }
 protocol NibLoadable {

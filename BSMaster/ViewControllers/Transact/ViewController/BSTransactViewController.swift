@@ -34,10 +34,11 @@ class BSTransactViewController: BSBaseTableViewController {
         
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-            let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSLoginViewController")
-//            let vc = BSLoginViewController()
-//            self.presentVC(vc)
-            self.pushVC(vc)
+           
+//             let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSLoginViewController")
+//             let nav = UINavigationController.init(rootViewController: vc)
+//             self.presentVC(nav)
+
             
         }.addDisposableTo(rx_disposeBag)
         dataArr.value.append(SectionModel.init(model: "section", items: ["1","1","1","1","1","1","1","1","1","1","1"]))
