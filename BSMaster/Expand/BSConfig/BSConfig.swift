@@ -30,6 +30,9 @@ public let MGScreenHeight:CGFloat = UIScreen.main.bounds.size.height
 public let MGScreenWidthHalf:CGFloat = MGScreenWidth / 2
 public let MGScreenHeightHalf:CGFloat = MGScreenHeight / 2
 
+public func BSRgb(_ r:CGFloat,g:CGFloat,b:CGFloat,alpha:CGFloat = 1) -> UIColor{
+    return UIColor(red:r/255.0, green: g/255.0, blue: b/255.0, alpha:alpha)
+}
 //MARK: 全局统一  Color  风格
     //TODO: 全局tableView 背景色
 let tableColor = UIColor.darkGray

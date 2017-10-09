@@ -38,7 +38,6 @@
                             <outlet property="delegate" destination="TfN-2q-gyV" id="mXr-7R-1T4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pif-eH-wWP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEW-uQ-2M0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

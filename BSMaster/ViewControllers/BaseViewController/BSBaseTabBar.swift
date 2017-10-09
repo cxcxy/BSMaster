@@ -33,6 +33,17 @@ class BSBaseTabBar: ESTabBarController {
            viewControllers.append(vc)
        
         }
+
+        self.view.backgroundColor   = UIColor.white
+        self.tabBar.backgroundColor = UIColor(hexString: "#FFFFFF")
+        self.tabBar.barTintColor    = UIColor.white
+        self.tabBar.backgroundImage = UIImage()
+        self.tabBar.isTranslucent   = false
+
+        self.tabBar.layer.borderWidth = 0.5
+        self.tabBar.layer.borderColor = BSRgb(234, g: 234, b: 234).cgColor
+        
+        self.tabBar.clipsToBounds = true
         self.viewControllers = viewControllers
     }
 

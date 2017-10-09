@@ -6,7 +6,7 @@ target 'BSMaster' do
 
    	pod 'Moya' , '~> 8.0.5'
 	pod 'Moya/RxSwift'
-	pod 'Alamofire'
+    pod 'Alamofire'
 	pod 'RxDataSources'
     pod 'SnapKit', '~> 3.0.0'
 	pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
