@@ -26,9 +26,15 @@ public class VCRouter {
     }
     //MARK: 跳转登录界面
    public class func toLoginVC(){
-        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSLoginViewController")
-        let nav = UINavigationController.init(rootViewController: vc)
-        topNaVC?.presentVC(nav)
+        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSPhoneLoginViewController")
+//        let nav = UINavigationController.init(rootViewController: vc)
+        topVC?.pushVC(vc)
+    }
+    //MARK: 跳转注册界面
+    public class func toRegistVC(){
+        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSRegistViewController")
+        //        let nav = UINavigationController.init(rootViewController: vc)
+        topVC?.pushVC(vc)
     }
     //MARK: 跳转设置界面
     public class func toSettingVC(){
@@ -41,5 +47,6 @@ public class VCRouter {
         vc.controllerStyle = type
           topVC?.pushVC(vc)
     }
+    
 }
 

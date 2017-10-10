@@ -14,7 +14,15 @@ class BSBaseNavigation: UINavigationController {
         super.viewDidLoad()
         navigationBar.isTranslucent                 = false // 取消半透明效果
         interactivePopGestureRecognizer?.delegate   = nil   // 使用系统返回手势
+    
+        let appearance = UIBarButtonItem.appearance()
+        appearance.setBackButtonTitlePositionAdjustment(UIOffset.init(horizontal: 0.0, vertical: -60), for: .default)
+
+        self.navigationBar.barTintColor = BSNavColor  // 统一 导航条背景色
+    
+        self.navigationBar.tintColor = UIColor.white // 统一 导航条上面字体的颜色
         
+        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 16.0)];
     }
     
     override func didReceiveMemoryWarning() {

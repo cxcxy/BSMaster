@@ -8,23 +8,54 @@
 
 import UIKit
 
-class BSTransactDetailViewController: BSBaseViewController {
+class BSTransactDetailViewController: BSBaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.red
-        let img = UIImageView.init(frame: CGRect.init(x: 10, y: 100, w: 300, h: 300))
-        img.set_Img_Url("https://camo.githubusercontent.com/3b186bfb4c2df6651f7b76e2fa28fbd60476f0e6/687474703a2f2f696d61676573302e636e626c6f67732e636f6d2f626c6f67323031352f3439373237392f3230313530362f3134313231323336353034313635302e706e67")
-        self.view.addSubview(img)
-//        self.navigationController?.navigationBar.barTintColor = UIColor.red
-
+        
+        tableView.delegate      = nil
+        tableView.dataSource    = nil
+        tableView.cellId_register("BSBuyCoinCell")
+        tableView.cellId_register("BSBuyRemindCell")
+        
+        dataSource.configureCell = {(_ , tableView , indexPath , element) in
+            let section         = indexPath.section
+            if section == 0 {
+            
+                let cell = tableView.dequeueReusableCell(withIdentifier: "BSBuyCoinCell", for: indexPath) as! BSBuyCoinCell
+                return cell
+            }else {
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: "BSBuyRemindCell", for: indexPath) as! BSBuyRemindCell
+                return cell
+            }
+            
+        }
+        dataArr.asObservable()
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .addDisposableTo(rx_disposeBag)
+        
+        tableView.rx
+            .setDelegate(self)
+            .addDisposableTo(rx_disposeBag)
+        
+        tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
+            
+            //             let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSLoginViewController")
+            //             let nav = UINavigationController.init(rootViewController: vc)
+            //             self.presentVC(nav)
+            
+            }.addDisposableTo(rx_disposeBag)
+        dataArr.value.append(SectionModel.init(model: "section", items: ["1"]))
+        dataArr.value.append(SectionModel.init(model: "two", items: ["1"]))
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
     }
-    
-
-
+}
+extension BSTransactDetailViewController {
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
+    }
 }

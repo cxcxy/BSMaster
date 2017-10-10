@@ -38,6 +38,9 @@ class BSTransactViewController: BSBaseTableViewController {
 //             let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSLoginViewController")
 //             let nav = UINavigationController.init(rootViewController: vc)
 //             self.presentVC(nav)
+//            let vc = BSTransactDetailViewController()
+//            self.pushVC(vc)
+            VCRouter.toLoginVC()
 
             
         }.addDisposableTo(rx_disposeBag)

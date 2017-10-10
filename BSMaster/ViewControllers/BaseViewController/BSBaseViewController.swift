@@ -13,16 +13,21 @@ class BSBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setCustomerBack()
+//        make
+         setUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
     }
+    func setUI()  {
+//        self.view.backgroundColor = UIColor.red
+    }
     func setCustomerBack() {
         if let count = navigationController?.viewControllers.count {
             if count > 1 {
-                let item = UIBarButtonItem(image:UIImage(named: "nav_backArrow"), style:.plain, target: self, action:#selector(navBack))
+                let item = UIBarButtonItem(image:UIImage(named: "nav_Back"), style:.plain, target: self, action:#selector(navBack))
                 navigationItem.leftBarButtonItem = item
             }
         }

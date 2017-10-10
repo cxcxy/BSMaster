@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "1.交易前请详细了解买家的交易信息"; ObjectID = "8h2-sV-rB7"; */
+"8h2-sV-rB7.text" = "1.交易前请详细了解买家的交易信息";
+
+/* Class = "UILabel"; text = "3.如遇到交易纠纷，请通过“帮助”来解决问题"; ObjectID = "PGA-mi-3KH"; */
+"PGA-mi-3KH.text" = "3.如遇到交易纠纷，请通过“帮助”来解决问题";
+
+/* Class = "UILabel"; text = "交易提醒"; ObjectID = "Vhj-fx-PdP"; */
+"Vhj-fx-PdP.text" = "交易提醒";
+
+/* Class = "UILabel"; text = "2.请通过平台进行沟通约定，并保存好相关的聊天记录"; ObjectID = "syN-uD-69G"; */
+"syN-uD-69G.text" = "2.请通过平台进行沟通约定，并保存好相关的聊天记录";

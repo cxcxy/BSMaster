@@ -21,6 +21,7 @@ target 'BSMaster' do
 	pod 'MJRefresh'
 	pod 'DZNEmptyDataSet'
     pod 'KMNavigationBarTransition'
+    pod 'PonyFrameworkOnSwift',:path => "PonyFrameworkOnSwift/PonyFrameworkOnSwift.podspec"
 
 end
 

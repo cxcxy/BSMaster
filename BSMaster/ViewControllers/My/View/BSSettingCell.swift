@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BSSettingCell: UITableViewCell {
+class BSSettingCell: BSBaseTableViewCell {
 
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbSubTitle: UILabel!
