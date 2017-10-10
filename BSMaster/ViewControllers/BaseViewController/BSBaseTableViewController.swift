@@ -21,16 +21,6 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         super.viewDidLoad()
         setCustomerBack()
         setUI()
-        
-//        if #available(iOS 11.0, *) {
-//            tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
-////
-//        } else {
-//            
-//            self.automaticallyAdjustsScrollViewInsets = false
-//
-//        }
-      
     }
     
     func setCustomerBack() {
@@ -46,20 +36,16 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         _ = navigationController?.popViewController(animated: true)
     }
     func setUI(){
-        self.view.backgroundColor = UIColor.white
+        
+        self.view.backgroundColor           = UIColor.white
         self.tableView.backgroundColor      = tableColor
-        self.tableView.tableFooterView      = UIView(frame:CGRect.zero)
-        self.tableView.tableHeaderView      = UIView(frame:CGRect.zero)
         self.tableView.emptyDataSetDelegate = self
         self.tableView.emptyDataSetSource   = self
         tableView.estimatedRowHeight        = estimatedRowHeight ?? 44
         tableView.rowHeight                 = UITableViewAutomaticDimension
         self.tableView.separatorColor       = SeprateColor
         self.tableView.mj_header            = mj_header
-        self.tableView.sectionFooterHeight  = 0.01
-        self.tableView.sectionHeaderHeight  = 0.01
-//        self.edgesForExtendedLayout         = UIRectEdge()
-//        self.tableView.keyboardDismissMode  = .onDrag
+        self.tableView.keyboardDismissMode  = .onDrag
         
     }
     //MARK:网络请求 isLoding --- 是否弹出loading框
@@ -112,7 +98,22 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         
     }
 }
-
+// 默认分组间隔
+extension BSBaseTableViewController {
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.01
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.01
+    }
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
+    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return nil
+    }
+    
+}
 
 // 空白展位图
 extension BSBaseTableViewController{
@@ -121,9 +122,8 @@ extension BSBaseTableViewController{
         let attri = NSAttributedString(string: text, attributes:[NSForegroundColorAttributeName:UIColor.red,NSFontAttributeName:UIFont.systemFont(ofSize: 17)])
         return attri
     }
-    
     @objc(backgroundColorForEmptyDataSet:) func backgroundColor(forEmptyDataSet scrollView: UIScrollView!) -> UIColor! {
         return tableColor
     }
-
 }
+

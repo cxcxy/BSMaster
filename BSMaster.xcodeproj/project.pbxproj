@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */; };
+		2D38F0561F8C66E9008264E7 /* BSBuyCoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D38F0541F8C66E9008264E7 /* BSBuyCoinCell.xib */; };
 		2D61A4441F8B4CCA00071D80 /* UIViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */; };
 		2D61A4461F8B66DB00071D80 /* BSMyAdverteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */; };
 		2D61A4CA1F8B7CEC00071D80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D61A4C91F8B7CEC00071D80 /* InfoPlist.strings */; };
@@ -64,6 +66,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBuyCoinCell.swift; sourceTree = "<group>"; };
+		2D38F0541F8C66E9008264E7 /* BSBuyCoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSBuyCoinCell.xib; sourceTree = "<group>"; };
 		2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRouter.swift; sourceTree = "<group>"; };
 		2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyAdverteViewController.swift; sourceTree = "<group>"; };
 		2D61A4C31F8B7CAB00071D80 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -386,6 +390,8 @@
 			children = (
 				2D6BDE9C1F7E34DE00E64452 /* BSTransactCell.swift */,
 				2D6BDE9D1F7E34DE00E64452 /* BSTransactCell.xib */,
+				2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */,
+				2D38F0541F8C66E9008264E7 /* BSBuyCoinCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -835,6 +841,7 @@
 				2DDD357B1F7DD2E1005DED82 /* Assets.xcassets in Resources */,
 				2DDD35CD1F7E1B98005DED82 /* Transact.storyboard in Resources */,
 				2D61A4CD1F8B7D0B00071D80 /* Localizable.strings in Resources */,
+				2D38F0561F8C66E9008264E7 /* BSBuyCoinCell.xib in Resources */,
 				2DDD35791F7DD2E1005DED82 /* Main.storyboard in Resources */,
 				2DDD35FC1F7E20CD005DED82 /* My.storyboard in Resources */,
 				2D61A9D01F8B0A19004AD2B8 /* Login.storyboard in Resources */,
@@ -974,6 +981,7 @@
 				2DE3306A1F7E2BCE00048D3D /* String+.swift in Sources */,
 				2D61A9981F7F372E004AD2B8 /* BSSegmented.swift in Sources */,
 				2D6BDEA11F7E3BF400E64452 /* BSBaseTableViewController.swift in Sources */,
+				2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */,
 				2DDD35C01F7DF3BA005DED82 /* BSUtil.swift in Sources */,
 				2D61A4D51F8B89BD00071D80 /* BSSettingViewController.swift in Sources */,
 				2DE3306E1F7E2C5700048D3D /* UIView+.swift in Sources */,

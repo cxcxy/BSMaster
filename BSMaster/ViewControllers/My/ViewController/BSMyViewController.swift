@@ -14,7 +14,7 @@ class BSMyViewController: BSBaseTableViewController {
         self.title = "我的"
         setUI()
         configTable()
-        
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     func configTable(){
         tableView.delegate      = nil
@@ -70,12 +70,7 @@ class BSMyViewController: BSBaseTableViewController {
                 default:break
                 
             }
-            
-            
 
- 
-            
-            
             }.addDisposableTo(rx_disposeBag)
         
         dataArr.value.append(SectionModel.init(model: "one", items: [1,2,3]))

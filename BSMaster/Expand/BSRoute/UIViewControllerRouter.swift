@@ -32,7 +32,7 @@ public class VCRouter {
     }
     //MARK: 跳转设置界面
     public class func toSettingVC(){
-        let vc = BSSettingViewController()
+        let vc = BSSettingViewController.init(style: .grouped)
         topVC?.pushVC(vc)
     }
     //MARK: 跳转广告界面

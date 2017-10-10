@@ -21,7 +21,7 @@ class BSOrderViewControllers: BSBaseSegmentedControl {
         self.titleSegmentArray = ["进行中","已结束"]
         var vcArray:[UIViewController] = []
         for _ in titleSegmentArray {
-            let HomeTabVC = BSOrderViewController()
+            let HomeTabVC = BSOrderViewController.init(style: .grouped)
             vcArray.append(HomeTabVC)
         }
         self.controllerArray = vcArray

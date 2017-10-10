@@ -1,7 +1,7 @@
 platform :ios, '9.0'
 install! 'cocoapods',:deterministic_uuids => false
 target 'BSMaster' do
-
+    inhibit_all_warnings!
 	use_frameworks!
 
    	pod 'Moya' , '~> 8.0.5'
