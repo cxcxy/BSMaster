@@ -33,7 +33,11 @@ public class VCRouter {
     //MARK: 跳转注册界面
     public class func toRegistVC(){
         let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSRegistViewController")
-        //        let nav = UINavigationController.init(rootViewController: vc)
+        topVC?.pushVC(vc)
+    }
+    //MARK: 跳转设置昵称界面
+    public class func toSetNickVC(){
+        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSSetNickViewController")
         topVC?.pushVC(vc)
     }
     //MARK: 跳转设置界面

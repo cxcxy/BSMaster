@@ -10,6 +10,7 @@ import UIKit
 
 class BSLoginViewController: BSBaseSegmentedControl {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configViewControllers()

@@ -12,6 +12,8 @@
 		2D0C37531F8CC0F600EFF40E /* BSBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C37521F8CC0F600EFF40E /* BSBaseTableViewCell.swift */; };
 		2D0C37541F8CC17E00EFF40E /* BSBuyRemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0C37561F8CC17E00EFF40E /* BSBuyRemindCell.xib */; };
 		2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */; };
+		2D5615131F8DA88800BB9C03 /* BSViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615121F8DA88800BB9C03 /* BSViewComponent.swift */; };
+		2D5615151F8DAA3300BB9C03 /* BSSetNickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */; };
 		2D61A4441F8B4CCA00071D80 /* UIViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */; };
 		2D61A4461F8B66DB00071D80 /* BSMyAdverteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */; };
 		2D61A4CA1F8B7CEC00071D80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D61A4C91F8B7CEC00071D80 /* InfoPlist.strings */; };
@@ -82,6 +84,8 @@
 		2D0C375F1F8CD00100EFF40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BSBuyRemindCell.xib; sourceTree = "<group>"; };
 		2D0C37601F8CD03400EFF40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BSBuyCoinCell.xib; sourceTree = "<group>"; };
 		2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBuyCoinCell.swift; sourceTree = "<group>"; };
+		2D5615121F8DA88800BB9C03 /* BSViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSViewComponent.swift; sourceTree = "<group>"; };
+		2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSetNickViewController.swift; sourceTree = "<group>"; };
 		2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRouter.swift; sourceTree = "<group>"; };
 		2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyAdverteViewController.swift; sourceTree = "<group>"; };
 		2D61A4C31F8B7CAB00071D80 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 				2D61A9D11F8B0AA9004AD2B8 /* BSLoginViewController.swift */,
 				2DE0E2481F8B219700DB225C /* BSPhoneLoginViewController.swift */,
 				2D6523C31F8CF82B00CB5B54 /* BSRegistViewController.swift */,
+				2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDD35BC1F7DF324005DED82 /* BSUIViewController.swift */,
+				2D5615121F8DA88800BB9C03 /* BSViewComponent.swift */,
 				2DE330651F7E29B500048D3D /* UIStoryboard+.swift */,
 				2DE330671F7E2A2600048D3D /* UITableView+.swift */,
 				2DE330691F7E2BCE00048D3D /* String+.swift */,
@@ -816,6 +822,7 @@
 				2D0C37501F8CBDED00EFF40E /* BSBuyRemindCell.swift in Sources */,
 				2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */,
 				2D61A9C41F7F6D58004AD2B8 /* BSMyTableViewCell.swift in Sources */,
+				2D5615151F8DAA3300BB9C03 /* BSSetNickViewController.swift in Sources */,
 				2DE330681F7E2A2600048D3D /* UITableView+.swift in Sources */,
 				2DE330621F7E28A900048D3D /* BSOrderViewController.swift in Sources */,
 				2D6BDEA31F7E449F00E64452 /* NSObject+Rx.swift in Sources */,
@@ -833,6 +840,7 @@
 				2D61A9BF1F7F61DC004AD2B8 /* BSBaseSegmentedControl.swift in Sources */,
 				2DE3306A1F7E2BCE00048D3D /* String+.swift in Sources */,
 				2D61A9981F7F372E004AD2B8 /* BSSegmented.swift in Sources */,
+				2D5615131F8DA88800BB9C03 /* BSViewComponent.swift in Sources */,
 				2D6BDEA11F7E3BF400E64452 /* BSBaseTableViewController.swift in Sources */,
 				2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */,
 				2DDD35C01F7DF3BA005DED82 /* BSUtil.swift in Sources */,

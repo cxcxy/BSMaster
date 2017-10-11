@@ -15,6 +15,15 @@ class BSBaseViewController: UIViewController {
         setCustomerBack()
 //        make
          setUI()
+//        //点击背景收起键盘
+//        let tapBackground = UITapGestureRecognizer()
+//        tapBackground.rx.event
+//            .subscribe(onNext: { [unowned self] _ in
+//                self.view.endEditing(true)
+//            })
+//            .disposed(by: rx_disposeBag)
+//        view.addGestureRecognizer(tapBackground)
+
     }
 
     override func didReceiveMemoryWarning() {

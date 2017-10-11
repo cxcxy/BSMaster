@@ -96,7 +96,10 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <connections>
+                                            <action selector="tfPhone:" destination="bw6-pv-t1X" eventType="editingDidEnd" id="q2b-UV-ZLT"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzR-5L-6fb">
                                         <rect key="frame" x="0.0" y="34" width="315" height="1"/>
@@ -154,7 +157,7 @@
                                     <constraint firstItem="KNG-DY-eac" firstAttribute="leading" secondItem="Qsx-I8-yLh" secondAttribute="leading" id="wx7-xk-Ltj"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve6-eT-N8U">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve6-eT-N8U" customClass="BSNextBtn" customModule="BSMaster" customModuleProvider="target">
                                 <rect key="frame" x="30" y="290" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ack-ie-IOw"/>
@@ -208,16 +211,19 @@
                     <connections>
                         <outlet property="btnLogin" destination="ve6-eT-N8U" id="QCy-OP-biQ"/>
                         <outlet property="btnPassword" destination="pp6-KF-MrQ" id="0Jp-Eh-wcK"/>
+                        <outlet property="tfPassword" destination="foN-9t-qmj" id="mzt-3b-7Bq"/>
+                        <outlet property="tfPhone" destination="FkG-cX-Num" id="pe2-wZ-Nm6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AiF-XA-r5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bw6-pv-t1X" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="101.59999999999999" y="-1737.481259370315"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Nick View Controller-->
         <scene sceneID="re9-nA-Il0">
             <objects>
-                <viewController id="eVB-Gh-Jfh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BSSetNickViewController" id="eVB-Gh-Jfh" customClass="BSSetNickViewController" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6gV-ri-a48"/>
                         <viewControllerLayoutGuide type="bottom" id="BeH-bs-La9"/>
@@ -242,7 +248,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75r-XB-zs7">
                                         <rect key="frame" x="0.0" y="34" width="315" height="1"/>
@@ -267,7 +273,7 @@
                                     <constraint firstItem="Ick-AE-ofN" firstAttribute="leading" secondItem="VQJ-ee-yDh" secondAttribute="leading" id="iXK-uD-sp7"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdW-2N-pe0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdW-2N-pe0" customClass="BSNextBtn" customModule="BSMaster" customModuleProvider="target">
                                 <rect key="frame" x="30" y="215.5" width="315" height="47"/>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.59607843137254901" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -277,6 +283,9 @@
                                 <state key="normal" title="完成注册">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerAction:" destination="eVB-Gh-Jfh" eventType="touchUpInside" id="aj1-Sv-B7S"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -292,6 +301,10 @@
                             <constraint firstItem="UdW-2N-pe0" firstAttribute="top" secondItem="VQJ-ee-yDh" secondAttribute="bottom" constant="25" id="vRr-XQ-sZ5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnRegister" destination="UdW-2N-pe0" id="Ihu-eN-QjI"/>
+                        <outlet property="tfNick" destination="Ick-AE-ofN" id="aHg-dA-Npb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzC-Cx-Fn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -358,7 +371,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLx-yc-Oig">
                                         <rect key="frame" x="0.0" y="34" width="315" height="1"/>
@@ -393,7 +406,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebp-X0-ezf">
                                         <rect key="frame" x="0.0" y="34" width="315" height="1"/>
@@ -490,7 +503,7 @@
                                     <constraint firstItem="hHj-mo-iug" firstAttribute="centerY" secondItem="rE4-ae-jSK" secondAttribute="centerY" id="uef-mq-tqp"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAj-Li-7QG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAj-Li-7QG" customClass="BSNextBtn" customModule="BSMaster" customModuleProvider="target">
                                 <rect key="frame" x="30" y="374" width="315" height="47"/>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.59607843137254901" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -500,6 +513,9 @@
                                 <state key="normal" title="下一步">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextAction:" destination="V1T-p3-OcT" eventType="touchUpInside" id="Gqe-8z-EAV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -524,6 +540,13 @@
                             <constraint firstItem="rE4-ae-jSK" firstAttribute="top" secondItem="sLw-Jk-1Fe" secondAttribute="bottom" id="yJl-MO-Zbi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnNext" destination="fAj-Li-7QG" id="YRz-kq-RKS"/>
+                        <outlet property="btnSelector" destination="hHj-mo-iug" id="8cm-gD-SpG"/>
+                        <outlet property="tfCode" destination="jUg-cK-1CR" id="htG-hm-z3j"/>
+                        <outlet property="tfPassword" destination="EmP-21-phq" id="dVr-8x-8pZ"/>
+                        <outlet property="tfPhone" destination="aAC-sw-I7t" id="sXw-1o-aE9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Poz-hY-cYa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -52,7 +52,7 @@ class BSBaseSegmentedControl: BSBaseViewController {
     //MARK:配置顶部 segment
     func configSegmentNavition()  {
         segment             = UISegmentedControl.init(items: titleSegmentArray)
-        segment.frame.size  = CGSize.init(width: 180, height: 20)
+        segment.frame.size  = CGSize.init(width: 180, height: 30)
         segment.addSelectorAction {[unowned self] (selectorIndex) in
             
             self.v.magicView.switch(toPage: UInt (selectorIndex), animated: true)
