@@ -17,8 +17,40 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
         
         configViewControllers()
         self.segmentStyle = .none
+        
+        makeCustomerImageNavigationItem("search_white", left: false) {
+            
+        }
     }
-
+    
+    
+    func requstLogin()  {
+        var params = [String:Any]()
+//        params["mobile_type"]   = "1"
+        params["mobile"]        = "15981870364"
+        params["login_pass"]    = "123456"
+//        params["vcode"]         = "123456"
+//        params["nickname"]      = "cxcxcxy"
+        BSNetManager.sharedManager.requestWithTarget(.api_Login(params: params), successClosure: { (result, code,message)  in
+            
+           BSHud.showMsg(message)
+            
+        }) { (errorStr) in
+            print(errorStr ?? "error")
+        }
+    }
+    
+    
+    
+    lazy var rightNagationItem:BSCountryNavView = {
+        let view = BSCountryNavView.loadFromNib()
+        view.backgroundColor = BSNavColor
+        view.addAction {
+            print("click view")
+            self.requstLogin()
+        }
+        return view
+    }()
     func configViewControllers()  {
         self.titleSegmentArray = [NSLocalizedString("BuyCoins", comment: ""),"卖币"]
         var vcArray:[UIViewController] = []
@@ -28,6 +60,7 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
         }
         self.controllerArray = vcArray
         self.updateUI()
+        makeRightNavigationItem(rightNagationItem, left: true)
 
     }
    

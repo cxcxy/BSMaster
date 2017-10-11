@@ -514,20 +514,30 @@ extension UIViewController{
             
         }
         
-        func makeRightNavigationItem(_ navigationItem:UIView){
+        func makeRightNavigationItem(_ navigationItem:UIView,left:Bool){
             
             let item = UIBarButtonItem(customView: navigationItem)
             
             let spaceItem = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
             spaceItem.width = -10
-            self.navigationItem.rightBarButtonItem = item
-            self.navigationItem.rightBarButtonItems = [spaceItem,item]
             
-            if let left = self.navigationItem.rightBarButtonItem{
-                let offset = UIDevice.deviceType.rawValue > 3 ? -20 : -16
-                left.imageInsets = UIEdgeInsetsMake(0,CGFloat(offset),0, 8);
+            if left{
+
+                self.navigationItem.leftBarButtonItem = item
+                self.navigationItem.leftBarButtonItems = [spaceItem,item]
+                if let left = self.navigationItem.leftBarButtonItem{
+                    let offset = UIDevice.deviceType.rawValue > 3 ? -20 : -16
+                    left.imageInsets = UIEdgeInsetsMake(0,CGFloat(offset),0, 8);
+                }
+            }else{
+                self.navigationItem.rightBarButtonItem = item
+                self.navigationItem.rightBarButtonItems = [spaceItem,item]
+                if let left = self.navigationItem.rightBarButtonItem{
+                    let offset = UIDevice.deviceType.rawValue > 3 ? -20 : -16
+                    left.imageInsets = UIEdgeInsetsMake(0,CGFloat(offset),0, 8);
+                }
             }
-            
+        
         }
         
         

@@ -14,6 +14,9 @@ class BSPhoneLoginViewController: BSBaseViewController {
     @IBOutlet weak var tfPhone: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnPassword: UIButton!
+    
+    private var loginViewModel : BSLoginViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "登录"
@@ -25,21 +28,11 @@ class BSPhoneLoginViewController: BSBaseViewController {
             VCRouter.toRegistVC()
         }
         
-        //判断手机是否合法
-        let phoneValid = tfPhone.rx.text
-            .map{$0!.characters.count > 0 && $0!.characters.count <= 11 }
-            .shareReplay(1)
+        self.loginViewModel =
+            BSLoginViewModel.init(input: (username: self.tfPhone.rx.text.orEmpty.asDriver(), password: self.tfPassword.rx.text.orEmpty.asDriver()))
         
-        //判断密码是否合法
-        let passwordValid = tfPassword.rx.text
-            .map{$0!.characters.count >= 6 && $0!.characters.count < 16 }  //map函数 对text进行处理
-            .shareReplay(1)
-        // 手机合法 且 密码 合法 ---- 集合
-        let everythingValid = Observable.combineLatest(phoneValid, passwordValid) { (usernameValid, passwordValid) -> Bool in
-            usernameValid && passwordValid
-        }
-        
-        everythingValid.subscribe(onNext: { [unowned self](isTrue) in
+
+        self.loginViewModel?.signInEnabled.drive(onNext: { [unowned self](isTrue) in
             if isTrue {
                 self.btnLogin.backgroundColor = BSBtnColor
                 self.btnLogin.setTitleColor(UIColor.white, for: .normal)
@@ -48,8 +41,10 @@ class BSPhoneLoginViewController: BSBaseViewController {
                 self.btnLogin.setTitleColor(UIColor.init(hexString: "c1c5cc"), for: .normal)
             }
         }).addDisposableTo(rx_disposeBag)
+      
         // 控制btnLogin 是否可点击
-        everythingValid.bind(to: btnLogin.rx.isEnabled).addDisposableTo(rx_disposeBag)
+//        everythingValid.bind(to: btnLogin.rx.isEnabled).addDisposableTo(rx_disposeBag)
+         self.loginViewModel?.signInEnabled.asObservable().bind(to: btnLogin.rx.isEnabled).addDisposableTo(rx_disposeBag)
         // btnLogin 点击监听
         btnLogin.rx.tap.subscribe(onNext: {  [weak self]in
             print("登录按钮")

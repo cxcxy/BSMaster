@@ -43,7 +43,8 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         self.tableView.emptyDataSetSource   = self
         tableView.estimatedRowHeight        = estimatedRowHeight ?? 44
         tableView.rowHeight                 = UITableViewAutomaticDimension
-        self.tableView.separatorColor       = SeprateColor
+        self.tableView.separatorStyle       = .none
+//        self.tableView.separatorColor       = SeprateColor
         self.tableView.mj_header            = mj_header
         self.tableView.keyboardDismissMode  = .onDrag
         

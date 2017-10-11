@@ -5,7 +5,9 @@ target 'BSMaster' do
 	use_frameworks!
 
    	pod 'Moya' , '~> 8.0.5'
-	pod 'Moya/RxSwift'
+	pod 'Moya/RxSwift', '~> 8.0.5'
+    pod 'RxSwift', '~> 3.5.0'
+    pod 'RxCocoa', '~> 3.5.0'
     pod 'Alamofire'
 	pod 'RxDataSources'
     pod 'SnapKit', '~> 3.0.0'

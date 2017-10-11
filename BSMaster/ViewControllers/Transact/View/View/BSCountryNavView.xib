@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="oo3-TM-VgO" customClass="BSCountryNavView" customModule="BSMaster" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="20"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVi-AL-ltO">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down" translatesAutoresizingMaskIntoConstraints="NO" id="GYw-fL-TXK">
+                    <rect key="frame" x="40" y="7" width="10" height="6"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="6" id="0KC-12-776"/>
+                        <constraint firstAttribute="width" constant="10" id="Wiy-mB-FZL"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="GYw-fL-TXK" firstAttribute="leading" secondItem="oVi-AL-ltO" secondAttribute="trailing" id="4Qs-cA-WCq"/>
+                <constraint firstAttribute="bottom" secondItem="oVi-AL-ltO" secondAttribute="bottom" id="LcA-Um-0eq"/>
+                <constraint firstItem="GYw-fL-TXK" firstAttribute="centerY" secondItem="oo3-TM-VgO" secondAttribute="centerY" id="O6M-L5-9dK"/>
+                <constraint firstItem="oVi-AL-ltO" firstAttribute="leading" secondItem="oo3-TM-VgO" secondAttribute="leading" id="R2J-6Q-vMX"/>
+                <constraint firstItem="oVi-AL-ltO" firstAttribute="top" secondItem="oo3-TM-VgO" secondAttribute="top" id="ijI-yd-e2k"/>
+                <constraint firstAttribute="trailing" secondItem="GYw-fL-TXK" secondAttribute="trailing" id="zeL-4z-Jsb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-409" y="-367"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="down" width="9" height="5"/>
+    </resources>
+</document>

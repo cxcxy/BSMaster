@@ -11,6 +11,8 @@ import Moya
 
 
 public enum RequestApi{
+    case api_Login(params: [String: Any])
+    case api_register(params: [String: Any])
     
 }
 let provider = RxMoyaProvider<RequestApi>()
@@ -18,8 +20,7 @@ extension RequestApi:TargetType{
 
     public func headers() -> [String: String] {
         var assigned: [String: String] = [:]
-        
-        assigned += ["User-Agent": getUserAgent()]
+
         return assigned
     }
     
@@ -32,24 +33,29 @@ extension RequestApi:TargetType{
     }
     
     public var path:String{
-      
-       return ""
+        switch self {
+        case .api_Login:
+            return API.URL_Login
+        case .api_register:
+            return API.URL_Register
+        }
+
     
     }
     
     public var method:Moya.Method{
-//        switch self {
-        
-//        default:
             return .post
-//        }
-        
     }
     
     public var parameters:[String: Any]?{
- 
-        return nil
-        
+        var params = [String: Any]()
+        switch self {
+        case let .api_Login(param):
+             params =  param
+        case let .api_register(param):
+            params =  param
+        }
+        return params
     }
     
     //  单元测试用

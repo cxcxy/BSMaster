@@ -11,7 +11,7 @@ import ObjectMapper
 import Moya
 
 typealias FailClosure               = (_ errorMsg:String?) -> ()
-typealias SuccessClosure            = (_ result:AnyObject, _ code: String?) ->()
+typealias SuccessClosure            = (_ result:AnyObject, _ code: Int?,_ message: String?) ->()
 
 enum RequestCode:String{
     
@@ -23,14 +23,14 @@ enum RequestCode:String{
 //MARK:前后端约定的返回数据结构
 class ReturnInfo: Mappable {
     var data:AnyObject? //若返回无数据，returnObject字段也得带上,可为空值
-    var code: String?
+    var code: Int?
     var message: String?
     required init?(map: Map) {
     }
     func mapping(map: Map) {
         data          <-    map["data"]
-        code          <-    map["resCode"]
-        message       <-    map["resMsg"]
+        code          <-    map["code"]
+        message       <-    map["msg"]
     }
 }
 class BSNetManager {
@@ -40,8 +40,9 @@ class BSNetManager {
         let method = target.method
         let parameters = target.parameters
         let endpoint = Endpoint<RequestApi>(url: target.baseURL.appendingPathComponent(target.path).absoluteString, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: method, parameters: parameters, parameterEncoding: target.parameterEncoding)
-        return endpoint.adding(newHTTPHeaderFields: target.headers())
+        return endpoint
     }
+    
     let requestProvider = MoyaProvider<RequestApi>(endpointClosure: BSNetManager.endpointClosure)
     
     func requestWithTarget(
@@ -50,7 +51,7 @@ class BSNetManager {
         failClosure:@escaping FailClosure
         ){
         
-        print("request target 请求的URL：",target.path,"\n请求的参数： ",target.parameters ?? "","\n",BSNetManager.endpointClosure(target: target).httpHeaderFields ?? ["":""])
+        print("request target 请求的URL：",target.path,"\n请求的参数： ",target.parameters ?? "","\n")
         
         _ =  requestProvider.request(target) { (result) in
 
@@ -70,7 +71,7 @@ class BSNetManager {
                 
                 if let code = info?.code{
                     
-                    guard code == RequestCode.Success.rawValue else{
+                    guard code == 200 else{
                        
                         failClosure(info?.message)
                         
@@ -82,7 +83,7 @@ class BSNetManager {
                 }
 
                 let res = info?.data ?? [] as AnyObject
-                successClosure(res, info?.code)
+                successClosure(res, info?.code,info?.message)
                 
             case .failure(_):
                 failClosure("网络错误")
