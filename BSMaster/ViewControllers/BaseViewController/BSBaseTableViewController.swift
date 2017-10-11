@@ -26,7 +26,7 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
     func setCustomerBack() {
         if let count = navigationController?.viewControllers.count {
             if count > 1 {
-                let item = UIBarButtonItem(image:UIImage(named: "nav_backArrow"), style:.plain, target: self, action:#selector(navBack))
+                let item = UIBarButtonItem(image:UIImage(named: "nav_Back"), style:.plain, target: self, action:#selector(navBack))
                 navigationItem.leftBarButtonItem = item
             }
         }

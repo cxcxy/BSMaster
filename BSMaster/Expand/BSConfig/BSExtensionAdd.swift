@@ -248,7 +248,7 @@ public extension UIButton{
                     })
                     
                 } else {
-                    let content = "重新获取" + "（\((time - 1) % 60)s）"
+                    let content = "\((time - 1) % 60)s再次发送"
                     DispatchQueue.main.async(execute: { () -> Void in
                         
                         strongSelf.backgroundColor = countBGColor

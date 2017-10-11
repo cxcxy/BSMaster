@@ -15,6 +15,7 @@ class BSRegistViewController: BSBaseViewController {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btnSelector: UIButton!
     @IBOutlet weak var btnNext: BSNextBtn!
+    @IBOutlet weak var btnMsgCode: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "注册"
@@ -61,7 +62,7 @@ class BSRegistViewController: BSBaseViewController {
         // 控制btnLogin 是否可点击
         everythingValid.bind(to: btnNext.rx.isEnabled).addDisposableTo(rx_disposeBag)
         // btnLogin 点击监听
-        btnNext.rx.tap.subscribe(onNext: {  [unowned self]in
+        btnNext.rx.tap.subscribe(onNext: { [unowned self] in
             print("登录按钮")
         }).addDisposableTo(rx_disposeBag)
         
@@ -69,7 +70,10 @@ class BSRegistViewController: BSBaseViewController {
         btnSelector.rx.tap.subscribe(onNext: {
             selectorObser.value = !selectorObser.value
         }).addDisposableTo(rx_disposeBag)
-        
+        // 获取验证码
+        btnMsgCode.rx.tap.subscribe(onNext: { [unowned self] in
+            self.btnMsgCode.startTimer(60, title: "获取验证码", mainBGColor: UIColor.white, mainTitleColor: BSBtnColor, countBGColor: UIColor.white, countTitleColor: MGRgb(128, g: 128, b: 128), handle: nil)
+        }).addDisposableTo(rx_disposeBag)
         
     }
     @IBAction func nextAction(_ sender: Any) {

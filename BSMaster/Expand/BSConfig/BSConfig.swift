@@ -41,10 +41,10 @@ let SeprateColor = UIColor.blue // 系统分割线颜色
 
 //MARK: 导航栏背景色
 
-let BSNavColor = UIColor.init(hexString: "1798f2")
+let BSNavColor = UIColor.init(hexString: "1798f2")!
 //MARK: 下一步按钮背景色
 
-let BSBtnColor = UIColor.init(hexString: "38a1f3")
+let BSBtnColor = UIColor.init(hexString: "38a1f3")!
 //MARK: 控件描边颜色
 
 let BSBorderColor = UIColor.init(hexString: "c4c7ce")!

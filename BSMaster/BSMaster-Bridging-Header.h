@@ -13,6 +13,7 @@
 @import DZNEmptyDataSet;
 @import EZSwiftExtensions;
 @import Kingfisher;
+@import IQKeyboardManagerSwift;
 //@import ESTabBar;
 
 //#import <KMNavigationBarTransition/UINavigationController+KMNavigationBarTransition.h>

@@ -52,7 +52,7 @@
                         <viewControllerLayoutGuide type="top" id="Kk5-7y-qUH"/>
                         <viewControllerLayoutGuide type="bottom" id="wsm-VE-XnI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="T7L-bg-aH2">
+                    <view key="view" contentMode="scaleToFill" id="T7L-bg-aH2" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -318,7 +318,7 @@
                         <viewControllerLayoutGuide type="top" id="maW-Yr-Chg"/>
                         <viewControllerLayoutGuide type="bottom" id="xrP-kB-18k"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uGT-KD-oIc">
+                    <view key="view" contentMode="scaleToFill" id="uGT-KD-oIc" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -419,7 +419,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acA-7Z-UTj">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acA-7Z-UTj">
                                         <rect key="frame" x="248" y="3" width="67" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="获取验证码">
@@ -541,6 +541,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnMsgCode" destination="acA-7Z-UTj" id="UjR-RT-D7U"/>
                         <outlet property="btnNext" destination="fAj-Li-7QG" id="YRz-kq-RKS"/>
                         <outlet property="btnSelector" destination="hHj-mo-iug" id="8cm-gD-SpG"/>
                         <outlet property="tfCode" destination="jUg-cK-1CR" id="htG-hm-z3j"/>
