@@ -6,7 +6,10 @@
 //  Copyright © 2017年 陈旭. All rights reserved.
 //
 import UIKit
-
+struct BSMeIcon {
+    let icon : String
+    let title : String
+}
 class BSMyViewController: BSBaseTableViewController {
 
     override func viewDidLoad() {
@@ -21,7 +24,12 @@ class BSMyViewController: BSBaseTableViewController {
         tableView.dataSource    = nil
         tableView.cellId_register("BSMyTableViewCell")
         tableView.cellId_register("BAMySetTableViewCell")
+        tableView.separatorStyle = .singleLine
+        tableView.separatorColor = BSCellLineColor
         
+        makeCustomerImageNavigationItem("me_setting", left: false) {
+            print("设置")
+        }
         dataSource.configureCell = {[weak self](_ , tableView , indexPath , element) in
 //            guard let `self` = self else { return  UITableViewCell() }
             
@@ -30,6 +38,7 @@ class BSMyViewController: BSBaseTableViewController {
                 return cell
             }else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BAMySetTableViewCell", for: indexPath) as! BAMySetTableViewCell
+                cell.iconModel = element as! BSMeIcon
                 return cell
             }
         }
@@ -49,14 +58,16 @@ class BSMyViewController: BSBaseTableViewController {
             switch section ?? 0 {
                 case 0:
                     switch row ?? 0{
-                    case 0:   VCRouter.toADVC(.Adverted)
+                    case 1:   VCRouter.toADVC(.Adverted)
                     default:
                         break
                 }
                 case 1:
                     switch row ?? 0{
-                    case 0: VCRouter.toADVC(.Trust)
-                        
+                    case 0: VCRouter.toSuggestVC()
+                    case 1: VCRouter.toAboutMeVC()
+                    case 2: VCRouter.toCenterVC()
+                    case 3: self.exitLogin()
                     default:
                         break
                 }
@@ -73,10 +84,27 @@ class BSMyViewController: BSBaseTableViewController {
 
             }.addDisposableTo(rx_disposeBag)
         
-        dataArr.value.append(SectionModel.init(model: "one", items: [1,2,3]))
-        dataArr.value.append(SectionModel.init(model: "two", items: [1,2]))
-        dataArr.value.append(SectionModel.init(model: "Three", items: [1,2,3,4]))
         
+        dataArr.value.append(SectionModel.init(model: "one", items: [BSMeIcon.init(icon: "", title: ""),
+                                                                     BSMeIcon.init(icon: "me_ad", title: "我的广告"),
+                                                                     BSMeIcon.init(icon: "me_friend", title: "邀请好友")]))
+        
+        dataArr.value.append(SectionModel.init(model: "two", items: [BSMeIcon.init(icon: "me_suggest", title: "建议反馈"),
+                                                                     BSMeIcon.init(icon: "me_about", title: "关于我们"),
+                                                                     BSMeIcon.init(icon: "me_center", title: "客服中心"),
+                                                                     BSMeIcon.init(icon: "me_out", title: "退出登录")]))
+    
+        
+    }
+    func exitLogin() {
+        let alertController: UIAlertController = UIAlertController(title: "退出登录", message: "你确定要退出登录吗", preferredStyle: .alert)
+        let cancelAction: UIAlertAction = UIAlertAction(title: "取消", style:.cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        let sureAction: UIAlertAction = UIAlertAction(title: "确定", style: .default) { action -> Void in
+            print("退出登录")
+        }
+        alertController.addAction(sureAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

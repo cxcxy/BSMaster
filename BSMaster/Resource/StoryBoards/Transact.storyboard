@@ -131,6 +131,53 @@
             </objects>
             <point key="canvasLocation" x="232.80000000000001" y="-762.36881559220399"/>
         </scene>
+        <!--Post View Controller-->
+        <scene sceneID="nxJ-1W-xl0">
+            <objects>
+                <viewController storyboardIdentifier="BSPostViewController" id="h64-Qr-sem" customClass="BSPostViewController" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Gq-lw-QBd"/>
+                        <viewControllerLayoutGuide type="bottom" id="3AU-hd-ppT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tGj-xS-fUV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="STe-Y5-xnx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E0-Yn-LT3">
+                                <rect key="frame" x="35" y="617" width="305" height="50"/>
+                                <color key="backgroundColor" red="0.090196078431372548" green="0.59607843137254901" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5cg-Iv-Rze"/>
+                                </constraints>
+                                <state key="normal" title="发布">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4E0-Yn-LT3" firstAttribute="leading" secondItem="tGj-xS-fUV" secondAttribute="leading" constant="35" id="Ffx-0U-oZA"/>
+                            <constraint firstAttribute="trailing" secondItem="STe-Y5-xnx" secondAttribute="trailing" id="aEf-lB-C5q"/>
+                            <constraint firstItem="3AU-hd-ppT" firstAttribute="top" secondItem="4E0-Yn-LT3" secondAttribute="bottom" id="nKc-Ss-0JK"/>
+                            <constraint firstItem="4E0-Yn-LT3" firstAttribute="top" secondItem="STe-Y5-xnx" secondAttribute="bottom" id="qPX-LB-8oK"/>
+                            <constraint firstItem="STe-Y5-xnx" firstAttribute="top" secondItem="5Gq-lw-QBd" secondAttribute="bottom" id="s0p-dS-uH9"/>
+                            <constraint firstAttribute="trailing" secondItem="4E0-Yn-LT3" secondAttribute="trailing" constant="35" id="uZz-PR-Cyd"/>
+                            <constraint firstItem="STe-Y5-xnx" firstAttribute="leading" secondItem="tGj-xS-fUV" secondAttribute="leading" id="vXz-vJ-iFq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPost" destination="4E0-Yn-LT3" id="9YX-SQ-MBe"/>
+                        <outlet property="tableView" destination="STe-Y5-xnx" id="p1C-ov-7AK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBK-lv-aCw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="-735"/>
+        </scene>
         <!--Transact View Controllers-->
         <scene sceneID="Lae-W4-wNh">
             <objects>

@@ -7,15 +7,21 @@
 //
 
 import UIKit
-
+typealias BSPostActionBlock = (_ isBuy:Bool) -> ()
 class BSMaskBuyView: UIView {
+    var clickBlock : BSPostActionBlock?
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBAction func postBuyAction(_ sender: Any) {
+
+        if let clickBlock = clickBlock {
+            clickBlock(true)
+        }
     }
-    */
+    
+    @IBAction func postSaleAction(_ sender: Any) {
 
+        if let clickBlock = clickBlock {
+            clickBlock(false)
+        }
+    }
 }

@@ -26,8 +26,8 @@ class BSBaseTabBar: ESTabBarController {
         self.didHijackHandler = {
             [weak tabBarController] tabbarController , viewController, index in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
-                print("11111")
-                let vc = BSPushMaskViewController()
+
+                let vc = BSPushMaskViewController() // 弹出 选择 出售 还是 购买 弹窗
                 tabbarController.presentToMaskViewController(viewControllerToPresent: vc)
                 
             })
@@ -49,7 +49,7 @@ class BSBaseTabBar: ESTabBarController {
 
             
             if title.offset == 2 {
-               vc.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: UIImage(named: "photo_verybig"), selectedImage: UIImage(named: "photo_verybig"))
+               vc.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: UIImage(named: "closeBuy"), selectedImage: UIImage(named: "closeBuy"))
             }else{
                 vc.tabBarItem = ESTabBarItem.init(title: title.element,
                                                   image: UIImage(named: images[title.offset]),
@@ -80,7 +80,7 @@ class ExampleIrregularityContentView: ESTabBarItemContentView {
         self.imageView.backgroundColor      = BSNavColor
         self.imageView.layer.borderWidth    = 3.0
         self.imageView.layer.borderColor    = UIColor.white.cgColor
-        self.imageView.layer.cornerRadius   = 35
+        self.imageView.layer.cornerRadius   = 30
         self.insets                     = UIEdgeInsetsMake(-32, 0, 0, 0)
         let transform = CGAffineTransform.identity
         self.imageView.transform = transform

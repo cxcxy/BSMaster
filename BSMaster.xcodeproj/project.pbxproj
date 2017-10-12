@@ -10,6 +10,15 @@
 		2D07A8371F8F1EBA00636188 /* BSBaseMackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07A8361F8F1EB900636188 /* BSBaseMackViewController.swift */; };
 		2D07A8391F8F329E00636188 /* BSMaskBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07A8381F8F329E00636188 /* BSMaskBuyView.swift */; };
 		2D07A83B1F8F32AC00636188 /* BSMaskBuyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D07A83A1F8F32AC00636188 /* BSMaskBuyView.xib */; };
+		2D07A83D1F8F40EB00636188 /* BSPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07A83C1F8F40EB00636188 /* BSPostViewController.swift */; };
+		2D07A8401F8F4F6F00636188 /* BSPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07A83E1F8F4F6F00636188 /* BSPostCell.swift */; };
+		2D07A8411F8F4F6F00636188 /* BSPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D07A83F1F8F4F6F00636188 /* BSPostCell.xib */; };
+		2D07A8491F8F545100636188 /* BSPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07A8481F8F545100636188 /* BSPostModel.swift */; };
+		2D07A84C1F8F5FE500636188 /* BSPostInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07A84A1F8F5FE500636188 /* BSPostInputCell.swift */; };
+		2D07A84D1F8F5FE500636188 /* BSPostInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D07A84B1F8F5FE500636188 /* BSPostInputCell.xib */; };
+		2D07A85E1F8F706600636188 /* BSPostHighTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07A85C1F8F706600636188 /* BSPostHighTableViewCell.swift */; };
+		2D07A85F1F8F706600636188 /* BSPostHighTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D07A85D1F8F706600636188 /* BSPostHighTableViewCell.xib */; };
+		2D07A8611F8F77AD00636188 /* BSDigitalCoinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07A8601F8F77AD00636188 /* BSDigitalCoinController.swift */; };
 		2D0C37431F8CAC0000EFF40E /* BSBuyCoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0C37451F8CAC0100EFF40E /* BSBuyCoinCell.xib */; };
 		2D0C37501F8CBDED00EFF40E /* BSBuyRemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C374E1F8CBDED00EFF40E /* BSBuyRemindCell.swift */; };
 		2D0C37531F8CC0F600EFF40E /* BSBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C37521F8CC0F600EFF40E /* BSBaseTableViewCell.swift */; };
@@ -18,6 +27,11 @@
 		2D423E9E1F8E15F200D38418 /* BSLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D423E9D1F8E15F200D38418 /* BSLoginViewModel.swift */; };
 		2D423EA01F8E46F200D38418 /* BSForgetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D423E9F1F8E46F200D38418 /* BSForgetPassViewController.swift */; };
 		2D423EA21F8E477F00D38418 /* BSResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D423EA11F8E477F00D38418 /* BSResetViewController.swift */; };
+		2D4E38E81F8F8F95004A16A4 /* BSAboutMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E38E71F8F8F95004A16A4 /* BSAboutMeController.swift */; };
+		2D4E38EA1F8F91F1004A16A4 /* BSCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E38E91F8F91F1004A16A4 /* BSCenterController.swift */; };
+		2D4E38EC1F8F92BC004A16A4 /* BSSuggestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E38EB1F8F92BC004A16A4 /* BSSuggestController.swift */; };
+		2D4E38EF1F8F9AC4004A16A4 /* BSSuggestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E38ED1F8F9AC4004A16A4 /* BSSuggestCell.swift */; };
+		2D4E38F01F8F9AC4004A16A4 /* BSSuggestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E38EE1F8F9AC4004A16A4 /* BSSuggestCell.xib */; };
 		2D5615131F8DA88800BB9C03 /* BSViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615121F8DA88800BB9C03 /* BSViewComponent.swift */; };
 		2D5615151F8DAA3300BB9C03 /* BSSetNickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */; };
 		2D5615511F8DFD4700BB9C03 /* BSCountryNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615501F8DFD4700BB9C03 /* BSCountryNavView.swift */; };
@@ -84,6 +98,15 @@
 		2D07A8361F8F1EB900636188 /* BSBaseMackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseMackViewController.swift; sourceTree = "<group>"; };
 		2D07A8381F8F329E00636188 /* BSMaskBuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMaskBuyView.swift; sourceTree = "<group>"; };
 		2D07A83A1F8F32AC00636188 /* BSMaskBuyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSMaskBuyView.xib; sourceTree = "<group>"; };
+		2D07A83C1F8F40EB00636188 /* BSPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPostViewController.swift; sourceTree = "<group>"; };
+		2D07A83E1F8F4F6F00636188 /* BSPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPostCell.swift; sourceTree = "<group>"; };
+		2D07A83F1F8F4F6F00636188 /* BSPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSPostCell.xib; sourceTree = "<group>"; };
+		2D07A8481F8F545100636188 /* BSPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPostModel.swift; sourceTree = "<group>"; };
+		2D07A84A1F8F5FE500636188 /* BSPostInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPostInputCell.swift; sourceTree = "<group>"; };
+		2D07A84B1F8F5FE500636188 /* BSPostInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSPostInputCell.xib; sourceTree = "<group>"; };
+		2D07A85C1F8F706600636188 /* BSPostHighTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPostHighTableViewCell.swift; sourceTree = "<group>"; };
+		2D07A85D1F8F706600636188 /* BSPostHighTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSPostHighTableViewCell.xib; sourceTree = "<group>"; };
+		2D07A8601F8F77AD00636188 /* BSDigitalCoinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSDigitalCoinController.swift; sourceTree = "<group>"; };
 		2D0C374B1F8CAC8D00EFF40E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/BSBuyCoinCell.xib"; sourceTree = "<group>"; };
 		2D0C374E1F8CBDED00EFF40E /* BSBuyRemindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBuyRemindCell.swift; sourceTree = "<group>"; };
 		2D0C37521F8CC0F600EFF40E /* BSBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +121,11 @@
 		2D423E9D1F8E15F200D38418 /* BSLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSLoginViewModel.swift; sourceTree = "<group>"; };
 		2D423E9F1F8E46F200D38418 /* BSForgetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSForgetPassViewController.swift; sourceTree = "<group>"; };
 		2D423EA11F8E477F00D38418 /* BSResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSResetViewController.swift; sourceTree = "<group>"; };
+		2D4E38E71F8F8F95004A16A4 /* BSAboutMeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSAboutMeController.swift; sourceTree = "<group>"; };
+		2D4E38E91F8F91F1004A16A4 /* BSCenterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSCenterController.swift; sourceTree = "<group>"; };
+		2D4E38EB1F8F92BC004A16A4 /* BSSuggestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSuggestController.swift; sourceTree = "<group>"; };
+		2D4E38ED1F8F9AC4004A16A4 /* BSSuggestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSuggestCell.swift; sourceTree = "<group>"; };
+		2D4E38EE1F8F9AC4004A16A4 /* BSSuggestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSSuggestCell.xib; sourceTree = "<group>"; };
 		2D5615121F8DA88800BB9C03 /* BSViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSViewComponent.swift; sourceTree = "<group>"; };
 		2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSetNickViewController.swift; sourceTree = "<group>"; };
 		2D5615501F8DFD4700BB9C03 /* BSCountryNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSCountryNavView.swift; sourceTree = "<group>"; };
@@ -184,6 +212,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D07A8471F8F543D00636188 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D07A8481F8F545100636188 /* BSPostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D07A84E1F8F60AC00636188 /* BSThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BSThirdParty;
+			sourceTree = "<group>";
+		};
 		2D423E9C1F8E15E100D38418 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +309,12 @@
 				2D0C37451F8CAC0100EFF40E /* BSBuyCoinCell.xib */,
 				2D0C374E1F8CBDED00EFF40E /* BSBuyRemindCell.swift */,
 				2D0C37561F8CC17E00EFF40E /* BSBuyRemindCell.xib */,
+				2D07A83E1F8F4F6F00636188 /* BSPostCell.swift */,
+				2D07A83F1F8F4F6F00636188 /* BSPostCell.xib */,
+				2D07A84A1F8F5FE500636188 /* BSPostInputCell.swift */,
+				2D07A84B1F8F5FE500636188 /* BSPostInputCell.xib */,
+				2D07A85C1F8F706600636188 /* BSPostHighTableViewCell.swift */,
+				2D07A85D1F8F706600636188 /* BSPostHighTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -309,6 +358,7 @@
 		2DDD35891F7DE39E005DED82 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				2D07A84E1F8F60AC00636188 /* BSThirdParty */,
 				2D61A4421F8B4C8300071D80 /* BSRoute */,
 				2DDD35911F7DE454005DED82 /* BSConfig */,
 				2DDD35901F7DE454005DED82 /* BSExtension */,
@@ -417,8 +467,8 @@
 		2DDD35D01F7E1EFB005DED82 /* Transact */ = {
 			isa = PBXGroup;
 			children = (
+				2D07A8471F8F543D00636188 /* Model */,
 				2DDD35E01F7E2043005DED82 /* ViewController */,
-				2DDD35E21F7E2043005DED82 /* Model */,
 				2DDD35DE1F7E2043005DED82 /* View */,
 				2DDD35DF1F7E2043005DED82 /* ViewModel */,
 			);
@@ -491,15 +541,10 @@
 				2DEF92461F7F2BF0001425CF /* BSTransactViewControllers.swift */,
 				2DE330631F7E28B700048D3D /* BSTransactViewController.swift */,
 				2DE3306F1F7E2EBC00048D3D /* BSTransactDetailViewController.swift */,
+				2D07A83C1F8F40EB00636188 /* BSPostViewController.swift */,
+				2D07A8601F8F77AD00636188 /* BSDigitalCoinController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		2DDD35E21F7E2043005DED82 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2DDD35E31F7E204B005DED82 /* Model */ = {
@@ -599,6 +644,8 @@
 				2D61A9C71F7F8494004AD2B8 /* BAMySetTableViewCell.xib */,
 				2D61A4D61F8B8E8700071D80 /* BSSettingCell.swift */,
 				2D61A4D71F8B8E8700071D80 /* BSSettingCell.xib */,
+				2D4E38ED1F8F9AC4004A16A4 /* BSSuggestCell.swift */,
+				2D4E38EE1F8F9AC4004A16A4 /* BSSuggestCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -616,6 +663,9 @@
 				2DE3305D1F7E288500048D3D /* BSMyViewController.swift */,
 				2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */,
 				2D61A4D41F8B89BD00071D80 /* BSSettingViewController.swift */,
+				2D4E38E71F8F8F95004A16A4 /* BSAboutMeController.swift */,
+				2D4E38E91F8F91F1004A16A4 /* BSCenterController.swift */,
+				2D4E38EB1F8F92BC004A16A4 /* BSSuggestController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -717,8 +767,10 @@
 				2DDD35FA1F7E20C3005DED82 /* Purse.storyboard in Resources */,
 				2D07A83B1F8F32AC00636188 /* BSMaskBuyView.xib in Resources */,
 				2D61A9C51F7F6D58004AD2B8 /* BSMyTableViewCell.xib in Resources */,
+				2D07A8411F8F4F6F00636188 /* BSPostCell.xib in Resources */,
 				2D61A9C91F7F8494004AD2B8 /* BAMySetTableViewCell.xib in Resources */,
 				2D0C37541F8CC17E00EFF40E /* BSBuyRemindCell.xib in Resources */,
+				2D4E38F01F8F9AC4004A16A4 /* BSSuggestCell.xib in Resources */,
 				2DDD357B1F7DD2E1005DED82 /* Assets.xcassets in Resources */,
 				2DDD35CD1F7E1B98005DED82 /* Transact.storyboard in Resources */,
 				2D61A4CD1F8B7D0B00071D80 /* Localizable.strings in Resources */,
@@ -726,7 +778,9 @@
 				2DDD35791F7DD2E1005DED82 /* Main.storyboard in Resources */,
 				2DDD35FC1F7E20CD005DED82 /* My.storyboard in Resources */,
 				2D61A9D01F8B0A19004AD2B8 /* Login.storyboard in Resources */,
+				2D07A85F1F8F706600636188 /* BSPostHighTableViewCell.xib in Resources */,
 				2D5615531F8DFD6500BB9C03 /* BSCountryNavView.xib in Resources */,
+				2D07A84D1F8F5FE500636188 /* BSPostInputCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +818,7 @@
 				"${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KMNavigationBarTransition/KMNavigationBarTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -786,6 +841,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZSwiftExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMNavigationBarTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMPlaceholderTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -830,9 +886,11 @@
 				2DDD35BD1F7DF324005DED82 /* BSUIViewController.swift in Sources */,
 				2DDD35C71F7E0C91005DED82 /* BSBaseNavigation.swift in Sources */,
 				2DDD35C91F7E0D59005DED82 /* BSBaseTabBar.swift in Sources */,
+				2D07A84C1F8F5FE500636188 /* BSPostInputCell.swift in Sources */,
 				2DDD35931F7DE489005DED82 /* BSConfig.swift in Sources */,
 				2DDD358F1F7DE3BF005DED82 /* BSBaseViewController.swift in Sources */,
 				2D6523C41F8CF82B00CB5B54 /* BSRegistViewController.swift in Sources */,
+				2D07A85E1F8F706600636188 /* BSPostHighTableViewCell.swift in Sources */,
 				2DEF92471F7F2BF0001425CF /* BSTransactViewControllers.swift in Sources */,
 				2DDD35761F7DD2E1005DED82 /* ViewController.swift in Sources */,
 				2D07A8371F8F1EBA00636188 /* BSBaseMackViewController.swift in Sources */,
@@ -846,19 +904,25 @@
 				2DDD35991F7DE91A005DED82 /* BSRequestApi.swift in Sources */,
 				2D61A4D81F8B8E8700071D80 /* BSSettingCell.swift in Sources */,
 				2D6523C21F8CF07D00CB5B54 /* BSExtensionAdd.swift in Sources */,
+				2D4E38EA1F8F91F1004A16A4 /* BSCenterController.swift in Sources */,
 				2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */,
 				2D0C37501F8CBDED00EFF40E /* BSBuyRemindCell.swift in Sources */,
 				2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */,
+				2D07A8401F8F4F6F00636188 /* BSPostCell.swift in Sources */,
 				2D07A8391F8F329E00636188 /* BSMaskBuyView.swift in Sources */,
 				2D423E9E1F8E15F200D38418 /* BSLoginViewModel.swift in Sources */,
 				2D61A9C41F7F6D58004AD2B8 /* BSMyTableViewCell.swift in Sources */,
+				2D4E38E81F8F8F95004A16A4 /* BSAboutMeController.swift in Sources */,
 				2D423EA01F8E46F200D38418 /* BSForgetPassViewController.swift in Sources */,
 				2D5615151F8DAA3300BB9C03 /* BSSetNickViewController.swift in Sources */,
 				2DE330681F7E2A2600048D3D /* UITableView+.swift in Sources */,
 				2DE330621F7E28A900048D3D /* BSOrderViewController.swift in Sources */,
+				2D07A8611F8F77AD00636188 /* BSDigitalCoinController.swift in Sources */,
 				2D6BDEA31F7E449F00E64452 /* NSObject+Rx.swift in Sources */,
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
+				2D4E38EF1F8F9AC4004A16A4 /* BSSuggestCell.swift in Sources */,
 				2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */,
+				2D4E38EC1F8F92BC004A16A4 /* BSSuggestController.swift in Sources */,
 				2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */,
 				2DE330641F7E28B700048D3D /* BSTransactViewController.swift in Sources */,
 				2DE330601F7E289A00048D3D /* BSMainViewController.swift in Sources */,
@@ -873,8 +937,10 @@
 				2DE3306A1F7E2BCE00048D3D /* String+.swift in Sources */,
 				2D61A9981F7F372E004AD2B8 /* BSSegmented.swift in Sources */,
 				2D5615131F8DA88800BB9C03 /* BSViewComponent.swift in Sources */,
+				2D07A83D1F8F40EB00636188 /* BSPostViewController.swift in Sources */,
 				2D6BDEA11F7E3BF400E64452 /* BSBaseTableViewController.swift in Sources */,
 				2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */,
+				2D07A8491F8F545100636188 /* BSPostModel.swift in Sources */,
 				2DDD35C01F7DF3BA005DED82 /* BSUtil.swift in Sources */,
 				2D61A4D51F8B89BD00071D80 /* BSSettingViewController.swift in Sources */,
 				2DE3306E1F7E2C5700048D3D /* UIView+.swift in Sources */,

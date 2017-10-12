@@ -21,6 +21,8 @@ target 'BSMaster' do
 	pod 'MJRefresh'
 	pod 'DZNEmptyDataSet'
     pod 'KMNavigationBarTransition'
+#    pod 'RSKPlaceholderTextView'
+    pod 'KMPlaceholderTextView', '~> 1.3.0'
 
 end
 

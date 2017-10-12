@@ -9,7 +9,14 @@
 import UIKit
 
 class BAMySetTableViewCell: BSBaseTableViewCell {
-
+    var iconModel : BSMeIcon! {
+        didSet{
+            imgIcon.image = UIImage.init(named: iconModel.icon)
+            lbTitle.text  = iconModel.title
+        }
+    }
+    @IBOutlet weak var imgIcon: UIImageView!
+    @IBOutlet weak var lbTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

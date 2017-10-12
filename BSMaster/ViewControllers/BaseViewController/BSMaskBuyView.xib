@@ -15,27 +15,35 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushBuy" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-bd-LG0">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhX-pk-mnd">
                     <rect key="frame" x="75" y="0.0" width="83" height="95"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="83" id="Ljh-1f-SoS"/>
-                        <constraint firstAttribute="height" constant="95" id="Nlz-fd-RhO"/>
+                        <constraint firstAttribute="height" constant="95" id="EGr-ZP-VND"/>
+                        <constraint firstAttribute="width" constant="83" id="Lnv-Bz-CzH"/>
                     </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushSale" translatesAutoresizingMaskIntoConstraints="NO" id="fwp-rx-SWQ">
-                    <rect key="frame" x="217" y="-0.5" width="83" height="95"/>
+                    <state key="normal" title="Button" image="pushBuy"/>
+                    <connections>
+                        <action selector="postBuyAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="ccX-dQ-Rwc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-48-bTd">
+                    <rect key="frame" x="217" y="0.0" width="83" height="95"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="95" id="QK1-Fb-ufM"/>
-                        <constraint firstAttribute="width" constant="83" id="T6Y-4L-2Q4"/>
+                        <constraint firstAttribute="width" constant="83" id="9UY-GN-AE2"/>
+                        <constraint firstAttribute="height" constant="95" id="T92-Tt-PnN"/>
                     </constraints>
-                </imageView>
+                    <state key="normal" title="Button" image="pushSale"/>
+                    <connections>
+                        <action selector="postSaleAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ope-Bk-Mr5"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="fwp-rx-SWQ" firstAttribute="centerY" secondItem="DDa-bd-LG0" secondAttribute="centerY" id="5Gd-cH-hBN"/>
-                <constraint firstAttribute="trailing" secondItem="fwp-rx-SWQ" secondAttribute="trailing" constant="75" id="GIe-KF-OWY"/>
-                <constraint firstItem="DDa-bd-LG0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="75" id="K3O-Xj-Nyy"/>
-                <constraint firstItem="DDa-bd-LG0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="XFX-An-UBE"/>
+                <constraint firstItem="tIY-48-bTd" firstAttribute="centerY" secondItem="uhX-pk-mnd" secondAttribute="centerY" id="8uc-bv-11W"/>
+                <constraint firstAttribute="trailing" secondItem="tIY-48-bTd" secondAttribute="trailing" constant="75" id="Grn-od-IHg"/>
+                <constraint firstItem="uhX-pk-mnd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="75" id="Uyb-9q-dUo"/>
+                <constraint firstItem="uhX-pk-mnd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eUg-eb-yEZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-225.5" y="-182.5"/>

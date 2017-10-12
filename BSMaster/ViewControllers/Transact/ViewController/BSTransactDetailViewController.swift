@@ -21,6 +21,11 @@ class BSTransactDetailViewController: BSBaseViewController {
         }
         tableView.delegate      = nil
         tableView.dataSource    = nil
+        tableView.estimatedRowHeight        =  100
+        tableView.rowHeight                 = UITableViewAutomaticDimension
+        self.tableView.separatorStyle       = .none
+        self.tableView.keyboardDismissMode  = .onDrag
+        
         tableView.backgroundColor = tableColor
         tableView.cellId_register("BSBuyCoinCell")
         tableView.cellId_register("BSBuyRemindCell")
@@ -69,7 +74,17 @@ class BSTransactDetailViewController: BSBaseViewController {
     }
 }
 extension BSTransactDetailViewController:UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.01
+    }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return nil
     }
 }

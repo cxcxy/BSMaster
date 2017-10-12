@@ -94,6 +94,7 @@ class BSBaseMackViewController: UIViewController,CAAnimationDelegate {
 }
 
 class BSPushMaskViewController: BSBaseMackViewController {
+        var clickBlock : BSPostActionBlock?
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -101,11 +102,24 @@ class BSPushMaskViewController: BSBaseMackViewController {
     lazy var pushMaskView: BSMaskBuyView = {
         let view = BSMaskBuyView.loadFromNib()
         view.frame = CGRect.init(x: 0, y: MGScreenHeight - 190 - 75, w: MGScreenWidth, h: 95)
+        view.clickBlock = { [weak self](isBuy) in
+            if let strongSelf = self {
+                    strongSelf.dismissBtn()
+                    BSDelay.start(delay: dissDuration + 0.2, closure: { // 延时 跳转， 需要 等待 dismissBtn 的时间
+                        if isBuy {
+                            VCRouter.toPostVC(.Buy)
+                        }else {
+                            VCRouter.toPostVC(.Sale)
+                        }
+                    })
+                }
+         }
         return view
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.containsView = self.pushMaskView
+        
         
     }
 }

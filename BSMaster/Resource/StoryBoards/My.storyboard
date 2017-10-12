@@ -44,5 +44,186 @@
             </objects>
             <point key="canvasLocation" x="-890" y="-170"/>
         </scene>
+        <!--About Me Controller-->
+        <scene sceneID="GGV-Vl-w3a">
+            <objects>
+                <viewController storyboardIdentifier="BSAboutMeController" id="vVh-Nf-kZt" customClass="BSAboutMeController" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cgg-pJ-kNx"/>
+                        <viewControllerLayoutGuide type="bottom" id="n0Z-F7-Ue2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3hu-Gt-rp7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about-icon" translatesAutoresizingMaskIntoConstraints="NO" id="5gN-tT-aut">
+                                <rect key="frame" x="147" y="55" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="VWo-FV-BhT"/>
+                                    <constraint firstAttribute="height" constant="80" id="nS1-rf-JWx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoinMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsO-Sx-m8J">
+                                <rect key="frame" x="149.5" y="158" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v1.3.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylP-C2-L5j">
+                                <rect key="frame" x="168.5" y="193" width="37.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.50196078431372548" green="0.5490196078431373" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前也是最新版本" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IZ-p0-jIt">
+                                <rect key="frame" x="126" y="245" width="122.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.086274509803921567" green="0.56862745098039214" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-xs-J1C">
+                                <rect key="frame" x="15" y="323" width="345" height="1"/>
+                                <color key="backgroundColor" red="0.8666666666666667" green="0.88627450980392153" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="4SM-3f-VSv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU5-xr-za4">
+                                <rect key="frame" x="15" y="301" width="29" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.098039215686274508" green="0.10980392156862745" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTq-Qn-9Ua">
+                                <rect key="frame" x="329" y="296" width="31" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="9jA-Wa-GUF"/>
+                                </constraints>
+                                <state key="normal" title="复制"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNx-Hn-Axu">
+                                <rect key="frame" x="329" y="317" width="31" height="1"/>
+                                <color key="backgroundColor" red="0.086274509803921567" green="0.56862745098039214" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="RzK-8P-emS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coinmart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szZ-E7-Dsw">
+                                <rect key="frame" x="268.5" y="300" width="50.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.50196078431372548" green="0.5490196078431373" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4IZ-p0-jIt" firstAttribute="centerX" secondItem="ylP-C2-L5j" secondAttribute="centerX" id="1vq-SQ-e1W"/>
+                            <constraint firstItem="BNx-Hn-Axu" firstAttribute="trailing" secondItem="YTq-Qn-9Ua" secondAttribute="trailing" id="8nq-Uc-xmf"/>
+                            <constraint firstAttribute="trailing" secondItem="lOv-xs-J1C" secondAttribute="trailing" constant="15" id="8tr-BU-TaQ"/>
+                            <constraint firstItem="BNx-Hn-Axu" firstAttribute="leading" secondItem="YTq-Qn-9Ua" secondAttribute="leading" id="Bzg-U0-9aL"/>
+                            <constraint firstItem="FsO-Sx-m8J" firstAttribute="top" secondItem="5gN-tT-aut" secondAttribute="bottom" constant="23" id="CI1-Gl-xA3"/>
+                            <constraint firstItem="5gN-tT-aut" firstAttribute="top" secondItem="Cgg-pJ-kNx" secondAttribute="bottom" constant="35" id="CJM-i3-dL0"/>
+                            <constraint firstItem="4IZ-p0-jIt" firstAttribute="top" secondItem="ylP-C2-L5j" secondAttribute="bottom" constant="35" id="Dkt-TG-vbH"/>
+                            <constraint firstItem="5gN-tT-aut" firstAttribute="centerX" secondItem="3hu-Gt-rp7" secondAttribute="centerX" id="EIc-Sx-NJF"/>
+                            <constraint firstItem="YTq-Qn-9Ua" firstAttribute="trailing" secondItem="lOv-xs-J1C" secondAttribute="trailing" id="ETf-1B-Yrd"/>
+                            <constraint firstItem="lOv-xs-J1C" firstAttribute="top" secondItem="DU5-xr-za4" secondAttribute="bottom" constant="5" id="I0c-fY-qQH"/>
+                            <constraint firstItem="lOv-xs-J1C" firstAttribute="top" secondItem="4IZ-p0-jIt" secondAttribute="bottom" constant="60" id="JMF-Ys-Kki"/>
+                            <constraint firstItem="ylP-C2-L5j" firstAttribute="top" secondItem="FsO-Sx-m8J" secondAttribute="bottom" constant="14" id="KSI-qM-aq5"/>
+                            <constraint firstItem="ylP-C2-L5j" firstAttribute="centerX" secondItem="FsO-Sx-m8J" secondAttribute="centerX" id="TbK-Wc-aLr"/>
+                            <constraint firstItem="lOv-xs-J1C" firstAttribute="leading" secondItem="3hu-Gt-rp7" secondAttribute="leading" constant="15" id="VSt-zg-hQi"/>
+                            <constraint firstItem="FsO-Sx-m8J" firstAttribute="centerX" secondItem="5gN-tT-aut" secondAttribute="centerX" id="d2H-Bt-ajY"/>
+                            <constraint firstItem="DU5-xr-za4" firstAttribute="leading" secondItem="lOv-xs-J1C" secondAttribute="leading" id="gI1-1w-1OX"/>
+                            <constraint firstItem="YTq-Qn-9Ua" firstAttribute="bottom" secondItem="DU5-xr-za4" secondAttribute="bottom" id="rgm-kf-20s"/>
+                            <constraint firstItem="szZ-E7-Dsw" firstAttribute="centerY" secondItem="YTq-Qn-9Ua" secondAttribute="centerY" id="t56-xg-3RZ"/>
+                            <constraint firstItem="BNx-Hn-Axu" firstAttribute="bottom" secondItem="YTq-Qn-9Ua" secondAttribute="bottom" id="viD-68-cDb"/>
+                            <constraint firstItem="YTq-Qn-9Ua" firstAttribute="leading" secondItem="szZ-E7-Dsw" secondAttribute="trailing" constant="10" id="yBF-8B-2xL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZp-Mm-R8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223.19999999999999" y="-183.05847076461771"/>
+        </scene>
+        <!--Center Controller-->
+        <scene sceneID="0mQ-xo-VAd">
+            <objects>
+                <viewController storyboardIdentifier="BSCenterController" id="Mtp-Ys-2eZ" customClass="BSCenterController" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HuY-Gh-hvA"/>
+                        <viewControllerLayoutGuide type="bottom" id="WBQ-Lj-RDO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oZ4-fk-hKe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系我们" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3a-ZQ-wuC">
+                                <rect key="frame" x="15" y="45" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.098039215690000001" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在CoinMart遇到任何问题需要求助，可关注CoinMart官方微信客服，或CoinMart官方客服进行咨询。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpF-ck-Flr">
+                                <rect key="frame" x="15" y="78" width="345" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.50196078431372548" green="0.5490196078431373" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="官方微信：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZz-vN-ZOD">
+                                <rect key="frame" x="15" y="152.5" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.098039215690000001" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoinMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOe-XW-Ppu">
+                                <rect key="frame" x="107" y="153" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.50196078431372548" green="0.5490196078431373" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTr-2B-VK5">
+                                <rect key="frame" x="125" y="249" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="8BF-hJ-lbA"/>
+                                    <constraint firstAttribute="height" constant="125" id="QoU-pM-sl9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoinMart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayh-nJ-ri6">
+                                <rect key="frame" x="156" y="398" width="63.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.098039215690000001" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ayh-nJ-ri6" firstAttribute="top" secondItem="PTr-2B-VK5" secondAttribute="bottom" constant="24" id="8Rn-UK-8D6"/>
+                            <constraint firstItem="qZz-vN-ZOD" firstAttribute="top" secondItem="NpF-ck-Flr" secondAttribute="bottom" constant="41" id="LtA-Fl-AeG"/>
+                            <constraint firstItem="NpF-ck-Flr" firstAttribute="leading" secondItem="C3a-ZQ-wuC" secondAttribute="leading" id="QsR-pX-xMm"/>
+                            <constraint firstItem="qZz-vN-ZOD" firstAttribute="leading" secondItem="C3a-ZQ-wuC" secondAttribute="leading" id="RhM-EC-A0k"/>
+                            <constraint firstItem="aOe-XW-Ppu" firstAttribute="centerY" secondItem="qZz-vN-ZOD" secondAttribute="centerY" id="Ugg-tL-k9a"/>
+                            <constraint firstItem="PTr-2B-VK5" firstAttribute="centerX" secondItem="oZ4-fk-hKe" secondAttribute="centerX" id="UjI-UH-G7D"/>
+                            <constraint firstAttribute="trailing" secondItem="NpF-ck-Flr" secondAttribute="trailing" constant="15" id="VFj-Fh-iwh"/>
+                            <constraint firstItem="C3a-ZQ-wuC" firstAttribute="leading" secondItem="oZ4-fk-hKe" secondAttribute="leading" constant="15" id="bWM-Xf-8oL"/>
+                            <constraint firstItem="aOe-XW-Ppu" firstAttribute="leading" secondItem="qZz-vN-ZOD" secondAttribute="trailing" constant="5" id="czm-jk-w5c"/>
+                            <constraint firstItem="NpF-ck-Flr" firstAttribute="top" secondItem="C3a-ZQ-wuC" secondAttribute="bottom" constant="12" id="dow-EJ-R6Z"/>
+                            <constraint firstItem="PTr-2B-VK5" firstAttribute="top" secondItem="aOe-XW-Ppu" secondAttribute="bottom" constant="75" id="jpR-Wj-YL1"/>
+                            <constraint firstItem="ayh-nJ-ri6" firstAttribute="centerX" secondItem="PTr-2B-VK5" secondAttribute="centerX" id="mPk-V9-H77"/>
+                            <constraint firstItem="C3a-ZQ-wuC" firstAttribute="top" secondItem="HuY-Gh-hvA" secondAttribute="bottom" constant="25" id="xQx-P1-c1w"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uwr-Bg-yRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="-170"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="about-icon" width="80" height="80"/>
+    </resources>
 </document>
