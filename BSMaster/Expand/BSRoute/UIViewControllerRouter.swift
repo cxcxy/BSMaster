@@ -68,5 +68,11 @@ public class VCRouter {
         let vc = UIStoryboard.getStoryVC(.Transact, identifier: "BSTransactDetailViewController") as! BSTransactDetailViewController
         topVC?.pushVC(vc)
     }
+    //TODO: 弹出蒙层
+    public class func toPrensMaskVC(){
+        let vc = UIStoryboard.getStoryVC(.Transact, identifier: "BSTransactDetailViewController") as! BSTransactDetailViewController
+        let nav = BSBaseNavigation.init(rootViewController: vc)
+        topVC?.presentVC(nav)
+    }
 }
 

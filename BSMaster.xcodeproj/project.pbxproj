@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D07A8371F8F1EBA00636188 /* BSBaseMackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07A8361F8F1EB900636188 /* BSBaseMackViewController.swift */; };
+		2D07A8391F8F329E00636188 /* BSMaskBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07A8381F8F329E00636188 /* BSMaskBuyView.swift */; };
+		2D07A83B1F8F32AC00636188 /* BSMaskBuyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D07A83A1F8F32AC00636188 /* BSMaskBuyView.xib */; };
 		2D0C37431F8CAC0000EFF40E /* BSBuyCoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0C37451F8CAC0100EFF40E /* BSBuyCoinCell.xib */; };
 		2D0C37501F8CBDED00EFF40E /* BSBuyRemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C374E1F8CBDED00EFF40E /* BSBuyRemindCell.swift */; };
 		2D0C37531F8CC0F600EFF40E /* BSBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C37521F8CC0F600EFF40E /* BSBaseTableViewCell.swift */; };
@@ -78,6 +81,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D07A8361F8F1EB900636188 /* BSBaseMackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseMackViewController.swift; sourceTree = "<group>"; };
+		2D07A8381F8F329E00636188 /* BSMaskBuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMaskBuyView.swift; sourceTree = "<group>"; };
+		2D07A83A1F8F32AC00636188 /* BSMaskBuyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSMaskBuyView.xib; sourceTree = "<group>"; };
 		2D0C374B1F8CAC8D00EFF40E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/BSBuyCoinCell.xib"; sourceTree = "<group>"; };
 		2D0C374E1F8CBDED00EFF40E /* BSBuyRemindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBuyRemindCell.swift; sourceTree = "<group>"; };
 		2D0C37521F8CC0F600EFF40E /* BSBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -343,6 +349,9 @@
 				2DDD35C81F7E0D59005DED82 /* BSBaseTabBar.swift */,
 				2D61A9BE1F7F61DC004AD2B8 /* BSBaseSegmentedControl.swift */,
 				2D0C37521F8CC0F600EFF40E /* BSBaseTableViewCell.swift */,
+				2D07A8361F8F1EB900636188 /* BSBaseMackViewController.swift */,
+				2D07A8381F8F329E00636188 /* BSMaskBuyView.swift */,
+				2D07A83A1F8F32AC00636188 /* BSMaskBuyView.xib */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -706,6 +715,7 @@
 				2D61A4D91F8B8E8700071D80 /* BSSettingCell.xib in Resources */,
 				2DDD357E1F7DD2E1005DED82 /* LaunchScreen.storyboard in Resources */,
 				2DDD35FA1F7E20C3005DED82 /* Purse.storyboard in Resources */,
+				2D07A83B1F8F32AC00636188 /* BSMaskBuyView.xib in Resources */,
 				2D61A9C51F7F6D58004AD2B8 /* BSMyTableViewCell.xib in Resources */,
 				2D61A9C91F7F8494004AD2B8 /* BAMySetTableViewCell.xib in Resources */,
 				2D0C37541F8CC17E00EFF40E /* BSBuyRemindCell.xib in Resources */,
@@ -825,6 +835,7 @@
 				2D6523C41F8CF82B00CB5B54 /* BSRegistViewController.swift in Sources */,
 				2DEF92471F7F2BF0001425CF /* BSTransactViewControllers.swift in Sources */,
 				2DDD35761F7DD2E1005DED82 /* ViewController.swift in Sources */,
+				2D07A8371F8F1EBA00636188 /* BSBaseMackViewController.swift in Sources */,
 				2DE330701F7E2EBC00048D3D /* BSTransactDetailViewController.swift in Sources */,
 				2DDD35C21F7DF413005DED82 /* BSHud.swift in Sources */,
 				2D6BDE9E1F7E34DE00E64452 /* BSTransactCell.swift in Sources */,
@@ -838,6 +849,7 @@
 				2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */,
 				2D0C37501F8CBDED00EFF40E /* BSBuyRemindCell.swift in Sources */,
 				2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */,
+				2D07A8391F8F329E00636188 /* BSMaskBuyView.swift in Sources */,
 				2D423E9E1F8E15F200D38418 /* BSLoginViewModel.swift in Sources */,
 				2D61A9C41F7F6D58004AD2B8 /* BSMyTableViewCell.swift in Sources */,
 				2D423EA01F8E46F200D38418 /* BSForgetPassViewController.swift in Sources */,

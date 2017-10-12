@@ -14,6 +14,27 @@ class BSBaseTabBar: ESTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.shouldHijackHandler = {
+            tabbarController, viewController, index in
+            if index == 2 {
+                return true
+            }
+            return false
+            
+        }
+        self.didHijackHandler = {
+            [weak tabBarController] tabbarController , viewController, index in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+                print("11111")
+                let vc = BSPushMaskViewController()
+                tabbarController.presentToMaskViewController(viewControllerToPresent: vc)
+                
+            })
+            
+        }
+        
+        
         let storys          =   ["Transact","Order","Transact","Purse","My"]
         let images          =   ["tab_home","tab_shopping","tab_special","icon_brand","tab_me"]
         let imagesSelector  =   ["tab_home","tab_shopping","tab_special","icon_brand","tab_me"]
@@ -56,11 +77,11 @@ class ExampleIrregularityContentView: ESTabBarItemContentView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.imageView.backgroundColor = UIColor.init(red: 23/255.0, green: 149/255.0, blue: 158/255.0, alpha: 1.0)
-        self.imageView.layer.borderWidth = 3.0
-        self.imageView.layer.borderColor = UIColor.init(white: 235 / 255.0, alpha: 1.0).cgColor
-        self.imageView.layer.cornerRadius = 35
-        self.insets = UIEdgeInsetsMake(-32, 0, 0, 0)
+        self.imageView.backgroundColor      = BSNavColor
+        self.imageView.layer.borderWidth    = 3.0
+        self.imageView.layer.borderColor    = UIColor.white.cgColor
+        self.imageView.layer.cornerRadius   = 35
+        self.insets                     = UIEdgeInsetsMake(-32, 0, 0, 0)
         let transform = CGAffineTransform.identity
         self.imageView.transform = transform
         self.superview?.bringSubview(toFront: self)
