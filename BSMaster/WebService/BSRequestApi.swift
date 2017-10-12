@@ -13,15 +13,16 @@ import Moya
 public enum RequestApi{
     case api_Login(params: [String: Any])
     case api_register(params: [String: Any])
+    case api_forgetPass(params: [String: Any])
+    case api_changePass(params: [String: Any])
+    case api_registerFister(params: [String: Any])
     
 }
 let provider = RxMoyaProvider<RequestApi>()
 extension RequestApi:TargetType{
 
     public func headers() -> [String: String] {
-        var assigned: [String: String] = [:]
-
-        return assigned
+        return [:]
     }
     
     public var task: Task {
@@ -38,6 +39,12 @@ extension RequestApi:TargetType{
             return API.URL_Login
         case .api_register:
             return API.URL_Register
+        case .api_forgetPass:
+            return API.URL_ForgetPass
+        case .api_changePass:
+            return API.URL_ChangePass
+        case .api_registerFister:
+            return API.URL_RegisterFister
         }
 
     
@@ -53,6 +60,12 @@ extension RequestApi:TargetType{
         case let .api_Login(param):
              params =  param
         case let .api_register(param):
+            params =  param
+        case let .api_forgetPass(param):
+            params =  param
+        case let .api_changePass(param):
+            params =  param
+        case let .api_registerFister(param):
             params =  param
         }
         return params

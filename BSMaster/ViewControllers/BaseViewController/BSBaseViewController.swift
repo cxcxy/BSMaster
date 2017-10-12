@@ -25,7 +25,7 @@ class BSBaseViewController: UIViewController {
 
     }
     func setUI()  {
-//        self.view.backgroundColor = UIColor.red
+        self.view.backgroundColor = UIColor.white
     }
     func setCustomerBack() {
         if let count = navigationController?.viewControllers.count {

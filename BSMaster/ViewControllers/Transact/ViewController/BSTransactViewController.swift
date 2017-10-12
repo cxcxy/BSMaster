@@ -16,7 +16,7 @@ class BSTransactViewController: BSBaseTableViewController {
         tableView.delegate      = nil
         tableView.dataSource    = nil
         tableView.cellId_register("BSTransactCell")
-
+        
         dataSource.configureCell = {(_ , tableView , indexPath , element) in
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "BSTransactCell", for: indexPath) as! BSTransactCell
@@ -34,15 +34,8 @@ class BSTransactViewController: BSBaseTableViewController {
         
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-           
-//             let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSLoginViewController")
-//             let nav = UINavigationController.init(rootViewController: vc)
-//             self.presentVC(nav)
-//            let vc = BSTransactDetailViewController()
-//            self.pushVC(vc)
-            VCRouter.toLoginVC()
 
-            
+            VCRouter.toBuyCoinVC()
         }.addDisposableTo(rx_disposeBag)
         dataArr.value.append(SectionModel.init(model: "section", items: ["1","1","1","1","1","1","1","1","1","1","1"]))
         

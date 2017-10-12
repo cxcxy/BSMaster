@@ -27,8 +27,8 @@ public class VCRouter {
     //MARK: 跳转登录界面
    public class func toLoginVC(){
         let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSPhoneLoginViewController")
-//        let nav = UINavigationController.init(rootViewController: vc)
-        topVC?.pushVC(vc)
+        let nav = BSBaseNavigation.init(rootViewController: vc)
+        topVC?.presentVC(nav)
     }
     //MARK: 跳转注册界面
     public class func toRegistVC(){
@@ -36,8 +36,19 @@ public class VCRouter {
         topVC?.pushVC(vc)
     }
     //MARK: 跳转设置昵称界面
-    public class func toSetNickVC(){
-        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSSetNickViewController")
+    public class func toSetNickVC(_ model:RegisterModel){
+        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSSetNickViewController") as! BSSetNickViewController
+        vc.registerModel = model
+        topVC?.pushVC(vc)
+    }
+    //MARK: 跳转忘记密码界面
+    public class func toForgetPassVC(){
+        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSForgetPassViewController") as! BSForgetPassViewController
+        topVC?.pushVC(vc)
+    }
+    //MARK: 跳转重置密码界面
+    public class func toResetPassVC(){
+        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSResetViewController") as! BSResetViewController
         topVC?.pushVC(vc)
     }
     //MARK: 跳转设置界面
@@ -51,6 +62,11 @@ public class VCRouter {
         vc.controllerStyle = type
           topVC?.pushVC(vc)
     }
-    
+
+    //TODO: 购买 出售比特币
+    public class func toBuyCoinVC(){
+        let vc = UIStoryboard.getStoryVC(.Transact, identifier: "BSTransactDetailViewController") as! BSTransactDetailViewController
+        topVC?.pushVC(vc)
+    }
 }
 

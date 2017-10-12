@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BSBuyRemindCell: UITableViewCell {
+class BSBuyRemindCell: BSBaseTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

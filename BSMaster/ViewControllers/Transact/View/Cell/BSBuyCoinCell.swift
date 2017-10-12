@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BSBuyCoinCell: UITableViewCell {
+class BSBuyCoinCell: BSBaseTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

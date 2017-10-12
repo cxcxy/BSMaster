@@ -8,13 +8,20 @@
 
 import UIKit
 
-class BSTransactDetailViewController: BSBaseTableViewController {
+class BSTransactDetailViewController: BSBaseViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    let dataSource  = RxTableViewSectionedReloadDataSource<SectionModel<String,Any>>()
+    var dataArr =  Variable<[SectionModel<String,Any>]>([])
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "出售比特币"
+        makeCustomerNavigationItem("帮助", left: false) {
+            
+        }
         tableView.delegate      = nil
         tableView.dataSource    = nil
+        tableView.backgroundColor = tableColor
         tableView.cellId_register("BSBuyCoinCell")
         tableView.cellId_register("BSBuyRemindCell")
         
@@ -49,13 +56,20 @@ class BSTransactDetailViewController: BSBaseTableViewController {
         dataArr.value.append(SectionModel.init(model: "section", items: ["1"]))
         dataArr.value.append(SectionModel.init(model: "two", items: ["1"]))
     }
+    @IBAction func soldAction(_ sender: Any) {
+        
+        
+    }
+    @IBAction func contactAction(_ sender: Any) {
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
     }
 }
-extension BSTransactDetailViewController {
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+extension BSTransactDetailViewController:UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
     }
 }

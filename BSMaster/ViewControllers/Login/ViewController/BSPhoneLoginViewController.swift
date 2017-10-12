@@ -27,11 +27,13 @@ class BSPhoneLoginViewController: BSBaseViewController {
         makeCustomerNavigationItem("注册", left: false) {
             VCRouter.toRegistVC()
         }
-        
+        makeCustomerImageNavigationItem("close", left: true) {
+            self.navigationController?.dismissVC(completion: nil)
+        }
         self.loginViewModel =
-            BSLoginViewModel.init(input: (username: self.tfPhone.rx.text.orEmpty.asDriver(), password: self.tfPassword.rx.text.orEmpty.asDriver()))
+            BSLoginViewModel.init(input: (phoneNumber: self.tfPhone.rx.text.orEmpty.asDriver(), password: self.tfPassword.rx.text.orEmpty.asDriver()))
         
-
+        // 监测按钮是否可以点击
         self.loginViewModel?.signInEnabled.drive(onNext: { [unowned self](isTrue) in
             if isTrue {
                 self.btnLogin.backgroundColor = BSBtnColor
@@ -41,22 +43,28 @@ class BSPhoneLoginViewController: BSBaseViewController {
                 self.btnLogin.setTitleColor(UIColor.init(hexString: "c1c5cc"), for: .normal)
             }
         }).addDisposableTo(rx_disposeBag)
-      
-        // 控制btnLogin 是否可点击
-//        everythingValid.bind(to: btnLogin.rx.isEnabled).addDisposableTo(rx_disposeBag)
+       // 绑定到 btn 是否可点击状态
          self.loginViewModel?.signInEnabled.asObservable().bind(to: btnLogin.rx.isEnabled).addDisposableTo(rx_disposeBag)
-        // btnLogin 点击监听
+        // btnLogin 点击监听 请求登录接口
         btnLogin.rx.tap.subscribe(onNext: {  [weak self]in
-            print("登录按钮")
+            self?.requstLogin()
         }).addDisposableTo(rx_disposeBag)
-        btnPassword.rx.tap.subscribe(onNext: {  [weak self]in
-            print("忘记密码")
+        
+        // 点击忘记密码
+        btnPassword.rx.tap.subscribe(onNext: {
+            VCRouter.toForgetPassVC()
         }).addDisposableTo(rx_disposeBag)
         
       
         btnLogin.layer.cornerRadius         = 7.0
         
         
+    }
+    //MARK: 请求登录接口 
+    func requstLogin()  {
+        self.loginViewModel?.requestLoginData(self.tfPhone.text!, password: self.tfPassword.text!).subscribe(onNext: { (message) in
+            BSHud.showMsg(message)
+        }).addDisposableTo(rx_disposeBag)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

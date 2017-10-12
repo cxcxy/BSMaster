@@ -37,7 +37,7 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
     }
     func setUI(){
         
-        self.view.backgroundColor           = UIColor.white
+
         self.tableView.backgroundColor      = tableColor
         self.tableView.emptyDataSetDelegate = self
         self.tableView.emptyDataSetSource   = self

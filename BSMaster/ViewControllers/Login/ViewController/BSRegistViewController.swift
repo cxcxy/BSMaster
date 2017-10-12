@@ -16,6 +16,10 @@ class BSRegistViewController: BSBaseViewController {
     @IBOutlet weak var btnSelector: UIButton!
     @IBOutlet weak var btnNext: BSNextBtn!
     @IBOutlet weak var btnMsgCode: UIButton!
+    
+    private var registerViewModel : BSRegisterViewModel?
+    
+    @IBOutlet weak var viewRegistDelegate: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "注册"
@@ -23,35 +27,19 @@ class BSRegistViewController: BSBaseViewController {
     override func setUI() {
         super.setUI()
         
-        makeCustomerNavigationItem("登录", left: false) {
-           
-        }
-        //判断手机是否合法
-        let phoneValid = tfPhone.rx.text
-            .map{$0!.characters.count > 0 && $0!.characters.count <= 11 }
-            .shareReplay(1)
-        //判断验证码是否合法
-        let codeValid = tfCode.rx.text
-            .map{$0!.characters.count > 0 && $0!.characters.count <= 6 }
-            .shareReplay(1)
-        //判断密码是否合法
-        let passwordValid = tfPassword.rx.text
-            .map{ $0!.characters.count >= 6 && $0!.characters.count < 16 }
-            .shareReplay(1)
-    
         // 控制同意协议 按钮的状态
         let selectorObser = Variable(false)
         selectorObser.asObservable().bind(to: btnSelector.rx.isSelected).disposed(by: rx_disposeBag)
         
-        let checkBtnValid = selectorObser.asObservable().map { $0 }.shareReplay(1)
-
-        // 手机合法 且 密码 合法 ---- 集合
-        let everythingValid = Observable.combineLatest(phoneValid, passwordValid, codeValid,checkBtnValid) { (usernameValid, passwordValid, codeValid,checkBtnValid) -> Bool in
-            usernameValid && passwordValid && codeValid && checkBtnValid
-        }
+        self.registerViewModel =
+            BSRegisterViewModel.init(input: (phoneNumber: self.tfPhone.rx.text.orEmpty.asDriver(),
+                                             password: self.tfPassword.rx.text.orEmpty.asDriver(),
+                                             verCode:self.tfCode.rx.text.orEmpty.asDriver(),
+                                             isSelect:selectorObser.asDriver()))
         
-        everythingValid.subscribe(onNext: { [unowned self](isTrue) in
-            if isTrue && self.btnSelector.isSelected {
+        
+        self.registerViewModel?.nextInEnabled.drive(onNext: { [unowned self](isTrue) in
+            if isTrue {
                 self.btnNext.backgroundColor = BSBtnColor
                 self.btnNext.setTitleColor(UIColor.white, for: .normal)
             }else {
@@ -59,8 +47,10 @@ class BSRegistViewController: BSBaseViewController {
                 self.btnNext.setTitleColor(UIColor.init(hexString: "c1c5cc"), for: .normal)
             }
         }).addDisposableTo(rx_disposeBag)
-        // 控制btnLogin 是否可点击
-        everythingValid.bind(to: btnNext.rx.isEnabled).addDisposableTo(rx_disposeBag)
+        
+        // 控制btnNext 下一步 是否可点击
+         self.registerViewModel?.nextInEnabled.asObservable().bind(to: btnNext.rx.isEnabled).addDisposableTo(rx_disposeBag)
+    
         // btnLogin 点击监听
         btnNext.rx.tap.subscribe(onNext: { [unowned self] in
             print("登录按钮")
@@ -76,13 +66,31 @@ class BSRegistViewController: BSBaseViewController {
         }).addDisposableTo(rx_disposeBag)
         
     }
+    //MARK: 判断信息是否有效
     @IBAction func nextAction(_ sender: Any) {
         
-            VCRouter.toSetNickVC()
+        BSRegisterViewModel.requestRegisterFisterData(self.tfPhone.text!, type: "1", verCode: "123456", mobile_type: nil).subscribe(onNext: { [unowned self](message) in
+            BSLog(message)
+            self.toNextVC()
+        }).addDisposableTo(rx_disposeBag)
+        
         
     }
+    //MARK: 跳转 设置昵称的界面
+    func toNextVC(){
+        let registerData = RegisterModel.init(phone: self.tfPhone.text!, verCode: self.tfCode.text!, passwWord: self.tfPassword.text!)
+        
+        VCRouter.toSetNickVC(registerData)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+}
+public struct RegisterModel {
+    var phone: String
+    var verCode: String
+    var passwWord:String
 }

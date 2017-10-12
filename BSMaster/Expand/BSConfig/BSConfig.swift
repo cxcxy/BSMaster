@@ -35,7 +35,7 @@ public func BSRgb(_ r:CGFloat,g:CGFloat,b:CGFloat,alpha:CGFloat = 1) -> UIColor{
 }
 //MARK: 全局统一  Color  风格
     //TODO: 全局tableView 背景色
-let tableColor = UIColor.darkGray
+let tableColor =    MGRgb(238, g: 241, b: 243, alpha: 1.0)
 let SeprateColor = UIColor.blue // 系统分割线颜色
 
 

@@ -18,7 +18,10 @@ let urlItunes = "https://itunes.apple.com/cn/app/jian-jiao-she-ji/id1110300308?m
 
 /****************************API_URL接口**********************************/
 public struct API {
-    static let URL_Login = "Login/login"
-    static let URL_Register = "Login/register"
+    static let URL_Login            = "Login/login"
+    static let URL_Register         = "Login/register"
+    static let URL_RegisterFister   = "Login/first_step"
+    static let URL_ForgetPass       = "Login/forgot_pass"
+    static let URL_ChangePass       = "Login/changePwd"
 }
 

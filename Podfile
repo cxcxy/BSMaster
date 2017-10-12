@@ -5,9 +5,7 @@ target 'BSMaster' do
 	use_frameworks!
 
    	pod 'Moya' , '~> 8.0.5'
-	pod 'Moya/RxSwift', '~> 8.0.5'
-    pod 'RxSwift', '~> 3.5.0'
-    pod 'RxCocoa', '~> 3.5.0'
+	pod 'Moya/RxSwift'
     pod 'Alamofire'
 	pod 'RxDataSources'
     pod 'SnapKit', '~> 3.0.0'
@@ -23,7 +21,6 @@ target 'BSMaster' do
 	pod 'MJRefresh'
 	pod 'DZNEmptyDataSet'
     pod 'KMNavigationBarTransition'
-    pod 'PonyFrameworkOnSwift',:path => "PonyFrameworkOnSwift/PonyFrameworkOnSwift.podspec"
 
 end
 

@@ -47,15 +47,19 @@ class BSNetManager {
     
     func requestWithTarget(
         _ target:RequestApi,
+        isShowLoding:Bool = false,
         successClosure:@escaping SuccessClosure,
         failClosure:@escaping FailClosure
         ){
         
-        print("request target 请求的URL：",target.path,"\n请求的参数： ",target.parameters ?? "","\n")
+        if isShowLoding {
+            BSHud.showLoading()
+        }
         
+        BSLog("request target 请求的URL： \(target.path)\n请求的参数：\(target.parameters ?? [:])")
         _ =  requestProvider.request(target) { (result) in
 
-            
+            BSHud.dismiss()
             switch result{
                 
             case let .success(response):
@@ -68,7 +72,7 @@ class BSNetManager {
                 jsonString      = try! response.mapString()
                 
                 let info = Mapper<ReturnInfo>().map(JSONString:jsonString)
-                
+                BSLog(jsonString)
                 if let code = info?.code{
                     
                     guard code == 200 else{

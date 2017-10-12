@@ -17,8 +17,8 @@ struct BSHud {
             SVProgressHUD.setFadeOutAnimationDuration(0.0)
             SVProgressHUD.setDefaultStyle(.custom)
             SVProgressHUD.setDefaultMaskType(.clear)
-            SVProgressHUD.setForegroundColor(UIColor.black)
-            SVProgressHUD.setBackgroundColor(UIColor(white: 0.8, alpha: 0.8))
+            SVProgressHUD.setForegroundColor(UIColor.white)
+            SVProgressHUD.setBackgroundColor(MGRgb(0, g: 0, b: 0, alpha: 0.8))
             SVProgressHUD.show()
         }
         
@@ -36,7 +36,7 @@ struct BSHud {
             
             configSVHud()
             let msg = message ?? "网络错误"
-            SVProgressHUD.showInfo(withStatus: msg)
+            SVProgressHUD.showError(withStatus: msg)
         }
     }
   // 错误
@@ -53,9 +53,10 @@ struct BSHud {
         SVProgressHUD.setFadeOutAnimationDuration(0.0)
         SVProgressHUD.setDefaultMaskType(.clear)
         SVProgressHUD.setDefaultStyle(.custom)
-//        SVProgressHUD.setInfoImage(UIImage(named:"")!)
-        SVProgressHUD.setBackgroundColor(UIColor.black)
+        SVProgressHUD.setInfoImage(UIImage())
+        SVProgressHUD.setImageViewSize(CGSize.init(width: 0, height: 0))
         SVProgressHUD.setForegroundColor(UIColor.white)
+        SVProgressHUD.setBackgroundColor(MGRgb(0, g: 0, b: 0, alpha: 0.8))
         SVProgressHUD.setMinimumDismissTimeInterval(1.5)
     }
     static func configErrorSVHud(){
@@ -64,8 +65,8 @@ struct BSHud {
         SVProgressHUD.setDefaultMaskType(.clear)
         SVProgressHUD.setDefaultStyle(.custom)
 //        SVProgressHUD.setInfoImage(UIImage(named:"error")!)
-        SVProgressHUD.setBackgroundColor(UIColor.black)
         SVProgressHUD.setForegroundColor(UIColor.white)
+        SVProgressHUD.setBackgroundColor(MGRgb(0, g: 0, b: 0, alpha: 0.8))
         SVProgressHUD.setMinimumDismissTimeInterval(1.5)
     }
 }
