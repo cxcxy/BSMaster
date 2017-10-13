@@ -27,6 +27,9 @@ class BSMyViewController: BSBaseTableViewController {
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = BSCellLineColor
         
+        
+        
+        
         makeCustomerImageNavigationItem("me_setting", left: false) {
             print("设置")
         }

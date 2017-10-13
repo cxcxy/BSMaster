@@ -25,7 +25,7 @@ class BSBaseNavigation: UINavigationController {
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 16.0)];
         
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.shadowImage = UIImage.getImageWithColor(color: BSNavColor)
     }
     
     override func didReceiveMemoryWarning() {

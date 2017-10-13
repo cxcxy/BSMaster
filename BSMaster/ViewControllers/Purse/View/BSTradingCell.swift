@@ -8,13 +8,18 @@
 
 import UIKit
 
-class BSTradingCell: UITableViewCell {
+class BSTradingCell: BSBaseTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    @IBAction func clickDateAction(_ sender: Any) {
+        let view = BSSreenDateView.loadFromNib()
+        view.show()
+        
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
