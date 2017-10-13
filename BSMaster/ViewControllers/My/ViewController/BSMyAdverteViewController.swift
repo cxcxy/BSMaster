@@ -13,6 +13,7 @@ public enum BSSegmentStyle {
     case Trust      // 受信任的
     case Buy        // 我购买的
     case Sold       // 我出售的
+    case Search     // 搜索
     
 }
 class BSMyAdverteViewController: BSBaseSegmentedControl {
@@ -27,27 +28,39 @@ class BSMyAdverteViewController: BSBaseSegmentedControl {
 //        let s  = NSLocalizedString("aDES", comment: <#T##String#>)
         
         configTitleArray()
-        var vcArray:[UIViewController] = []
-        for _ in titleVCSegmentArray {
-            let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSPhoneLoginViewController")
-            vcArray.append(vc)
-        }
-        self.controllerArray  = vcArray
+
+       
         self.segmentStyle     = .headerView
         self.updateUI()
     }
     // 根据不同的界面配置不同的文字
     func configTitleArray()  {
         var titleArray:Array<String> = []
+        var vcArray:[UIViewController] = []
+        
         switch controllerStyle {
         case .Adverted:
             titleArray      = ["进行中","已下架"]
+            for _ in titleArray {
+                let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSPhoneLoginViewController")
+                vcArray.append(vc)
+            }
         case .Trust:
             titleArray      = ["您信任的人","信任您的人"]
         case .Buy,.Sold:
             titleArray      = ["进行中","已结束"]
+        case .Search:
+            self.title      = "搜索"
+            titleArray      = ["找广告","找用户"]
+
+            let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSSearchController")
+            let vcTwo = UIStoryboard.getStoryVC(.Login, identifier: "BSSearchUserController")
+            vcArray.append(vc)
+            vcArray.append(vcTwo)
+
         }
-        self.titleVCSegmentArray       = titleArray
+        self.titleVCSegmentArray        = titleArray
+        self.controllerArray            = vcArray
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

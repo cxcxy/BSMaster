@@ -83,14 +83,9 @@ class BSBaseSegmentedControl: BSBaseViewController {
     }
     //MARK: 展示 顶部 Title View
     func configHeaderView()  {
-        v.magicView.layoutStyle         = .divide
-        v.magicView.switchStyle         = .default
-        v.magicView.sliderWidth         = 50
-        v.magicView.itemWidth           = MGScreenWidth / 2
-        v.magicView.sliderColor         = UIColor.black
-        v.magicView.sliderHeight        = 3
-        v.magicView.isSeparatorHidden   = true
-        v.magicView.isSwitchAnimated    =  false
+        
+         v.magicView.navigationView.isHidden     = false
+        
     }
     //MARK: 更新整个界面的UI 展示界面元素
     func updateUI()  {
@@ -133,8 +128,8 @@ extension BSBaseSegmentedControl:VTMagicViewDataSource{
             let b               = UIButton(type: .custom)
             b.frame             = CGRect(x: 0, y: 0, width: width, height: 50)
             b.titleLabel!.font  =  UIFont.systemFont(ofSize: 14)
-            b.setTitleColor(UIColor.gray, for: UIControlState())
-            b.setTitleColor(UIColor.black, for: .selected)
+            b.setTitleColor(MGRgb(128, g: 140, b: 155), for: UIControlState())
+            b.setTitleColor(MGRgb(50, g: 164, b: 244), for: .selected)
             b.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
             
             return b
@@ -174,15 +169,15 @@ class VCVTMagic:VTMagicController{
     
     override func viewDidLoad() {
         
-        magicView.navigationColor           = UIColor.white
-        magicView.sliderColor               = UIColor.black
-        magicView.separatorColor            = UIColor(hexString: "#EAEAEA")
-        magicView.layoutStyle               = .divide
-        magicView.switchStyle               = .default
-        magicView.navigationHeight          = 40
-        magicView.sliderWidth               = 50
-        magicView.isMenuScrollEnabled       = true
-        magicView.isScrollEnabled           = true
+        magicView.navigationHeight    = 45
+        magicView.layoutStyle         = .divide
+        magicView.sliderStyle         = .default
+        magicView.itemWidth           = (MGScreenWidth - 30) / 2
+        magicView.sliderColor         = BSBtnColor
+        magicView.sliderHeight        = 2
+        magicView.separatorColor      = MGRgb(239, g: 243, b: 246)
+        magicView.separatorHeight     = 2
+        magicView.sliderWidth         = (MGScreenWidth - 30) / 2
         
     }
     

@@ -19,7 +19,7 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
         self.segmentStyle = .none
         
         makeCustomerImageNavigationItem("search_white", left: false) {
-            
+            VCRouter.toADVC(.Search)
         }
     }
     

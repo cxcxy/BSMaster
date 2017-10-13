@@ -23,6 +23,9 @@ class BSBaseNavigation: UINavigationController {
         self.navigationBar.tintColor = UIColor.white // 统一 导航条上面字体的颜色
         
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 16.0)];
+        
+        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationBar.shadowImage = UIImage()
     }
     
     override func didReceiveMemoryWarning() {

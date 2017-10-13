@@ -49,7 +49,7 @@ let BSBtnColor = UIColor.init(hexString: "1798f2")!
 //MARK: 控件描边颜色
 let BSBorderColor = UIColor.init(hexString: "c4c7ce")!
 
-//MARK: 控件描边颜色
+//MARK: tableViewCell Line颜色
 let BSCellLineColor = MGRgb(221, g: 226, b: 228)
 
 

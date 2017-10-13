@@ -24,6 +24,8 @@
 		2D0C37531F8CC0F600EFF40E /* BSBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C37521F8CC0F600EFF40E /* BSBaseTableViewCell.swift */; };
 		2D0C37541F8CC17E00EFF40E /* BSBuyRemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0C37561F8CC17E00EFF40E /* BSBuyRemindCell.xib */; };
 		2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */; };
+		2D3F9C4E1F904C0F0050CD57 /* BSSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F9C4D1F904C0F0050CD57 /* BSSearchController.swift */; };
+		2D3F9C501F9059CB0050CD57 /* BSSearchUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F9C4F1F9059CB0050CD57 /* BSSearchUserController.swift */; };
 		2D423E9E1F8E15F200D38418 /* BSLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D423E9D1F8E15F200D38418 /* BSLoginViewModel.swift */; };
 		2D423EA01F8E46F200D38418 /* BSForgetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D423E9F1F8E46F200D38418 /* BSForgetPassViewController.swift */; };
 		2D423EA21F8E477F00D38418 /* BSResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D423EA11F8E477F00D38418 /* BSResetViewController.swift */; };
@@ -118,6 +120,8 @@
 		2D0C375F1F8CD00100EFF40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BSBuyRemindCell.xib; sourceTree = "<group>"; };
 		2D0C37601F8CD03400EFF40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BSBuyCoinCell.xib; sourceTree = "<group>"; };
 		2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBuyCoinCell.swift; sourceTree = "<group>"; };
+		2D3F9C4D1F904C0F0050CD57 /* BSSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSearchController.swift; sourceTree = "<group>"; };
+		2D3F9C4F1F9059CB0050CD57 /* BSSearchUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSearchUserController.swift; sourceTree = "<group>"; };
 		2D423E9D1F8E15F200D38418 /* BSLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSLoginViewModel.swift; sourceTree = "<group>"; };
 		2D423E9F1F8E46F200D38418 /* BSForgetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSForgetPassViewController.swift; sourceTree = "<group>"; };
 		2D423EA11F8E477F00D38418 /* BSResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSResetViewController.swift; sourceTree = "<group>"; };
@@ -543,6 +547,8 @@
 				2DE3306F1F7E2EBC00048D3D /* BSTransactDetailViewController.swift */,
 				2D07A83C1F8F40EB00636188 /* BSPostViewController.swift */,
 				2D07A8601F8F77AD00636188 /* BSDigitalCoinController.swift */,
+				2D3F9C4D1F904C0F0050CD57 /* BSSearchController.swift */,
+				2D3F9C4F1F9059CB0050CD57 /* BSSearchUserController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -905,6 +911,7 @@
 				2D61A4D81F8B8E8700071D80 /* BSSettingCell.swift in Sources */,
 				2D6523C21F8CF07D00CB5B54 /* BSExtensionAdd.swift in Sources */,
 				2D4E38EA1F8F91F1004A16A4 /* BSCenterController.swift in Sources */,
+				2D3F9C4E1F904C0F0050CD57 /* BSSearchController.swift in Sources */,
 				2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */,
 				2D0C37501F8CBDED00EFF40E /* BSBuyRemindCell.swift in Sources */,
 				2DDD35951F7DE8F8005DED82 /* BSApiPath.swift in Sources */,
@@ -919,6 +926,7 @@
 				2DE330621F7E28A900048D3D /* BSOrderViewController.swift in Sources */,
 				2D07A8611F8F77AD00636188 /* BSDigitalCoinController.swift in Sources */,
 				2D6BDEA31F7E449F00E64452 /* NSObject+Rx.swift in Sources */,
+				2D3F9C501F9059CB0050CD57 /* BSSearchUserController.swift in Sources */,
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
 				2D4E38EF1F8F9AC4004A16A4 /* BSSuggestCell.swift in Sources */,
 				2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */,
