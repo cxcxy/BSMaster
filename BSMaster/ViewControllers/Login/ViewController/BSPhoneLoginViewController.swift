@@ -33,16 +33,6 @@ class BSPhoneLoginViewController: BSBaseViewController {
         self.loginViewModel =
             BSLoginViewModel.init(input: (phoneNumber: self.tfPhone.rx.text.orEmpty.asDriver(), password: self.tfPassword.rx.text.orEmpty.asDriver()))
         
-        // 监测按钮是否可以点击
-        self.loginViewModel?.signInEnabled.drive(onNext: { [unowned self](isTrue) in
-            if isTrue {
-                self.btnLogin.backgroundColor = BSBtnColor
-                self.btnLogin.setTitleColor(UIColor.white, for: .normal)
-            }else {
-                self.btnLogin.backgroundColor = UIColor.white
-                self.btnLogin.setTitleColor(UIColor.init(hexString: "c1c5cc"), for: .normal)
-            }
-        }).addDisposableTo(rx_disposeBag)
        // 绑定到 btn 是否可点击状态
          self.loginViewModel?.signInEnabled.asObservable().bind(to: btnLogin.rx.isEnabled).addDisposableTo(rx_disposeBag)
         // btnLogin 点击监听 请求登录接口
@@ -54,10 +44,6 @@ class BSPhoneLoginViewController: BSBaseViewController {
         btnPassword.rx.tap.subscribe(onNext: {
             VCRouter.toForgetPassVC()
         }).addDisposableTo(rx_disposeBag)
-        
-      
-        btnLogin.layer.cornerRadius         = 7.0
-        
         
     }
     //MARK: 请求登录接口 

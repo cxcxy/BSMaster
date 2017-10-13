@@ -11,7 +11,14 @@ struct BSMeIcon {
     let title : String
 }
 class BSMyViewController: BSBaseTableViewController {
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "我的"
@@ -20,18 +27,16 @@ class BSMyViewController: BSBaseTableViewController {
         self.automaticallyAdjustsScrollViewInsets = false
     }
     func configTable(){
-//        tableView.delegate      = nil
-//        tableView.dataSource    = nil
+
         tableView.cellId_register("BSMyTableViewCell")
         tableView.cellId_register("BAMySetTableViewCell")
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = BSCellLineColor
         
-        
-        
+        self.navigationController?.navigationBar.shadowImage = UIImage.getImageWithColor(color: BSNavColor)
         
         makeCustomerImageNavigationItem("me_setting", left: false) {
-            print("设置")
+            VCRouter.toSettingVC()
         }
         dataSource.configureCell = {[weak self](_ , tableView , indexPath , element) in
 //            guard let `self` = self else { return  UITableViewCell() }
@@ -49,9 +54,6 @@ class BSMyViewController: BSBaseTableViewController {
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
         
-//        tableView.rx
-//            .setDelegate(self)
-//            .addDisposableTo(rx_disposeBag)
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
 

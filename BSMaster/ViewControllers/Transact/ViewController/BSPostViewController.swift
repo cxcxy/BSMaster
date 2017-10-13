@@ -88,7 +88,7 @@ class BSPostViewController: BSBaseViewController {
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
 //            VCRouter.
-            VCRouter.toDigitaCpoinVC()
+            VCRouter.toTitleListVC(.DigitalCoin)
             //             let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSLoginViewController")
             //             let nav = UINavigationController.init(rootViewController: vc)
             //             self.presentVC(nav)

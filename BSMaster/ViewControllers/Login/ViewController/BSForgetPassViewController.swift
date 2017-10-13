@@ -34,15 +34,10 @@ class BSForgetPassViewController: BSBaseViewController {
             phoneValid  && codeValid
         }
         
-        everythingValid.subscribe(onNext: { [unowned self](isTrue) in
-            if isTrue {
-                self.btnNext.backgroundColor = BSBtnColor
-                self.btnNext.setTitleColor(UIColor.white, for: .normal)
-            }else {
-                self.btnNext.backgroundColor = UIColor.white
-                self.btnNext.setTitleColor(UIColor.init(hexString: "c1c5cc"), for: .normal)
-            }
-        }).addDisposableTo(rx_disposeBag)
+        // 控制btnNext 下一步 是否可点击
+        everythingValid.bind(to: btnNext.rx.isEnabled).addDisposableTo(rx_disposeBag)
+        
+
 
         
         // btnNext 点击监听

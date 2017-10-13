@@ -30,15 +30,28 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfd-dQ-cQz">
+                        <rect key="frame" x="15" y="48.5" width="290" height="1"/>
+                        <color key="backgroundColor" red="0.8666666666666667" green="0.88627450980392153" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="8qc-OA-iX3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="bfd-dQ-cQz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="1hP-eo-DW4"/>
                     <constraint firstItem="sp0-kD-QRs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="6Zp-zj-ItK"/>
                     <constraint firstAttribute="trailing" secondItem="waN-K1-LlN" secondAttribute="trailing" constant="15" id="ELP-dN-9VH"/>
                     <constraint firstItem="waN-K1-LlN" firstAttribute="leading" secondItem="sp0-kD-QRs" secondAttribute="trailing" id="Nf8-cf-XTm"/>
                     <constraint firstItem="waN-K1-LlN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RSe-NG-0tI"/>
                     <constraint firstAttribute="bottom" secondItem="sp0-kD-QRs" secondAttribute="bottom" constant="16.5" id="UyD-lb-7FL"/>
+                    <constraint firstAttribute="bottom" secondItem="bfd-dQ-cQz" secondAttribute="bottom" id="cXo-fO-pVh"/>
                     <constraint firstItem="sp0-kD-QRs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rOw-gc-GIu"/>
                     <constraint firstItem="sp0-kD-QRs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="vU4-Mk-Egd"/>
+                    <constraint firstAttribute="trailing" secondItem="bfd-dQ-cQz" secondAttribute="trailing" constant="15" id="wiO-sZ-FtA"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

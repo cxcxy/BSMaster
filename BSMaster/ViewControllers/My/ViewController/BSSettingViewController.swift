@@ -41,15 +41,15 @@ class BSSettingViewController: BSBaseTableViewController {
 //            .addDisposableTo(rx_disposeBag)
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-            
+
+            self.toVC(indexpath.element)
+          
             }.addDisposableTo(rx_disposeBag)
         
         let itemsOne = [SettingModel.init(title: "实名认证", subTitle: "未认证"),
                         SettingModel.init(title: "资金密码", subTitle: "已设置")]
         
-        let itemsTwo = [SettingModel.init(title: "绑定手机", subTitle: "已绑定"),
-                        SettingModel.init(title: "绑定邮箱", subTitle: "未绑定"),
-                        SettingModel.init(title: "登录密码", subTitle: "")]
+        let itemsTwo = [SettingModel.init(title: "登录密码", subTitle: "")]
         
         let itemsThree = [SettingModel.init(title: "语言", subTitle: "")]
         
@@ -58,6 +58,31 @@ class BSSettingViewController: BSBaseTableViewController {
         dataArr.value.append(SectionModel.init(model: "two", items: itemsTwo))
         dataArr.value.append(SectionModel.init(model: "Three", items: itemsThree))
         
+    }
+    func toVC(_ indexPath: IndexPath?) {
+        guard let index = indexPath else {
+            return
+        }
+        let section = index.section
+        let row = index.row
+        switch section {
+        case 0:
+            if row == 0 {
+                 VCRouter.toRealNameVC()
+            }else{
+                 VCRouter.toSetMoneyPassVC(true)
+            }
+            break
+        case 1:
+            VCRouter.toInputMoneyPassVC(.LoginPassWord)
+            break
+        case 2:
+               VCRouter.toTitleListVC(.Language)
+        default: break
+            
+        }
+       
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

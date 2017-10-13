@@ -7,40 +7,49 @@
 //
 
 import UIKit
+enum BSTitleListType {
+    case DigitalCoin // 数字货币
+    case Language    // 语言
+}
+
 
 class BSDigitalCoinController: BSBaseTableViewController {
-
+    
+    var titleListType : BSTitleListType = .DigitalCoin
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "数字货币"
-//        tableView.delegate      = nil
-//        tableView.dataSource    = nil
+        
+
         tableView.cellId_register("BSDigtitalCell")
+        
+        switch titleListType {
+        case .Language:
+            self.title = "语言"
+            makeCustomerNavigationItem("保存", left: false) {
+                BSHud.showMsg("保存成功")
+            }
+            break
+        default:
+            self.title = "数字货币"
+            break
+        }
         
         dataSource.configureCell = {(_ , tableView , indexPath , element) in
             
-//            var cell = tableView.dequeueReusableCell(withIdentifier: "BSDigtitalCell", for: indexPath) as! BSDigtitalCell
-//            if cell == nil {
-            
-              let  cell = BSDigtitalCell.init(style: .default, reuseIdentifier: "BSDigtitalCell")
-//            }
+            let  cell = BSDigtitalCell.init(style: .default, reuseIdentifier: "BSDigtitalCell")
             return cell
             
         }
-        
         dataArr.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
         
-//        tableView.rx
-//            .setDelegate(self)
-//            .addDisposableTo(rx_disposeBag)
-        
-        
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
             
 //            VCRouter.toBuyCoinVC()
-            }.addDisposableTo(rx_disposeBag)
+        }.addDisposableTo(rx_disposeBag)
+        
         dataArr.value.append(SectionModel.init(model: "section", items: ["1","1","1","1","1","1","1","1","1","1","1"]))
     }
 
@@ -48,8 +57,6 @@ class BSDigitalCoinController: BSBaseTableViewController {
         super.didReceiveMemoryWarning()
 
     }
-    
-
 
 }
 class BSDigtitalCell: UITableViewCell {

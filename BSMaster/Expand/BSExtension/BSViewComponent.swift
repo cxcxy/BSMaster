@@ -42,7 +42,11 @@ class BSNextBtn: UIButton {
         self.backgroundColor            = UIColor.white
         self.layer.cornerRadius         = 7.0
         self.addBorder(width: 0.5, color: BSBorderColor)
-        self.setTitleColor(UIColor.init(hexString: "c1c5cc"), for: .normal)
+        self.setTitleColor(UIColor.white, for: .normal)
+        self.setTitleColor(MGRgb(193, g: 197, b: 204), for: .disabled)
+        self.setBackgroundColor(BSBtnColor, forState: .normal)
+        self.setBackgroundColor(UIColor.white, forState: .disabled)
+//        self.setTitleColor(UIColor.init(hexString: "c1c5cc"), for: .normal)
     }
     
 }

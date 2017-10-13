@@ -81,8 +81,9 @@ class VCRouter {
         topVC?.pushVC(vc)
     }
     //TODO: 跳转数字货币
-    class func toDigitaCpoinVC(){
+    class func toTitleListVC(_ titleType: BSTitleListType){
         let vc = BSDigitalCoinController.init(style: .grouped)
+        vc.titleListType = titleType
         topVC?.pushVC(vc)
     }
     //TODO: 跳转关于我们
@@ -102,7 +103,7 @@ class VCRouter {
     //TODO: 跳转意见返回
     class func toSuggestVC(){
         
-        let vc = BSSuggestController()
+        let vc = BSSuggestController.init(style: .grouped)
         
         topVC?.pushVC(vc)
     }
@@ -113,6 +114,32 @@ class VCRouter {
         
         topVC?.pushVC(vc)
     }
-  
+    //TODO: 跳转实名认证
+    class func toRealNameVC(){
+        
+        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSRealNameController") as! BSRealNameController
+        topVC?.pushVC(vc)
+
+    }
+    //TODO: 跳转重置资金密码  isSet: 是否已经设置资金密码
+    class func toSetMoneyPassVC(_ isSet:Bool = false){
+        if isSet {
+            self.toInputMoneyPassVC(.MoneyPassWord)
+        }else{
+            let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSResetViewController") as! BSResetViewController
+            vc.changePassType = .MoneyPassWord
+            topVC?.pushVC(vc)
+        }
+
+        
+    }
+    //TODO: 跳转输入资金密码
+    class func toInputMoneyPassVC(_ passType:BSResetPassType){
+        
+        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSInputMoneyViewController") as! BSInputMoneyViewController
+        vc.resetPassType = passType
+        topVC?.pushVC(vc)
+        
+    }
 }
 

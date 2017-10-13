@@ -27,17 +27,6 @@ class BSSetNickViewController: BSBaseViewController {
             .map{$0!.characters.count > 0}
             .shareReplay(1)
         
-        // 监听是否满足条件
-        nickValid.subscribe(onNext: { [unowned self](isTrue) in
-            if isTrue  {
-                self.btnRegister.backgroundColor = BSBtnColor
-                self.btnRegister.setTitleColor(UIColor.white, for: .normal)
-            }else {
-                self.btnRegister.backgroundColor = UIColor.white
-                self.btnRegister.setTitleColor(UIColor.init(hexString: "c1c5cc"), for: .normal)
-            }
-        }).addDisposableTo(rx_disposeBag)
-        
         // 控制是否可以点击
         nickValid.asObservable().bind(to: btnRegister.rx.isEnabled).disposed(by: rx_disposeBag)
         

@@ -60,7 +60,7 @@ class BSBaseTabBar: ESTabBarController {
         }
 
         self.view.backgroundColor   = UIColor.white
-        self.tabBar.backgroundColor = UIColor(hexString: "#FFFFFF")
+//        self.tabBar.backgroundColor = UIColor(hexString: "#FFFFFF")
         self.tabBar.barTintColor    = UIColor.white
         self.tabBar.isTranslucent   = false
         self.viewControllers        = viewControllers
