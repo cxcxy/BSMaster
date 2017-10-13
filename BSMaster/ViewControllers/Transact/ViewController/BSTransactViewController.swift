@@ -13,8 +13,7 @@ class BSTransactViewController: BSBaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "交易"
-        tableView.delegate      = nil
-        tableView.dataSource    = nil
+
         tableView.cellId_register("BSTransactCell")
         
         dataSource.configureCell = {(_ , tableView , indexPath , element) in
@@ -28,13 +27,10 @@ class BSTransactViewController: BSBaseTableViewController {
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
  
-        tableView.rx
-            .setDelegate(self)
-            .addDisposableTo(rx_disposeBag)
+
         
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-
             VCRouter.toBuyCoinVC()
         }.addDisposableTo(rx_disposeBag)
         dataArr.value.append(SectionModel.init(model: "section", items: ["1","1","1","1","1","1","1","1","1","1","1"]))

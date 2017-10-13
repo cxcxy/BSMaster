@@ -36,8 +36,8 @@ class BSBaseTabBar: ESTabBarController {
         
         
         let storys          =   ["Transact","Order","Transact","Purse","My"]
-        let images          =   ["tab_home","tab_shopping","tab_special","icon_brand","tab_me"]
-        let imagesSelector  =   ["tab_home","tab_shopping","tab_special","icon_brand","tab_me"]
+        let images          =   ["tab_grayTransact","tab_grayOrder","","tab_grayPurse","tab_grayMe"]
+        let imagesSelector  =   ["tab_transact","tab_grayOrder","","tab_grayPurse","tab_grayMe"]
         let imagesTitle     =   ["交易","订单","","钱包","我的"]
         
         var viewControllers = [UIViewController]()
@@ -49,7 +49,7 @@ class BSBaseTabBar: ESTabBarController {
 
             
             if title.offset == 2 {
-               vc.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: UIImage(named: "closeBuy"), selectedImage: UIImage(named: "closeBuy"))
+               vc.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: UIImage(named: "tab_chose"), selectedImage: UIImage(named: "tab_chose"))
             }else{
                 vc.tabBarItem = ESTabBarItem.init(title: title.element,
                                                   image: UIImage(named: images[title.offset]),
@@ -63,7 +63,7 @@ class BSBaseTabBar: ESTabBarController {
         self.tabBar.backgroundColor = UIColor(hexString: "#FFFFFF")
         self.tabBar.barTintColor    = UIColor.white
         self.tabBar.isTranslucent   = false
-        self.viewControllers = viewControllers
+        self.viewControllers        = viewControllers
     }
 
     override func didReceiveMemoryWarning() {

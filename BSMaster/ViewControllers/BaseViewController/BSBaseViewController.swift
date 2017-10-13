@@ -24,9 +24,11 @@ class BSBaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
 
     }
+    //MARK:配置 UI
     func setUI()  {
         self.view.backgroundColor = UIColor.white
     }
+    //MARK: 返回按钮
     func setCustomerBack() {
         if let count = navigationController?.viewControllers.count {
             if count > 1 {

@@ -22,7 +22,7 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         setCustomerBack()
         setUI()
     }
-    
+    //MARK: 返回按钮
     func setCustomerBack() {
         if let count = navigationController?.viewControllers.count {
             if count > 1 {
@@ -35,19 +35,28 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
     func navBack() {
         _ = navigationController?.popViewController(animated: true)
     }
+    //MARK:配置 UI
     func setUI(){
         
-
         self.tableView.backgroundColor      = tableColor
         self.tableView.emptyDataSetDelegate = self
         self.tableView.emptyDataSetSource   = self
         tableView.estimatedRowHeight        = estimatedRowHeight ?? 44
         tableView.rowHeight                 = UITableViewAutomaticDimension
         self.tableView.separatorStyle       = .none
-//        self.tableView.separatorColor       = SeprateColor
-        self.tableView.mj_header            = mj_header
         self.tableView.keyboardDismissMode  = .onDrag
-        
+        self.tableView.delegate             = nil
+        self.tableView.dataSource           = nil
+        tableView.rx
+            .setDelegate(self)
+            .addDisposableTo(rx_disposeBag)
+    }
+    
+    func cofigMjHeader() {
+        self.tableView.mj_header            = mj_header
+    }
+    func cofigMjFooter() {
+        self.tableView.mj_footer            = mj_footer
     }
     //MARK:网络请求 isLoding --- 是否弹出loading框
     func request(){

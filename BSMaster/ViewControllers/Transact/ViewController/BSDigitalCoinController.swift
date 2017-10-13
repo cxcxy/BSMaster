@@ -13,8 +13,8 @@ class BSDigitalCoinController: BSBaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "数字货币"
-        tableView.delegate      = nil
-        tableView.dataSource    = nil
+//        tableView.delegate      = nil
+//        tableView.dataSource    = nil
         tableView.cellId_register("BSDigtitalCell")
         
         dataSource.configureCell = {(_ , tableView , indexPath , element) in
@@ -32,9 +32,9 @@ class BSDigitalCoinController: BSBaseTableViewController {
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
         
-        tableView.rx
-            .setDelegate(self)
-            .addDisposableTo(rx_disposeBag)
+//        tableView.rx
+//            .setDelegate(self)
+//            .addDisposableTo(rx_disposeBag)
         
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in

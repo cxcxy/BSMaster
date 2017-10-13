@@ -20,8 +20,8 @@ class BSSettingViewController: BSBaseTableViewController {
 
     }
     func configTable(){
-        tableView.delegate      = nil
-        tableView.dataSource    = nil
+//        tableView.delegate      = nil
+//        tableView.dataSource    = nil
         tableView.cellId_register("BSSettingCell")
         
         dataSource.configureCell = {[weak self](_ , tableView , indexPath , element) in
@@ -36,9 +36,9 @@ class BSSettingViewController: BSBaseTableViewController {
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
         
-        tableView.rx
-            .setDelegate(self)
-            .addDisposableTo(rx_disposeBag)
+//        tableView.rx
+//            .setDelegate(self)
+//            .addDisposableTo(rx_disposeBag)
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
             

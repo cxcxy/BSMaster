@@ -106,6 +106,13 @@ class VCRouter {
         
         topVC?.pushVC(vc)
     }
+    //TODO: 跳转交易明细
+    class func toTradingDetailVC(){
+        
+        let vc = BSTradingDetailController()
+        
+        topVC?.pushVC(vc)
+    }
   
 }
 

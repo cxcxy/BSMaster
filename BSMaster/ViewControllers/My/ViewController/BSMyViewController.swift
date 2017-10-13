@@ -20,8 +20,8 @@ class BSMyViewController: BSBaseTableViewController {
         self.automaticallyAdjustsScrollViewInsets = false
     }
     func configTable(){
-        tableView.delegate      = nil
-        tableView.dataSource    = nil
+//        tableView.delegate      = nil
+//        tableView.dataSource    = nil
         tableView.cellId_register("BSMyTableViewCell")
         tableView.cellId_register("BAMySetTableViewCell")
         tableView.separatorStyle = .singleLine
@@ -46,9 +46,9 @@ class BSMyViewController: BSBaseTableViewController {
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
         
-        tableView.rx
-            .setDelegate(self)
-            .addDisposableTo(rx_disposeBag)
+//        tableView.rx
+//            .setDelegate(self)
+//            .addDisposableTo(rx_disposeBag)
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
 
