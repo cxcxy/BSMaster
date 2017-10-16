@@ -136,7 +136,7 @@ class VCRouter {
     //TODO: 跳转输入资金密码
     class func toInputMoneyPassVC(_ passType:BSResetPassType){
         
-        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSInputMoneyViewController") as! BSInputMoneyViewController
+        let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSResetFiestViewController") as! BSResetFiestViewController
         vc.resetPassType = passType
         topVC?.pushVC(vc)
         

@@ -8,8 +8,8 @@
 
 import UIKit
 enum BSResetPassType {
-    case LoginPassWord
-    case MoneyPassWord
+    case LoginPassWord // 重置登录密码
+    case MoneyPassWord // 重置资金密码
 }
 class BSResetViewController: BSBaseViewController {
     @IBOutlet weak var tfPassword: UITextField!
