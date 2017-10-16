@@ -818,10 +818,10 @@
             </objects>
             <point key="canvasLocation" x="4172" y="-1739"/>
         </scene>
-        <!--Input Money View Controller-->
+        <!--Reset Fiest View Controller-->
         <scene sceneID="7vj-sF-lLt">
             <objects>
-                <viewController storyboardIdentifier="BSInputMoneyViewController" id="2Na-bi-brf" customClass="BSInputMoneyViewController" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BSResetFiestViewController" id="2Na-bi-brf" customClass="BSResetFiestViewController" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ogt-KM-RwC"/>
                         <viewControllerLayoutGuide type="bottom" id="KAD-2p-f1X"/>
@@ -923,6 +923,7 @@
                     <connections>
                         <outlet property="btnForgetPass" destination="alA-t6-YQv" id="v4A-c4-a75"/>
                         <outlet property="btnNext" destination="gAB-do-qVv" id="hu7-te-uxj"/>
+                        <outlet property="lbDes" destination="HC8-Vi-nhM" id="7wX-gS-eOJ"/>
                         <outlet property="tfPass" destination="cgP-RF-noI" id="W8q-54-eEX"/>
                     </connections>
                 </viewController>

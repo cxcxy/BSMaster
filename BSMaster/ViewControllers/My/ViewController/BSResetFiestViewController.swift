@@ -1,5 +1,5 @@
 //
-//  BSInputMoneyViewController.swift
+//  BSResetFiestViewController.swift
 //  BSMaster
 //
 //  Created by 陈旭 on 2017/10/13.
@@ -8,10 +8,11 @@
 
 import UIKit
 
-class BSInputMoneyViewController: BSBaseViewController {
+class BSResetFiestViewController: BSBaseViewController {
     
     var resetPassType : BSResetPassType = .LoginPassWord
     
+    @IBOutlet weak var lbDes: UILabel!
     @IBOutlet weak var tfPass: UITextField!
     @IBOutlet weak var btnNext: BSNextBtn!
     @IBOutlet weak var btnForgetPass: UIButton!
@@ -20,6 +21,7 @@ class BSInputMoneyViewController: BSBaseViewController {
         switch resetPassType {
         case .LoginPassWord:
             self.title = "重置登录密码"
+            self.lbDes.text = "修改您的登录密码"
             self.tfPass.placeholder = "输入原登录密码"
         case .MoneyPassWord:
             self.title = "重置资金密码"
