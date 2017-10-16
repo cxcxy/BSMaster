@@ -87,11 +87,10 @@ class BSPostViewController: BSBaseViewController {
             .addDisposableTo(rx_disposeBag)
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-//            VCRouter.
-            VCRouter.toTitleListVC(.DigitalCoin)
-            //             let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSLoginViewController")
-            //             let nav = UINavigationController.init(rootViewController: vc)
-            //             self.presentVC(nav)
+
+//          VCRouter.toTitleListVC(.DigitalCoin)
+            self.toVC(indexpath.element)
+
             
             }.addDisposableTo(rx_disposeBag)
         let ontArray = [BSPostModel.init(title: "所在地", content: "中国", placHold: ""),
@@ -115,22 +114,44 @@ class BSPostViewController: BSBaseViewController {
         dataArr.value.append(SectionModel.init(model: "four", items: fourArray))
     }
     func requestPostBuy()  {
-        var params = [String:Any]
-        params["type"]  = "1"
-        params["coin_type"]  = "1"
-        params["member_id"]  = "1"
-        params["is_safe"]  = "1"
-        params["country_id"]  = "1"
-        params["currency_code"]  = "1"
-        params["premium_rate"]  = "1"
-        params["price"]  = "1"
-        params["min_price"]  = "1"
-        params["min_num"]  = "1"
-        params["max_num"]  = "1"
-        params["payment"]  = "1"
-        params["message"]  = "1"
+//        var params = [String:Any]
+//        params["type"]  = "1"
+//        params["coin_type"]  = "1"
+//        params["member_id"]  = "1"
+//        params["is_safe"]  = "1"
+//        params["country_id"]  = "1"
+//        params["currency_code"]  = "1"
+//        params["premium_rate"]  = "1"
+//        params["price"]  = "1"
+//        params["min_price"]  = "1"
+//        params["min_num"]  = "1"
+//        params["max_num"]  = "1"
+//        params["payment"]  = "1"
+//        params["message"]  = "1"
         
     }
+    func toVC(_ indexpath:IndexPath?)  {
+        guard let index = indexpath else {
+            return
+        }
+        let section = index.section
+        let row = index.row
+        switch section {
+        case 0:
+            switch row {
+                case 0:
+                    VCRouter.toCountryVC()
+                    break
+                case 1:
+                    VCRouter.toCountryVC(.Corrency)
+                    break
+                default:break
+            }
+        default:
+            break
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 

@@ -11,12 +11,17 @@ import Moya
 
 
 public enum RequestApi{
+    //MARK: 登录注册相关接口
     case api_Login(params: [String: Any])
     case api_register(params: [String: Any])
     case api_forgetPass(params: [String: Any])
     case api_changePass(params: [String: Any])
     case api_registerFister(params: [String: Any])
+    //MARK: 发布出售相关接口
     case api_release(params: [String: Any])
+    //MARK: 手机区号相关接口
+    case api_MobileType(lang:String)
+    case api_Country(lang:String)
 }
 let provider = RxMoyaProvider<RequestApi>()
 extension RequestApi:TargetType{
@@ -47,6 +52,10 @@ extension RequestApi:TargetType{
             return API.URL_RegisterFister
         case .api_release:
             return API.URL_ReleaseAd
+        case .api_MobileType:
+            return API.URL_MobileType
+        case .api_Country:
+            return API.URL_Country
         default:
             return ""
         }
@@ -73,6 +82,11 @@ extension RequestApi:TargetType{
             params =  param
         case let .api_release(param):
             params = param
+        case let .api_MobileType(langId):
+            params = ["lang":langId]
+        case let .api_Country(langId):
+            params = ["lang":langId]
+            
         }
         return params
     }

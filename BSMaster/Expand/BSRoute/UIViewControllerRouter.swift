@@ -144,5 +144,13 @@ class VCRouter {
         topVC?.pushVC(vc)
         
     }
+    //TODO: 跳转选择国家／地区 or 货币选择
+    class func toCountryVC(_ vc_type:BSCountryType = .Country){
+        
+        let vc = BSMobileListController()
+        vc.vc_type = vc_type
+        topVC?.pushVC(vc)
+    }
+    
 }
 

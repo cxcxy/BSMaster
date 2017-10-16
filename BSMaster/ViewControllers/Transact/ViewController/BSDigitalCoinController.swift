@@ -52,7 +52,7 @@ class BSDigitalCoinController: BSBaseTableViewController {
         
         dataArr.value.append(SectionModel.init(model: "section", items: ["1","1","1","1","1","1","1","1","1","1","1"]))
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 

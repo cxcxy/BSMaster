@@ -64,7 +64,7 @@ class BSResetViewController: BSBaseViewController {
         
         if tfPassword.text == tfTwoPassword.text {
             
-            BSPassViewModel.requestResetPassData(forgetInfo.phone, password: tfPassword.text!, verCode: forgetInfo.verCode, mobile_type: "1").subscribe(onNext: { (message) in
+            BSPassViewModel.requestResetPassData(forgetInfo.phone, password: tfPassword.text!, verCode: forgetInfo.verCode, mobile_type: "44").subscribe(onNext: { (message) in
                 BSHud.showMsg(message)
             }).addDisposableTo(rx_disposeBag)
             

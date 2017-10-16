@@ -26,9 +26,12 @@ public struct API {
     static let URL_ChangePass       = "Login/changePwd"
     
     //MARK: 发布出售相关接口
-    static let URL_ReleaseAd        = "Trade/release"
+    static let URL_ReleaseAd         = "Trade/release"
     
     //MARK: 手机区号相关接口
     static let URL_MobileType        = "Other/mobile"
+    //MARK: 国家币种接口
+    static let URL_Country           = "Other/country"
+    
 }
 

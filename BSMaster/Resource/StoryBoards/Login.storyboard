@@ -213,6 +213,7 @@
                         <outlet property="btnPassword" destination="pp6-KF-MrQ" id="0Jp-Eh-wcK"/>
                         <outlet property="tfPassword" destination="foN-9t-qmj" id="mzt-3b-7Bq"/>
                         <outlet property="tfPhone" destination="FkG-cX-Num" id="pe2-wZ-Nm6"/>
+                        <outlet property="viewCountry" destination="cGy-cz-ymO" id="yXp-7h-i0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AiF-XA-r5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1188,6 +1189,7 @@
                         <outlet property="tfCode" destination="jUg-cK-1CR" id="htG-hm-z3j"/>
                         <outlet property="tfPassword" destination="EmP-21-phq" id="dVr-8x-8pZ"/>
                         <outlet property="tfPhone" destination="aAC-sw-I7t" id="sXw-1o-aE9"/>
+                        <outlet property="viewCountry" destination="eRz-vt-m5q" id="7tN-cB-PMO"/>
                         <outlet property="viewRegistDelegate" destination="Fse-5O-ymF" id="dff-sn-fTE"/>
                     </connections>
                 </viewController>
@@ -1479,6 +1481,7 @@
                         <outlet property="btnNext" destination="5UZ-BW-9OX" id="b00-Je-GzG"/>
                         <outlet property="tfCode" destination="5Vn-8K-frw" id="B2J-Rh-4QW"/>
                         <outlet property="tfPhone" destination="8zD-o8-upv" id="vXU-3B-eO7"/>
+                        <outlet property="viewCountry" destination="G8m-C2-7RT" id="NLA-G8-S7Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0WD-kX-uXP" userLabel="First Responder" sceneMemberID="firstResponder"/>

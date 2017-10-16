@@ -15,6 +15,7 @@ class BSPhoneLoginViewController: BSBaseViewController {
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnPassword: UIButton!
     
+    @IBOutlet weak var viewCountry: UIView!
     private var loginViewModel : BSLoginViewModel?
     
     override func viewDidLoad() {
@@ -39,7 +40,9 @@ class BSPhoneLoginViewController: BSBaseViewController {
         btnLogin.rx.tap.subscribe(onNext: {  [weak self]in
             self?.requstLogin()
         }).addDisposableTo(rx_disposeBag)
-        
+        viewCountry.addAction {
+            VCRouter.toCountryVC()
+        }
         // 点击忘记密码
         btnPassword.rx.tap.subscribe(onNext: {
             VCRouter.toForgetPassVC()

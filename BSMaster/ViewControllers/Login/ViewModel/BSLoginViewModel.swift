@@ -39,11 +39,11 @@ class BSLoginViewModel {
         }.distinctUntilChanged() //  distinctUntilChanged 会废弃掉重复的事件
 
     }
-    // 登录接口 
-    func requestLoginData(_ phone:String,password:String) -> Observable<String> {
+    // 登录接口   mobile_type 默认为中国 44
+    func requestLoginData(_ phone:String,password:String,mobile_type:String = "44") -> Observable<String> {
         return Observable.create { observer -> Disposable in
             var params = [String:Any]()
-            params["mobile_type"]   = "1"
+            params["mobile_type"]   = mobile_type
             params["mobile"]        = phone
             params["login_pass"]    = password
             BSNetManager.sharedManager.requestWithTarget(.api_Login(params: params),isShowLoding: true, successClosure: { (result, code,message)  in
@@ -83,10 +83,10 @@ class BSRegisterViewModel {
         
     }
     // 注册第一步接口。判断手机号，验证码是否合法。type 1 注册密码 type 2 忘记密码
-    class func requestRegisterFisterData(_ phone:String,type:String,verCode:String,mobile_type:String?) -> Observable<String> {
+    class func requestRegisterFisterData(_ phone:String,type:String,verCode:String,mobile_type:String = "44") -> Observable<String> {
         return Observable.create { observer -> Disposable in
             var params = [String:Any]()
-            params["mobile_type"]   = mobile_type ?? "1"
+            params["mobile_type"]   = mobile_type
             params["mobile"]        = phone
             params["type"]          = type
             params["vcode"]         = verCode
@@ -101,10 +101,10 @@ class BSRegisterViewModel {
         }
     }
     // 注册接口
-   class func requestRegisterData(_ phone:String,password:String,verCode:String,nickName:String,mobile_type:String?) -> Observable<String> {
+   class func requestRegisterData(_ phone:String,password:String,verCode:String,nickName:String,mobile_type:String = "44") -> Observable<String> {
         return Observable.create { observer -> Disposable in
             var params = [String:Any]()
-            params["mobile_type"]   = mobile_type ?? "1"
+            params["mobile_type"]   = mobile_type
             params["mobile"]        = phone
             params["login_pass"]    = password
             params["vcode"]         = verCode
@@ -124,10 +124,10 @@ class BSRegisterViewModel {
 class BSPassViewModel {
 
     // 重置密码接口
-    class func requestResetPassData(_ phone:String,password:String,verCode:String,mobile_type:String?) -> Observable<String> {
+    class func requestResetPassData(_ phone:String,password:String,verCode:String,mobile_type:String = "44") -> Observable<String> {
         return Observable.create { observer -> Disposable in
             var params = [String:Any]()
-            params["mobile_type"]   = mobile_type ?? "1"
+            params["mobile_type"]   = mobile_type
             params["mobile"]        = phone
             params["pass1"]         = password
             params["pass2"]         = password
@@ -162,7 +162,45 @@ class BSPassViewModel {
 }
 
 
+class BSMobileListViewModel {
+    
+    //MARK: 获取国家／区号 数据接口
+    class func requestMobileListData(_ lang:String?) -> Observable<[BSMobileListModel]> {
+        return Observable.create { observer -> Disposable in
+  
+            BSNetManager.sharedManager.requestWithTarget(.api_MobileType(lang: lang ?? "4"),isShowLoding: true, successClosure: { (result, code,message)  in
 
+                let arr = Mapper<BSMobileListModel>().mapArray(JSONObject:result)
+                if let array = arr{
+                    observer.onNext(array)
+                }
+
+            }) { (errorStr) in
+                observer.onError(NetError.CustomError(errorStr ?? "").handle())
+            }
+            return Disposables.create {
+            }
+        }
+    }
+    //MARK: 获取货币类型 数据接口
+    class func requestCurrencyListData(_ lang:String?) -> Observable<[BSMobileListModel]> {
+        return Observable.create { observer -> Disposable in
+            
+            BSNetManager.sharedManager.requestWithTarget(.api_Country(lang: lang ?? "4"),isShowLoding: true, successClosure: { (result, code,message)  in
+                
+                let arr = Mapper<BSMobileListModel>().mapArray(JSONObject:result)
+                if let array = arr{
+                    observer.onNext(array)
+                }
+                
+            }) { (errorStr) in
+                observer.onError(NetError.CustomError(errorStr ?? "").handle())
+            }
+            return Disposables.create {
+            }
+        }
+    }
+}
 
 
 

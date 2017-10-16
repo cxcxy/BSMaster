@@ -43,7 +43,7 @@ class BSSetNickViewController: BSBaseViewController {
                                                 password: registerModel.passwWord,
                                                 verCode: registerModel.verCode,
                                                 nickName: tfNick.text!,
-                                                mobile_type: nil).subscribe(onNext: {[unowned self] (message) in
+                                                mobile_type: "44").subscribe(onNext: {[unowned self] (message) in
                                                     BSHud.showMsg(message)
                                                     self.popToRootVC()
                                                 }).addDisposableTo(rx_disposeBag)

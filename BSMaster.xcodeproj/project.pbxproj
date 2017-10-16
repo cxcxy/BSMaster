@@ -61,6 +61,7 @@
 		2D5615151F8DAA3300BB9C03 /* BSSetNickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */; };
 		2D5615511F8DFD4700BB9C03 /* BSCountryNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615501F8DFD4700BB9C03 /* BSCountryNavView.swift */; };
 		2D5615531F8DFD6500BB9C03 /* BSCountryNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D5615521F8DFD6500BB9C03 /* BSCountryNavView.xib */; };
+		2D5DCA721F94685600944FDA /* BSMobileListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5DCA711F94685600944FDA /* BSMobileListController.swift */; };
 		2D61A4441F8B4CCA00071D80 /* UIViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */; };
 		2D61A4461F8B66DB00071D80 /* BSMyAdverteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */; };
 		2D61A4CA1F8B7CEC00071D80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D61A4C91F8B7CEC00071D80 /* InfoPlist.strings */; };
@@ -189,6 +190,7 @@
 		2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSetNickViewController.swift; sourceTree = "<group>"; };
 		2D5615501F8DFD4700BB9C03 /* BSCountryNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSCountryNavView.swift; sourceTree = "<group>"; };
 		2D5615521F8DFD6500BB9C03 /* BSCountryNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSCountryNavView.xib; sourceTree = "<group>"; };
+		2D5DCA711F94685600944FDA /* BSMobileListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMobileListController.swift; sourceTree = "<group>"; };
 		2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRouter.swift; sourceTree = "<group>"; };
 		2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyAdverteViewController.swift; sourceTree = "<group>"; };
 		2D61A4C31F8B7CAB00071D80 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				2D61A9D11F8B0AA9004AD2B8 /* BSLoginViewController.swift */,
 				2DE0E2481F8B219700DB225C /* BSPhoneLoginViewController.swift */,
 				2D6523C31F8CF82B00CB5B54 /* BSRegistViewController.swift */,
+				2D5DCA711F94685600944FDA /* BSMobileListController.swift */,
 				2D423E9F1F8E46F200D38418 /* BSForgetPassViewController.swift */,
 				2D423EA11F8E477F00D38418 /* BSResetViewController.swift */,
 				2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */,
@@ -1053,6 +1056,7 @@
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
 				2D4E38EF1F8F9AC4004A16A4 /* BSSuggestCell.swift in Sources */,
 				2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */,
+				2D5DCA721F94685600944FDA /* BSMobileListController.swift in Sources */,
 				2D4E38EC1F8F92BC004A16A4 /* BSSuggestController.swift in Sources */,
 				2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */,
 				2D3F9C581F9061620050CD57 /* BSBTCTypeTableViewCell.swift in Sources */,

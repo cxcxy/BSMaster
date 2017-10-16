@@ -17,6 +17,7 @@ class BSRegistViewController: BSBaseViewController {
     @IBOutlet weak var btnNext: BSNextBtn!
     @IBOutlet weak var btnMsgCode: UIButton!
     
+    @IBOutlet weak var viewCountry: UIView!
     private var registerViewModel : BSRegisterViewModel?
     
     @IBOutlet weak var viewRegistDelegate: UIView!
@@ -54,12 +55,15 @@ class BSRegistViewController: BSBaseViewController {
         btnMsgCode.rx.tap.subscribe(onNext: { [unowned self] in
             self.btnMsgCode.startTimer(60, title: "获取验证码", mainBGColor: UIColor.white, mainTitleColor: BSBtnColor, countBGColor: UIColor.white, countTitleColor: MGRgb(128, g: 128, b: 128), handle: nil)
         }).addDisposableTo(rx_disposeBag)
+        viewCountry.addAction {
+            VCRouter.toCountryVC()
+        }
         
     }
     //MARK: 判断信息是否有效
     @IBAction func nextAction(_ sender: Any) {
         
-        BSRegisterViewModel.requestRegisterFisterData(self.tfPhone.text!, type: "1", verCode: tfCode.text!, mobile_type: nil).subscribe(onNext: { [unowned self](message) in
+        BSRegisterViewModel.requestRegisterFisterData(self.tfPhone.text!, type: "1", verCode: tfCode.text!, mobile_type: "44").subscribe(onNext: { [unowned self](message) in
             BSLog(message)
             self.toNextVC()
         }).addDisposableTo(rx_disposeBag)
@@ -68,7 +72,7 @@ class BSRegistViewController: BSBaseViewController {
     }
     //MARK: 跳转 设置昵称的界面
     func toNextVC(){
-        let registerData = RegisterModel.init(phone: self.tfPhone.text!, verCode: self.tfCode.text!, passwWord: self.tfPassword.text!, mobile_type: "")
+        let registerData = RegisterModel.init(phone: self.tfPhone.text!, verCode: self.tfCode.text!, passwWord: self.tfPassword.text!, mobile_type: "44")
         
         VCRouter.toSetNickVC(registerData)
         

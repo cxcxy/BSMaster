@@ -26,7 +26,8 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
         self.segmentStyle = .none
         
         makeCustomerImageNavigationItem("search_white", left: false) {
-            VCRouter.toADVC(.Search)
+//            VCRouter.toADVC(.Search)
+            VCRouter.toLoginVC()
         }
     }
 
@@ -35,7 +36,8 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
         view.backgroundColor = BSNavColor
         view.addAction {
         print("click view")
-         VCRouter.toLoginVC()
+//         VCRouter.toLoginVC()
+        VCRouter.toCountryVC()
         }
         return view
     }()
