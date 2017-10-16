@@ -48,11 +48,11 @@ class BSForgetPassViewController: BSBaseViewController {
             self.btnMsgCode.startTimer(60, title: "获取验证码", mainBGColor: UIColor.white, mainTitleColor: BSBtnColor, countBGColor: UIColor.white, countTitleColor: MGRgb(128, g: 128, b: 128), handle: nil)
         }).addDisposableTo(rx_disposeBag)
     }
-      //MARK: 跳转 重置密码的界面
+      //MARK: 跳转 重置密码的界面  先验证验证码是否 合法
     func toResetPassVC()  {
         
         BSRegisterViewModel.requestRegisterFisterData(tfPhone.text!, type: "2", verCode: tfCode.text!, mobile_type: nil).subscribe(onNext: { (message) in
-              VCRouter.toResetPassVC()
+            VCRouter.toResetPassVC(RegisterModel.init(phone: self.tfPhone.text!, verCode: self.tfCode.text!, passwWord: "", mobile_type: "1"))
         }).addDisposableTo(rx_disposeBag)
         
     }

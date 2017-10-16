@@ -1313,7 +1313,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnNext" destination="UiU-32-YmT" id="3O5-bE-qSd"/>
                         <outlet property="btnSure" destination="UiU-32-YmT" id="buS-5Z-HMf"/>
                         <outlet property="lbDes" destination="zjo-YP-QlN" id="GhX-br-1hS"/>
                         <outlet property="tfPassword" destination="4cT-UR-2a2" id="RQ0-1g-ULj"/>

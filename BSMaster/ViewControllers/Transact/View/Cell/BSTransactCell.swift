@@ -26,9 +26,10 @@ class BSTransactCell: BSBaseTableViewCell {
         super.awakeFromNib()
         // Initialization code
         btnBuy.addBorder(width: 1, color: MGRgb(56, g: 161, b: 243))
-        btnBuy.layer.cornerRadius           = 5.0
-        viewPayType.layer.cornerRadius      = 3.0
-        viewOnLine.layer.cornerRadius       = 4.5
+        btnBuy.setCornerRadius(radius: 5.0)
+        viewPayType.setCornerRadius(radius: 3.0)
+        viewOnLine.setCornerRadius(radius: 4.5)
+
         viewOnLine.addBorder(width: 1, color: UIColor.white)
     }
 

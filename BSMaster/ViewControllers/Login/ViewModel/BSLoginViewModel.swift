@@ -82,7 +82,7 @@ class BSRegisterViewModel {
          }.distinctUntilChanged() //  distinctUntilChanged 会废弃掉重复的事件
         
     }
-    // 注册第一步接口。判断手机号，验证码是否合法
+    // 注册第一步接口。判断手机号，验证码是否合法。type 1 注册密码 type 2 忘记密码
     class func requestRegisterFisterData(_ phone:String,type:String,verCode:String,mobile_type:String?) -> Observable<String> {
         return Observable.create { observer -> Disposable in
             var params = [String:Any]()

@@ -15,6 +15,13 @@ class BSMyTableViewCell: BSBaseTableViewCell {
         // Initialization code
     }
 
+    @IBAction func buyAction(_ sender: Any) {
+        VCRouter.toADVC(.Buy)
+    }
+    
+    @IBAction func seleAction(_ sender: Any) {
+        VCRouter.toADVC(.Sold)
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

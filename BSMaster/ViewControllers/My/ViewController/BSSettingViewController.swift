@@ -16,34 +16,28 @@ class BSSettingViewController: BSBaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "设置"
-        configTable()
 
     }
-    func configTable(){
-//        tableView.delegate      = nil
-//        tableView.dataSource    = nil
+    override func setUI() {
+        super.setUI()
         tableView.cellId_register("BSSettingCell")
-        
         dataSource.configureCell = {[weak self](_ , tableView , indexPath , element) in
-
-                let cell = tableView.dequeueReusableCell(withIdentifier: "BSSettingCell", for: indexPath) as! BSSettingCell
-                cell.lbTitle.text = (element as? SettingModel)?.title
-                cell.lbSubTitle.text = (element as? SettingModel)?.subTitle
-                return cell
-
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BSSettingCell", for: indexPath) as! BSSettingCell
+            cell.lbTitle.text = (element as? SettingModel)?.title
+            cell.lbSubTitle.text = (element as? SettingModel)?.subTitle
+            return cell
+            
         }
         dataArr.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
         
-//        tableView.rx
-//            .setDelegate(self)
-//            .addDisposableTo(rx_disposeBag)
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-
+            
             self.toVC(indexpath.element)
-          
+            
             }.addDisposableTo(rx_disposeBag)
         
         let itemsOne = [SettingModel.init(title: "实名认证", subTitle: "未认证"),
@@ -57,8 +51,8 @@ class BSSettingViewController: BSBaseTableViewController {
         dataArr.value.append(SectionModel.init(model: "one", items: itemsOne))
         dataArr.value.append(SectionModel.init(model: "two", items: itemsTwo))
         dataArr.value.append(SectionModel.init(model: "Three", items: itemsThree))
-        
     }
+
     func toVC(_ indexPath: IndexPath?) {
         guard let index = indexPath else {
             return

@@ -14,8 +14,11 @@ enum BSResetPassType {
 class BSResetViewController: BSBaseViewController {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfTwoPassword: UITextField!
-    @IBOutlet weak var btnNext: BSNextBtn!
+
     @IBOutlet weak var btnSure: UIButton!
+    
+    var forgetInfo : RegisterModel!
+    
     
     @IBOutlet weak var lbDes: UILabel!
     var changePassType : BSResetPassType = .LoginPassWord
@@ -32,17 +35,15 @@ class BSResetViewController: BSBaseViewController {
              self.tfPassword.placeholder         = "请设置提款密码"
              self.tfTwoPassword.placeholder      = "请再次确认您的密码"
         }
-       
-
     }
     override func setUI() {
         super.setUI()
 
-        //判断手机是否合法
+        //判断第一次输入密码是否合法
         let password    = tfPassword.rx.text
             .map{ $0!.characters.count >= 6 && $0!.characters.count <= 16 }
             .shareReplay(1)
-        //判断验证码是否合法
+        //判断第二次输入密码是否合法
         let twoPassword = tfTwoPassword.rx.text
             .map{ $0!.characters.count >= 6 && $0!.characters.count <= 16 }
             .shareReplay(1)
@@ -51,7 +52,7 @@ class BSResetViewController: BSBaseViewController {
             password  && twoPassword
         }
         // 控制btnNext 下一步 是否可点击
-        everythingValid.bind(to: btnNext.rx.isEnabled).addDisposableTo(rx_disposeBag)
+        everythingValid.bind(to: btnSure.rx.isEnabled).addDisposableTo(rx_disposeBag)
        
         // btnSure 点击监听
         btnSure.rx.tap.subscribe(onNext: { [unowned self] in
@@ -63,11 +64,10 @@ class BSResetViewController: BSBaseViewController {
         
         if tfPassword.text == tfTwoPassword.text {
             
-            BSPassViewModel.requestResetPassData("15981870366", password: "000000", verCode: "123456", mobile_type: nil).subscribe(onNext: { (message) in
+            BSPassViewModel.requestResetPassData(forgetInfo.phone, password: tfPassword.text!, verCode: forgetInfo.verCode, mobile_type: "1").subscribe(onNext: { (message) in
                 BSHud.showMsg(message)
             }).addDisposableTo(rx_disposeBag)
             
-//            self.popToRootVC()
         }else {
             BSHud.showWarnMsg("密码输入不一致")
         }
@@ -76,6 +76,5 @@ class BSResetViewController: BSBaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
 }

@@ -16,7 +16,7 @@ public enum RequestApi{
     case api_forgetPass(params: [String: Any])
     case api_changePass(params: [String: Any])
     case api_registerFister(params: [String: Any])
-    
+    case api_release(params: [String: Any])
 }
 let provider = RxMoyaProvider<RequestApi>()
 extension RequestApi:TargetType{
@@ -45,6 +45,10 @@ extension RequestApi:TargetType{
             return API.URL_ChangePass
         case .api_registerFister:
             return API.URL_RegisterFister
+        case .api_release:
+            return API.URL_ReleaseAd
+        default:
+            return ""
         }
 
     
@@ -67,6 +71,8 @@ extension RequestApi:TargetType{
             params =  param
         case let .api_registerFister(param):
             params =  param
+        case let .api_release(param):
+            params = param
         }
         return params
     }

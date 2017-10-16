@@ -59,7 +59,7 @@ class BSRegistViewController: BSBaseViewController {
     //MARK: 判断信息是否有效
     @IBAction func nextAction(_ sender: Any) {
         
-        BSRegisterViewModel.requestRegisterFisterData(self.tfPhone.text!, type: "1", verCode: "123456", mobile_type: nil).subscribe(onNext: { [unowned self](message) in
+        BSRegisterViewModel.requestRegisterFisterData(self.tfPhone.text!, type: "1", verCode: tfCode.text!, mobile_type: nil).subscribe(onNext: { [unowned self](message) in
             BSLog(message)
             self.toNextVC()
         }).addDisposableTo(rx_disposeBag)
@@ -68,7 +68,7 @@ class BSRegistViewController: BSBaseViewController {
     }
     //MARK: 跳转 设置昵称的界面
     func toNextVC(){
-        let registerData = RegisterModel.init(phone: self.tfPhone.text!, verCode: self.tfCode.text!, passwWord: self.tfPassword.text!)
+        let registerData = RegisterModel.init(phone: self.tfPhone.text!, verCode: self.tfCode.text!, passwWord: self.tfPassword.text!, mobile_type: "")
         
         VCRouter.toSetNickVC(registerData)
         
@@ -79,8 +79,4 @@ class BSRegistViewController: BSBaseViewController {
     }
     
 }
-public struct RegisterModel {
-    var phone: String
-    var verCode: String
-    var passwWord:String
-}
+

@@ -103,7 +103,7 @@ class BSPostViewController: BSBaseViewController {
                         BSPostModel.init(title: "最低价", content: "", placHold: "广告最低可成交的价格",imgRight: true),
                         BSPostModel.init(title: "最小量", content: "", placHold: "每一笔交易额的最小限额",imgRight: true),
                         BSPostModel.init(title: "最大量", content: "", placHold: "每一笔交易额的最大限额",imgRight: true),
-                        BSPostModel.init(title: "最大量", content: "现金存款", placHold: "")]
+                        BSPostModel.init(title: "付款方式", content: "现金存款", placHold: "")]
        
         let sectionArray = [BSPostModel.init(title: "所在地", content: "中国", placHold: "")]
         let fourArray = [BSPostModel.init(title: "所在地", content: "中国", placHold: "")]
@@ -114,7 +114,23 @@ class BSPostViewController: BSBaseViewController {
         dataArr.value.append(SectionModel.init(model: "three", items: sectionArray))
         dataArr.value.append(SectionModel.init(model: "four", items: fourArray))
     }
-
+    func requestPostBuy()  {
+        var params = [String:Any]
+        params["type"]  = "1"
+        params["coin_type"]  = "1"
+        params["member_id"]  = "1"
+        params["is_safe"]  = "1"
+        params["country_id"]  = "1"
+        params["currency_code"]  = "1"
+        params["premium_rate"]  = "1"
+        params["price"]  = "1"
+        params["min_price"]  = "1"
+        params["min_num"]  = "1"
+        params["max_num"]  = "1"
+        params["payment"]  = "1"
+        params["message"]  = "1"
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 

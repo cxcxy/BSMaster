@@ -83,6 +83,11 @@
 		2D6BDE9F1F7E34DE00E64452 /* BSTransactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6BDE9D1F7E34DE00E64452 /* BSTransactCell.xib */; };
 		2D6BDEA11F7E3BF400E64452 /* BSBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6BDEA01F7E3BF400E64452 /* BSBaseTableViewController.swift */; };
 		2D6BDEA31F7E449F00E64452 /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6BDEA21F7E449F00E64452 /* NSObject+Rx.swift */; };
+		2D6D655E1F9446EF003B03AF /* BSMyBuyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D655D1F9446EF003B03AF /* BSMyBuyController.swift */; };
+		2D6D65611F94471C003B03AF /* BSMyBuyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D655F1F94471C003B03AF /* BSMyBuyCell.swift */; };
+		2D6D65621F94471C003B03AF /* BSMyBuyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6D65601F94471C003B03AF /* BSMyBuyCell.xib */; };
+		2D6D65651F945429003B03AF /* BSLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D65641F945429003B03AF /* BSLoginModel.swift */; };
+		2D6D65691F945C27003B03AF /* BSPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D65681F945C26003B03AF /* BSPostViewModel.swift */; };
 		2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35731F7DD2E1005DED82 /* AppDelegate.swift */; };
 		2DDD35791F7DD2E1005DED82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35771F7DD2E1005DED82 /* Main.storyboard */; };
 		2DDD357B1F7DD2E1005DED82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD357A1F7DD2E1005DED82 /* Assets.xcassets */; };
@@ -213,6 +218,11 @@
 		2D6BDE9D1F7E34DE00E64452 /* BSTransactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSTransactCell.xib; sourceTree = "<group>"; };
 		2D6BDEA01F7E3BF400E64452 /* BSBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseTableViewController.swift; sourceTree = "<group>"; };
 		2D6BDEA21F7E449F00E64452 /* NSObject+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
+		2D6D655D1F9446EF003B03AF /* BSMyBuyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyBuyController.swift; sourceTree = "<group>"; };
+		2D6D655F1F94471C003B03AF /* BSMyBuyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyBuyCell.swift; sourceTree = "<group>"; };
+		2D6D65601F94471C003B03AF /* BSMyBuyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSMyBuyCell.xib; sourceTree = "<group>"; };
+		2D6D65641F945429003B03AF /* BSLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSLoginModel.swift; sourceTree = "<group>"; };
+		2D6D65681F945C26003B03AF /* BSPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPostViewModel.swift; sourceTree = "<group>"; };
 		2DDD35701F7DD2E1005DED82 /* BSMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDD35731F7DD2E1005DED82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DDD35781F7DD2E1005DED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -356,19 +366,12 @@
 		2D61A9CA1F8B09B9004AD2B8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2D6D65631F945412003B03AF /* Model */,
 				2D423E9C1F8E15E100D38418 /* ViewModel */,
-				2D61A9CB1F8B09B9004AD2B8 /* Model */,
 				2D61A9CC1F8B09B9004AD2B8 /* View */,
 				2D61A9CD1F8B09B9004AD2B8 /* ViewController */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		2D61A9CB1F8B09B9004AD2B8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2D61A9CC1F8B09B9004AD2B8 /* View */ = {
@@ -408,6 +411,22 @@
 				2D07A85D1F8F706600636188 /* BSPostHighTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		2D6D65631F945412003B03AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D6D65641F945429003B03AF /* BSLoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D6D65671F945C19003B03AF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D6D65681F945C26003B03AF /* BSPostViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2DDD35671F7DD2E1005DED82 = {
@@ -557,10 +576,10 @@
 		2DDD35D01F7E1EFB005DED82 /* Transact */ = {
 			isa = PBXGroup;
 			children = (
+				2D6D65671F945C19003B03AF /* ViewModel */,
 				2D07A8471F8F543D00636188 /* Model */,
 				2DDD35E01F7E2043005DED82 /* ViewController */,
 				2DDD35DE1F7E2043005DED82 /* View */,
-				2DDD35DF1F7E2043005DED82 /* ViewModel */,
 			);
 			path = Transact;
 			sourceTree = "<group>";
@@ -616,13 +635,6 @@
 				2D6BDE9B1F7E34A900E64452 /* Cell */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2DDD35DF1F7E2043005DED82 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2DDD35E01F7E2043005DED82 /* ViewController */ = {
@@ -726,6 +738,8 @@
 			children = (
 				2D61A9C21F7F6D58004AD2B8 /* BSMyTableViewCell.swift */,
 				2D61A9C31F7F6D58004AD2B8 /* BSMyTableViewCell.xib */,
+				2D6D655F1F94471C003B03AF /* BSMyBuyCell.swift */,
+				2D6D65601F94471C003B03AF /* BSMyBuyCell.xib */,
 				2D61A9C61F7F8494004AD2B8 /* BAMySetTableViewCell.swift */,
 				2D61A9C71F7F8494004AD2B8 /* BAMySetTableViewCell.xib */,
 				2D61A4D61F8B8E8700071D80 /* BSSettingCell.swift */,
@@ -747,6 +761,7 @@
 			children = (
 				2DE3305D1F7E288500048D3D /* BSMyViewController.swift */,
 				2D61A4451F8B66DB00071D80 /* BSMyAdverteViewController.swift */,
+				2D6D655D1F9446EF003B03AF /* BSMyBuyController.swift */,
 				2D61A4D41F8B89BD00071D80 /* BSSettingViewController.swift */,
 				2D4E38E71F8F8F95004A16A4 /* BSAboutMeController.swift */,
 				2D4E38E91F8F91F1004A16A4 /* BSCenterController.swift */,
@@ -857,6 +872,7 @@
 				2DDD35FA1F7E20C3005DED82 /* Purse.storyboard in Resources */,
 				2D07A83B1F8F32AC00636188 /* BSMaskBuyView.xib in Resources */,
 				2D61A9C51F7F6D58004AD2B8 /* BSMyTableViewCell.xib in Resources */,
+				2D6D65621F94471C003B03AF /* BSMyBuyCell.xib in Resources */,
 				2D3F9C5D1F9064020050CD57 /* BSGetBTCCell.xib in Resources */,
 				2D07A8411F8F4F6F00636188 /* BSPostCell.xib in Resources */,
 				2D61A9C91F7F8494004AD2B8 /* BAMySetTableViewCell.xib in Resources */,
@@ -1008,6 +1024,7 @@
 				2D3F9C5C1F9064020050CD57 /* BSGetBTCCell.swift in Sources */,
 				2D61A4D81F8B8E8700071D80 /* BSSettingCell.swift in Sources */,
 				2D6523C21F8CF07D00CB5B54 /* BSExtensionAdd.swift in Sources */,
+				2D6D65691F945C27003B03AF /* BSPostViewModel.swift in Sources */,
 				2DFB49D51F90D42A007EE744 /* BSRealStyleCell.swift in Sources */,
 				2D3F9C661F9087360050CD57 /* BSTradingCell.swift in Sources */,
 				2D4E38EA1F8F91F1004A16A4 /* BSCenterController.swift in Sources */,
@@ -1030,7 +1047,9 @@
 				2D07A8611F8F77AD00636188 /* BSDigitalCoinController.swift in Sources */,
 				2D6BDEA31F7E449F00E64452 /* NSObject+Rx.swift in Sources */,
 				2D3F9C501F9059CB0050CD57 /* BSSearchUserController.swift in Sources */,
+				2D6D655E1F9446EF003B03AF /* BSMyBuyController.swift in Sources */,
 				2D0C9E5D1F90A04700698F1D /* BSSreenDateView.swift in Sources */,
+				2D6D65611F94471C003B03AF /* BSMyBuyCell.swift in Sources */,
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
 				2D4E38EF1F8F9AC4004A16A4 /* BSSuggestCell.swift in Sources */,
 				2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */,
@@ -1040,6 +1059,7 @@
 				2DE330641F7E28B700048D3D /* BSTransactViewController.swift in Sources */,
 				2DE330601F7E289A00048D3D /* BSMainViewController.swift in Sources */,
 				2D61A9C81F7F8494004AD2B8 /* BAMySetTableViewCell.swift in Sources */,
+				2D6D65651F945429003B03AF /* BSLoginModel.swift in Sources */,
 				2D5615511F8DFD4700BB9C03 /* BSCountryNavView.swift in Sources */,
 				2D61A9C11F7F62C9004AD2B8 /* BSOrderViewControllers.swift in Sources */,
 				2DE3306C1F7E2C3100048D3D /* UIImage+.swift in Sources */,

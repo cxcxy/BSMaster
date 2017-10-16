@@ -42,6 +42,7 @@ class BSInputMoneyViewController: BSBaseViewController {
         // btn 点击监听 请求接口
         btnForgetPass.rx.tap.subscribe(onNext: {
             print("忘记密码")
+            VCRouter.toForgetPassVC()
         }).addDisposableTo(rx_disposeBag)
         btnNext.rx.tap.subscribe(onNext: {[unowned self] in
  

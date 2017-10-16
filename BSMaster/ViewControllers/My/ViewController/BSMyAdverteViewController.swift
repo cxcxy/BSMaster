@@ -40,19 +40,32 @@ class BSMyAdverteViewController: BSBaseSegmentedControl {
         
         switch controllerStyle {
         case .Adverted:
-            titleArray      = ["进行中","已下架"]
-            for _ in titleArray {
-                let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSPhoneLoginViewController")
-                vcArray.append(vc)
-            }
+            self.title      =   "我的广告"
+            titleArray      =  ["进行中","已结束"]
+            let vc          = BSMyBuyController.init(style: .grouped)
+            let vcTwo       = BSMyBuyController.init(style: .grouped)
+            vcArray.append(vc)
+            vcArray.append(vcTwo)
         case .Trust:
             titleArray      = ["您信任的人","信任您的人"]
-        case .Buy,.Sold:
-            titleArray      = ["进行中","已结束"]
+        case .Buy:
+            self.title      =   "我购买的"
+            titleArray      =  ["进行中","已结束"]
+            let vc          = BSMyBuyController.init(style: .grouped)
+            let vcTwo       = BSMyBuyController.init(style: .grouped)
+            vcArray.append(vc)
+            vcArray.append(vcTwo)
+         case .Sold:
+            self.title      =   "我出售的"
+            titleArray      =  ["进行中","已结束"]
+            let vc          = BSMyBuyController.init(style: .grouped)
+            let vcTwo       = BSMyBuyController.init(style: .grouped)
+            vcArray.append(vc)
+            vcArray.append(vcTwo)
+  
         case .Search:
             self.title      = "搜索"
             titleArray      = ["找广告","找用户"]
-
             let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSSearchController")
             let vcTwo = UIStoryboard.getStoryVC(.Login, identifier: "BSSearchUserController")
             vcArray.append(vc)

@@ -56,7 +56,7 @@ class BSNetManager {
             BSHud.showLoading()
         }
         
-        BSLog("request target 请求的URL： \(target.path)\n请求的参数：\(target.parameters ?? [:])")
+        BSLog("request target： \n请求的URL： \(target.path)\n请求的参数：\(target.parameters ?? [:])")
         _ =  requestProvider.request(target) { (result) in
 
             BSHud.dismiss()

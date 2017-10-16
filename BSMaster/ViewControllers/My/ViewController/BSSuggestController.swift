@@ -59,7 +59,8 @@ class BSFooterBtnView: UIView {
         b                   = UIButton(type: .custom)
         b.frame             = CGRect(x: 0, y: 0, width: MGScreenWidth - 70, height: 50)
         b.titleLabel!.font  =  UIFont.systemFont(ofSize: 15)
-        b.layer.cornerRadius         = 7.0
+
+        b.setCornerRadius(radius: 7.0)
         b.addBorder(width: 0.5, color: BSBorderColor)
         b.setTitleColor(UIColor.white, for: .normal)
         b.setTitleColor(MGRgb(193, g: 197, b: 204), for: .disabled)

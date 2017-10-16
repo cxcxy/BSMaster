@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7W0-Cj-ra2" id="c4A-FR-8D8">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMw-rn-AJJ">
@@ -73,6 +73,10 @@
                                 <state key="normal" title="我购买的" image="me_buy">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buyAction:" destination="7W0-Cj-ra2" eventType="touchUpInside" id="Qac-Kz-zbr"/>
+                                    <action selector="buyAction:" destination="-1" eventType="touchUpInside" id="azK-s9-tl3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgx-Dx-aFD">
                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
@@ -81,6 +85,9 @@
                                 <state key="normal" title="我出售的" image="me_sell">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="seleAction:" destination="7W0-Cj-ra2" eventType="touchUpInside" id="JFu-1l-r0j"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2196078431372549" green="0.63137254901960782" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

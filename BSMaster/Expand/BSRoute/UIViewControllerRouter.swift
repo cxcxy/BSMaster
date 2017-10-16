@@ -46,8 +46,11 @@ class VCRouter {
         topVC?.pushVC(vc)
     }
     //MARK: 跳转重置密码界面
-     class func toResetPassVC(){
+    class func toResetPassVC(_ forgetInfo:RegisterModel? = nil){
         let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSResetViewController") as! BSResetViewController
+        if let info = forgetInfo {
+            vc.forgetInfo = info
+        }
         topVC?.pushVC(vc)
     }
     //MARK: 跳转设置界面
