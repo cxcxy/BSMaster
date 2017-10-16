@@ -19,6 +19,7 @@ public enum RequestApi{
     case api_registerFister(params: [String: Any])
     //MARK: 发布出售相关接口
     case api_release(params: [String: Any])
+    case api_buyList(params: [String: Any])
     //MARK: 手机区号相关接口
     case api_MobileType(lang:String)
     case api_Country(lang:String)
@@ -56,6 +57,8 @@ extension RequestApi:TargetType{
             return API.URL_MobileType
         case .api_Country:
             return API.URL_Country
+        case .api_buyList:
+            return API.URL_BuyList
         default:
             return ""
         }
@@ -86,7 +89,8 @@ extension RequestApi:TargetType{
             params = ["lang":langId]
         case let .api_Country(langId):
             params = ["lang":langId]
-            
+        case let .api_buyList(param):
+            params =  param
         }
         return params
     }

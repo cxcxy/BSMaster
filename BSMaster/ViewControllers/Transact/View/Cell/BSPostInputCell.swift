@@ -9,11 +9,13 @@
 import UIKit
 import KMPlaceholderTextView
 class BSPostInputCell: BSBaseTableViewCell {
-
+    var postModel : BSPostModel?
     @IBOutlet weak var inputTextView: KMPlaceholderTextView!
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        inputTextView.rx.text.orEmpty.subscribe(onNext: { [unowned self](str) in
+            self.postModel?.message = str
+        }).addDisposableTo(rx_disposeBag)
     
     }
 

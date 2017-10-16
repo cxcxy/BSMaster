@@ -90,7 +90,7 @@ class BSRegisterViewModel {
             params["mobile"]        = phone
             params["type"]          = type
             params["vcode"]         = verCode
-
+//            let model =  BSRegisterFirstModel.init(mobile_type: mobile_type, mobile: phone, type: type, vcode: verCode)
             BSNetManager.sharedManager.requestWithTarget(.api_registerFister(params: params),isShowLoding: true, successClosure: { (result, code,message)  in
                 observer.onNext(message ?? "")
             }) { (errorStr) in

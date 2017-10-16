@@ -15,7 +15,21 @@ public struct RegisterModel {
     var mobile_type :   String = ""// 手机区号
 }
 
+class BSRegisterFirstModel: NSObject {
+    var mobile_type     :String
+    var mobile          :String
+    var type            :String
+    var vcode           :String
 
+     init(mobile_type:String,mobile:String,type:String,vcode:String) {
+        
+        self.mobile_type = mobile_type
+        self.mobile      = mobile
+        self.type           =  type
+        self.vcode      = vcode
+    }
+
+}
 class BSMobileListModel:NSObject, Mappable {
     var id                      : String?  // id
     var name                    : String? // 国家名称

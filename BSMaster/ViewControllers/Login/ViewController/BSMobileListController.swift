@@ -25,7 +25,6 @@ class BSMobileListController: BSBaseTableViewController {
                 break
         }
         
-        self.title = "国家／地区"
         tableView.cellId_register("BSDigtitalCell")
         
         

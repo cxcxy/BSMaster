@@ -151,6 +151,17 @@ class VCRouter {
         vc.vc_type = vc_type
         topVC?.pushVC(vc)
     }
-    
+    // MARK: - 弹出选择器视图
+    class func prentPirckerMask(dataArr:[String],startIndex:Int,block:@escaping SelectRowBlock) {
+        let vc = BSBasePickerViewController()
+        vc.btnDismiss.backgroundColor = UIColor.black
+        vc.btnDismiss.alpha  = 0.5
+        vc.showPicker(arr: dataArr,index: startIndex)
+        vc.selectBlock = {(str,index) in
+            block(str,index)
+        }
+        topVC?.presentToMaskViewController(viewControllerToPresent: vc)
+        
+    }
 }
 

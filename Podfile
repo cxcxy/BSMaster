@@ -14,6 +14,7 @@ target 'BSMaster' do
     pod 'EZSwiftExtensions'
   	pod 'IQKeyboardManagerSwift'
 	pod 'ObjectMapper'
+    pod 'SwiftyJSON'
 	pod 'SVProgressHUD'
 	pod 'Kingfisher'
    	pod 'VTMagic'   , :git => 'https://github.com/aycgithub/VTMagic.git'

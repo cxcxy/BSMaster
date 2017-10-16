@@ -80,6 +80,10 @@
                     <constraint firstItem="RPH-oR-hfY" firstAttribute="centerY" secondItem="Svb-3T-dYm" secondAttribute="centerY" id="yBi-rv-9UY"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="btnEnable" destination="7rb-Lm-yki" id="iTK-Qn-LET"/>
+                <outlet property="btnNoEnable" destination="RPH-oR-hfY" id="BKo-vk-DaK"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>
