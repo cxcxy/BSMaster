@@ -30,12 +30,30 @@ class BSRegisterFirstModel: NSObject {
     }
 
 }
+
+
 class BSMobileListModel:NSObject, Mappable {
-    var id                      : String?  // id
+
+    var data                    : [BSCountryModel]?
+    var title : String?
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        
+        data                    <- map["data"]
+        title                   <- map["title"]
+    }
+}
+class BSCountryModel:NSObject, Mappable {
+    var id                      : Int?  // id
     var name                    : String? // 国家名称
     var country_code            : String? // 国家代号
     var currency_name           : String? // 货币名称
     var currency_code           : String? // 货币代号
+    var shou                    : String?
+
     required init?(map: Map) {
         
     }
@@ -47,7 +65,7 @@ class BSMobileListModel:NSObject, Mappable {
         country_code            <- map["country_code"]
         currency_name           <- map["currency_name"]
         currency_code           <- map["currency_code"]
-        
-        
+        shou                    <- map["shou"]
+
     }
 }

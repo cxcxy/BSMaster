@@ -145,10 +145,19 @@ class VCRouter {
         
     }
     //TODO: 跳转选择国家／地区 or 货币选择
-    class func toCountryVC(_ vc_type:BSCountryType = .Country){
+    class func toCountryVC(_ vc_type:BSCountryType = .Country,block:@escaping ChooseCountryBlock){
         
-        let vc = BSMobileListController()
+        let vc =  UIStoryboard.getStoryVC(.Login, identifier: "BSMobileListController") as! BSMobileListController
         vc.vc_type = vc_type
+        vc.seletorBlock = {(str,id,code) in
+            block(str,id,code)
+        }
+        topVC?.pushVC(vc)
+    }
+    //TODO: 跳转搜索广告结果页
+    class func toSearchADResultVC(_ params : [String:Any]){
+        let vc = BSSearchResultController()
+        vc.params = params
         topVC?.pushVC(vc)
     }
     // MARK: - 弹出选择器视图

@@ -10,11 +10,20 @@ import UIKit
 
 class BSBTCTypeTableViewCell: BSBaseTableViewCell {
 
+    @IBOutlet weak var btnPostBtn: UIButton!
+    @IBOutlet weak var btnGetBtc: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    @IBAction func postAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func getAction(_ sender: Any) {
+        
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

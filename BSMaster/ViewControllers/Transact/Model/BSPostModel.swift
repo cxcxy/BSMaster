@@ -72,17 +72,17 @@ class BSPostModel: NSObject,Mappable {
 //MARK: 列表页模型
 class BSPostListModel: NSObject,Mappable {
     
-    var id                  :String?
+    var id                  :Int?
     var favicon             :String?
     var nickname            :String?
     var price               :String?
     var currency_code       :String?
-    var min_num             :String?
-    var max_num             :String?
-    var transaction_count   :String?
-    var favorable_rate      :String?
-    var trust_count         :String?
-
+    var min_num             :Int?
+    var max_num             :Int?
+    var transaction_count   :Int?
+    var favorable_rate      :Int?
+    var trust_count         :Int?
+    var payment             :Int?
     
     override init(){
         
@@ -102,7 +102,7 @@ class BSPostListModel: NSObject,Mappable {
         transaction_count                   <- map["transaction_count"]
         favorable_rate                      <- map["favorable_rate"]
         trust_count                         <- map["trust_count"]
-
+        payment                             <- map["payment"]
     }
     
 }

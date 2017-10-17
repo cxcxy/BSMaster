@@ -113,15 +113,9 @@ class BSPostViewController: BSBaseViewController {
                         BSPostStyleModel.init(title: "数字货币", content: "比特币（BTC）", placHold: "",inputType:.numberCurrency,isInput:false)]
         dataArr.value.append(SectionModel.init(model: "section", items: oneArray))
         configData()
-       
-      
-        
-        
+
         let sectionArray = [BSPostStyleModel.init(title: "所在地", content: "中国", placHold: "")]
         let fourArray = [BSPostStyleModel.init(title: "所在地", content: "中国", placHold: "")]
-        
-        
-      
         
         dataArr.value.append(SectionModel.init(model: "three", items: sectionArray))
         dataArr.value.append(SectionModel.init(model: "four", items: fourArray))
@@ -154,8 +148,8 @@ class BSPostViewController: BSBaseViewController {
 
         postModel.coin_type         = "1"
         postModel.member_id         = "13"
-        postModel.country_id        = "44"
-        postModel.currency_code     = "CNY"
+//        postModel.country_id        = "44"
+//        postModel.currency_code     = "CNY"
         postModel.price             = "25969.21"
         
 //        postModel.payment_term      = "50"
@@ -176,10 +170,14 @@ class BSPostViewController: BSBaseViewController {
         case 0:
             switch row {
                 case 1:
-                    VCRouter.toCountryVC()
+                    VCRouter.toCountryVC( block: { (str, id,code) in
+                        
+                    })
                     break
                 case 2:
-                    VCRouter.toCountryVC(.Corrency)
+                    VCRouter.toCountryVC(.Country, block: { (str, id,code) in
+                        
+                    })
                     break
                 default:break
             }

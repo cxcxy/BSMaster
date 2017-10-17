@@ -7,7 +7,9 @@
 //
 
 import UIKit
-typealias SelectRowBlock =  (_ str:String, _ index: Int) -> ()
+typealias SelectRowBlock        =  (_ str:String, _ index: Int) -> ()
+
+typealias ChooseCountryBlock    =  (_ str:String, _ id: Int,_ code:String) -> ()
 
 class BSBasePickerViewController: BSBaseMackViewController {
     var selectBlock :SelectRowBlock?

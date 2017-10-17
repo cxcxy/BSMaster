@@ -40,8 +40,11 @@ class BSPhoneLoginViewController: BSBaseViewController {
         btnLogin.rx.tap.subscribe(onNext: {  [weak self]in
             self?.requstLogin()
         }).addDisposableTo(rx_disposeBag)
+        
         viewCountry.addAction {
-            VCRouter.toCountryVC()
+            VCRouter.toCountryVC( block: { (str, id,code) in
+                
+            })
         }
         // 点击忘记密码
         btnPassword.rx.tap.subscribe(onNext: {

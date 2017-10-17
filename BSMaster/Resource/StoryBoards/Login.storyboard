@@ -407,7 +407,7 @@
                                             <constraint firstAttribute="bottom" secondItem="QCW-X7-bhq" secondAttribute="bottom" id="nyO-17-I49"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="最低价" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOR-cM-pRX">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="最高价" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOR-cM-pRX">
                                         <rect key="frame" x="215" y="10" width="100" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="nf8-EH-usp"/>
@@ -533,7 +533,7 @@
                                     <constraint firstAttribute="height" constant="47" id="g5U-tD-E5l"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="完成注册">
+                                <state key="normal" title="搜索">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -557,6 +557,17 @@
                             <constraint firstItem="MX2-ox-Yum" firstAttribute="leading" secondItem="zMH-zj-Ugj" secondAttribute="leading" constant="30" id="wfs-hr-JTB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnSearch" destination="t64-9E-YIX" id="1OC-ec-4nZ"/>
+                        <outlet property="lbCoinType" destination="jOf-XH-fB8" id="3bS-Qe-UZ4"/>
+                        <outlet property="lbCountry" destination="wbr-sM-3Uo" id="7PY-SZ-qey"/>
+                        <outlet property="lbPayType" destination="r5o-AS-RcL" id="coT-6W-EaZ"/>
+                        <outlet property="tfMacPrice" destination="LOR-cM-pRX" id="lo0-X9-IdI"/>
+                        <outlet property="tfMinPrice" destination="QCW-X7-bhq" id="rJc-aO-ZnA"/>
+                        <outlet property="viewChooseCountry" destination="MX2-ox-Yum" id="StK-oc-cKg"/>
+                        <outlet property="viewChooseMoney" destination="Drh-Ge-hMC" id="qYi-Jv-fI0"/>
+                        <outlet property="viewChoosePay" destination="2yl-5h-qN6" id="Jcv-go-OvQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQY-pc-AZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -619,6 +630,9 @@
                                 <state key="normal" title="搜索">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchAction:" destination="7MF-xY-Yk6" eventType="touchUpInside" id="lxf-BP-qnH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -631,6 +645,10 @@
                             <constraint firstItem="f9j-JO-bot" firstAttribute="top" secondItem="u52-zq-xrl" secondAttribute="bottom" constant="25" id="yqR-5R-T1J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnSearch" destination="f9j-JO-bot" id="1yG-Ui-wqu"/>
+                        <outlet property="tfUser" destination="bjM-gm-lzC" id="hQC-H5-IBV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6l-SA-a4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -931,6 +949,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRd-FU-W9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4988" y="-1749"/>
+        </scene>
+        <!--Mobile List Controller-->
+        <scene sceneID="Z5j-Di-fi4">
+            <objects>
+                <viewController storyboardIdentifier="BSMobileListController" id="pKI-sh-yBL" customClass="BSMobileListController" customModule="BSMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cv3-3L-Hrq"/>
+                        <viewControllerLayoutGuide type="bottom" id="dWz-kz-xNl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aGa-vG-6U1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Is-Is-5aV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pKI-sh-yBL" id="8E6-Mc-nBR"/>
+                                    <outlet property="delegate" destination="pKI-sh-yBL" id="cen-d1-dHw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dWz-kz-xNl" firstAttribute="top" secondItem="8Is-Is-5aV" secondAttribute="bottom" id="6A8-ox-oUg"/>
+                            <constraint firstItem="8Is-Is-5aV" firstAttribute="top" secondItem="cv3-3L-Hrq" secondAttribute="bottom" id="GRJ-L5-bAP"/>
+                            <constraint firstItem="8Is-Is-5aV" firstAttribute="leading" secondItem="aGa-vG-6U1" secondAttribute="leading" id="H9J-qf-CBl"/>
+                            <constraint firstAttribute="trailing" secondItem="8Is-Is-5aV" secondAttribute="trailing" id="qeR-cO-MON"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="8Is-Is-5aV" id="gKK-FF-VGw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vet-Ej-Cql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6102" y="-1791"/>
         </scene>
         <!--Regist View Controller-->
         <scene sceneID="OqY-L7-Nfv">

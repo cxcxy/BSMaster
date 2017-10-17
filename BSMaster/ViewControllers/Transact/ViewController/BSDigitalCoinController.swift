@@ -62,7 +62,7 @@ class BSDigitalCoinController: BSBaseTableViewController {
 class BSDigtitalCell: UITableViewCell {
     var lbTitle : UILabel!
     var lbLine :UILabel!
-    
+    var right_Icon:UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -76,6 +76,12 @@ class BSDigtitalCell: UITableViewCell {
             lbLine = UILabel()
             lbLine.backgroundColor = MGRgb(221, g: 226, b: 228)
             self.addSubview(lbLine)
+        
+        
+            right_Icon = UIImageView()
+            right_Icon.image = UIImage.init(named: "right")
+            self.addSubview(right_Icon)
+        
             lbTitle.snp.makeConstraints { [unowned self](make) in
                 make.left.equalTo(15)
                 make.centerY.equalTo(self)
@@ -86,6 +92,14 @@ class BSDigtitalCell: UITableViewCell {
             make.right.equalTo(-15)
             make.height.equalTo(1)
             make.bottom.equalTo(0)
+        }
+        right_Icon.snp.makeConstraints { (make) in
+//            make.left.equalTo(15)
+             make.right.equalTo(-15)
+            make.height.equalTo(13)
+            make.width.equalTo(7)
+            make.centerY.equalTo(self)
+//            make.bottom.equalTo(0)
         }
     }
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {

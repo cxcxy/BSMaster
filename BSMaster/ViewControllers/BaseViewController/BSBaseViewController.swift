@@ -18,6 +18,11 @@ class BSBaseViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIApplication.shared.keyWindow?.endEditing(true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.keyWindow?.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,6 +44,9 @@ class BSBaseViewController: UIViewController {
     }
     func navBack() {
         _ = navigationController?.popViewController(animated: true)
+    }
+    func request()  {
+        
     }
     deinit {
         

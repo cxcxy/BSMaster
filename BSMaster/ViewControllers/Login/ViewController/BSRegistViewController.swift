@@ -56,7 +56,9 @@ class BSRegistViewController: BSBaseViewController {
             self.btnMsgCode.startTimer(60, title: "获取验证码", mainBGColor: UIColor.white, mainTitleColor: BSBtnColor, countBGColor: UIColor.white, countTitleColor: MGRgb(128, g: 128, b: 128), handle: nil)
         }).addDisposableTo(rx_disposeBag)
         viewCountry.addAction {
-            VCRouter.toCountryVC()
+            VCRouter.toCountryVC( block: { (str, id,code) in
+                
+            })
         }
         
     }

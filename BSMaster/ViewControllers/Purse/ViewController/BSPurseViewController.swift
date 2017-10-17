@@ -7,8 +7,14 @@
 //
 
 import UIKit
-
+enum BSPurseType {
+    case getBTC
+    case postBTC
+}
 class BSPurseViewController: BSBaseTableViewController {
+    
+    var purseType:BSPurseType = .getBTC
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
@@ -33,7 +39,7 @@ class BSPurseViewController: BSBaseTableViewController {
             VCRouter.toTradingDetailVC()
         }
         dataSource.configureCell = {[weak self](_ , tableView , indexPath , element) in
-            //            guard let `self` = self else { return  UITableViewCell() }
+                        guard let `self` = self else { return  UITableViewCell() }
             let section = indexPath.section
             let row = indexPath.row
             switch section {
@@ -43,10 +49,25 @@ class BSPurseViewController: BSBaseTableViewController {
             case 1:
                 if row == 0 {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "BSBTCTypeTableViewCell", for: indexPath) as! BSBTCTypeTableViewCell
+                    cell.btnGetBtc.addAction {
+                        self.purseType = .getBTC
+                        self.tableView.reloadData()
+                    }
+                    cell.btnPostBtn.addAction {
+                        self.purseType = .postBTC
+                        self.tableView.reloadData()
+                    }
                     return cell
                 }else{
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "BSPostBTCCell", for: indexPath) as! BSPostBTCCell
-                    return cell
+                    switch self.purseType{
+                    case .getBTC:
+                            let cell = tableView.dequeueReusableCell(withIdentifier: "BSGetBTCCell", for: indexPath) as! BSGetBTCCell
+                            return cell
+                    case .postBTC:
+                            let cell = tableView.dequeueReusableCell(withIdentifier: "BSPostBTCCell", for: indexPath) as! BSPostBTCCell
+                            return cell
+                    }
+
                 }
 
                 
@@ -69,7 +90,8 @@ class BSPurseViewController: BSBaseTableViewController {
         
         dataArr.value.append(SectionModel.init(model: "one", items: [BSMeIcon.init(icon: "", title: "")]))
         
-        dataArr.value.append(SectionModel.init(model: "two", items: [BSMeIcon.init(icon: "me_suggest", title: "建议反馈"),
+        dataArr.value.append(SectionModel.init(model: "two",
+                                               items: [BSMeIcon.init(icon: "me_suggest", title: "建议反馈"),
                                                                      BSMeIcon.init(icon: "me_about", title: "关于我们")]))
     }
     

@@ -22,6 +22,15 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         setCustomerBack()
         setUI()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.keyWindow?.endEditing(true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.keyWindow?.endEditing(true)
+    }
+    
     //MARK: 返回按钮
     func setCustomerBack() {
         if let count = navigationController?.viewControllers.count {

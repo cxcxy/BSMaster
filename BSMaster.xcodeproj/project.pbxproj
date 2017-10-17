@@ -29,7 +29,10 @@
 		2D0C9E631F90B4DC00698F1D /* BSSuggestTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0C9E611F90B4DC00698F1D /* BSSuggestTitleCell.xib */; };
 		2D0F64DC1F90DF440005341A /* BSResetFiestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F64DB1F90DF440005341A /* BSResetFiestViewController.swift */; };
 		2D0F64DF1F90E43D0005341A /* BSMyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F64DE1F90E43D0005341A /* BSMyViewModel.swift */; };
+		2D12F59D1F95E9B200CD7D44 /* BSSearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D12F59C1F95E9B200CD7D44 /* BSSearchResultController.swift */; };
 		2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */; };
+		2D3B5B211F95F8D600CBE3D9 /* BSChooseBTCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B5B201F95F8D600CBE3D9 /* BSChooseBTCView.swift */; };
+		2D3B5B231F95F8DF00CBE3D9 /* BSChooseBTCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3B5B221F95F8DF00CBE3D9 /* BSChooseBTCView.xib */; };
 		2D3F9C4E1F904C0F0050CD57 /* BSSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F9C4D1F904C0F0050CD57 /* BSSearchController.swift */; };
 		2D3F9C501F9059CB0050CD57 /* BSSearchUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F9C4F1F9059CB0050CD57 /* BSSearchUserController.swift */; };
 		2D3F9C541F905C770050CD57 /* BSPurseHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F9C521F905C770050CD57 /* BSPurseHeaderCell.swift */; };
@@ -160,7 +163,10 @@
 		2D0C9E611F90B4DC00698F1D /* BSSuggestTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSSuggestTitleCell.xib; sourceTree = "<group>"; };
 		2D0F64DB1F90DF440005341A /* BSResetFiestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSResetFiestViewController.swift; sourceTree = "<group>"; };
 		2D0F64DE1F90E43D0005341A /* BSMyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyViewModel.swift; sourceTree = "<group>"; };
+		2D12F59C1F95E9B200CD7D44 /* BSSearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSearchResultController.swift; sourceTree = "<group>"; };
 		2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBuyCoinCell.swift; sourceTree = "<group>"; };
+		2D3B5B201F95F8D600CBE3D9 /* BSChooseBTCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSChooseBTCView.swift; sourceTree = "<group>"; };
+		2D3B5B221F95F8DF00CBE3D9 /* BSChooseBTCView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSChooseBTCView.xib; sourceTree = "<group>"; };
 		2D3F9C4D1F904C0F0050CD57 /* BSSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSearchController.swift; sourceTree = "<group>"; };
 		2D3F9C4F1F9059CB0050CD57 /* BSSearchUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSearchUserController.swift; sourceTree = "<group>"; };
 		2D3F9C521F905C770050CD57 /* BSPurseHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPurseHeaderCell.swift; sourceTree = "<group>"; };
@@ -364,6 +370,8 @@
 			children = (
 				2D5615501F8DFD4700BB9C03 /* BSCountryNavView.swift */,
 				2D5615521F8DFD6500BB9C03 /* BSCountryNavView.xib */,
+				2D3B5B201F95F8D600CBE3D9 /* BSChooseBTCView.swift */,
+				2D3B5B221F95F8DF00CBE3D9 /* BSChooseBTCView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -655,6 +663,7 @@
 				2D07A83C1F8F40EB00636188 /* BSPostViewController.swift */,
 				2D07A8601F8F77AD00636188 /* BSDigitalCoinController.swift */,
 				2D3F9C4D1F904C0F0050CD57 /* BSSearchController.swift */,
+				2D12F59C1F95E9B200CD7D44 /* BSSearchResultController.swift */,
 				2D3F9C4F1F9059CB0050CD57 /* BSSearchUserController.swift */,
 			);
 			path = ViewController;
@@ -884,6 +893,7 @@
 				2D6D65621F94471C003B03AF /* BSMyBuyCell.xib in Resources */,
 				2D3F9C5D1F9064020050CD57 /* BSGetBTCCell.xib in Resources */,
 				2D07A8411F8F4F6F00636188 /* BSPostCell.xib in Resources */,
+				2D3B5B231F95F8DF00CBE3D9 /* BSChooseBTCView.xib in Resources */,
 				2D61A9C91F7F8494004AD2B8 /* BAMySetTableViewCell.xib in Resources */,
 				2D0C9E5F1F90A04F00698F1D /* BSSreenDateView.xib in Resources */,
 				2D0C37541F8CC17E00EFF40E /* BSBuyRemindCell.xib in Resources */,
@@ -1056,8 +1066,10 @@
 				2D423EA01F8E46F200D38418 /* BSForgetPassViewController.swift in Sources */,
 				2DA254771F94B3CC000D874C /* BSPickerView.swift in Sources */,
 				2D5615151F8DAA3300BB9C03 /* BSSetNickViewController.swift in Sources */,
+				2D12F59D1F95E9B200CD7D44 /* BSSearchResultController.swift in Sources */,
 				2DE330681F7E2A2600048D3D /* UITableView+.swift in Sources */,
 				2DE330621F7E28A900048D3D /* BSOrderViewController.swift in Sources */,
+				2D3B5B211F95F8D600CBE3D9 /* BSChooseBTCView.swift in Sources */,
 				2D07A8611F8F77AD00636188 /* BSDigitalCoinController.swift in Sources */,
 				2D6BDEA31F7E449F00E64452 /* NSObject+Rx.swift in Sources */,
 				2D3F9C501F9059CB0050CD57 /* BSSearchUserController.swift in Sources */,

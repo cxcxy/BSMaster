@@ -55,17 +55,24 @@ class BSPostCell: BSBaseTableViewCell {
             self.updateModelData(str)
         }).addDisposableTo(rx_disposeBag)
         self.contentView.addTapGesture { [weak self](sender) in
-            print("111")
             if let strongSelf = self {
                 switch strongSelf.inputType {
                     case .payType:
                         VCRouter.prentPirckerMask(dataArr: BSPayTypeArr, startIndex: strongSelf.chooseIndex, block: { (str, index) in
-
                             strongSelf.chooseIndex = index
                             strongSelf.postModel?.payment = (index + 1).toString
+                        
                             strongSelf.tfContent.text = str
-                            
                         })
+                    case .Locus:
+                        VCRouter.toCountryVC( block: { (str, id,code) in
+                            print(str,id,code)
+                            strongSelf.model.content    = str
+                            strongSelf.tfContent.text   = str
+                            strongSelf.postModel?.country_id = id.toString
+                            strongSelf.postModel?.currency_code = code
+                        })
+                    
                 default:break
                 }
 

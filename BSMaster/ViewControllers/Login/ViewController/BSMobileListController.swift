@@ -11,8 +11,15 @@ enum BSCountryType {
     case Country   // "国家／地区"
     case Corrency  // 货币
 }
-class BSMobileListController: BSBaseTableViewController {
+class BSMobileListController: BSBaseViewController {
     var vc_type:BSCountryType = .Country
+    var dataArr : [BSMobileListModel] = []
+    
+    var seletorBlock:ChooseCountryBlock?
+    
+    @IBOutlet weak var tableView: UITableView!
+    //MARK:Lazy
+    var headerIndexs:[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,35 +34,26 @@ class BSMobileListController: BSBaseTableViewController {
         
         tableView.cellId_register("BSDigtitalCell")
         
-        
-        dataSource.configureCell = {(_ , tableView , indexPath , element) in
-            
-            let  cell = BSDigtitalCell.init(style: .default, reuseIdentifier: "BSDigtitalCell")
-            cell.lbTitle.text = (element as? BSMobileListModel)?.name ?? ""
-            return cell
-            
-        }
-        dataArr.asObservable()
-            .bind(to: tableView.rx.items(dataSource: dataSource))
-            .addDisposableTo(rx_disposeBag)
-        
-        tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-            
-            //            VCRouter.toBuyCoinVC()
-            }.addDisposableTo(rx_disposeBag)
-        
         request()
 
-
+    }
+    func cofigData(_ arr:[BSMobileListModel])  {
+        var titleArr:[String] = []
+        for model in arr {
+            titleArr.append(model.title ?? "")
+        }
+        self.dataArr = arr
+        headerIndexs = titleArr
+        self.tableView.reloadData()
     }
     override func request() {
         super.request()
         switch vc_type {
         case .Country:
-            BSMobileListViewModel.requestMobileListData("4").subscribe(onNext: {[weak self] (arr) in
+            BSMobileListViewModel.requestCurrencyListData("4").subscribe(onNext: {[weak self] (arr) in
                 if let strongSelf = self {
-                    strongSelf.dataArr.value.append(SectionModel.init(model: "section", items: arr))
-                    
+
+                    strongSelf.cofigData(arr)
                 }
                 
             }).addDisposableTo(rx_disposeBag)
@@ -64,8 +62,8 @@ class BSMobileListController: BSBaseTableViewController {
             
             BSMobileListViewModel.requestCurrencyListData("4").subscribe(onNext: {[weak self] (arr) in
                 if let strongSelf = self {
-                    strongSelf.dataArr.value.append(SectionModel.init(model: "section", items: arr))
-                    
+//                    strongSelf.dataArr.value.append(SectionModel.init(model: "section", items: arr))
+                    print(arr)
                 }
                 
             }).addDisposableTo(rx_disposeBag)
@@ -74,10 +72,40 @@ class BSMobileListController: BSBaseTableViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    
     }
+}
+extension BSMobileListController:UITableViewDelegate,UITableViewDataSource {
     
-
-
-
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return headerIndexs.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (dataArr[section].data?.count)!
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let  cell = BSDigtitalCell.init(style: .default, reuseIdentifier: "BSDigtitalCell")
+        cell.lbTitle.text = dataArr[indexPath.section].data?[indexPath.row].name ?? ""
+        return cell
+        
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return headerIndexs[section]
+    }
+    //实现索引数据源代理方法
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return headerIndexs
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       let m  = dataArr[indexPath.section].data?[indexPath.row]
+        if let bclok = seletorBlock {
+            bclok(m?.name ?? "",m?.id ?? 0,m?.currency_code ?? "")
+            //        // 发送通知：
+            let dic = ["name":m?.name ?? "",
+                       "id":m?.id ?? 0,
+                       "code":m?.currency_code ?? ""] as [String : Any]
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "kNotificationCountryName"), object: dic)
+            self.popVC()
+        }
+    }
 }

@@ -1,37 +1,32 @@
 //
-//  BSTransactViewController.swift
+//  BSSearchResultController.swift
 //  BSMaster
 //
-//  Created by 陈旭 on 2017/9/29.
+//  Created by 陈旭 on 2017/10/17.
 //  Copyright © 2017年 陈旭. All rights reserved.
 //
 
 import UIKit
 
-enum BSTransactType:String {
-    case Buy    = "2"
-    case Sold   = "1"
-}
-
-class BSTransactViewController: BSBaseTableViewController {
+class BSSearchResultController: BSBaseTableViewController {
 
     var transactType:BSTransactType = .Buy
     var params:[String: Any] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "交易"
-      
-        // 接收通知：
-        _ = NotificationCenter.default.rx.notification(Notification.Name("kNotificationCountryName")).takeUntil(self.rx.deallocated).subscribe(onNext: {[unowned self] (value) in
-            print(value)
-            
-            let dic = value.object as? NSDictionary
-            self.params["country_id"]   = dic?["id"]
-            self.request()
-
-        })
-
-
+        self.title = "搜索结果"
+        
+//        // 接收通知：
+//        _ = NotificationCenter.default.rx.notification(Notification.Name("kNotificationCountryName")).takeUntil(self.rx.deallocated).subscribe(onNext: {[unowned self] (value) in
+//            print(value)
+//
+//            let dic = value.object as? NSDictionary
+//            self.params["country_id"]   = dic?["id"]
+//            self.request()
+//
+//        })
+//
+        
         
         tableView.cellId_register("BSTransactCell")
         self.cofigMjHeader()
@@ -42,22 +37,22 @@ class BSTransactViewController: BSBaseTableViewController {
             return cell
             
         }
-      
+        
         dataArr.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
- 
+        
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-            VCRouter.toBuyCoinVC()
-        }.addDisposableTo(rx_disposeBag)
+//            VCRouter.toBuyCoinVC()
+            }.addDisposableTo(rx_disposeBag)
         
         request()
     }
     override func request() {
         super.request()
-        params["type"] = transactType.rawValue
-
+//        params["type"] = transactType.rawValue
+        
         BSPostListViewModel.requestBuyListData(params).subscribe(onNext: { [unowned self] (message) in
             self.endRefresh()
             self.dataArr.value.removeAll()
@@ -67,6 +62,7 @@ class BSTransactViewController: BSBaseTableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
+
 }

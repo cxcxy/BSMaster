@@ -72,7 +72,8 @@ class BSNetManager {
                 jsonString      = try! response.mapString()
                 
                 let info = Mapper<ReturnInfo>().map(JSONString:jsonString)
-                BSLog(jsonString)
+                BSLog("\n--code: \(String(describing: info?.code?.toString))\n--message: \(String(describing: info?.message))\n--data: \(String(describing: info?.data))")
+
                 if let code = info?.code{
                     
                     guard code == 200 else{

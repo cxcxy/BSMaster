@@ -49,7 +49,9 @@ class BSForgetPassViewController: BSBaseViewController {
             self.btnMsgCode.startTimer(60, title: "获取验证码", mainBGColor: UIColor.white, mainTitleColor: BSBtnColor, countBGColor: UIColor.white, countTitleColor: MGRgb(128, g: 128, b: 128), handle: nil)
         }).addDisposableTo(rx_disposeBag)
         viewCountry.addAction {
-            VCRouter.toCountryVC()
+            VCRouter.toCountryVC( block: { (str, id,code) in
+                
+            })
         }
     }
       //MARK: 跳转 重置密码的界面  先验证验证码是否 合法

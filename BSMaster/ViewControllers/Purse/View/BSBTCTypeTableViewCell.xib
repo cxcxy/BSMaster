@@ -27,6 +27,9 @@
                                 <state key="normal" title="接受比特币">
                                     <color key="titleColor" red="0.086274509803921567" green="0.56862745098039214" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="getAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3Bk-Tk-0v2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,6 +50,9 @@
                                 <state key="normal" title="发送比特币">
                                     <color key="titleColor" red="0.50196078431372548" green="0.5490196078431373" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="postAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EmV-Jz-gBC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -105,6 +111,10 @@
                     <constraint firstAttribute="trailing" secondItem="zaF-oW-Ldy" secondAttribute="trailing" id="wRQ-3m-kRI"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="btnGetBtc" destination="HXT-yg-jMG" id="8V8-Lr-GSJ"/>
+                <outlet property="btnPostBtn" destination="xke-Kf-9U8" id="RM4-k0-wjY"/>
+            </connections>
             <point key="canvasLocation" x="-233" y="-160.5"/>
         </tableViewCell>
     </objects>

@@ -187,8 +187,11 @@ class BSMobileListViewModel {
         return Observable.create { observer -> Disposable in
             
             BSNetManager.sharedManager.requestWithTarget(.api_Country(lang: lang ?? "4"),isShowLoding: true, successClosure: { (result, code,message)  in
+               
+                let dic = result as? NSDictionary
+                let ar = dic?.allValues
                 
-                let arr = Mapper<BSMobileListModel>().mapArray(JSONObject:result)
+                let arr = Mapper<BSMobileListModel>().mapArray(JSONObject:ar)
                 if let array = arr{
                     observer.onNext(array)
                 }

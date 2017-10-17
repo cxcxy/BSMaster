@@ -10,5 +10,6 @@ import UIKit
 
 class BSCountryNavView: UIView {
 
-
+    @IBOutlet weak var lbCountryName: UILabel!
+    
 }
