@@ -31,15 +31,17 @@ class BSTransactViewController: BSBaseTableViewController {
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
             VCRouter.toBuyCoinVC()
         }.addDisposableTo(rx_disposeBag)
-        dataArr.value.append(SectionModel.init(model: "section", items: ["1","1","1","1","1","1","1","1","1","1","1"]))
+        
         request()
     }
     override func request() {
         super.request()
         let params:[String: Any] = ["type":"1"]
 
-        BSPostListViewModel.requestBuyListData(params).subscribe(onNext: { (message) in
+        BSPostListViewModel.requestBuyListData(params).subscribe(onNext: { [unowned self] (message) in
             print(message)
+            self.dataArr.value.append(SectionModel.init(model: "section", items: message)) 
+//            dataArr.value.append()
         }).addDisposableTo(rx_disposeBag)
     }
 

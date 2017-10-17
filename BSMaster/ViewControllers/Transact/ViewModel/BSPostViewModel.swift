@@ -41,7 +41,8 @@ class BSPostListViewModel: NSObject {
 //                let a = IXON(result)
 //                let a result.toJSON
 //                print(re s)
-                let arr = Mapper<BSPostListModel>().mapArray(JSONObject: result)
+                let r = JSON(result)
+                let arr = Mapper<BSPostListModel>().mapArray(JSONObject:r["list"].arrayObject)
                 if let array = arr{
                     observer.onNext(array)
                 }

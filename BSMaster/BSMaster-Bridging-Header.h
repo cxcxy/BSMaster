@@ -14,6 +14,7 @@
 @import EZSwiftExtensions;
 @import Kingfisher;
 @import IQKeyboardManagerSwift;
+@import SwiftyJSON;
 //@import KMPlaceholderTextView;
 //@import ESTabBar;
 
