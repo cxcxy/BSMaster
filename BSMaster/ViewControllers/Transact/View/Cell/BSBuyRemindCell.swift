@@ -9,7 +9,11 @@
 import UIKit
 
 class BSBuyRemindCell: BSBaseTableViewCell {
-
+    var modelData:BSTransactDetailModel!{
+        didSet{
+            
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -9,9 +9,30 @@
 import UIKit
 
 class BSBTCTypeTableViewCell: BSBaseTableViewCell {
-
+    var purseType:BSPurseType = .getBTC {
+        didSet{
+            switch purseType {
+            case .getBTC:
+                btnGetBtc.isSelected = true
+                lbOneLine.isHidden   = false
+                btnPostBtn.isSelected = false
+                lbTwoLine.isHidden = true
+                break
+            case .postBTC:
+                btnGetBtc.isSelected = false
+                lbOneLine.isHidden   = true
+                btnPostBtn.isSelected = true
+                lbTwoLine.isHidden = false
+                break
+            }
+            
+        }
+    }
     @IBOutlet weak var btnPostBtn: UIButton!
     @IBOutlet weak var btnGetBtc: UIButton!
+    @IBOutlet weak var lbOneLine: UILabel!
+    
+    @IBOutlet weak var lbTwoLine: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

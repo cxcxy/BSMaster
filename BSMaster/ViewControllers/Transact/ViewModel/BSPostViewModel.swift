@@ -57,3 +57,27 @@ class BSPostListViewModel: NSObject {
     }
     
 }
+class BSTransactDetailViewModel: NSObject {
+    
+    
+    //MARK: 交易详情接口
+    class  func requestTransactDetailData(_ transact: String) -> Observable<BSTransactDetailModel> {
+        return Observable.create { observer -> Disposable in
+            
+            BSNetManager.sharedManager.requestWithTarget(.api_transactInfo(transactId: transact),isShowLoding: true, successClosure: { (result, code,message)  in
+ 
+                let model = Mapper<BSTransactDetailModel>().map(JSONObject: result)
+                if let m = model{
+                    observer.onNext(m)
+                }
+            }) { (errorStr) in
+                observer.onError(NetError.CustomError(errorStr ?? "").handle())
+            }
+            
+            return Disposables.create {
+            }
+            
+        }
+    }
+    
+}

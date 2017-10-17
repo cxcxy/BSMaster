@@ -106,3 +106,44 @@ class BSPostListModel: NSObject,Mappable {
     }
     
 }
+//MARK: 交易详情 模型
+class BSTransactDetailModel: NSObject,Mappable {
+    
+    var product_id                  :Int?
+    var member_id                   :Int?
+    var favicon                      :String?
+    var nickname                    :String?
+    var price                       :String?
+     var currency_code             :String?
+    var min_num             :Int?
+    var max_num             :Int?
+    var transaction_count   :Int?
+    var favorable_rate      :Int?
+    var trust_count         :Int?
+    var historical_transaction:Double?
+    var payment             :Int?
+    
+    override init(){
+        
+    }
+    
+    required init?(map: Map) {
+    }
+    
+    func mapping(map: Map) {
+        product_id                                  <- map["product_id"]
+        member_id                             <- map["member_id"]
+        favicon                            <- map["favicon"]
+       nickname                            <- map["nickname"]
+        price                               <- map["price"]
+        currency_code                       <- map["currency_code"]
+        min_num                             <- map["min_num"]
+        max_num                             <- map["max_num"]
+        transaction_count                   <- map["transaction_count"]
+        favorable_rate                      <- map["favorable_rate"]
+        trust_count                         <- map["trust_count"]
+        historical_transaction      <- map["historical_transaction"]
+        payment                             <- map["payment"]
+    }
+    
+}

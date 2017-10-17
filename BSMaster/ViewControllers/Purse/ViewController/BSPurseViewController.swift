@@ -49,6 +49,7 @@ class BSPurseViewController: BSBaseTableViewController {
             case 1:
                 if row == 0 {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "BSBTCTypeTableViewCell", for: indexPath) as! BSBTCTypeTableViewCell
+                    
                     cell.btnGetBtc.addAction {
                         self.purseType = .getBTC
                         self.tableView.reloadData()
@@ -57,14 +58,17 @@ class BSPurseViewController: BSBaseTableViewController {
                         self.purseType = .postBTC
                         self.tableView.reloadData()
                     }
+                    cell.purseType = self.purseType
                     return cell
                 }else{
                     switch self.purseType{
                     case .getBTC:
                             let cell = tableView.dequeueReusableCell(withIdentifier: "BSGetBTCCell", for: indexPath) as! BSGetBTCCell
+                           
                             return cell
                     case .postBTC:
                             let cell = tableView.dequeueReusableCell(withIdentifier: "BSPostBTCCell", for: indexPath) as! BSPostBTCCell
+//                            cell.purseType = self.purseType
                             return cell
                     }
 

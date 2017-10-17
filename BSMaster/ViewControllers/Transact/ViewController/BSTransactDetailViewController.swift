@@ -11,6 +11,9 @@ import UIKit
 class BSTransactDetailViewController: BSBaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var transactId:String!
+    
     let dataSource  = RxTableViewSectionedReloadDataSource<SectionModel<String,Any>>()
     var dataArr =  Variable<[SectionModel<String,Any>]>([])
     override func viewDidLoad() {
@@ -35,9 +38,10 @@ class BSTransactDetailViewController: BSBaseViewController {
             if section == 0 {
             
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BSBuyCoinCell", for: indexPath) as! BSBuyCoinCell
+                cell.modelData = element as! BSTransactDetailModel
                 return cell
             }else {
-                
+
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BSBuyRemindCell", for: indexPath) as! BSBuyRemindCell
                 return cell
             }
@@ -58,8 +62,16 @@ class BSTransactDetailViewController: BSBaseViewController {
             //             self.presentVC(nav)
             
             }.addDisposableTo(rx_disposeBag)
-        dataArr.value.append(SectionModel.init(model: "section", items: ["1"]))
-        dataArr.value.append(SectionModel.init(model: "two", items: ["1"]))
+
+        request()
+    }
+    override func request() {
+        super.request()
+        BSTransactDetailViewModel.requestTransactDetailData(self.transactId).subscribe(onNext: {[weak self] (model) in
+            guard let `self` = self else { return  }
+            self.dataArr.value.append(SectionModel.init(model: "section", items: [model]))
+            self.dataArr.value.append(SectionModel.init(model: "two", items: [model]))
+        }).addDisposableTo(rx_disposeBag)
     }
     @IBAction func soldAction(_ sender: Any) {
         

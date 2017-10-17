@@ -23,8 +23,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXT-yg-jMG">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="接受比特币">
+                                    <color key="titleColor" red="0.50196078431372548" green="0.5490196078431373" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected">
                                     <color key="titleColor" red="0.086274509803921567" green="0.56862745098039214" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -46,9 +51,14 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xke-Kf-9U8">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="46.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="发送比特币">
                                     <color key="titleColor" red="0.50196078431372548" green="0.5490196078431373" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.086274509803921567" green="0.56862745098039214" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="postAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EmV-Jz-gBC"/>
@@ -67,7 +77,7 @@
                         <rect key="frame" x="0.0" y="45" width="320" height="2"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsA-Sq-tI4">
-                                <rect key="frame" x="2" y="0.0" width="158.5" height="2"/>
+                                <rect key="frame" x="5" y="0.0" width="155.5" height="2"/>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.59607843137254901" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -83,16 +93,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esr-2m-135">
+                                <rect key="frame" x="159.5" y="0.0" width="155.5" height="2"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.59607843140000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.94509803921568625" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lcW-Yn-qhz" firstAttribute="centerY" secondItem="j2v-5o-Bn4" secondAttribute="centerY" id="4gl-bF-hZE"/>
                             <constraint firstAttribute="height" constant="2" id="Dvq-X7-CQp"/>
+                            <constraint firstItem="esr-2m-135" firstAttribute="centerY" secondItem="tsA-Sq-tI4" secondAttribute="centerY" id="Prx-Er-BVa"/>
                             <constraint firstAttribute="bottom" secondItem="tsA-Sq-tI4" secondAttribute="bottom" id="fuE-7r-id7"/>
-                            <constraint firstItem="tsA-Sq-tI4" firstAttribute="leading" secondItem="j2v-5o-Bn4" secondAttribute="leading" constant="2" id="gBE-XO-bUG"/>
+                            <constraint firstItem="tsA-Sq-tI4" firstAttribute="leading" secondItem="j2v-5o-Bn4" secondAttribute="leading" constant="5" id="gBE-XO-bUG"/>
+                            <constraint firstItem="esr-2m-135" firstAttribute="top" secondItem="j2v-5o-Bn4" secondAttribute="top" id="hKl-v5-Th5"/>
                             <constraint firstItem="tsA-Sq-tI4" firstAttribute="top" secondItem="j2v-5o-Bn4" secondAttribute="top" id="muP-VG-SiP"/>
                             <constraint firstItem="lcW-Yn-qhz" firstAttribute="centerX" secondItem="j2v-5o-Bn4" secondAttribute="centerX" id="nAC-5P-vsH"/>
+                            <constraint firstItem="esr-2m-135" firstAttribute="leading" secondItem="lcW-Yn-qhz" secondAttribute="leading" id="nCD-NO-iwV"/>
+                            <constraint firstAttribute="bottom" secondItem="esr-2m-135" secondAttribute="bottom" id="nKP-qm-TfV"/>
                             <constraint firstItem="tsA-Sq-tI4" firstAttribute="trailing" secondItem="lcW-Yn-qhz" secondAttribute="trailing" id="sox-Fq-acW"/>
+                            <constraint firstAttribute="trailing" secondItem="esr-2m-135" secondAttribute="trailing" constant="5" id="wHI-Zs-9rh"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -114,6 +136,8 @@
             <connections>
                 <outlet property="btnGetBtc" destination="HXT-yg-jMG" id="8V8-Lr-GSJ"/>
                 <outlet property="btnPostBtn" destination="xke-Kf-9U8" id="RM4-k0-wjY"/>
+                <outlet property="lbOneLine" destination="tsA-Sq-tI4" id="uJe-ng-Ppu"/>
+                <outlet property="lbTwoLine" destination="esr-2m-135" id="1RJ-gZ-XnI"/>
             </connections>
             <point key="canvasLocation" x="-233" y="-160.5"/>
         </tableViewCell>

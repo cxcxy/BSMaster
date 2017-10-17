@@ -147,7 +147,6 @@
 		2D07A85C1F8F706600636188 /* BSPostHighTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPostHighTableViewCell.swift; sourceTree = "<group>"; };
 		2D07A85D1F8F706600636188 /* BSPostHighTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSPostHighTableViewCell.xib; sourceTree = "<group>"; };
 		2D07A8601F8F77AD00636188 /* BSDigitalCoinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSDigitalCoinController.swift; sourceTree = "<group>"; };
-		2D0C374B1F8CAC8D00EFF40E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/BSBuyCoinCell.xib"; sourceTree = "<group>"; };
 		2D0C374E1F8CBDED00EFF40E /* BSBuyRemindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBuyRemindCell.swift; sourceTree = "<group>"; };
 		2D0C37521F8CC0F600EFF40E /* BSBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseTableViewCell.swift; sourceTree = "<group>"; };
 		2D0C37551F8CC17E00EFF40E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/BSBuyRemindCell.xib"; sourceTree = "<group>"; };
@@ -1116,7 +1115,6 @@
 		2D0C37451F8CAC0100EFF40E /* BSBuyCoinCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2D0C374B1F8CAC8D00EFF40E /* zh-Hans */,
 				2D0C375D1F8CCAD800EFF40E /* en */,
 				2D0C375E1F8CCADC00EFF40E /* zh-Hant */,
 				2D0C37601F8CD03400EFF40E /* Base */,

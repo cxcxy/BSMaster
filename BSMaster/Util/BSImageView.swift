@@ -20,5 +20,16 @@ extension UIImageView {
             
         }
     }
-
+    //MARK: 扩展加载头像方法
+    func set_PhotoImg_Url(_ url:String?)  {
+        
+        if let url = URL(string: url ?? "") {
+            
+            self.kf.setImage(with: url, placeholder: UIImage.init(named: ""),
+                             options: [.transition(.fade(1))], progressBlock: nil,
+                             completionHandler: nil)
+            
+            
+        }
+    }
 }

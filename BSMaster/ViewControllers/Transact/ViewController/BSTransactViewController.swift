@@ -48,9 +48,20 @@ class BSTransactViewController: BSBaseTableViewController {
             .addDisposableTo(rx_disposeBag)
  
         
-        tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-            VCRouter.toBuyCoinVC()
-        }.addDisposableTo(rx_disposeBag)
+//        tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
+//            VCRouter.toBuyCoinVC("1")
+//        }.addDisposableTo(rx_disposeBag)
+//        tableView.rx.modelSelected(<#T##modelType: T.Type##T.Type#>)
+        tableView.rx
+            .modelSelected(BSPostListModel.self)
+            .subscribe(onNext:  { value in
+//                DefaultWireframe.presentAlert("Tapped `\(value)`")
+                if let id = value.id?.toString {
+                    VCRouter.toBuyCoinVC(id)
+                }
+                
+            })
+            .disposed(by: rx_disposeBag)
         
         request()
     }

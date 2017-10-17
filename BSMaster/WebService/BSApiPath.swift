@@ -27,7 +27,8 @@ public struct API {
     
     //MARK: 发布出售相关接口
     static let URL_ReleaseAd         = "Trade/release"
-    static let URL_BuyList           = "Trade/trade_list"
+    static let URL_BuyList           = "Trade/trade_list"  // 交易列表
+    static let URL_TransactInfo      = "Trade/trade_info"  // 交易详情
     //MARK: 手机区号相关接口
     static let URL_MobileType        = "Other/mobile"
     //MARK: 国家币种接口

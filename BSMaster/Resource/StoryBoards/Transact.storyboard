@@ -116,11 +116,11 @@
                         <constraints>
                             <constraint firstItem="bJh-5h-9jv" firstAttribute="top" secondItem="wwM-tV-agR" secondAttribute="bottom" id="RxR-r9-viJ"/>
                             <constraint firstAttribute="trailing" secondItem="9X6-u5-wF9" secondAttribute="trailing" id="Tyb-dC-dZn"/>
-                            <constraint firstItem="kJO-uj-QML" firstAttribute="top" secondItem="9X6-u5-wF9" secondAttribute="bottom" id="WmA-ld-ZfT"/>
                             <constraint firstAttribute="trailing" secondItem="bJh-5h-9jv" secondAttribute="trailing" id="XHc-z4-qsm"/>
                             <constraint firstItem="9X6-u5-wF9" firstAttribute="leading" secondItem="Xdt-rN-xcS" secondAttribute="leading" id="dxB-wb-5kr"/>
                             <constraint firstItem="bJh-5h-9jv" firstAttribute="leading" secondItem="Xdt-rN-xcS" secondAttribute="leading" id="koy-I4-xu5"/>
                             <constraint firstItem="9X6-u5-wF9" firstAttribute="top" secondItem="bJh-5h-9jv" secondAttribute="bottom" id="l0k-Eh-yjP"/>
+                            <constraint firstItem="kJO-uj-QML" firstAttribute="top" secondItem="9X6-u5-wF9" secondAttribute="bottom" id="rwV-Ap-itR"/>
                         </constraints>
                     </view>
                     <connections>

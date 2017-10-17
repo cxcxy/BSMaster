@@ -136,7 +136,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交易次数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkP-uv-bKf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好评" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkP-uv-bKf">
                                                 <rect key="frame" x="0.0" y="35.5" width="75" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -163,7 +163,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交易次数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5d-eD-fac">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="历史成交" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5d-eD-fac">
                                                 <rect key="frame" x="0.0" y="35.5" width="75" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -355,16 +355,31 @@
                     <constraint firstItem="P3r-C5-A0J" firstAttribute="trailing" secondItem="eVG-NZ-uXa" secondAttribute="trailing" id="8xI-K9-ULS"/>
                     <constraint firstItem="eVG-NZ-uXa" firstAttribute="trailing" secondItem="iYc-81-efA" secondAttribute="trailing" id="Au5-TD-XSI"/>
                     <constraint firstItem="qvs-wv-mQf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="DUT-nF-JUv"/>
+                    <constraint firstItem="eVG-NZ-uXa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="FgT-zu-4Zl"/>
                     <constraint firstItem="P3r-C5-A0J" firstAttribute="leading" secondItem="eVG-NZ-uXa" secondAttribute="leading" id="Pw0-mv-hhe"/>
+                    <constraint firstItem="P3r-C5-A0J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Sy1-P3-fez"/>
                     <constraint firstItem="iYc-81-efA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="SyT-gG-gSv"/>
-                    <constraint firstItem="qvs-wv-mQf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ULp-IR-P7c"/>
                     <constraint firstItem="eVG-NZ-uXa" firstAttribute="leading" secondItem="iYc-81-efA" secondAttribute="leading" id="VPz-Tb-qvJ"/>
                     <constraint firstAttribute="trailing" secondItem="qvs-wv-mQf" secondAttribute="trailing" constant="15" id="YBk-WK-HON"/>
+                    <constraint firstAttribute="trailing" secondItem="eVG-NZ-uXa" secondAttribute="trailing" constant="15" id="YRK-SH-UnX"/>
                     <constraint firstAttribute="trailing" secondItem="iYc-81-efA" secondAttribute="trailing" constant="15" id="ZCO-69-d7K"/>
                     <constraint firstItem="qvs-wv-mQf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fUG-ws-6b9"/>
                     <constraint firstItem="iYc-81-efA" firstAttribute="top" secondItem="qvs-wv-mQf" secondAttribute="bottom" constant="20" id="oxT-b5-SNb"/>
+                    <constraint firstAttribute="trailing" secondItem="P3r-C5-A0J" secondAttribute="trailing" constant="15" id="vnp-kh-6Ne"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imgPhoto" destination="43u-g7-OpG" id="mzG-bg-WL5"/>
+                <outlet property="lbHistory" destination="ICL-4W-cUz" id="2jQ-AB-mwp"/>
+                <outlet property="lbName" destination="oH7-mn-W8t" id="SuJ-cE-mHi"/>
+                <outlet property="lbPaytype" destination="2YM-wx-DLb" id="I0h-SF-Yag"/>
+                <outlet property="lbPrice" destination="UAC-Qg-Z6O" id="nZ4-VD-Ycy"/>
+                <outlet property="lbQuota" destination="Yx9-s1-VN7" id="ygK-nv-BMf"/>
+                <outlet property="lbRate" destination="hHh-Qp-XMx" id="GsY-53-lb7"/>
+                <outlet property="lbTranctNumber" destination="SZr-Pr-qvL" id="woO-VW-Cb0"/>
+                <outlet property="tfBTC" destination="47H-dO-9Qh" id="wJQ-iX-XpU"/>
+                <outlet property="tfCNY" destination="ulQ-Pp-hQm" id="4UI-Ez-9JK"/>
+            </connections>
             <point key="canvasLocation" x="-83.5" y="196"/>
         </tableViewCell>
     </objects>

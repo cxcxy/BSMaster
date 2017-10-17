@@ -75,8 +75,8 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
         b.setTitleColor(MGRgb(50, g: 164, b: 244), for: .selected)
         b.addTarget(self, action: #selector(showAction), for: .touchUpInside)
         b.backgroundColor = UIColor.blue
-        self.view.addSubview(b)
         
+        self.view.addSubview(b)
         self.view.addSubview(btcView)
         
         b.snp.makeConstraints { [unowned self](make) in
@@ -88,14 +88,13 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
             
         }
         
-         btcView.snp.makeConstraints { [unowned self](make) in
+        btcView.snp.makeConstraints { [unowned self](make) in
             make.width.equalTo(0)
             make.right.equalTo(b).offset(-50)
             make.bottom.equalTo(self.view).offset(-200)
             make.height.equalTo(50)
             
         }
-
         
     }
     func showAction()  {

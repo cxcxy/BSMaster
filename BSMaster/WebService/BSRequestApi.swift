@@ -20,9 +20,11 @@ public enum RequestApi{
     //MARK: 发布出售相关接口
     case api_release(params: [String: Any])
     case api_buyList(params: [String: Any])
+    case api_transactInfo( transactId:String)
     //MARK: 手机区号相关接口
     case api_MobileType(lang:String)
     case api_Country(lang:String)
+    
 }
 let provider = RxMoyaProvider<RequestApi>()
 extension RequestApi:TargetType{
@@ -59,6 +61,8 @@ extension RequestApi:TargetType{
             return API.URL_Country
         case .api_buyList:
             return API.URL_BuyList
+        case .api_transactInfo:
+            return API.URL_TransactInfo
         default:
             return ""
         }
@@ -91,6 +95,8 @@ extension RequestApi:TargetType{
             params = ["lang":langId]
         case let .api_buyList(param):
             params =  param
+        case let .api_transactInfo(transactId):
+            params = ["id":transactId]
         }
         return params
     }
