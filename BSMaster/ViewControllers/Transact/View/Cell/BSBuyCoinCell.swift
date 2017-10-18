@@ -39,6 +39,7 @@ class BSBuyCoinCell: BSBaseTableViewCell {
             self.lbHistory.text = modelData.historical_transaction?.toString ?? ""
             let pic = modelData.favicon
             self.imgPhoto.set_Img_Url(pic)
+ 
         }
     }
     

@@ -29,8 +29,8 @@ class BSPostStyleModel: NSObject {
 //MARK: 请求 发布接口 模型
 class BSPostModel: NSObject,Mappable {
 
-    var type:String                 =  ""
-    var coin_type:String            =  "1"
+    var type:String              =  ""
+    var coin_type:String            =  "1" //1比特币，2莱特币，3以太坊，4BACC积分，5贝壳币
     var member_id:String            =  ""
     var is_safe:String              =  "2"
     var country_id:String            = "44"
@@ -38,6 +38,7 @@ class BSPostModel: NSObject,Mappable {
     var premium_rate:String         =  ""
     var price:String                =  ""
     var min_price:String            =  ""
+    var max_price:String?
     var min_num:String              =  ""
     var max_num:String              =  ""
     var payment:String              =  "1"
@@ -61,6 +62,7 @@ class BSPostModel: NSObject,Mappable {
         premium_rate        <- map["premium_rate"]
         price               <- map["price"]
         min_price           <- map["min_price"]
+        max_price           <- map["max_price"]
         min_num             <- map["min_num"]
         max_num             <- map["max_num"]
         payment             <- map["payment"]
@@ -69,6 +71,43 @@ class BSPostModel: NSObject,Mappable {
     }
 
 }
+//MARK: 请求 搜索接口 模型
+class BSSearchModel: NSObject,Mappable {
+    
+    var type                :String?
+    var coin_type           :String?
+    var country_id          :String?
+    var page                :Int?//当前页
+    var page_size           :Int?//显示条数
+    var min_price           :String?
+    var max_price           :String?
+    var payment             :String?
+    var currency_code       :String?
+    var nickname            :String?
+
+    override init(){
+        
+    }
+    
+    required init?(map: Map) {
+    }
+    
+    func mapping(map: Map) {
+        
+        type                <- map["type"]
+        coin_type           <- map["coin_type"]
+        country_id          <- map["country_id"]
+        page                 <- map["page"]
+        page_size            <- map["page_size"]
+        currency_code       <- map["currency_code"]
+        min_price           <- map["min_price"]
+        max_price           <- map["max_price"]
+        payment             <- map["payment"]
+        nickname             <- map["nickname"]
+
+    }
+    
+}
 //MARK: 列表页模型
 class BSPostListModel: NSObject,Mappable {
     
@@ -76,14 +115,15 @@ class BSPostListModel: NSObject,Mappable {
     var favicon             :String?
     var nickname            :String?
     var price               :String?
-    var currency_code       :String?
+    var currency_code       :String?//货币
     var min_num             :Int?
     var max_num             :Int?
     var transaction_count   :Int?
     var favorable_rate      :Int?
     var trust_count         :Int?
     var payment             :Int?
-    
+
+
     override init(){
         
     }
@@ -103,6 +143,7 @@ class BSPostListModel: NSObject,Mappable {
         favorable_rate                      <- map["favorable_rate"]
         trust_count                         <- map["trust_count"]
         payment                             <- map["payment"]
+        
     }
     
 }

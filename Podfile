@@ -24,6 +24,7 @@ target 'BSMaster' do
     pod 'KMNavigationBarTransition'
 #    pod 'RSKPlaceholderTextView'
     pod 'KMPlaceholderTextView', '~> 1.3.0'
+    pod 'UMengUShare/Social/ReducedWeChat'
 
 end
 

@@ -21,19 +21,24 @@ class BSSearchController: BSBaseViewController {
     @IBOutlet weak var lbCoinType: UILabel!
     @IBOutlet weak var lbPayType: UILabel!
     var params:[String:Any] = [:]
+    
+    var post_paramsModel : BSSearchModel = BSSearchModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        params["type"]          = "2"
-        params["coin_type"]     = "1"
-        params["country_id"]    = "44"
+        // 默认值 。 购买， 比特币， 中国
+        post_paramsModel.type       = "2"
+        post_paramsModel.coin_type  = "1"
+        post_paramsModel.country_id = "44"
+
         
         viewChooseCountry.addTapGesture { [weak self] (sender) in
             guard let strongSelf = self else { return }
             VCRouter.toCountryVC(block: { (str, id, code) in
                 print(str,id,code)
                 strongSelf.lbCountry.text = str
-                 strongSelf.params["country_id"] = id
+                 strongSelf.post_paramsModel.country_id = id.toString
+
             })
         }
         viewChoosePay.addTapGesture { [weak self](sender) in
@@ -41,27 +46,30 @@ class BSSearchController: BSBaseViewController {
             VCRouter.prentPirckerMask(dataArr: BSPayTypeArr, startIndex: strongSelf.chooseIndex, block: { (str, index) in
                 strongSelf.chooseIndex = index
                 strongSelf.lbPayType.text = str
-                strongSelf.params["payment"] = index + 1
+//                strongSelf.params["payment"] = index + 1
+                strongSelf.post_paramsModel.payment = (index + 1).toString
             })
         }
 
-        tfMinPrice.rx.text.subscribe(onNext: { [weak self](text) in
+        tfMinPrice.rx.text.orEmpty.subscribe(onNext: { [weak self](text) in
 
              guard let strongSelf = self else { return }
-            strongSelf.params["min_price"] = text
+            
+            strongSelf.post_paramsModel.min_price = text
             
         }).addDisposableTo(rx_disposeBag)
         
-        tfMacPrice.rx.text.subscribe(onNext: { [weak self](text) in
+        tfMacPrice.rx.text.orEmpty.subscribe(onNext: { [weak self](text) in
 
             guard let strongSelf = self else { return }
-            strongSelf.params["max_price"] = text
+//            strongSelf.params["max_price"] = text
+            strongSelf.post_paramsModel.max_price = text
             
         }).addDisposableTo(rx_disposeBag)
         
         btnSearch.rx.tap.subscribe(onNext: { [weak self] in
             guard let strongSelf = self else { return }
-            VCRouter.toSearchADResultVC(strongSelf.params)
+            VCRouter.toSearchADResultVC(strongSelf.post_paramsModel.toJSON())
         }).addDisposableTo(rx_disposeBag)
     }
 
