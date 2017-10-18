@@ -60,6 +60,8 @@
 		2D4E38EC1F8F92BC004A16A4 /* BSSuggestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E38EB1F8F92BC004A16A4 /* BSSuggestController.swift */; };
 		2D4E38EF1F8F9AC4004A16A4 /* BSSuggestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E38ED1F8F9AC4004A16A4 /* BSSuggestCell.swift */; };
 		2D4E38F01F8F9AC4004A16A4 /* BSSuggestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E38EE1F8F9AC4004A16A4 /* BSSuggestCell.xib */; };
+		2D52CD751F9706A6004297BB /* BSRCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52CD741F9706A6004297BB /* BSRCloudManager.swift */; };
+		2D52CD791F97194B004297BB /* BSRCMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52CD781F97194B004297BB /* BSRCMessageViewController.swift */; };
 		2D5615131F8DA88800BB9C03 /* BSViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615121F8DA88800BB9C03 /* BSViewComponent.swift */; };
 		2D5615151F8DAA3300BB9C03 /* BSSetNickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */; };
 		2D5615511F8DFD4700BB9C03 /* BSCountryNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615501F8DFD4700BB9C03 /* BSCountryNavView.swift */; };
@@ -197,6 +199,8 @@
 		2D4E38EB1F8F92BC004A16A4 /* BSSuggestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSuggestController.swift; sourceTree = "<group>"; };
 		2D4E38ED1F8F9AC4004A16A4 /* BSSuggestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSuggestCell.swift; sourceTree = "<group>"; };
 		2D4E38EE1F8F9AC4004A16A4 /* BSSuggestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSSuggestCell.xib; sourceTree = "<group>"; };
+		2D52CD741F9706A6004297BB /* BSRCloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSRCloudManager.swift; sourceTree = "<group>"; };
+		2D52CD781F97194B004297BB /* BSRCMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSRCMessageViewController.swift; sourceTree = "<group>"; };
 		2D5615121F8DA88800BB9C03 /* BSViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSViewComponent.swift; sourceTree = "<group>"; };
 		2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSetNickViewController.swift; sourceTree = "<group>"; };
 		2D5615501F8DFD4700BB9C03 /* BSCountryNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSCountryNavView.swift; sourceTree = "<group>"; };
@@ -360,6 +364,7 @@
 			children = (
 				2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */,
 				2DDDB4E51F96F4DA00B28480 /* BSShareManager.swift */,
+				2D52CD741F9706A6004297BB /* BSRCloudManager.swift */,
 			);
 			name = BSRoute;
 			path = BSMaster/Expand/BSRoute;
@@ -675,6 +680,7 @@
 				2D3F9C4D1F904C0F0050CD57 /* BSSearchController.swift */,
 				2D12F59C1F95E9B200CD7D44 /* BSSearchResultController.swift */,
 				2D3F9C4F1F9059CB0050CD57 /* BSSearchUserController.swift */,
+				2D52CD781F97194B004297BB /* BSRCMessageViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1024,6 +1030,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster-resources.sh",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RongCloud.bundle",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/en.lproj",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/zh-Hans.lproj",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/Emoji.plist",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RCConfig.plist",
 				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1097,6 +1108,7 @@
 				2D07A8611F8F77AD00636188 /* BSDigitalCoinController.swift in Sources */,
 				2D6BDEA31F7E449F00E64452 /* NSObject+Rx.swift in Sources */,
 				2D3F9C501F9059CB0050CD57 /* BSSearchUserController.swift in Sources */,
+				2D52CD791F97194B004297BB /* BSRCMessageViewController.swift in Sources */,
 				2D6D655E1F9446EF003B03AF /* BSMyBuyController.swift in Sources */,
 				2D0C9E5D1F90A04700698F1D /* BSSreenDateView.swift in Sources */,
 				2D6D65611F94471C003B03AF /* BSMyBuyCell.swift in Sources */,
@@ -1123,6 +1135,7 @@
 				2D5615131F8DA88800BB9C03 /* BSViewComponent.swift in Sources */,
 				2D3F9C751F9096A50050CD57 /* BSScreenCollectionViewCell.swift in Sources */,
 				2D07A83D1F8F40EB00636188 /* BSPostViewController.swift in Sources */,
+				2D52CD751F9706A6004297BB /* BSRCloudManager.swift in Sources */,
 				2D6BDEA11F7E3BF400E64452 /* BSBaseTableViewController.swift in Sources */,
 				2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */,
 				2D07A8491F8F545100636188 /* BSPostModel.swift in Sources */,

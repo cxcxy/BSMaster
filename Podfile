@@ -25,6 +25,8 @@ target 'BSMaster' do
 #    pod 'RSKPlaceholderTextView'
     pod 'KMPlaceholderTextView', '~> 1.3.0'
     pod 'UMengUShare/Social/ReducedWeChat'
+    pod 'RongCloudIM/IMLib', '~> 2.8.3'
+    pod 'RongCloudIM/IMKit', '~> 2.8.3'  
 
 end
 

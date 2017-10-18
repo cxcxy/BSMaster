@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA9CF833354DEC274771CB76"
+               BlueprintIdentifier = "144D14A8082C496AA38F7846"
                BuildableName = "ESTabBarController_swift.framework"
                BlueprintName = "ESTabBarController-swift"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA9CF833354DEC274771CB76"
+            BlueprintIdentifier = "144D14A8082C496AA38F7846"
             BuildableName = "ESTabBarController_swift.framework"
             BlueprintName = "ESTabBarController-swift"
             ReferencedContainer = "container:Pods.xcodeproj">

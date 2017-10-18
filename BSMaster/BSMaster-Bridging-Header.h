@@ -15,12 +15,8 @@
 @import Kingfisher;
 @import IQKeyboardManagerSwift;
 @import SwiftyJSON;
-//@import KMPlaceholderTextView;
-//@import ESTabBar;
 
-//#import <KMNavigationBarTransition/UINavigationController+KMNavigationBarTransition.h>
-
-//#import <UMMobClick/MobClick.h>
 #import <UMSocialCore/UMSocialCore.h>
-//#import "UMessage.h"
+
+#import <RongIMKit/RongIMKit.h>
 

@@ -20,7 +20,7 @@ class BSTransactDetailViewController: BSBaseViewController {
         super.viewDidLoad()
         self.title = "出售比特币"
         makeCustomerNavigationItem("帮助", left: false) {
-            
+
         }
         tableView.delegate      = nil
         tableView.dataSource    = nil

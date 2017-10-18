@@ -26,19 +26,29 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
         self.segmentStyle = .none
         
         makeCustomerImageNavigationItem("search_white", left: false) {
-            VCRouter.toADVC(.Search)
+//            VCRouter.toADVC(.Search)
+            
+    
+            self.toRCMessageVC()
 //            VCRouter.toLoginVC()
         }
         configChooseBTCView()
     }
 
+    
+    func toRCMessageVC()  {
+        let vc = BSRCMessageViewController()
+        vc.conversationType =  RCConversationType.ConversationType_PRIVATE
+        vc.targetId = "1"
+        vc.title = "出售订单"
+        self.pushVC(vc)
+    }
+    
     lazy var rightNagationItem:BSCountryNavView = {
         let view = BSCountryNavView.loadFromNib()
         view.backgroundColor = BSNavColor
         view.addAction {
-        print("click view")
-//         VCRouter.toLoginVC()
-//            VCRouter.toCountryVC(.Country, block: <#ChooseCountryBlock#>)
+
             VCRouter.toCountryVC(.Country, block: { (str, id,code) in
                 view.lbCountryName.text = str
             })

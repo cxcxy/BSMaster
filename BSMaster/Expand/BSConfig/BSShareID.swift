@@ -13,8 +13,6 @@ public struct BSShareID {
     public struct AppStore {
         public static let appID       = "1110300308"
     }
-    
-
     public struct Wechat {
         public static let appID       = "wx5491e5203286430c"
         public static let appKey      = "4b58993541eeafdd8c236d15bfb15609"
@@ -28,8 +26,8 @@ public struct BSShareID {
     
    
     public struct RongCloud {
-        public static let appID       = "k51hidwq1u67b"
-        public static let testToken   = "iKHh7k4J8eoTvZfTCwSNWsSBbbBNFKcjb+ORbC53wq1VMTGO2QDTJNTFI3Q7IHRJ+1EE9lHpuTQ="
+        public static let appID       = "lmxuhwagl0fvd"
+        public static let testToken   = "c2rrVCQVDVHfhbfxHZy6b4FyhztXrJ//03oU+pTlMxxEYOv+obJJH6oA0QJZyC734raxs7+eJOD0Q6sENt0ZKA=="
     }
 
 }

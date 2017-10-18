@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
 
         BSShareManager.config_init() // 配置友盟信息
-        
+        BSRCloudManager.config_init() // 配置融云信息
         IQKeyboardManager.sharedManager().enable = true
         return true
     }
