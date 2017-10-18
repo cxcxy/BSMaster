@@ -29,13 +29,13 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
 //            VCRouter.toADVC(.Search)
             
     
-            self.toRCMessageVC()
-//            VCRouter.toLoginVC()
+//            self.toRCMessageVC()
+            VCRouter.toLoginVC()
         }
         configChooseBTCView()
     }
 
-    
+    // 跳转聊天界面
     func toRCMessageVC()  {
         let vc = BSRCMessageViewController()
         vc.conversationType =  RCConversationType.ConversationType_PRIVATE
@@ -43,7 +43,7 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
         vc.title = "出售订单"
         self.pushVC(vc)
     }
-    
+    // 配置左侧 国家地区 item
     lazy var rightNagationItem:BSCountryNavView = {
         let view = BSCountryNavView.loadFromNib()
         view.backgroundColor = BSNavColor
@@ -51,10 +51,16 @@ class BSTransactViewControllers: BSBaseSegmentedControl {
 
             VCRouter.toCountryVC(.Country, block: { (str, id,code) in
                 view.lbCountryName.text = str
+                // 发送通知：
+                let dic = ["name":str,
+                           "id":id,
+                           "code":code] as [String : Any]
+                NotificationCenter.postNotificationNameOnMainThread(Noti_ChooseCountry, object: dic)
             })
         }
         return view
     }()
+    // 配置子首页
     func configViewControllers()  {
         self.titleSegmentArray = [NSLocalizedString("BuyCoins", comment: ""),"卖币"]
         var vcArray:[UIViewController] = []

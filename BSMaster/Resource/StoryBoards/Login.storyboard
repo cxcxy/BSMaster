@@ -96,7 +96,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="tfPhone:" destination="bw6-pv-t1X" eventType="editingDidEnd" id="q2b-UV-ZLT"/>
                                         </connections>
@@ -133,7 +133,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNG-DY-eac">
                                         <rect key="frame" x="0.0" y="34" width="315" height="1"/>
@@ -211,6 +211,7 @@
                     <connections>
                         <outlet property="btnLogin" destination="ve6-eT-N8U" id="QCy-OP-biQ"/>
                         <outlet property="btnPassword" destination="pp6-KF-MrQ" id="0Jp-Eh-wcK"/>
+                        <outlet property="lbCountryName" destination="gmf-HZ-gKF" id="4Pb-cq-phk"/>
                         <outlet property="tfPassword" destination="foN-9t-qmj" id="mzt-3b-7Bq"/>
                         <outlet property="tfPhone" destination="FkG-cX-Num" id="pe2-wZ-Nm6"/>
                         <outlet property="viewCountry" destination="cGy-cz-ymO" id="yXp-7h-i0v"/>
@@ -249,7 +250,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75r-XB-zs7">
                                         <rect key="frame" x="0.0" y="34" width="315" height="1"/>
@@ -595,7 +596,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ing-LP-aQ2">
                                         <rect key="frame" x="0.0" y="49" width="315" height="1"/>
@@ -688,7 +689,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                        <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWu-f7-tjJ">
                                                         <rect key="frame" x="0.0" y="49" width="315" height="1"/>
@@ -723,7 +724,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                        <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8k-2Z-g0Q">
                                                         <rect key="frame" x="0.0" y="49" width="315" height="1"/>
@@ -859,7 +860,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yP1-Hr-E39">
                                         <rect key="frame" x="0.0" y="49" width="315" height="1"/>
@@ -1048,7 +1049,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLx-yc-Oig">
                                         <rect key="frame" x="0.0" y="34" width="315" height="1"/>
@@ -1083,7 +1084,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebp-X0-ezf">
                                         <rect key="frame" x="0.0" y="34" width="315" height="1"/>
@@ -1127,7 +1128,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgo-HP-jNa">
                                         <rect key="frame" x="0.0" y="34" width="315" height="1"/>
@@ -1241,6 +1242,7 @@
                         <outlet property="btnMsgCode" destination="acA-7Z-UTj" id="UjR-RT-D7U"/>
                         <outlet property="btnNext" destination="fAj-Li-7QG" id="YRz-kq-RKS"/>
                         <outlet property="btnSelector" destination="hHj-mo-iug" id="8cm-gD-SpG"/>
+                        <outlet property="lbCountryName" destination="tSm-r5-Mx9" id="Ypm-wY-ySV"/>
                         <outlet property="tfCode" destination="jUg-cK-1CR" id="htG-hm-z3j"/>
                         <outlet property="tfPassword" destination="EmP-21-phq" id="dVr-8x-8pZ"/>
                         <outlet property="tfPhone" destination="aAC-sw-I7t" id="sXw-1o-aE9"/>
@@ -1280,7 +1282,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="tfPhone:" destination="bw6-pv-t1X" eventType="editingDidEnd" id="r58-wI-QpO"/>
                                         </connections>
@@ -1317,7 +1319,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="tfPhone:" destination="bw6-pv-t1X" eventType="editingDidEnd" id="17m-o9-gLf"/>
                                         </connections>
@@ -1433,7 +1435,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="tfPhone:" destination="2LL-eD-u5T" eventType="editingDidEnd" id="H9k-mR-04H"/>
                                             <action selector="tfPhone:" destination="bw6-pv-t1X" eventType="editingDidEnd" id="Txp-dA-hbH"/>
@@ -1471,7 +1473,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlO-KX-VbC">
                                         <rect key="frame" x="0.0" y="34" width="315" height="1"/>
@@ -1534,6 +1536,7 @@
                     <connections>
                         <outlet property="btnMsgCode" destination="VTk-ib-oIE" id="HId-wc-v6d"/>
                         <outlet property="btnNext" destination="5UZ-BW-9OX" id="b00-Je-GzG"/>
+                        <outlet property="lbCountryName" destination="c8T-K2-LNK" id="w02-2j-xMr"/>
                         <outlet property="tfCode" destination="5Vn-8K-frw" id="B2J-Rh-4QW"/>
                         <outlet property="tfPhone" destination="8zD-o8-upv" id="vXU-3B-eO7"/>
                         <outlet property="viewCountry" destination="G8m-C2-7RT" id="NLA-G8-S7Z"/>

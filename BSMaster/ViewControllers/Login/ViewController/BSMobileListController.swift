@@ -100,11 +100,7 @@ extension BSMobileListController:UITableViewDelegate,UITableViewDataSource {
        let m  = dataArr[indexPath.section].data?[indexPath.row]
         if let bclok = seletorBlock {
             bclok(m?.name ?? "",m?.id ?? 0,m?.currency_code ?? "")
-            // 发送通知：
-            let dic = ["name":m?.name ?? "",
-                       "id":m?.id ?? 0,
-                       "code":m?.currency_code ?? ""] as [String : Any]
-            NotificationCenter.postNotificationNameOnMainThread(Noti_ChooseCountry, object: dic)
+
             self.popVC()
         }
     }

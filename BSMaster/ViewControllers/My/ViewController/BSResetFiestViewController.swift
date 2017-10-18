@@ -18,12 +18,13 @@ class BSResetFiestViewController: BSBaseViewController {
     @IBOutlet weak var btnForgetPass: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+
         switch resetPassType {
-        case .LoginPassWord:
+        case .LoginPassWord,.LoginOldPassWord:
             self.title = "重置登录密码"
             self.lbDes.text = "修改您的登录密码"
             self.tfPass.placeholder = "输入原登录密码"
-        case .MoneyPassWord:
+        case .MoneyPassWord,.MoneyOldPassWord:
             self.title = "重置资金密码"
             self.tfPass.placeholder = "输入原资金密码"
         }
@@ -33,7 +34,7 @@ class BSResetFiestViewController: BSBaseViewController {
     override func setUI() {
         super.setUI()
         
-        //判断手机是否合法
+        //判断密码是否合法
         let password    = tfPass.rx.text
             .map{ $0!.characters.count > 0 }
             .shareReplay(1)
@@ -42,24 +43,28 @@ class BSResetFiestViewController: BSBaseViewController {
         password.bind(to: btnNext.rx.isEnabled).addDisposableTo(rx_disposeBag)
         
         // btn 点击监听 请求接口
-        btnForgetPass.rx.tap.subscribe(onNext: {
+        btnForgetPass.rx.tap.subscribe(onNext: {[unowned self] in
             print("忘记密码")
-            VCRouter.toForgetPassVC()
+            VCRouter.toForgetPassVC(self.resetPassType)
         }).addDisposableTo(rx_disposeBag)
+        
         btnNext.rx.tap.subscribe(onNext: {[unowned self] in
  
-            self.toVC()
+            self.judgmentOldPass()
           
         }).addDisposableTo(rx_disposeBag)
     }
+    // 判断原来密码是否正确
+    func judgmentOldPass()  {
+        let type = resetPassType == .LoginOldPassWord ? "2" : "1"
+        BSPassViewModel.requestJudgmentOldPassData(tfPass.text!, type: type, member_id: "22").subscribe(onNext: { [unowned self](message) in
+            self.toVC()
+        }).addDisposableTo(rx_disposeBag)
+    }
     func toVC()  {
-        switch resetPassType {
-        case .LoginPassWord:
-              VCRouter.toResetPassVC()
-        case .MoneyPassWord:
-              VCRouter.toSetMoneyPassVC()
-    
-        }
+     
+        VCRouter.toResetPassVC( oldPass: tfPass.text!, resetType: resetPassType)
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -82,7 +82,7 @@ class BSRegisterViewModel {
          }.distinctUntilChanged() //  distinctUntilChanged 会废弃掉重复的事件
         
     }
-    // 注册第一步接口。判断手机号，验证码是否合法。type 1 注册密码 type 2 忘记密码
+    //MARK:  注册第一步接口。判断手机号，验证码是否合法。type 1 注册密码 type 2 忘记密码
     class func requestRegisterFisterData(_ phone:String,type:String,verCode:String,mobile_type:String = "44") -> Observable<String> {
         return Observable.create { observer -> Disposable in
             var params = [String:Any]()
@@ -100,7 +100,7 @@ class BSRegisterViewModel {
             }
         }
     }
-    // 注册接口
+    //MARK:  注册接口
    class func requestRegisterData(_ phone:String,password:String,verCode:String,nickName:String,mobile_type:String = "44") -> Observable<String> {
         return Observable.create { observer -> Disposable in
             var params = [String:Any]()
@@ -118,13 +118,28 @@ class BSRegisterViewModel {
             }
         }
     }
+    
+   //MARK:  发送短信接口
+    class func requestPoseCodeData(_ phone:String) -> Observable<String> {
+        return Observable.create { observer -> Disposable in
+            BSNetManager.sharedManager.requestWithTarget(.api_postCode(mobile: phone),isShowLoding: true, successClosure: { (result, code,message)  in
+                observer.onNext(message ?? "")
+            }) { (errorStr) in
+                observer.onError(NetError.CustomError(errorStr ?? "").handle())
+            }
+            return Disposables.create {
+            }
+        }
+    }
 }
 
 
 class BSPassViewModel {
 
-    // 重置密码接口
-    class func requestResetPassData(_ phone:String,password:String,verCode:String,mobile_type:String = "44") -> Observable<String> {
+    
+    
+    //MARK:  忘记 登录 密码接口
+    class func requestForgetLoginPassData(_ phone:String,password:String,verCode:String,mobile_type:String = "44") -> Observable<String> {
         return Observable.create { observer -> Disposable in
             var params = [String:Any]()
             params["mobile_type"]   = mobile_type
@@ -141,16 +156,67 @@ class BSPassViewModel {
             }
         }
     }
-    // 修改登录接口
-    class func requestChangePassData(_ phone:String,oldPass:String,password:String,token:String) -> Observable<String> {
+    //MARK:  判断原密码 是否正确接口 type 1, 重置资金密码 2 重置支付密码
+    class func requestJudgmentOldPassData(_ old_pass:String,type:String,member_id:String) -> Observable<String> {
+        return Observable.create { observer -> Disposable in
+            BSNetManager.sharedManager.requestWithTarget(.api_FirstPass(old_pass:old_pass,type:type,member_id:member_id),isShowLoding: true, successClosure: { (result, code,message)  in
+                observer.onNext(message ?? "")
+            }) { (errorStr) in
+                observer.onError(NetError.CustomError(errorStr ?? "").handle())
+            }
+            return Disposables.create {
+            }
+        }
+    }
+    
+    //MARK: 使用原密码 修改 登录密码接口
+    class func requestChangePassOldData(_ oldPass:String,password:String,member_id:String) -> Observable<String> {
         return Observable.create { observer -> Disposable in
             var params = [String:Any]()
-            params["token"]         = token
+            params["member_id"]           = member_id
             params["pass_old"]      = oldPass
             params["pass1"]         = password
             params["pass2"]         = password
 
             BSNetManager.sharedManager.requestWithTarget(.api_changePass(params: params),isShowLoding: true, successClosure: { (result, code,message)  in
+                observer.onNext(message ?? "")
+            }) { (errorStr) in
+                observer.onError(NetError.CustomError(errorStr ?? "").handle())
+            }
+            return Disposables.create {
+            }
+        }
+    }
+//
+   //MARK:  使用原密码 修改 资金密码接口
+    class func requestChangeOldPayPassData(_ oldPass:String,password:String,member_id:String) -> Observable<String> {
+        return Observable.create { observer -> Disposable in
+            var params = [String:Any]()
+            params["old_pass"]          = oldPass
+            params["member_id"]         = member_id
+            params["pay_pass"]          = password
+            params["pay_pass1"]         = password
+
+            BSNetManager.sharedManager.requestWithTarget(.api_setPayPass(params: params),isShowLoding: true, successClosure: { (result, code,message)  in
+                observer.onNext(message ?? "")
+            }) { (errorStr) in
+                observer.onError(NetError.CustomError(errorStr ?? "").handle())
+            }
+            return Disposables.create {
+            }
+        }
+    }
+     //MARK: 忘记 资金密码 接口
+    class func requestForgetPayPassData(_ phone:String,password:String,verCode:String,mobile_type:String = "44") -> Observable<String> {
+        return Observable.create { observer -> Disposable in
+            var params = [String:Any]()
+            params["mobile_type"]   = mobile_type
+            params["mobile"]        = phone
+            params["pay_pass"]      = password
+            params["pay_pass1"]     = password
+            params["vcode"]         = verCode
+            
+            BSNetManager.sharedManager.requestWithTarget(.api_forgetPayPass(params: params),isShowLoding: true, successClosure: { (result, code,message)  in
                 observer.onNext(message ?? "")
             }) { (errorStr) in
                 observer.onError(NetError.CustomError(errorStr ?? "").handle())

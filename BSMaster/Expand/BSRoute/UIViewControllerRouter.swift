@@ -40,18 +40,23 @@ class VCRouter {
         vc.registerModel = model
         topVC?.pushVC(vc)
     }
-    //MARK: 跳转忘记密码界面
-     class func toForgetPassVC(){
+    //MARK: 跳转忘记密码界面 resetType:默认为 重置登录密码界面
+     class func toForgetPassVC(_ resetType:BSResetPassType = .LoginPassWord){
         let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSForgetPassViewController") as! BSForgetPassViewController
+        vc.resetPassType = resetType
         topVC?.pushVC(vc)
     }
-    //MARK: 跳转重置密码界面
-    class func toResetPassVC(_ forgetInfo:RegisterModel? = nil){
+    //MARK: 跳转重置密码界面 resetType:默认为 重置登录密码界面
+    class func toResetPassVC(_ forgetInfo:RegisterModel? = nil,oldPass:String? = nil,resetType:BSResetPassType = .LoginPassWord){
         let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSResetViewController") as! BSResetViewController
-        if let info = forgetInfo {
-            vc.forgetInfo = info
-        }
+//        if let info = forgetInfo {
+            vc.forgetInfo       = forgetInfo
+//        }else{
+            vc.oldPass          = oldPass
+//        }
+        vc.resetPassType        = resetType
         topVC?.pushVC(vc)
+
     }
     //MARK: 跳转设置界面
      class func toSettingVC(){
@@ -130,9 +135,9 @@ class VCRouter {
         if isSet {
             self.toInputMoneyPassVC(.MoneyPassWord)
         }else{
-            let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSResetViewController") as! BSResetViewController
-            vc.changePassType = .MoneyPassWord
-            topVC?.pushVC(vc)
+//            let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSResetViewController") as! BSResetViewController
+//            vc.changePassType = .MoneyPassWord
+//            topVC?.pushVC(vc)
         }
 
         

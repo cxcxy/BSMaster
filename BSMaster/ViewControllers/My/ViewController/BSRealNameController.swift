@@ -23,11 +23,6 @@ class BSRealNameController: BSBaseViewController {
         let selectorObser = Variable(false)
         selectorObser.asObservable().bind(to: btnSelector.rx.isSelected).disposed(by: rx_disposeBag)
         
-//        self.registerViewModel =
-//            BSRegisterViewModel.init(input: (phoneNumber: self.tfPhone.rx.text.orEmpty.asDriver(),
-//                                             password: self.tfPassword.rx.text.orEmpty.asDriver(),
-//                                             verCode:self.tfCode.rx.text.orEmpty.asDriver(),
-//                                             isSelect:selectorObser.asDriver()))
         
         
         self.realNameViewModel =
@@ -44,27 +39,24 @@ class BSRealNameController: BSBaseViewController {
         self.realNameViewModel?.signInEnabled.asObservable().bind(to: btnSure.rx.isEnabled).addDisposableTo(rx_disposeBag)
         // btnLogin 点击监听 请求登录接口
         btnSure.rx.tap.subscribe(onNext: {  [weak self]in
-       
+            guard let `self` = self else { return  }
+            self.requestSetRealName()
         }).addDisposableTo(rx_disposeBag)
     }
-
+    // 请求实名认证接口
+    func requestSetRealName()  {
+        
+        self.realNameViewModel?.requestRealNameData(tfName.text!, name: tfCode.text!, member_id: "22").subscribe(onNext: { (message) in
+            BSHud.showMsg(message)
+        }).addDisposableTo(rx_disposeBag)
+    }
     @IBAction func sureAction(_ sender: Any) {
         print("实名认证")
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }

@@ -17,7 +17,7 @@ class BSRealNameViewModel: NSObject {
             .map { $0.characters.count > 0 }
         //判断身份证号码是否合法
         let codeValid = input.codeInput
-            .map{$0.characters.count >= 6 && $0.characters.count < 16 }
+            .map{$0.characters.count > 0  }
         //判断控制同意协议 按钮的状态
         
         let checkBtnValid = input.isSelect.map{ $0 }
@@ -28,11 +28,9 @@ class BSRealNameViewModel: NSObject {
         
     }
     // 实名认证接口
-    func requestRealNameData(_ name:String,code:String) -> Observable<String> {
+    func requestRealNameData(_ idcard:String,name:String,member_id:String) -> Observable<String> {
         return Observable.create { observer -> Disposable in
-            var params = [String:Any]()
-
-            BSNetManager.sharedManager.requestWithTarget(.api_Login(params: params),isShowLoding: true, successClosure: { (result, code,message)  in
+        BSNetManager.sharedManager.requestWithTarget(.api_authentication(idcard:idcard,name:name,member_id:member_id),isShowLoding: true, successClosure: { (result, code,message)  in
                 observer.onNext(message ?? "")
             }) { (errorStr) in
                 observer.onError(NetError.CustomError(errorStr ?? "").handle())
@@ -40,7 +38,23 @@ class BSRealNameViewModel: NSObject {
             
             return Disposables.create {
             }
+        }
+    }
+}
+//MARK: 我购买的
+class BSMyADViewModel: NSObject {
+  
+    //TODO:  我购买的 列表页 type：状态 1进行中 2已结束
+   class func requestMyADListData(_ type:String,member_id:String) -> Observable<String> {
+        return Observable.create { observer -> Disposable in
+            BSNetManager.sharedManager.requestWithTarget(.api_Purchase(type:type,member_id:member_id),isShowLoding: true, successClosure: { (result, code,message)  in
+                observer.onNext(message ?? "")
+            }) { (errorStr) in
+                observer.onError(NetError.CustomError(errorStr ?? "").handle())
+            }
             
+            return Disposables.create {
+            }
         }
     }
 }

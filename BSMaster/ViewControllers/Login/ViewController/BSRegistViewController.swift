@@ -10,6 +10,7 @@ import UIKit
 
 class BSRegistViewController: BSBaseViewController {
 
+    @IBOutlet weak var lbCountryName: UILabel!
     @IBOutlet weak var tfPhone: UITextField!
     @IBOutlet weak var tfCode: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
@@ -19,6 +20,8 @@ class BSRegistViewController: BSBaseViewController {
     
     @IBOutlet weak var viewCountry: UIView!
     private var registerViewModel : BSRegisterViewModel?
+    
+    var mobile_type = "44" // 国家类型  默认中国 44
     
     @IBOutlet weak var viewRegistDelegate: UIView!
     override func viewDidLoad() {
@@ -42,10 +45,10 @@ class BSRegistViewController: BSBaseViewController {
         // 控制btnNext 下一步 是否可点击
          self.registerViewModel?.nextInEnabled.asObservable().bind(to: btnNext.rx.isEnabled).addDisposableTo(rx_disposeBag)
     
-        // btnLogin 点击监听
-        btnNext.rx.tap.subscribe(onNext: { [unowned self] in
-            print("登录按钮")
-        }).addDisposableTo(rx_disposeBag)
+//        // btnLogin 点击监听
+//        btnNext.rx.tap.subscribe(onNext: { [unowned self] in
+//            print("登录按钮")
+//        }).addDisposableTo(rx_disposeBag)
         
         // 同意协议
         btnSelector.rx.tap.subscribe(onNext: {
@@ -53,19 +56,39 @@ class BSRegistViewController: BSBaseViewController {
         }).addDisposableTo(rx_disposeBag)
         // 获取验证码
         btnMsgCode.rx.tap.subscribe(onNext: { [unowned self] in
-            self.btnMsgCode.startTimer(60, title: "获取验证码", mainBGColor: UIColor.white, mainTitleColor: BSBtnColor, countBGColor: UIColor.white, countTitleColor: MGRgb(128, g: 128, b: 128), handle: nil)
+            self.getCode()
         }).addDisposableTo(rx_disposeBag)
-        viewCountry.addAction {
+        
+        // 选择国家点击
+        viewCountry.addAction {[unowned self] in
             VCRouter.toCountryVC( block: { (str, id,code) in
-                
+                self.lbCountryName.text = "国家／地区：" + str
+                self.mobile_type = id.toString
             })
         }
         
     }
+    //MARK: 获取验证码接口
+    func getCode()  {
+
+        guard tfPhone.text != "" else {
+            BSHud.showMsg("请输入手机号")
+            return
+        }
+        
+        BSRegisterViewModel.requestPoseCodeData(tfPhone.text!).subscribe(onNext: { [weak self](message) in
+            guard let `self` = self else { return  }
+            BSHud.showMsg(message)
+            self.btnMsgCode.startTimer(60, title: "获取验证码", mainBGColor: UIColor.white, mainTitleColor: BSBtnColor, countBGColor: UIColor.white, countTitleColor: MGRgb(128, g: 128, b: 128), handle: nil)
+
+            
+        } ).addDisposableTo(rx_disposeBag)
+    }
+    
     //MARK: 判断信息是否有效
     @IBAction func nextAction(_ sender: Any) {
         
-        BSRegisterViewModel.requestRegisterFisterData(self.tfPhone.text!, type: "1", verCode: tfCode.text!, mobile_type: "44").subscribe(onNext: { [unowned self](message) in
+        BSRegisterViewModel.requestRegisterFisterData(self.tfPhone.text!, type: "1", verCode: tfCode.text!, mobile_type: mobile_type).subscribe(onNext: { [unowned self](message) in
             BSLog(message)
             self.toNextVC()
         }).addDisposableTo(rx_disposeBag)

@@ -17,6 +17,14 @@ public enum RequestApi{
     case api_forgetPass(params: [String: Any])
     case api_changePass(params: [String: Any])
     case api_registerFister(params: [String: Any])
+    case api_postCode(mobile:String)
+    
+    case api_setPayPass(params: [String: Any])
+    case api_forgetPayPass(params: [String: Any])
+    
+    case api_FirstPass(old_pass:String,type:String,member_id:String)
+    
+    case api_authentication(idcard:String,name:String,member_id:String)
     //MARK: 发布出售相关接口
     case api_release(params: [String: Any])
     case api_buyList(params: [String: Any])
@@ -24,7 +32,10 @@ public enum RequestApi{
     //MARK: 手机区号相关接口
     case api_MobileType(lang:String)
     case api_Country(lang:String)
-    
+    case api_Purchase(type:String,member_id:String)
+    case api_PurchaseDetails(id:String)
+    case api_PayType(payment:String,id:String)
+//    case api_MyAD(id_del)
 }
 let provider = RxMoyaProvider<RequestApi>()
 extension RequestApi:TargetType{
@@ -63,6 +74,22 @@ extension RequestApi:TargetType{
             return API.URL_BuyList
         case .api_transactInfo:
             return API.URL_TransactInfo
+        case .api_postCode:
+            return API.URL_PostCode
+        case .api_setPayPass:
+            return API.URL_SetPayPass
+        case .api_forgetPayPass:
+            return API.URL_ForgetPayPass
+        case .api_authentication:
+            return API.URL_Authentication
+        case .api_Purchase:
+            return API.URL_Purchase
+        case .api_PurchaseDetails:
+            return API.URL_PurchaseDetails
+        case .api_PayType:
+            return API.URL_PayType
+        case .api_FirstPass:
+            return API.URL_FirstPass
         default:
             return ""
         }
@@ -97,7 +124,25 @@ extension RequestApi:TargetType{
             params =  param
         case let .api_transactInfo(transactId):
             params = ["id":transactId]
+            
+        case let .api_postCode(mobile):
+            params = ["mobile":mobile]
+        case let .api_setPayPass(param):
+            params =  param
+        case let .api_forgetPayPass(param):
+            params =  param
+        case let .api_authentication(idcard,name,member_id):
+            params = ["idcard":idcard,"name":name,"member_id":member_id]
+        case let .api_Purchase(type,member_id):
+            params = ["type":type,"member_id":member_id]
+        case let .api_PurchaseDetails(id):
+            params = ["id":id]
+        case let .api_PayType(payment,id):
+            params = ["payment":payment,"id":id]
+        case let .api_FirstPass(old_pass,type,member_id):
+            params = ["old_pass":old_pass,"type":type,"member_id":member_id]
         }
+
         return params
     }
     

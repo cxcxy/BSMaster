@@ -8,8 +8,11 @@
 
 import UIKit
 enum BSResetPassType {
-    case LoginPassWord // 重置登录密码
-    case MoneyPassWord // 重置资金密码
+    case LoginPassWord // 忘记密码--重置登录密码
+    case MoneyPassWord // 忘记密码--重置资金密码
+    
+    case LoginOldPassWord // 原密码--重置资金密码
+    case MoneyOldPassWord // 原密码--重置资金密码
 }
 class BSResetViewController: BSBaseViewController {
     @IBOutlet weak var tfPassword: UITextField!
@@ -17,19 +20,19 @@ class BSResetViewController: BSBaseViewController {
 
     @IBOutlet weak var btnSure: UIButton!
     
-    var forgetInfo : RegisterModel!
+    var forgetInfo : RegisterModel?
     
-    
+    var oldPass:String?
     @IBOutlet weak var lbDes: UILabel!
-    var changePassType : BSResetPassType = .LoginPassWord
-    
+    var resetPassType : BSResetPassType = .LoginPassWord
+    var member_id = "22"
     override func viewDidLoad() {
         super.viewDidLoad()
-        switch changePassType {
-        case .LoginPassWord:
+        switch resetPassType {
+        case .LoginPassWord,.LoginOldPassWord:
              self.title         = "重置登录密码"
              self.lbDes.text    = "设置登录密码"
-        case .MoneyPassWord:
+        case .MoneyPassWord,.MoneyOldPassWord:
              self.title         = "重置资金密码"
              self.lbDes.text    = "设置资金密码将用于比特币的提款，保护您的比特币不被他人轻易盗用"
              self.tfPassword.placeholder         = "请设置提款密码"
@@ -63,10 +66,31 @@ class BSResetViewController: BSBaseViewController {
     func clickSure()  {
         
         if tfPassword.text == tfTwoPassword.text {
-            
-            BSPassViewModel.requestResetPassData(forgetInfo.phone, password: tfPassword.text!, verCode: forgetInfo.verCode, mobile_type: "44").subscribe(onNext: { (message) in
-                BSHud.showMsg(message)
-            }).addDisposableTo(rx_disposeBag)
+            switch resetPassType {
+            case .LoginPassWord:
+                BSPassViewModel.requestForgetLoginPassData(forgetInfo?.phone ?? "", password: tfPassword.text!, verCode: forgetInfo?.verCode ?? "", mobile_type: "44").subscribe(onNext: { (message) in
+                    BSHud.showMsg(message)
+                }).addDisposableTo(rx_disposeBag)
+                break
+            case .MoneyPassWord:
+//                BSPassViewModel.requestSetPayPassData(member_id, password: tfPassword.text!).subscribe(onNext: { (message) in
+//                    BSHud.showMsg(message)
+//                }).addDisposableTo(rx_disposeBag)
+                break
+            case .LoginOldPassWord:
+                let oldPass = self.oldPass ?? ""
+                BSPassViewModel.requestChangePassOldData(oldPass, password: tfPassword.text!, member_id: member_id).subscribe(onNext: { (message) in
+                    BSHud.showMsg(message)
+                }).addDisposableTo(rx_disposeBag)
+                
+                break
+            case .MoneyOldPassWord:
+               let oldPass = self.oldPass ?? ""
+                BSPassViewModel.requestChangeOldPayPassData(oldPass, password: tfPassword.text!, member_id: member_id).subscribe(onNext: { (message) in
+                    BSHud.showMsg(message)
+                }).addDisposableTo(rx_disposeBag)
+                break
+            }
             
         }else {
             BSHud.showWarnMsg("密码输入不一致")

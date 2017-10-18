@@ -10,6 +10,7 @@ import UIKit
 
 class BSPhoneLoginViewController: BSBaseViewController {
 
+    @IBOutlet weak var lbCountryName: UILabel!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfPhone: UITextField!
     @IBOutlet weak var btnLogin: UIButton!

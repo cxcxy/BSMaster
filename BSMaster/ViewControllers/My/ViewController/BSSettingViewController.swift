@@ -64,11 +64,22 @@ class BSSettingViewController: BSBaseTableViewController {
             if row == 0 {
                  VCRouter.toRealNameVC()
             }else{
-                 VCRouter.toSetMoneyPassVC(true)
+                
+                if true {// 在这判断用户是否已经设置过密码  ,跳转使用原密码更改密码逻辑
+                    VCRouter.toInputMoneyPassVC(.MoneyOldPassWord)
+                }else{
+                    VCRouter.toInputMoneyPassVC(.MoneyPassWord)
+                }
+                
             }
             break
         case 1:
-            VCRouter.toInputMoneyPassVC(.LoginPassWord)
+            if true {// 在这判断用户是否已经设置过密码  ,跳转使用原密码更改密码逻辑
+                VCRouter.toInputMoneyPassVC(.LoginOldPassWord)
+            }else{
+                VCRouter.toInputMoneyPassVC(.LoginPassWord)
+            }
+   
             break
         case 2:
                VCRouter.toTitleListVC(.Language)

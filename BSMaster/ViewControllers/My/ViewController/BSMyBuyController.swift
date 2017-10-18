@@ -42,7 +42,14 @@ class BSMyBuyController: BSBaseTableViewController {
 
 
     }
-
+    override func request() {
+        super.request()
+        
+        BSMyADViewModel.requestMyADListData("1", member_id: "22").subscribe(onNext: { (meaase) in
+            
+        }).addDisposableTo(rx_disposeBag)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
