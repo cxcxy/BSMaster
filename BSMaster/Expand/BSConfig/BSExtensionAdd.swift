@@ -76,7 +76,7 @@ public extension NotificationCenter{
         }
     }
     
-    static  func postNotificationNameOnMainThread(_ aName:String,object:AnyObject?){
+    static  func postNotificationNameOnMainThread(_ aName:String,object:Any?){
         let not = Notification(name: Notification.Name(rawValue: aName), object: object)
         postNotificationOnMainThread(not)
     }

@@ -11,12 +11,68 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="BSChooseBTCView" customModule="BSMaster" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+        <view clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" id="iN0-l3-epB" customClass="BSChooseBTCView" customModule="BSMaster" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="307" height="54"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="0.68776975111837024" blue="0.28168953177059575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toggle_coinBac" translatesAutoresizingMaskIntoConstraints="NO" id="z1i-sA-hQ7">
+                    <rect key="frame" x="0.0" y="0.0" width="307" height="54"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Cc-C6-191">
+                    <rect key="frame" x="15" y="1" width="267" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgi-0T-QhH">
+                            <rect key="frame" x="0.0" y="0.0" width="53.5" height="48"/>
+                            <state key="normal" image="coin_btc"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkk-4n-UUh">
+                            <rect key="frame" x="53.5" y="0.0" width="53.5" height="48"/>
+                            <state key="normal" image="coin_ltc"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-hh-xyl">
+                            <rect key="frame" x="107" y="0.0" width="53" height="48"/>
+                            <state key="normal" image="coin_ytf"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rG-s7-Vah">
+                            <rect key="frame" x="160" y="0.0" width="53.5" height="48"/>
+                            <state key="normal" image="coin_ba"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFQ-cC-fj7">
+                            <rect key="frame" x="213.5" y="0.0" width="53.5" height="48"/>
+                            <state key="normal" image="coin_bei"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="z1i-sA-hQ7" secondAttribute="bottom" id="Bd4-tC-PFy"/>
+                <constraint firstAttribute="bottom" secondItem="6Cc-C6-191" secondAttribute="bottom" constant="5" id="c13-mC-85V"/>
+                <constraint firstItem="6Cc-C6-191" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="gXl-fc-orp"/>
+                <constraint firstItem="6Cc-C6-191" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="gkn-2E-p63"/>
+                <constraint firstItem="z1i-sA-hQ7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gn9-Gq-WtZ"/>
+                <constraint firstAttribute="trailing" secondItem="6Cc-C6-191" secondAttribute="trailing" constant="25" id="h0h-cs-COu"/>
+                <constraint firstItem="z1i-sA-hQ7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hBz-l3-T4s"/>
+                <constraint firstAttribute="trailing" secondItem="z1i-sA-hQ7" secondAttribute="trailing" id="q0u-2I-Dnx"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="21.5" y="165"/>
+            <connections>
+                <outlet property="btnBA" destination="2rG-s7-Vah" id="InE-eQ-H2I"/>
+                <outlet property="btnBKB" destination="mFQ-cC-fj7" id="xd6-pd-d6E"/>
+                <outlet property="btnBtc" destination="fgi-0T-QhH" id="YJD-ku-vxY"/>
+                <outlet property="btnLTB" destination="Kkk-4n-UUh" id="4V8-sz-nxE"/>
+                <outlet property="btnYTF" destination="TfG-hh-xyl" id="JY1-m5-er1"/>
+            </connections>
+            <point key="canvasLocation" x="55.5" y="165"/>
         </view>
     </objects>
+    <resources>
+        <image name="coin_ba" width="22" height="15"/>
+        <image name="coin_bei" width="19" height="14"/>
+        <image name="coin_btc" width="13" height="19"/>
+        <image name="coin_ltc" width="16" height="17"/>
+        <image name="coin_ytf" width="13" height="22"/>
+        <image name="toggle_coinBac" width="216" height="48"/>
+    </resources>
 </document>

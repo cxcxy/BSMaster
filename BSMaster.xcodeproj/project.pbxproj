@@ -62,6 +62,8 @@
 		2D4E38F01F8F9AC4004A16A4 /* BSSuggestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E38EE1F8F9AC4004A16A4 /* BSSuggestCell.xib */; };
 		2D52CD751F9706A6004297BB /* BSRCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52CD741F9706A6004297BB /* BSRCloudManager.swift */; };
 		2D52CD791F97194B004297BB /* BSRCMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52CD781F97194B004297BB /* BSRCMessageViewController.swift */; };
+		2D52CD7B1F9727BA004297BB /* BSMessageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52CD7A1F9727BA004297BB /* BSMessageHeaderView.swift */; };
+		2D52CD7D1F9727D7004297BB /* BSMessageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D52CD7C1F9727D7004297BB /* BSMessageHeaderView.xib */; };
 		2D5615131F8DA88800BB9C03 /* BSViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615121F8DA88800BB9C03 /* BSViewComponent.swift */; };
 		2D5615151F8DAA3300BB9C03 /* BSSetNickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */; };
 		2D5615511F8DFD4700BB9C03 /* BSCountryNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5615501F8DFD4700BB9C03 /* BSCountryNavView.swift */; };
@@ -201,6 +203,8 @@
 		2D4E38EE1F8F9AC4004A16A4 /* BSSuggestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSSuggestCell.xib; sourceTree = "<group>"; };
 		2D52CD741F9706A6004297BB /* BSRCloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSRCloudManager.swift; sourceTree = "<group>"; };
 		2D52CD781F97194B004297BB /* BSRCMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSRCMessageViewController.swift; sourceTree = "<group>"; };
+		2D52CD7A1F9727BA004297BB /* BSMessageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMessageHeaderView.swift; sourceTree = "<group>"; };
+		2D52CD7C1F9727D7004297BB /* BSMessageHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSMessageHeaderView.xib; sourceTree = "<group>"; };
 		2D5615121F8DA88800BB9C03 /* BSViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSViewComponent.swift; sourceTree = "<group>"; };
 		2D5615141F8DAA3300BB9C03 /* BSSetNickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSetNickViewController.swift; sourceTree = "<group>"; };
 		2D5615501F8DFD4700BB9C03 /* BSCountryNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSCountryNavView.swift; sourceTree = "<group>"; };
@@ -385,6 +389,8 @@
 				2D5615521F8DFD6500BB9C03 /* BSCountryNavView.xib */,
 				2D3B5B201F95F8D600CBE3D9 /* BSChooseBTCView.swift */,
 				2D3B5B221F95F8DF00CBE3D9 /* BSChooseBTCView.xib */,
+				2D52CD7A1F9727BA004297BB /* BSMessageHeaderView.swift */,
+				2D52CD7C1F9727D7004297BB /* BSMessageHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -920,6 +926,7 @@
 				2D3F9C5D1F9064020050CD57 /* BSGetBTCCell.xib in Resources */,
 				2D07A8411F8F4F6F00636188 /* BSPostCell.xib in Resources */,
 				2D3B5B231F95F8DF00CBE3D9 /* BSChooseBTCView.xib in Resources */,
+				2D52CD7D1F9727D7004297BB /* BSMessageHeaderView.xib in Resources */,
 				2D61A9C91F7F8494004AD2B8 /* BAMySetTableViewCell.xib in Resources */,
 				2D0C9E5F1F90A04F00698F1D /* BSSreenDateView.xib in Resources */,
 				2D0C37541F8CC17E00EFF40E /* BSBuyRemindCell.xib in Resources */,
@@ -1097,6 +1104,7 @@
 				2D61A9C41F7F6D58004AD2B8 /* BSMyTableViewCell.swift in Sources */,
 				2D4E38E81F8F8F95004A16A4 /* BSAboutMeController.swift in Sources */,
 				2D3F9C541F905C770050CD57 /* BSPurseHeaderCell.swift in Sources */,
+				2D52CD7B1F9727BA004297BB /* BSMessageHeaderView.swift in Sources */,
 				2D423EA01F8E46F200D38418 /* BSForgetPassViewController.swift in Sources */,
 				2DA254771F94B3CC000D874C /* BSPickerView.swift in Sources */,
 				2DDDB4E91F96F6A600B28480 /* BSShareView.swift in Sources */,

@@ -1,0 +1,21 @@
+//
+//  BSMessageHeaderView.swift
+//  BSMaster
+//
+//  Created by 陈旭 on 2017/10/18.
+//  Copyright © 2017年 陈旭. All rights reserved.
+//
+
+import UIKit
+
+class BSMessageHeaderView: UIView {
+    @IBOutlet weak var lbPrice: UILabel!
+    
+    @IBOutlet weak var lbQuate: UILabel!
+    @IBOutlet weak var btnSold: UIButton!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        btnSold.setCornerRadius(radius: 5.0)
+    }
+
+}

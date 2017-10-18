@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BSMessageHeaderView" customModule="BSMaster" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="报价：28566.1 CNY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olH-F5-zV9">
+                    <rect key="frame" x="20" y="15" width="128.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.098039215686274508" green="0.10980392156862745" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="限额：1000-30000CNY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chi-o9-7jk">
+                    <rect key="frame" x="20" y="42" width="134" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.50196078431372548" green="0.5490196078431373" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBs-eD-c4x">
+                    <rect key="frame" x="295" y="27" width="65" height="26"/>
+                    <color key="backgroundColor" red="0.090196078431372548" green="0.59607843137254901" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="BCT-n8-W2k"/>
+                        <constraint firstAttribute="width" constant="65" id="HdI-uw-LvG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="出售">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="olH-F5-zV9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="6I0-ex-sD4"/>
+                <constraint firstItem="olH-F5-zV9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="Ipb-be-gZS"/>
+                <constraint firstAttribute="trailing" secondItem="kBs-eD-c4x" secondAttribute="trailing" constant="15" id="aPr-Xk-TzD"/>
+                <constraint firstItem="kBs-eD-c4x" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lmr-Pq-Ntq"/>
+                <constraint firstItem="Chi-o9-7jk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="mNL-6T-ndE"/>
+                <constraint firstItem="Chi-o9-7jk" firstAttribute="top" secondItem="olH-F5-zV9" secondAttribute="bottom" constant="10" id="sf7-y3-4If"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnSold" destination="kBs-eD-c4x" id="yeG-9X-K3z"/>
+                <outlet property="lbPrice" destination="olH-F5-zV9" id="n7j-sQ-6oh"/>
+                <outlet property="lbQuate" destination="Chi-o9-7jk" id="jYf-Rq-JhU"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="170"/>
+        </view>
+    </objects>
+</document>

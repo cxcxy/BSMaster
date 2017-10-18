@@ -10,8 +10,12 @@ import UIKit
 
 class BSChooseBTCView: UIView ,CAAnimationDelegate{
 
-    @IBOutlet weak var btnFirst: UIButton!
+    @IBOutlet weak var btnBKB: UIButton!
+    @IBOutlet weak var btnLTB: UIButton!
  
+    @IBOutlet weak var btnYTF: UIButton!
+    @IBOutlet weak var btnBA: UIButton!
+    @IBOutlet weak var btnBtc: UIButton!
     func showView(){ // 弹出视图
      
             let animation = CATransition.init()

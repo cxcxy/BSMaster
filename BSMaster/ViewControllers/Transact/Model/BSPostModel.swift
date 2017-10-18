@@ -121,7 +121,7 @@ class BSPostListModel: NSObject,Mappable {
     var transaction_count   :Int?
     var favorable_rate      :Int?
     var trust_count         :Int?
-    var payment             :Int?
+    var payment             :String?
 
 
     override init(){

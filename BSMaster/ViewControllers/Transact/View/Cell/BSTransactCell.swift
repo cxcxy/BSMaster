@@ -31,7 +31,7 @@ class BSTransactCell: BSBaseTableViewCell {
             "好评" + (transactModel.favorable_rate?.toString)! + "%|" +
             "信任" + (transactModel.trust_count?.toString)!
             self.lbQuota.text = "限额：" + (transactModel.min_num?.toString)! + "-" + (transactModel.max_num?.toString)! + " CNY"
-            self.lbPayType.text = BSPayTypeArr[transactModel.payment!]
+            self.lbPayType.text = transactModel.payment ?? ""
         }
     }
     

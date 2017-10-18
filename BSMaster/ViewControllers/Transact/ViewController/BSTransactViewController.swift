@@ -21,8 +21,8 @@ class BSTransactViewController: BSBaseTableViewController {
         super.viewDidLoad()
         self.title = "交易"
       
-        // 接收通知：
-        _ = NotificationCenter.default.rx.notification(Notification.Name("kNotificationCountryName")).takeUntil(self.rx.deallocated).subscribe(onNext: {[unowned self] (value) in
+        // 接收国家区域变动通知：
+        _ = NotificationCenter.default.rx.notification(Notification.Name(Noti_ChooseCountry)).takeUntil(self.rx.deallocated).subscribe(onNext: {[unowned self] (value) in
             print(value)
             
             let dic = value.object as? NSDictionary
@@ -31,7 +31,15 @@ class BSTransactViewController: BSBaseTableViewController {
 
         })
 
-
+        // 接收选择货币变动通知：
+        _ = NotificationCenter.default.rx.notification(Notification.Name(Noti_ChangeCoinType)).takeUntil(self.rx.deallocated).subscribe(onNext: {[unowned self] (value) in
+            print(value)
+            
+            let dic = value.object as? NSDictionary
+            self.params["coin_type"]   = dic?["coin_type"]
+            self.request()
+            
+        })
         
         tableView.cellId_register("BSTransactCell")
         self.cofigMjHeader()
@@ -47,11 +55,6 @@ class BSTransactViewController: BSBaseTableViewController {
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
  
-        
-//        tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-//            VCRouter.toBuyCoinVC("1")
-//        }.addDisposableTo(rx_disposeBag)
-//        tableView.rx.modelSelected(<#T##modelType: T.Type##T.Type#>)
         tableView.rx
             .modelSelected(BSPostListModel.self)
             .subscribe(onNext:  { value in
