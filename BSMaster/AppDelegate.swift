@@ -17,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
        
         self.window?.makeKeyAndVisible()
-//        let mainVC = UIStoryboard(name: "Main", bundle:Bundle.main).instantiateInitialViewController()
-//        self.window?.rootViewController = mainVC
+
+        BSShareManager.config_init() // 配置友盟信息
+        
         IQKeyboardManager.sharedManager().enable = true
         return true
     }
@@ -44,7 +45,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let result = UMSocialManager.default().handleOpen(url, options: options)
+        if !result {
+            // 其他如支付等SDK的回调
+            return false
+        }
+        print("分享成功")
+        return true
+    }
 
 }
 

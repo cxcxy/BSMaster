@@ -144,5 +144,6 @@ extension BSBaseTableViewController{
     @objc(backgroundColorForEmptyDataSet:) func backgroundColor(forEmptyDataSet scrollView: UIScrollView!) -> UIColor! {
         return tableColor
     }
+    
 }
 

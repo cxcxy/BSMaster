@@ -29,6 +29,11 @@ PODS:
   - SwiftyJSON (3.1.4)
   - SwiftyUserDefaults (3.0.0)
   - UITableView+FDTemplateLayoutCell (1.6)
+  - UMengUShare/Core (6.4.5):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.5)
+  - UMengUShare/Social/ReducedWeChat (6.4.5):
+    - UMengUShare/Core
   - VTMagic (1.2.4):
     - VTMagic/Core (= 1.2.4)
   - VTMagic/Core (1.2.4)
@@ -52,6 +57,7 @@ DEPENDENCIES:
   - SwiftyJSON
   - SwiftyUserDefaults
   - UITableView+FDTemplateLayoutCell (~> 1.5.beta)
+  - UMengUShare/Social/ReducedWeChat
   - VTMagic (from `https://github.com/aycgithub/VTMagic.git`)
 
 EXTERNAL SOURCES:
@@ -84,8 +90,9 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  UMengUShare: a5711c54e640b04e3048e931d2b88d50f9cfa55c
   VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
 
-PODFILE CHECKSUM: 04a83dacc25e2139a5014aa6f58016ef4fdf9694
+PODFILE CHECKSUM: a0695afde6642eb6e9e5881da24ce51b47c463e3
 
 COCOAPODS: 1.4.0.beta.1

@@ -113,6 +113,10 @@
 		2DDD35CF1F7E1E5C005DED82 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35CE1F7E1E5C005DED82 /* Order.storyboard */; };
 		2DDD35FA1F7E20C3005DED82 /* Purse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35F91F7E20C3005DED82 /* Purse.storyboard */; };
 		2DDD35FC1F7E20CD005DED82 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35FB1F7E20CD005DED82 /* My.storyboard */; };
+		2DDDB4E41F96F3B800B28480 /* BSShareID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDB4E31F96F3B800B28480 /* BSShareID.swift */; };
+		2DDDB4E61F96F4DA00B28480 /* BSShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDB4E51F96F4DA00B28480 /* BSShareManager.swift */; };
+		2DDDB4E91F96F6A600B28480 /* BSShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDB4E81F96F6A600B28480 /* BSShareView.swift */; };
+		2DDDB4EB1F96F6B200B28480 /* BSShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDB4EA1F96F6B200B28480 /* BSShareView.xib */; };
 		2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE0E2481F8B219700DB225C /* BSPhoneLoginViewController.swift */; };
 		2DE3305C1F7E282400048D3D /* BSPurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305B1F7E282400048D3D /* BSPurseViewController.swift */; };
 		2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305D1F7E288500048D3D /* BSMyViewController.swift */; };
@@ -256,6 +260,10 @@
 		2DDD35CE1F7E1E5C005DED82 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		2DDD35F91F7E20C3005DED82 /* Purse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Purse.storyboard; sourceTree = "<group>"; };
 		2DDD35FB1F7E20CD005DED82 /* My.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
+		2DDDB4E31F96F3B800B28480 /* BSShareID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSShareID.swift; sourceTree = "<group>"; };
+		2DDDB4E51F96F4DA00B28480 /* BSShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSShareManager.swift; sourceTree = "<group>"; };
+		2DDDB4E81F96F6A600B28480 /* BSShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSShareView.swift; sourceTree = "<group>"; };
+		2DDDB4EA1F96F6B200B28480 /* BSShareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSShareView.xib; sourceTree = "<group>"; };
 		2DE0E2481F8B219700DB225C /* BSPhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPhoneLoginViewController.swift; sourceTree = "<group>"; };
 		2DE3305B1F7E282400048D3D /* BSPurseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPurseViewController.swift; sourceTree = "<group>"; };
 		2DE3305D1F7E288500048D3D /* BSMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyViewController.swift; sourceTree = "<group>"; };
@@ -351,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */,
+				2DDDB4E51F96F4DA00B28480 /* BSShareManager.swift */,
 			);
 			name = BSRoute;
 			path = BSMaster/Expand/BSRoute;
@@ -502,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDD358C1F7DE39E005DED82 /* BaseViewController */,
+				2DDDB4E71F96F68E00B28480 /* BSView */,
 				2DDD35D01F7E1EFB005DED82 /* Transact */,
 				2DDD35D11F7E1EFB005DED82 /* Order */,
 				2DDD35D41F7E1EFC005DED82 /* Main */,
@@ -559,6 +569,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDD35921F7DE489005DED82 /* BSConfig.swift */,
+				2DDDB4E31F96F3B800B28480 /* BSShareID.swift */,
 				2D6523C11F8CF07D00CB5B54 /* BSExtensionAdd.swift */,
 			);
 			path = BSConfig;
@@ -796,6 +807,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2DDDB4E71F96F68E00B28480 /* BSView */ = {
+			isa = PBXGroup;
+			children = (
+				2DDDB4E81F96F6A600B28480 /* BSShareView.swift */,
+				2DDDB4EA1F96F6B200B28480 /* BSShareView.xib */,
+			);
+			path = BSView;
+			sourceTree = "<group>";
+		};
 		A7AF20D4C1C06F0F39947CB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,6 +910,7 @@
 				2D07A83B1F8F32AC00636188 /* BSMaskBuyView.xib in Resources */,
 				2D61A9C51F7F6D58004AD2B8 /* BSMyTableViewCell.xib in Resources */,
 				2D6D65621F94471C003B03AF /* BSMyBuyCell.xib in Resources */,
+				2DDDB4EB1F96F6B200B28480 /* BSShareView.xib in Resources */,
 				2D3F9C5D1F9064020050CD57 /* BSGetBTCCell.xib in Resources */,
 				2D07A8411F8F4F6F00636188 /* BSPostCell.xib in Resources */,
 				2D3B5B231F95F8DF00CBE3D9 /* BSChooseBTCView.xib in Resources */,
@@ -1002,9 +1023,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BSMaster/Pods-BSMaster-resources.sh",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1064,6 +1088,7 @@
 				2D3F9C541F905C770050CD57 /* BSPurseHeaderCell.swift in Sources */,
 				2D423EA01F8E46F200D38418 /* BSForgetPassViewController.swift in Sources */,
 				2DA254771F94B3CC000D874C /* BSPickerView.swift in Sources */,
+				2DDDB4E91F96F6A600B28480 /* BSShareView.swift in Sources */,
 				2D5615151F8DAA3300BB9C03 /* BSSetNickViewController.swift in Sources */,
 				2D12F59D1F95E9B200CD7D44 /* BSSearchResultController.swift in Sources */,
 				2DE330681F7E2A2600048D3D /* UITableView+.swift in Sources */,
@@ -1078,6 +1103,7 @@
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
 				2D4E38EF1F8F9AC4004A16A4 /* BSSuggestCell.swift in Sources */,
 				2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */,
+				2DDDB4E61F96F4DA00B28480 /* BSShareManager.swift in Sources */,
 				2D5DCA721F94685600944FDA /* BSMobileListController.swift in Sources */,
 				2D4E38EC1F8F92BC004A16A4 /* BSSuggestController.swift in Sources */,
 				2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */,
@@ -1104,6 +1130,7 @@
 				2D3F9C631F9086EB0050CD57 /* BSTradingDetailController.swift in Sources */,
 				2D61A4D51F8B89BD00071D80 /* BSSettingViewController.swift in Sources */,
 				2DE3306E1F7E2C5700048D3D /* UIView+.swift in Sources */,
+				2DDDB4E41F96F3B800B28480 /* BSShareID.swift in Sources */,
 				2D3F9C601F9065730050CD57 /* BSPostBTCCell.swift in Sources */,
 				2D0C37531F8CC0F600EFF40E /* BSBaseTableViewCell.swift in Sources */,
 			);
@@ -1333,7 +1360,7 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.juquan.hailuo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hailuo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -1401,7 +1428,7 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.juquan.hailuo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hailuo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;

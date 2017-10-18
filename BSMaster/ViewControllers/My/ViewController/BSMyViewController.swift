@@ -36,7 +36,9 @@ class BSMyViewController: BSBaseTableViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage.getImageWithColor(color: BSNavColor)
         
         makeCustomerImageNavigationItem("me_setting", left: false) {
-            VCRouter.toSettingVC()
+//            VCRouter.toSettingVC()
+            let view = BSShareView.loadFromNib()
+            view.show()
         }
         dataSource.configureCell = {[weak self](_ , tableView , indexPath , element) in
 //            guard let `self` = self else { return  UITableViewCell() }
