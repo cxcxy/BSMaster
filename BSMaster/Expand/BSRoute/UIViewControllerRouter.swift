@@ -71,9 +71,10 @@ class VCRouter {
     }
 
     //TODO: 购买 出售比特币
-    class func toBuyCoinVC(_ transactId: String){
+    class func toBuyCoinVC(_ transactId: String,transactType:BSTransactType){
         let vc = UIStoryboard.getStoryVC(.Transact, identifier: "BSTransactDetailViewController") as! BSTransactDetailViewController
         vc.transactId = transactId
+        vc.transactType = transactType
         topVC?.pushVC(vc)
     }
     //TODO: 弹出蒙层

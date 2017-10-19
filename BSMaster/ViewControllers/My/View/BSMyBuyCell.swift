@@ -18,6 +18,25 @@ class BSMyBuyCell: BSBaseTableViewCell {
     @IBOutlet weak var lbTime: UILabel!
     @IBOutlet weak var btnType: UIButton!
     @IBOutlet weak var viewType: UIView!
+    
+    var myBuyModel: BSMyBuyModel! {
+        didSet{
+            lbTitle.text = myBuyModel.type ?? ""
+            lbTitlType.text = myBuyModel.is_del ?? ""
+            
+            lbPayType.text = myBuyModel.payment ?? ""
+            let price   = myBuyModel.price ?? ""
+            let min_num = myBuyModel.min_num?.toString ?? ""
+            let max_num = myBuyModel.max_num?.toString ?? ""
+            let currency_code = myBuyModel.currency_code ?? ""
+            lbTradingLimit.text = "交易限额：" + min_num  + "-" + max_num + currency_code
+            lbPrice.text        = price + currency_code
+
+            lbTime.text = myBuyModel.create_time ?? ""
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 

@@ -108,6 +108,32 @@ class BSSearchModel: NSObject,Mappable {
     }
     
 }
+//MARK: 请求 创建购买 ／ 出售 订单 模型
+class BSCreateOrderModel: NSObject,Mappable {
+    
+    var member_id                   :String?//用户令牌
+    var product_id                  :String?//广告id
+    var price                       :String? //交易金额
+    var coin_num                    :String?//交易币种数量
+
+    
+    override init(){
+        
+    }
+    
+    required init?(map: Map) {
+    }
+    
+    func mapping(map: Map) {
+        
+        member_id                   <- map["member_id"]
+        product_id                  <- map["product_id"]
+        price                       <- map["price"]
+        coin_num                    <- map["coin_num"]
+
+    }
+    
+}
 //MARK: 列表页模型
 class BSPostListModel: NSObject,Mappable {
     
@@ -162,8 +188,9 @@ class BSTransactDetailModel: NSObject,Mappable {
     var favorable_rate      :Int?
     var trust_count         :Int?
     var historical_transaction:Double?
-    var payment             :Int?
-    
+    var payment             :String?
+    var message             :String?
+    var type                : String?
     override init(){
         
     }
@@ -183,8 +210,10 @@ class BSTransactDetailModel: NSObject,Mappable {
         transaction_count                   <- map["transaction_count"]
         favorable_rate                      <- map["favorable_rate"]
         trust_count                         <- map["trust_count"]
-        historical_transaction      <- map["historical_transaction"]
+        historical_transaction              <- map["historical_transaction"]
         payment                             <- map["payment"]
+        message                             <- map["message"]
+        type                                <- map["type"]
     }
     
 }

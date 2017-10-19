@@ -8,7 +8,19 @@
 
 import UIKit
 
+enum BSMyType {
+    case MyADProgress           // 我的广告-进行中
+    case MyADOver               // 我的广告-已下架
+    case MyBuyProgress          // 我购买的-进行中
+    case MyBuyOver              // 我购买的-已结束
+    case MySoldProgress         // 我出售的-进行中
+    case MySoldOver             // 我出售的-已结束
+}
+
 class BSMyBuyController: BSBaseTableViewController {
+   let dataSourceOne  = RxTableViewSectionedReloadDataSource<SectionModel<String,BSMyBuyModel>>()
+    
+    var myType : BSMyType = .MyADProgress
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,37 +29,53 @@ class BSMyBuyController: BSBaseTableViewController {
     override func setUI() {
         super.setUI()
         tableView.cellId_register("BSMyBuyCell")
-        dataSource.configureCell = {[weak self](_ , tableView , indexPath , element) in
+        
+        dataSourceOne.configureCell = {[weak self](_ , tableView , indexPath , element) in
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "BSMyBuyCell", for: indexPath) as! BSMyBuyCell
-
+            cell.myBuyModel = element
             return cell
             
         }
-        dataArr.asObservable()
-            .bind(to: tableView.rx.items(dataSource: dataSource))
-            .addDisposableTo(rx_disposeBag)
-        
+
         
         tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
             
             
         }.addDisposableTo(rx_disposeBag)
+        request()
         
-        let arr  = [1,2,3,4,5,6]
-        
-        for i in arr {
-            dataArr.value.append(SectionModel.init(model: i.toString, items: [i]))
-        }
-
-
     }
     override func request() {
         super.request()
-        
-        BSMyADViewModel.requestMyADListData("1", member_id: "22").subscribe(onNext: { (meaase) in
-            
-        }).addDisposableTo(rx_disposeBag)
+        // 请求我的广告接口
+        switch myType {
+        case .MyADProgress:
+            BSMyADViewModel.requestMyADListData("1", member_id: "13")
+                .bind(to: tableView.rx.items(dataSource: dataSourceOne))
+                .addDisposableTo(rx_disposeBag)
+            break
+        case .MyADOver:
+            BSMyADViewModel.requestMyADListData("2", member_id: "13")
+                .bind(to: tableView.rx.items(dataSource: dataSourceOne))
+                .addDisposableTo(rx_disposeBag)
+            break
+        case .MyBuyProgress:
+            BSMyADViewModel.requestMyBuyListData("1", member_id: "13")
+                .bind(to: tableView.rx.items(dataSource: dataSourceOne))
+                .addDisposableTo(rx_disposeBag)
+            break
+        case .MyBuyOver:
+            BSMyADViewModel.requestMyBuyListData("2", member_id: "13")
+                .bind(to: tableView.rx.items(dataSource: dataSourceOne))
+                .addDisposableTo(rx_disposeBag)
+            break
+        case .MySoldProgress:
+            break
+        case .MySoldOver:
+            break
+        }
+
         
     }
     override func didReceiveMemoryWarning() {

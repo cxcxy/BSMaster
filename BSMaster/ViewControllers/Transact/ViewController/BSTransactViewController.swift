@@ -19,7 +19,7 @@ class BSTransactViewController: BSBaseTableViewController {
     var params:[String: Any] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "交易"
+
       
         // 接收国家区域变动通知：
         _ = NotificationCenter.default.rx.notification(Notification.Name(Noti_ChooseCountry)).takeUntil(self.rx.deallocated).subscribe(onNext: {[unowned self] (value) in
@@ -57,12 +57,10 @@ class BSTransactViewController: BSBaseTableViewController {
  
         tableView.rx
             .modelSelected(BSPostListModel.self)
-            .subscribe(onNext:  { value in
-//                DefaultWireframe.presentAlert("Tapped `\(value)`")
+            .subscribe(onNext:  {[unowned self] value in
                 if let id = value.id?.toString {
-                    VCRouter.toBuyCoinVC(id)
+                    VCRouter.toBuyCoinVC(id,transactType:self.transactType)
                 }
-                
             })
             .disposed(by: rx_disposeBag)
         

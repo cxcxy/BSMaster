@@ -58,3 +58,11 @@ extension NibLoadable where Self: UIView {
         return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil)?.first as! Self
     }
 }
+
+extension UIButton {
+    func set_Title(_ t:String)  {
+        self.setTitle(t, for: UIControlState())
+    }
+}
+
+

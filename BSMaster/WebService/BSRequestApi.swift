@@ -29,13 +29,15 @@ public enum RequestApi{
     case api_release(params: [String: Any])
     case api_buyList(params: [String: Any])
     case api_transactInfo( transactId:String)
+    //TODO: 生成订单
+    case api_CreateOrder(product_id:String,price:String,coin_num:String,member_id:String)
     //MARK: 手机区号相关接口
     case api_MobileType(lang:String)
     case api_Country(lang:String)
     case api_Purchase(type:String,member_id:String)
     case api_PurchaseDetails(id:String)
     case api_PayType(payment:String,id:String)
-//    case api_MyAD(id_del)
+    case api_MyAD(is_del:String,member_id:String)
 }
 let provider = RxMoyaProvider<RequestApi>()
 extension RequestApi:TargetType{
@@ -90,6 +92,10 @@ extension RequestApi:TargetType{
             return API.URL_PayType
         case .api_FirstPass:
             return API.URL_FirstPass
+        case .api_MyAD:
+            return API.URL_MyAD
+        case .api_CreateOrder:
+            return API.URL_CreateOrder
         default:
             return ""
         }
@@ -141,6 +147,13 @@ extension RequestApi:TargetType{
             params = ["payment":payment,"id":id]
         case let .api_FirstPass(old_pass,type,member_id):
             params = ["old_pass":old_pass,"type":type,"member_id":member_id]
+        case let .api_MyAD(is_del,member_id):
+            params = ["is_del":is_del,"member_id":member_id]
+        case let .api_CreateOrder(product_id,price,coin_num,member_id):
+            params = ["product_id":product_id,
+                      "price":price,
+                      "coin_num":coin_num,
+                      "member_id":member_id]
         }
 
         return params

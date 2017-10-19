@@ -55,3 +55,14 @@ class BSBaseViewController: UIViewController {
     }
 
 }
+// 空白展位图
+extension BSBaseViewController:DZNEmptyDataSetDelegate,DZNEmptyDataSetSource{
+    @objc(titleForEmptyDataSet:) func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+
+        return BSNoDataTitle
+    }
+    @objc(backgroundColorForEmptyDataSet:) func backgroundColor(forEmptyDataSet scrollView: UIScrollView!) -> UIColor! {
+        return tableColor
+    }
+    
+}

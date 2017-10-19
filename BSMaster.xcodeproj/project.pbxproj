@@ -98,6 +98,8 @@
 		2D9322681F94B932002F033C /* BSPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9322671F94B932002F033C /* BSPickerView.xib */; };
 		2DA254771F94B3CC000D874C /* BSPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA254741F94B3CA000D874C /* BSPickerView.swift */; };
 		2DA254781F94B3CC000D874C /* BSBasePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA254761F94B3CC000D874C /* BSBasePickerViewController.swift */; };
+		2DD50A5A1F98CFFD009E2A2C /* BSPossPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD50A581F98CFFD009E2A2C /* BSPossPriceCell.swift */; };
+		2DD50A5B1F98CFFD009E2A2C /* BSPossPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD50A591F98CFFD009E2A2C /* BSPossPriceCell.xib */; };
 		2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDD35731F7DD2E1005DED82 /* AppDelegate.swift */; };
 		2DDD35791F7DD2E1005DED82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD35771F7DD2E1005DED82 /* Main.storyboard */; };
 		2DDD357B1F7DD2E1005DED82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDD357A1F7DD2E1005DED82 /* Assets.xcassets */; };
@@ -121,6 +123,11 @@
 		2DDDB4E61F96F4DA00B28480 /* BSShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDB4E51F96F4DA00B28480 /* BSShareManager.swift */; };
 		2DDDB4E91F96F6A600B28480 /* BSShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDB4E81F96F6A600B28480 /* BSShareView.swift */; };
 		2DDDB4EB1F96F6B200B28480 /* BSShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDB4EA1F96F6B200B28480 /* BSShareView.xib */; };
+		2DDF6F691F983EE700F4695B /* BSMyBuyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDF6F681F983EE700F4695B /* BSMyBuyModel.swift */; };
+		2DDF6F6B1F9888F100F4695B /* BSTitleAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDF6F6A1F9888F100F4695B /* BSTitleAlterView.swift */; };
+		2DDF6F6D1F9888F900F4695B /* BSTitleAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDF6F6C1F9888F900F4695B /* BSTitleAlterView.xib */; };
+		2DDF6F701F98AB0100F4695B /* BSOrderOverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDF6F6E1F98AB0100F4695B /* BSOrderOverTableViewCell.swift */; };
+		2DDF6F711F98AB0100F4695B /* BSOrderOverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDF6F6F1F98AB0100F4695B /* BSOrderOverTableViewCell.xib */; };
 		2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE0E2481F8B219700DB225C /* BSPhoneLoginViewController.swift */; };
 		2DE3305C1F7E282400048D3D /* BSPurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305B1F7E282400048D3D /* BSPurseViewController.swift */; };
 		2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3305D1F7E288500048D3D /* BSMyViewController.swift */; };
@@ -246,6 +253,8 @@
 		2D9322671F94B932002F033C /* BSPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSPickerView.xib; sourceTree = "<group>"; };
 		2DA254741F94B3CA000D874C /* BSPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPickerView.swift; sourceTree = "<group>"; };
 		2DA254761F94B3CC000D874C /* BSBasePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBasePickerViewController.swift; sourceTree = "<group>"; };
+		2DD50A581F98CFFD009E2A2C /* BSPossPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPossPriceCell.swift; sourceTree = "<group>"; };
+		2DD50A591F98CFFD009E2A2C /* BSPossPriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSPossPriceCell.xib; sourceTree = "<group>"; };
 		2DDD35701F7DD2E1005DED82 /* BSMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDD35731F7DD2E1005DED82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DDD35781F7DD2E1005DED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -272,6 +281,11 @@
 		2DDDB4E51F96F4DA00B28480 /* BSShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSShareManager.swift; sourceTree = "<group>"; };
 		2DDDB4E81F96F6A600B28480 /* BSShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSShareView.swift; sourceTree = "<group>"; };
 		2DDDB4EA1F96F6B200B28480 /* BSShareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSShareView.xib; sourceTree = "<group>"; };
+		2DDF6F681F983EE700F4695B /* BSMyBuyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyBuyModel.swift; sourceTree = "<group>"; };
+		2DDF6F6A1F9888F100F4695B /* BSTitleAlterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTitleAlterView.swift; sourceTree = "<group>"; };
+		2DDF6F6C1F9888F900F4695B /* BSTitleAlterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSTitleAlterView.xib; sourceTree = "<group>"; };
+		2DDF6F6E1F98AB0100F4695B /* BSOrderOverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSOrderOverTableViewCell.swift; sourceTree = "<group>"; };
+		2DDF6F6F1F98AB0100F4695B /* BSOrderOverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSOrderOverTableViewCell.xib; sourceTree = "<group>"; };
 		2DE0E2481F8B219700DB225C /* BSPhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPhoneLoginViewController.swift; sourceTree = "<group>"; };
 		2DE3305B1F7E282400048D3D /* BSPurseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPurseViewController.swift; sourceTree = "<group>"; };
 		2DE3305D1F7E288500048D3D /* BSMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyViewController.swift; sourceTree = "<group>"; };
@@ -438,6 +452,8 @@
 				2D0C37561F8CC17E00EFF40E /* BSBuyRemindCell.xib */,
 				2D07A83E1F8F4F6F00636188 /* BSPostCell.swift */,
 				2D07A83F1F8F4F6F00636188 /* BSPostCell.xib */,
+				2DD50A581F98CFFD009E2A2C /* BSPossPriceCell.swift */,
+				2DD50A591F98CFFD009E2A2C /* BSPossPriceCell.xib */,
 				2D07A84A1F8F5FE500636188 /* BSPostInputCell.swift */,
 				2D07A84B1F8F5FE500636188 /* BSPostInputCell.xib */,
 				2D07A85C1F8F706600636188 /* BSPostHighTableViewCell.swift */,
@@ -717,6 +733,8 @@
 		2DDD35E71F7E204B005DED82 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2DDF6F6E1F98AB0100F4695B /* BSOrderOverTableViewCell.swift */,
+				2DDF6F6F1F98AB0100F4695B /* BSOrderOverTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -815,6 +833,7 @@
 		2DDD35F61F7E206B005DED82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2DDF6F681F983EE700F4695B /* BSMyBuyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -824,6 +843,8 @@
 			children = (
 				2DDDB4E81F96F6A600B28480 /* BSShareView.swift */,
 				2DDDB4EA1F96F6B200B28480 /* BSShareView.xib */,
+				2DDF6F6A1F9888F100F4695B /* BSTitleAlterView.swift */,
+				2DDF6F6C1F9888F900F4695B /* BSTitleAlterView.xib */,
 			);
 			path = BSView;
 			sourceTree = "<group>";
@@ -926,6 +947,7 @@
 				2D3F9C5D1F9064020050CD57 /* BSGetBTCCell.xib in Resources */,
 				2D07A8411F8F4F6F00636188 /* BSPostCell.xib in Resources */,
 				2D3B5B231F95F8DF00CBE3D9 /* BSChooseBTCView.xib in Resources */,
+				2DDF6F6D1F9888F900F4695B /* BSTitleAlterView.xib in Resources */,
 				2D52CD7D1F9727D7004297BB /* BSMessageHeaderView.xib in Resources */,
 				2D61A9C91F7F8494004AD2B8 /* BAMySetTableViewCell.xib in Resources */,
 				2D0C9E5F1F90A04F00698F1D /* BSSreenDateView.xib in Resources */,
@@ -937,7 +959,9 @@
 				2DDD35CD1F7E1B98005DED82 /* Transact.storyboard in Resources */,
 				2D61A4CD1F8B7D0B00071D80 /* Localizable.strings in Resources */,
 				2D3F9C611F9065730050CD57 /* BSPostBTCCell.xib in Resources */,
+				2DD50A5B1F98CFFD009E2A2C /* BSPossPriceCell.xib in Resources */,
 				2D0C37431F8CAC0000EFF40E /* BSBuyCoinCell.xib in Resources */,
+				2DDF6F711F98AB0100F4695B /* BSOrderOverTableViewCell.xib in Resources */,
 				2DDD35791F7DD2E1005DED82 /* Main.storyboard in Resources */,
 				2DDD35FC1F7E20CD005DED82 /* My.storyboard in Resources */,
 				2DFB49D61F90D42A007EE744 /* BSRealStyleCell.xib in Resources */,
@@ -1120,6 +1144,7 @@
 				2D6D655E1F9446EF003B03AF /* BSMyBuyController.swift in Sources */,
 				2D0C9E5D1F90A04700698F1D /* BSSreenDateView.swift in Sources */,
 				2D6D65611F94471C003B03AF /* BSMyBuyCell.swift in Sources */,
+				2DDF6F701F98AB0100F4695B /* BSOrderOverTableViewCell.swift in Sources */,
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
 				2D4E38EF1F8F9AC4004A16A4 /* BSSuggestCell.swift in Sources */,
 				2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */,
@@ -1128,6 +1153,7 @@
 				2D4E38EC1F8F92BC004A16A4 /* BSSuggestController.swift in Sources */,
 				2DDD35741F7DD2E1005DED82 /* AppDelegate.swift in Sources */,
 				2D3F9C581F9061620050CD57 /* BSBTCTypeTableViewCell.swift in Sources */,
+				2DD50A5A1F98CFFD009E2A2C /* BSPossPriceCell.swift in Sources */,
 				2DE330641F7E28B700048D3D /* BSTransactViewController.swift in Sources */,
 				2DE330601F7E289A00048D3D /* BSMainViewController.swift in Sources */,
 				2D61A9C81F7F8494004AD2B8 /* BAMySetTableViewCell.swift in Sources */,
@@ -1147,9 +1173,11 @@
 				2D6BDEA11F7E3BF400E64452 /* BSBaseTableViewController.swift in Sources */,
 				2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */,
 				2D07A8491F8F545100636188 /* BSPostModel.swift in Sources */,
+				2DDF6F691F983EE700F4695B /* BSMyBuyModel.swift in Sources */,
 				2DDD35C01F7DF3BA005DED82 /* BSUtil.swift in Sources */,
 				2D3F9C631F9086EB0050CD57 /* BSTradingDetailController.swift in Sources */,
 				2D61A4D51F8B89BD00071D80 /* BSSettingViewController.swift in Sources */,
+				2DDF6F6B1F9888F100F4695B /* BSTitleAlterView.swift in Sources */,
 				2DE3306E1F7E2C5700048D3D /* UIView+.swift in Sources */,
 				2DDDB4E41F96F3B800B28480 /* BSShareID.swift in Sources */,
 				2D3F9C601F9065730050CD57 /* BSPostBTCCell.swift in Sources */,

@@ -9,16 +9,33 @@
 import UIKit
 
 class BSTransactDetailViewController: BSBaseViewController {
-
+    
+    var transactType:BSTransactType = .Buy
+    
+    @IBOutlet weak var btnSold: UIButton!
+    
+    @IBOutlet weak var btnContact: UIButton!
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var transactId:String!
+    var transactDetailModel: BSTransactDetailModel?
     
+    var transactId:String!  // 当前 广告ID
+    var createOrderModel  = BSCreateOrderModel() // 创建订单请求数据模型
     let dataSource  = RxTableViewSectionedReloadDataSource<SectionModel<String,Any>>()
     var dataArr =  Variable<[SectionModel<String,Any>]>([])
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "出售比特币"
+        switch transactType {
+        case .Buy:
+             self.title = "购买比特币"
+             btnSold.setTitle("购买", for: UIControlState())
+             break
+        case .Sold:
+             self.title = "出售比特币"
+             btnSold.setTitle("出售", for: UIControlState())
+             break
+        }
         makeCustomerNavigationItem("帮助", left: false) {
 
         }
@@ -33,12 +50,15 @@ class BSTransactDetailViewController: BSBaseViewController {
         tableView.cellId_register("BSBuyCoinCell")
         tableView.cellId_register("BSBuyRemindCell")
         
-        dataSource.configureCell = {(_ , tableView , indexPath , element) in
+        dataSource.configureCell = {[weak self](_ , tableView , indexPath , element) in
+            guard let `self` = self else { return UITableViewCell() }
             let section         = indexPath.section
             if section == 0 {
             
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BSBuyCoinCell", for: indexPath) as! BSBuyCoinCell
-                cell.modelData = element as! BSTransactDetailModel
+                cell.modelData = (element as! BSTransactDetailModel)
+                cell.createOrderModel = self.createOrderModel
+                cell.transactType = self.transactType
                 return cell
             }else {
 
@@ -54,31 +74,43 @@ class BSTransactDetailViewController: BSBaseViewController {
         tableView.rx
             .setDelegate(self)
             .addDisposableTo(rx_disposeBag)
-        
-        tableView.rx.itemSelected.subscribe {[unowned self] (indexpath) in
-            
-            //             let vc = UIStoryboard.getStoryVC(.Login, identifier: "BSLoginViewController")
-            //             let nav = UINavigationController.init(rootViewController: vc)
-            //             self.presentVC(nav)
-            
-            }.addDisposableTo(rx_disposeBag)
-
+    
         request()
     }
     override func request() {
         super.request()
         BSTransactDetailViewModel.requestTransactDetailData(self.transactId).subscribe(onNext: {[weak self] (model) in
             guard let `self` = self else { return  }
+            self.transactDetailModel = model
             self.dataArr.value.append(SectionModel.init(model: "section", items: [model]))
             self.dataArr.value.append(SectionModel.init(model: "two", items: [model]))
         }).addDisposableTo(rx_disposeBag)
     }
     @IBAction func soldAction(_ sender: Any) {
+        createOrderModel.product_id = self.transactId
         
+        
+        
+//        BSTransactDetailViewModel.requestCreateOrderData(self.transactId, price: "1010", coin_num: "1", member_id: "13").subscribe(onNext: { (message) in
+//            BSHud.showMsg(message)
+//        }).addDisposableTo(rx_disposeBag)
         
     }
     @IBAction func contactAction(_ sender: Any) {
-        
+        let vc = BSRCMessageViewController()
+        vc.conversationType =  RCConversationType.ConversationType_PRIVATE
+        vc.targetId = "1"
+        vc.title = self.title
+        let min_num = transactDetailModel?.min_num?.toString ?? ""
+        let max_num = transactDetailModel?.max_num?.toString ?? ""
+        let price   = transactDetailModel?.price ?? ""
+        let currency_code = transactDetailModel?.currency_code ?? ""
+        let quota   = min_num  + "-" + max_num
+        let quota_str = "限额：" + quota + currency_code
+  
+        vc.buyInfoModel =
+            BSBuyInfoModel.init(price:price,quota:quota_str,type:(btnSold.titleLabel?.text)!)
+        self.pushVC(vc)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -33,7 +33,8 @@ class BSMobileListController: BSBaseViewController {
         }
         
         tableView.cellId_register("BSDigtitalCell")
-        
+        self.tableView.emptyDataSetDelegate = self
+        self.tableView.emptyDataSetSource   = self
         request()
 
     }

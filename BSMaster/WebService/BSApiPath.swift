@@ -59,6 +59,8 @@ public struct API {
     //TODO: 交易状态更换
     static let URL_PayType          = "Server/forgot_paypass"
     //TODO: 我的广告
-    static let URL_MyAD             = "Server/products"
+    static let URL_MyAD             = "server/products"
+    //TODO: 生成订单
+    static let URL_CreateOrder             = "Trade/add_order"
 }
 

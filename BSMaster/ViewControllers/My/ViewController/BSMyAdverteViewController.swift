@@ -43,7 +43,9 @@ class BSMyAdverteViewController: BSBaseSegmentedControl {
             self.title      =   "我的广告"
             titleArray      =  ["进行中","已结束"]
             let vc          = BSMyBuyController.init(style: .grouped)
+            vc.myType       = .MyADProgress
             let vcTwo       = BSMyBuyController.init(style: .grouped)
+            vcTwo.myType    = .MyADOver
             vcArray.append(vc)
             vcArray.append(vcTwo)
         case .Trust:
@@ -52,7 +54,9 @@ class BSMyAdverteViewController: BSBaseSegmentedControl {
             self.title      =   "我购买的"
             titleArray      =  ["进行中","已结束"]
             let vc          = BSMyBuyController.init(style: .grouped)
+            vc.myType       = .MyBuyProgress
             let vcTwo       = BSMyBuyController.init(style: .grouped)
+            vcTwo.myType    = .MyBuyOver
             vcArray.append(vc)
             vcArray.append(vcTwo)
          case .Sold:

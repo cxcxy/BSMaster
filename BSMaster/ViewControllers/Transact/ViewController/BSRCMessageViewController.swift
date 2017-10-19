@@ -7,13 +7,22 @@
 //
 
 import UIKit
+struct BSBuyInfoModel {
+    var price:String
+    var quota:String
+    var type:String
+}
+
 
 class BSRCMessageViewController: RCConversationViewController {
 
+    
+    var buyInfoModel : BSBuyInfoModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        makeCustomerNavigationItem("帮助", left: false) {
+            
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -21,7 +30,9 @@ class BSRCMessageViewController: RCConversationViewController {
     }
     func configUI()  {
         let v = BSMessageHeaderView.loadFromNib()
-
+        if let m = buyInfoModel {
+            v.buyInfoModel = m
+        }
         self.view.addSubview(v)
         v.snp.makeConstraints { (make) in
             make.height.equalTo(80)

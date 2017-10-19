@@ -137,9 +137,8 @@ extension BSBaseTableViewController {
 // 空白展位图
 extension BSBaseTableViewController{
     @objc(titleForEmptyDataSet:) func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        let text = "暂无数据"
-        let attri = NSAttributedString(string: text, attributes:[NSForegroundColorAttributeName:UIColor.red,NSFontAttributeName:UIFont.systemFont(ofSize: 17)])
-        return attri
+
+        return BSNoDataTitle
     }
     @objc(backgroundColorForEmptyDataSet:) func backgroundColor(forEmptyDataSet scrollView: UIScrollView!) -> UIColor! {
         return tableColor

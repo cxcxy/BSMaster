@@ -124,6 +124,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnContact" destination="FqC-J8-W5M" id="HBn-c7-f37"/>
+                        <outlet property="btnSold" destination="dhQ-9S-mO5" id="BYv-o3-W7M"/>
                         <outlet property="tableView" destination="bJh-5h-9jv" id="ru5-AV-kjF"/>
                     </connections>
                 </viewController>

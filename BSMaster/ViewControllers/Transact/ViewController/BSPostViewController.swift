@@ -23,6 +23,8 @@ class BSPostViewController: BSBaseViewController {
     
 
     
+    var price_str: Variable<String>? = nil
+    
     var oneArray:[BSPostStyleModel] = []
     var twoArray:[BSPostStyleModel] = []
 
@@ -38,6 +40,21 @@ class BSPostViewController: BSBaseViewController {
              postModel.type = "1"
         }
        
+        // 接收选择货币变动通知：
+        _ = NotificationCenter.default.rx.notification(Notification.Name(Noti_RefreshPrice)).takeUntil(self.rx.deallocated).subscribe(onNext: {[unowned self] (value) in
+            
+            let dic = value.object as? NSDictionary
+//            print(dic?["premium_rate")
+            let str = dic!["premium_rate"]
+            
+            self.twoArray[1].content = "1111"
+//            self.tableView.reloadData()
+            self.dataArr.value[1] = SectionModel.init(model: "two", items: self.twoArray)
+//            print(str)
+//            self.configData( price: str as! String)
+            
+        })
+        
         makeCustomerNavigationItem("帮助", left: false) {
             
         }
@@ -52,6 +69,8 @@ class BSPostViewController: BSBaseViewController {
         tableView.cellId_register("BSPostCell")
         tableView.cellId_register("BSPostInputCell")
         tableView.cellId_register("BSPostHighTableViewCell")
+        tableView.cellId_register("BSPossPriceCell")
+        
  
         dataSource.configureCell = {[weak self](_ , tableView , indexPath , element) in
 
@@ -60,13 +79,20 @@ class BSPostViewController: BSBaseViewController {
             let section = indexPath.section
             switch section {
             case 0,1:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "BSPostCell", for: indexPath) as! BSPostCell
-                cell.model = element
+              
                 if indexPath.section == 1 && indexPath.row == 0 {
-                    cell.lbDes.text = "%"
+                   
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "BSPossPriceCell", for: indexPath) as! BSPossPriceCell
+                    return cell
+                }else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "BSPostCell", for: indexPath) as! BSPostCell
+                    cell.model = element
+                    cell.postModel = self.postModel
+                     return cell
                 }
-                cell.postModel = self.postModel
-                return cell
+                
+
+               
             case 2:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BSPostInputCell", for: indexPath) as! BSPostInputCell
                 cell.inputTextView.placeholder = "广告留言（下单前后都可见）\n请说明有关您交易的相关条款或备注您的支付方式，如微信号，支付宝号等，以便对方可以快速和你交易"
@@ -124,18 +150,19 @@ class BSPostViewController: BSBaseViewController {
     
     }
     
-    func configData(_ str:String = "现金存款")  {
+    func configData(_ str:String = "现金存款",price:String = "000000")  {
         if dataArr.value.count > 1 {
             dataArr.value.remove(at: 1)
         }
         twoArray = [BSPostStyleModel.init(title: "溢价", content: "", placHold: "根据市场的溢价比例",imgRight: true,inputType:.overFlow),
-                    BSPostStyleModel.init(title: "价格", content: "25969.21", placHold: "",imgRight: true,inputType:.price,isInput:false),
+             
                     BSPostStyleModel.init(title: "最低价", content: "", placHold: "广告最低可成交的价格",imgRight: true,inputType:.min_price),
                     BSPostStyleModel.init(title: "最小量", content: "", placHold: "每一笔交易额的最小限额",imgRight: true,inputType:.min_num),
                     BSPostStyleModel.init(title: "最大量", content: "", placHold: "每一笔交易额的最大限额",imgRight: true,inputType:.max_num),
                     BSPostStyleModel.init(title: "付款方式", content: str, placHold: "",inputType:.payType,isInput:false)]
         switch postType {
         case .Buy:
+            twoArray.remove(at: 1)
             twoArray.append(BSPostStyleModel.init(title: "付款期限", content: "", placHold: "请输入付款期限",imgRight: true,inputType:.payTime))
         case .Sale:
             break

@@ -7,18 +7,20 @@
 //
 
 import UIKit
-enum BSPostInputType {
+enum BSPostInputType:String {
     
-    case Locus              // 所在地
-    case Currency           // 货币
-    case numberCurrency     // 数字货币
-    case overFlow           // 溢价
-    case price              // 价格
-    case min_price          // 最低价
-    case min_num            // 最小量
-    case max_num            // 最大量
-    case payType            // 付款方式
-    case payTime            // 付款期限
+    case Locus         = "请选择您要发布广告的国家。"     // 所在地
+    case Currency      = "您希望交易付款的货币类型。"     // 货币
+    case overFlow      = "基于市场价的溢出比例,市场价是根据部分大型交易所实时价格得出的,确保您的报价趋于一个相对合理范围,比如当前价格为7000,溢价比例为10%,那么价格为7700。"     // 溢价
+    case price         = "基于溢价比例得到的报价，10分钟更新一次。"     // 价格
+    case min_num       = "一次交易的最低的交易限制。"     // 最小量
+    case max_num       = "一次交易的最大交易限制，您的钱包余额也会影响最大量的设置。"     // 最大量
+    
+    case payType        = "您需要指定一种最有效的付款方式，以帮助对方更快的与你达成交易。"       // 付款方式
+    case payTime        = "您承诺在此期限内付款。"     // 付款期限
+    case numberCurrency = "数字货币"     // 数字货币
+    case min_price      = "最低价"    // 最低价
+
 }
 
 
@@ -36,6 +38,11 @@ class BSPostCell: BSBaseTableViewCell {
                 self.tfContent.placeholder      = model.plactHold
             }
             self.inputType           = model.inputType
+            if self.inputType == .payTime {
+                self.lbDes.text = "分钟"
+            }else {
+                self.lbDes.text = "CNY"
+            }
             self.tfContent.isEnabled = model.isInput
         }
     }
@@ -50,6 +57,13 @@ class BSPostCell: BSBaseTableViewCell {
     var chooseIndex: Int = 0
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        btnQuestion.addAction {[unowned self] in
+            let v = BSTitleAlterView.loadFromNib()
+            v.lbDes.text = self.inputType.rawValue
+            v.show()
+        }
+        
         
         tfContent.rx.text.orEmpty.subscribe(onNext: { [unowned self](str) in
             self.updateModelData(str)
@@ -93,6 +107,12 @@ class BSPostCell: BSBaseTableViewCell {
             break
         case .overFlow:
             postModel.premium_rate  = str
+//            postModel.price         = "111"
+            
+            // 发送通知：
+            let dic = ["premium_rate":str
+                       ] as [String : Any]
+            NotificationCenter.postNotificationNameOnMainThread(Noti_RefreshPrice, object: dic)
             break
         case .price:
             postModel.price         = str

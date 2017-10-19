@@ -22,45 +22,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交易提醒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-fx-PdP">
-                                <rect key="frame" x="10" y="15" width="49.5" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="15" y="15" width="305" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Yhe-MK-TbC">
-                                <rect key="frame" x="15" y="44" width="290" height="59"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yhe-MK-TbC">
+                                <rect key="frame" x="15" y="46.5" width="290" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.交易前请详细了解买家的交易信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8h2-sV-rB7">
-                                        <rect key="frame" x="0.0" y="0.0" width="161" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.50196078431372548" green="0.5490196078431373" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.请通过平台进行沟通约定，并保存好相关的聊天记录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syN-uD-69G">
-                                        <rect key="frame" x="0.0" y="19.5" width="244.5" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="2.请通过平台进行沟通约定，并保存好相关的聊天记录" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syN-uD-69G">
+                                        <rect key="frame" x="0.0" y="18" width="290" height="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.如遇到交易纠纷，请通过“帮助”来解决问题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-mi-3KH">
-                                        <rect key="frame" x="0.0" y="39.5" width="203.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="33" width="290" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.50196078430000002" green="0.54901960780000003" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="QNi-8X-7CY"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vhj-fx-PdP" secondAttribute="trailing" id="2vw-hN-hiR"/>
                             <constraint firstItem="Yhe-MK-TbC" firstAttribute="leading" secondItem="C2U-SR-eQR" secondAttribute="leading" constant="15" id="AQ4-Mw-Pkk"/>
                             <constraint firstAttribute="trailing" secondItem="Yhe-MK-TbC" secondAttribute="trailing" constant="15" id="Dns-ZG-7zd"/>
                             <constraint firstAttribute="height" constant="111.5" id="DsV-VP-aV5"/>
-                            <constraint firstItem="Vhj-fx-PdP" firstAttribute="leading" secondItem="C2U-SR-eQR" secondAttribute="leading" constant="10" id="Ix2-it-MJ4"/>
                             <constraint firstItem="Vhj-fx-PdP" firstAttribute="top" secondItem="C2U-SR-eQR" secondAttribute="top" constant="15" id="VCH-Wp-EF0"/>
+                            <constraint firstAttribute="bottom" secondItem="Yhe-MK-TbC" secondAttribute="bottom" constant="15" id="aAa-By-t7v"/>
+                            <constraint firstItem="Vhj-fx-PdP" firstAttribute="leading" secondItem="Yhe-MK-TbC" secondAttribute="leading" id="lH5-rB-SNa"/>
                             <constraint firstItem="Yhe-MK-TbC" firstAttribute="top" secondItem="Vhj-fx-PdP" secondAttribute="bottom" constant="15" id="xZf-Oi-D1k"/>
                         </constraints>
                     </view>

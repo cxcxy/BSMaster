@@ -122,21 +122,12 @@ public extension String{
         attributeString.addAttribute(NSFontAttributeName, value: font, range: NSMakeRange(0, self.characters.count))
         let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         let boundingBox = attributeString.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
-        //        let boundingBox = attributeString.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+ 
         return boundingBox.height
     }
     
     
-    //    func toPinYin() -> String {
-    //        let s = self ?? ""
-    //        let string = NSMutableString(string:s) as CFMutableString
-    //        if CFStringTransform(string, nil, kCFStringTransformMandarinLatin,false) == true{
-    //            if CFStringTransform(string,nil, kCFStringTransformStripDiacritics, false) == true{
-    //                return string as String
-    //            }
-    //        }
-    //        return ""
-    //    }
+
     
     
     func validateMobile() -> Bool {
@@ -147,28 +138,9 @@ public extension String{
     }
     
     
-    func validateEmail()-> Bool {
-        let phoneRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-        let phoneTest = NSPredicate(format: "SELF MATCHES %@" , phoneRegex)
-        return (phoneTest.evaluate(with: self));
-    }
+  
     
-    
-    func priceFormat() -> String {
-        //        let price = Float(self)
-        //        guard let p = price else{
-        //            return "¥"
-        //        }
-        //        let number = NSNumber(float:p)
-        //        let numberFormat = NSNumberFormatter()
-        //        numberFormat.numberStyle = .DecimalStyle
-        //        let result = "¥" + (numberFormat.stringFromNumber(number) ?? "")
-        
-        
-        let result = "¥ " + self
-        return result
-    }
-    
+  
 }
 
 

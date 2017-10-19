@@ -38,8 +38,11 @@ let Noti_ChangeCoinType     = "kNotificationCoinTypeName"
 
 let Noti_ChooseCountry      = "kNotificationCountryName"
 
+let Noti_RefreshPrice      = "kNotificationRefreshPrice"
 
-let BSPayTypeArr = ["现金存款","银行转账","支付宝","微信支付","其他"]
+let BSPayTypeArr:Array<String> = ["现金存款","银行转账","支付宝","微信支付","其他"]
+
+let BSNoDataTitle:NSAttributedString =   NSAttributedString(string: "暂无数据", attributes:[NSForegroundColorAttributeName:MGRgb(25, g: 28, b: 39),NSFontAttributeName:UIFont.systemFont(ofSize: 17)])
 
 
 //MARK: 全局统一  Color  风格
