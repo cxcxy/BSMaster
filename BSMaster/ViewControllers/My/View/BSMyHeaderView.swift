@@ -13,12 +13,12 @@ class BSMyHeaderView: UIView {
     @IBOutlet weak var lbInfo: UILabel!
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var imgPhoto: UIImageView!
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
+    @IBAction func buyAction(_ sender: Any) {
+        VCRouter.toADVC(.Buy)
+    }
+    
+    @IBAction func seleAction(_ sender: Any) {
+        VCRouter.toADVC(.Sold)
+    }
 }

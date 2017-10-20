@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng9-dt-uAo">
@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="人民币" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BDP-ED-xtU">
-                        <rect key="frame" x="105" y="21" width="50" height="18"/>
+                        <rect key="frame" x="105" y="21" width="195.5" height="18"/>
                         <color key="textColor" red="0.098039215690000001" green="0.10980392160000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits"/>
@@ -87,6 +87,7 @@
                     <constraint firstItem="Us6-nh-Llh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="YUe-iy-4JU"/>
                     <constraint firstItem="BDP-ED-xtU" firstAttribute="centerY" secondItem="Ng9-dt-uAo" secondAttribute="centerY" id="aeT-j3-3sA"/>
                     <constraint firstItem="8q0-e3-oBu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="88" id="ctT-Sh-JTd"/>
+                    <constraint firstItem="9Gx-Ki-r9e" firstAttribute="leading" secondItem="BDP-ED-xtU" secondAttribute="trailing" id="kWf-2l-Xk5"/>
                     <constraint firstAttribute="trailing" secondItem="Us6-nh-Llh" secondAttribute="trailing" constant="15" id="r0O-Jl-zK4"/>
                     <constraint firstItem="Ng9-dt-uAo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="vbN-IO-Upy"/>
                     <constraint firstItem="9Gx-Ki-r9e" firstAttribute="centerY" secondItem="BDP-ED-xtU" secondAttribute="centerY" id="vw7-ca-DMY"/>

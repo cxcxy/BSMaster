@@ -50,14 +50,15 @@ class BSMyViewController: BSBaseTableViewController {
         dataSource.configureCell = {[weak self](_ , tableView , indexPath , element) in
 //            guard let `self` = self else { return  UITableViewCell() }
             
-            if indexPath.section == 0 && indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "BSMyTableViewCell", for: indexPath) as! BSMyTableViewCell
-                return cell
-            }else {
+//            if indexPath.section == 0 && indexPath.row == 0 {
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "BSMyTableViewCell", for: indexPath) as! BSMyTableViewCell
+//                return cell
+//            }else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BAMySetTableViewCell", for: indexPath) as! BAMySetTableViewCell
                 cell.iconModel = element as! BSMeIcon
+               
                 return cell
-            }
+//            }
         }
         dataArr.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
@@ -72,7 +73,7 @@ class BSMyViewController: BSBaseTableViewController {
             switch section ?? 0 {
                 case 0:
                     switch row ?? 0{
-                    case 1:   VCRouter.toADVC(.Adverted)
+                    case 0:   VCRouter.toADVC(.Adverted)
                     default:
                         break
                 }
@@ -99,7 +100,8 @@ class BSMyViewController: BSBaseTableViewController {
             }.addDisposableTo(rx_disposeBag)
         
         
-        dataArr.value.append(SectionModel.init(model: "one", items: [BSMeIcon.init(icon: "", title: ""),
+        dataArr.value.append(SectionModel.init(model: "one",
+                                               items: [
                                                                      BSMeIcon.init(icon: "me_ad", title: "我的广告"),
                                                                      BSMeIcon.init(icon: "me_friend", title: "邀请好友")]))
         
@@ -110,6 +112,8 @@ class BSMyViewController: BSBaseTableViewController {
     
         
     }
+
+    //MARK: 退出登录
     func exitLogin() {
         let alertController: UIAlertController = UIAlertController(title: "退出登录", message: "你确定要退出登录吗", preferredStyle: .alert)
         let cancelAction: UIAlertAction = UIAlertAction(title: "取消", style:.cancel, handler: nil)
@@ -145,7 +149,7 @@ extension BSMyViewController {
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-             return 110
+             return 160
         }else{
             return 0.01
         }

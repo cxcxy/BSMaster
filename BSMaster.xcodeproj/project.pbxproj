@@ -30,6 +30,11 @@
 		2D0F64DC1F90DF440005341A /* BSResetFiestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F64DB1F90DF440005341A /* BSResetFiestViewController.swift */; };
 		2D0F64DF1F90E43D0005341A /* BSMyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F64DE1F90E43D0005341A /* BSMyViewModel.swift */; };
 		2D12F59D1F95E9B200CD7D44 /* BSSearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D12F59C1F95E9B200CD7D44 /* BSSearchResultController.swift */; };
+		2D1965991F99E8F800626879 /* BSOrderingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1965971F99E8F800626879 /* BSOrderingCell.swift */; };
+		2D19659A1F99E8F800626879 /* BSOrderingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D1965981F99E8F800626879 /* BSOrderingCell.xib */; };
+		2D19659C1F99F25300626879 /* BSMessageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19659B1F99F25300626879 /* BSMessageProgressView.swift */; };
+		2D19659E1F99F25F00626879 /* BSMessageProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D19659D1F99F25F00626879 /* BSMessageProgressView.xib */; };
+		2D1965A01F9A1BA600626879 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19659F1F9A1BA600626879 /* Array+.swift */; };
 		2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */; };
 		2D3944BF1F998EB600470420 /* BSMyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3944BE1F998EB600470420 /* BSMyHeaderView.swift */; };
 		2D3944C11F998EC400470420 /* BSMyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3944C01F998EC400470420 /* BSMyHeaderView.xib */; };
@@ -183,6 +188,11 @@
 		2D0F64DB1F90DF440005341A /* BSResetFiestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSResetFiestViewController.swift; sourceTree = "<group>"; };
 		2D0F64DE1F90E43D0005341A /* BSMyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyViewModel.swift; sourceTree = "<group>"; };
 		2D12F59C1F95E9B200CD7D44 /* BSSearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSearchResultController.swift; sourceTree = "<group>"; };
+		2D1965971F99E8F800626879 /* BSOrderingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSOrderingCell.swift; sourceTree = "<group>"; };
+		2D1965981F99E8F800626879 /* BSOrderingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSOrderingCell.xib; sourceTree = "<group>"; };
+		2D19659B1F99F25300626879 /* BSMessageProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMessageProgressView.swift; sourceTree = "<group>"; };
+		2D19659D1F99F25F00626879 /* BSMessageProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSMessageProgressView.xib; sourceTree = "<group>"; };
+		2D19659F1F9A1BA600626879 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBuyCoinCell.swift; sourceTree = "<group>"; };
 		2D3944BE1F998EB600470420 /* BSMyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyHeaderView.swift; sourceTree = "<group>"; };
 		2D3944C01F998EC400470420 /* BSMyHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSMyHeaderView.xib; sourceTree = "<group>"; };
@@ -359,6 +369,16 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2D1965A11F9A1C4600626879 /* BSManager */ = {
+			isa = PBXGroup;
+			children = (
+				2DDDB4E51F96F4DA00B28480 /* BSShareManager.swift */,
+				2D52CD741F9706A6004297BB /* BSRCloudManager.swift */,
+				2D3944F41F99DA2200470420 /* BSUserManager.swift */,
+			);
+			path = BSManager;
+			sourceTree = "<group>";
+		};
 		2D3944E81F99A58100470420 /* AA3DES */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,9 +434,6 @@
 			isa = PBXGroup;
 			children = (
 				2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */,
-				2DDDB4E51F96F4DA00B28480 /* BSShareManager.swift */,
-				2D52CD741F9706A6004297BB /* BSRCloudManager.swift */,
-				2D3944F41F99DA2200470420 /* BSUserManager.swift */,
 			);
 			name = BSRoute;
 			path = BSMaster/Expand/BSRoute;
@@ -439,6 +456,8 @@
 				2D3B5B221F95F8DF00CBE3D9 /* BSChooseBTCView.xib */,
 				2D52CD7A1F9727BA004297BB /* BSMessageHeaderView.swift */,
 				2D52CD7C1F9727D7004297BB /* BSMessageHeaderView.xib */,
+				2D19659B1F99F25300626879 /* BSMessageProgressView.swift */,
+				2D19659D1F99F25F00626879 /* BSMessageProgressView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -550,6 +569,7 @@
 		2DDD35891F7DE39E005DED82 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				2D1965A11F9A1C4600626879 /* BSManager */,
 				2D61A4421F8B4C8300071D80 /* BSRoute */,
 				2DDD35911F7DE454005DED82 /* BSConfig */,
 				2DDD35901F7DE454005DED82 /* BSExtension */,
@@ -622,6 +642,7 @@
 				2DE330691F7E2BCE00048D3D /* String+.swift */,
 				2DE3306B1F7E2C3100048D3D /* UIImage+.swift */,
 				2DE3306D1F7E2C5700048D3D /* UIView+.swift */,
+				2D19659F1F9A1BA600626879 /* Array+.swift */,
 			);
 			path = BSExtension;
 			sourceTree = "<group>";
@@ -770,6 +791,8 @@
 			children = (
 				2DDF6F6E1F98AB0100F4695B /* BSOrderOverTableViewCell.swift */,
 				2DDF6F6F1F98AB0100F4695B /* BSOrderOverTableViewCell.xib */,
+				2D1965971F99E8F800626879 /* BSOrderingCell.swift */,
+				2D1965981F99E8F800626879 /* BSOrderingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -985,12 +1008,14 @@
 				2D07A8411F8F4F6F00636188 /* BSPostCell.xib in Resources */,
 				2D3B5B231F95F8DF00CBE3D9 /* BSChooseBTCView.xib in Resources */,
 				2DDF6F6D1F9888F900F4695B /* BSTitleAlterView.xib in Resources */,
+				2D19659A1F99E8F800626879 /* BSOrderingCell.xib in Resources */,
 				2D52CD7D1F9727D7004297BB /* BSMessageHeaderView.xib in Resources */,
 				2D61A9C91F7F8494004AD2B8 /* BAMySetTableViewCell.xib in Resources */,
 				2D0C9E5F1F90A04F00698F1D /* BSSreenDateView.xib in Resources */,
 				2D0C37541F8CC17E00EFF40E /* BSBuyRemindCell.xib in Resources */,
 				2D4E38F01F8F9AC4004A16A4 /* BSSuggestCell.xib in Resources */,
 				2DDD357B1F7DD2E1005DED82 /* Assets.xcassets in Resources */,
+				2D19659E1F99F25F00626879 /* BSMessageProgressView.xib in Resources */,
 				2D3F9C671F9087360050CD57 /* BSTradingCell.xib in Resources */,
 				2D3F9C591F9061620050CD57 /* BSBTCTypeTableViewCell.xib in Resources */,
 				2DDD35CD1F7E1B98005DED82 /* Transact.storyboard in Resources */,
@@ -1156,6 +1181,7 @@
 				2D3F9C661F9087360050CD57 /* BSTradingCell.swift in Sources */,
 				2D4E38EA1F8F91F1004A16A4 /* BSCenterController.swift in Sources */,
 				2D3F9C4E1F904C0F0050CD57 /* BSSearchController.swift in Sources */,
+				2D1965A01F9A1BA600626879 /* Array+.swift in Sources */,
 				2D0F64DC1F90DF440005341A /* BSResetFiestViewController.swift in Sources */,
 				2DE3305E1F7E288500048D3D /* BSMyViewController.swift in Sources */,
 				2D0C37501F8CBDED00EFF40E /* BSBuyRemindCell.swift in Sources */,
@@ -1186,6 +1212,7 @@
 				2D0C9E5D1F90A04700698F1D /* BSSreenDateView.swift in Sources */,
 				2D6D65611F94471C003B03AF /* BSMyBuyCell.swift in Sources */,
 				2DDF6F701F98AB0100F4695B /* BSOrderOverTableViewCell.swift in Sources */,
+				2D19659C1F99F25300626879 /* BSMessageProgressView.swift in Sources */,
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
 				2D3944F51F99DA2200470420 /* BSUserManager.swift in Sources */,
 				2D4E38EF1F8F9AC4004A16A4 /* BSSuggestCell.swift in Sources */,
@@ -1204,6 +1231,7 @@
 				2D61A9C11F7F62C9004AD2B8 /* BSOrderViewControllers.swift in Sources */,
 				2DE3306C1F7E2C3100048D3D /* UIImage+.swift in Sources */,
 				2D61A9D21F8B0AA9004AD2B8 /* BSLoginViewController.swift in Sources */,
+				2D1965991F99E8F800626879 /* BSOrderingCell.swift in Sources */,
 				2D61A4441F8B4CCA00071D80 /* UIViewControllerRouter.swift in Sources */,
 				2D61A4461F8B66DB00071D80 /* BSMyAdverteViewController.swift in Sources */,
 				2D61A9BF1F7F61DC004AD2B8 /* BSBaseSegmentedControl.swift in Sources */,

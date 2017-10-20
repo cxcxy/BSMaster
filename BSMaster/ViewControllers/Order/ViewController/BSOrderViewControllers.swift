@@ -27,10 +27,19 @@ class BSOrderViewControllers: BSBaseSegmentedControl {
     func configViewControllers()  {
         self.titleSegmentArray = ["进行中","已结束"]
         var vcArray:[UIViewController] = []
-        for _ in titleSegmentArray {
+        
+        for elemt in titleSegmentArray.enumerated() {
+            
             let HomeTabVC = BSOrderViewController.init(style: .grouped)
+            if elemt.offset == 0 {
+                HomeTabVC.orderType = .Progress
+            }
+            if elemt.offset == 1 {
+                HomeTabVC.orderType = .Over
+            }
             vcArray.append(HomeTabVC)
         }
+       
         self.controllerArray = vcArray
         self.updateUI()
     }

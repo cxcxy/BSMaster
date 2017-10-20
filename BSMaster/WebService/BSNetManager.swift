@@ -39,7 +39,7 @@ class BSNetManager {
     public static func endpointClosure(target: RequestApi) -> Endpoint<RequestApi> {
         let method = target.method
         let parameters = target.parameters
-        let endpoint = Endpoint<RequestApi>(url: target.baseURL.appendingPathComponent(API.URL_BaseURL).absoluteString, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: method, parameters: parameters, parameterEncoding: target.parameterEncoding)
+        let endpoint = Endpoint<RequestApi>(url: target.baseURL.appendingPathComponent(target.path).absoluteString, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: method, parameters: parameters, parameterEncoding: target.parameterEncoding)
     
         return endpoint
     }

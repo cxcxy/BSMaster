@@ -95,22 +95,37 @@ class BSTransactDetailViewController: BSBaseViewController {
 //            BSHud.showMsg(message)
 //        }).addDisposableTo(rx_disposeBag)
         
-    }
-    @IBAction func contactAction(_ sender: Any) {
-        let vc = BSRCMessageViewController()
-        vc.conversationType =  RCConversationType.ConversationType_PRIVATE
-        vc.targetId = "1"
-        vc.title = self.title
+        
         let min_num = transactDetailModel?.min_num?.toString ?? ""
         let max_num = transactDetailModel?.max_num?.toString ?? ""
         let price   = transactDetailModel?.price ?? ""
         let currency_code = transactDetailModel?.currency_code ?? ""
         let quota   = min_num  + "-" + max_num
         let quota_str = "限额：" + quota + currency_code
-  
-        vc.buyInfoModel =
-            BSBuyInfoModel.init(price:price,quota:quota_str,type:(btnSold.titleLabel?.text)!)
-        self.pushVC(vc)
+        
+        VCRouter.toRCCloudVC(.Buy,targetId: "1",
+                             title: self.title ?? "",
+                             buyInfoModel: BSBuyInfoModel.init(price:price,
+                                                               quota:quota_str,
+                                                               type:(btnSold.titleLabel?.text)!))
+        
+        
+    }
+    //MARK: 跳转聊天界面
+    @IBAction func contactAction(_ sender: Any) {
+    
+        let min_num = transactDetailModel?.min_num?.toString ?? ""
+        let max_num = transactDetailModel?.max_num?.toString ?? ""
+        let price   = transactDetailModel?.price ?? ""
+        let currency_code = transactDetailModel?.currency_code ?? ""
+        let quota   = min_num  + "-" + max_num
+        let quota_str = "限额：" + quota + currency_code
+
+        VCRouter.toRCCloudVC(targetId: "1",
+                             title: self.title ?? "",
+                             buyInfoModel: BSBuyInfoModel.init(price:price,
+                                                               quota:quota_str,
+                                                               type:(btnSold.titleLabel?.text)!))
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

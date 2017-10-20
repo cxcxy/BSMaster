@@ -12,35 +12,63 @@ struct BSBuyInfoModel {
     var quota:String
     var type:String
 }
-
+enum RCCloudType {
+    case Buy          // 购买
+    case Consulting   // 咨询
+}
 
 class BSRCMessageViewController: RCConversationViewController {
 
-    
+    var ccloudType:RCCloudType = .Consulting
     var buyInfoModel : BSBuyInfoModel?
+    var v : UIView! = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeCustomerNavigationItem("帮助", left: false) {
-            
+        makeCustomerNavigationItem("帮助", left: false) {[unowned self] in
+            self.updateVFrame()
         }
+    }
+    func updateVFrame()  {
+        v.frame.y = -64 
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          configUI()
     }
-    func configUI()  {
-        let v = BSMessageHeaderView.loadFromNib()
+    // 获取咨询 顶部view布局
+    func getMessageHeaderView() -> BSMessageHeaderView {
+        let  v = BSMessageHeaderView.loadFromNib()
         if let m = buyInfoModel {
             v.buyInfoModel = m
         }
+        return v
+    }
+    func configUI()  {
+        let nav_h:CGFloat = 64
+        var v_h:CGFloat   = 0
+      
+
+        switch ccloudType {
+        case .Consulting:
+                v_h = 80
+                v = self.getMessageHeaderView()
+            break
+        case .Buy:
+                v_h = 360
+                v = BSMessageProgressView.loadFromNib()
+        }
+     
         self.view.addSubview(v)
         v.snp.makeConstraints { (make) in
-            make.height.equalTo(80)
+            make.height.equalTo(v_h)
             make.width.equalTo(MGScreenWidth)
             make.centerX.equalTo(self.view)
-            make.top.equalTo(self.view).offset(64)
+            make.top.equalTo(self.view).offset(nav_h)
         }
-        self.conversationMessageCollectionView.frame = CGRect.init(x: 0, y: 144, w: MGScreenWidth, h: MGScreenHeight - 64 - 80 - 44)
+        self.conversationMessageCollectionView.frame = CGRect.init(x: 0,
+                                                                   y: nav_h + v_h,
+                                                                   w: MGScreenWidth,
+                                                                   h: MGScreenHeight - v_h - nav_h - 44)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

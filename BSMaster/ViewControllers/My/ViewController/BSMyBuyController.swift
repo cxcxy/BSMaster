@@ -34,6 +34,10 @@ class BSMyBuyController: BSBaseTableViewController {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "BSMyBuyCell", for: indexPath) as! BSMyBuyCell
             cell.myBuyModel = element
+            cell.block = { [weak self](is_del,id) in
+                guard let `self` = self else { return  }
+                self.requestLower(AD_id: id.toString)
+            }
             return cell
             
         }
@@ -77,6 +81,15 @@ class BSMyBuyController: BSBaseTableViewController {
         }
 
         
+    }
+    //MARK: 下架操作
+    func requestLower(_ id_del:String = "2",AD_id:String) {
+        
+        BSMyADViewModel.requestLowerMyADListData(id_del, AD_id: AD_id).subscribe(onNext: { [weak self](message) in
+            guard let `self` = self else { return  }
+            BSHud.showMsg(message)
+            self.request()
+        }).addDisposableTo(rx_disposeBag)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

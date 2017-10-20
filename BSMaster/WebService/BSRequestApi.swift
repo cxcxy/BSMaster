@@ -31,6 +31,8 @@ public enum RequestApi{
     case api_transactInfo( transactId:String)
     //TODO: 生成订单
     case api_CreateOrder(product_id:String,price:String,coin_num:String,member_id:String)
+    //TODO: 下架广告
+    case api_LowerAD(is_del:String,AD_id:String)
     //MARK: 手机区号相关接口
     case api_MobileType(lang:String)
     case api_Country(lang:String)
@@ -96,6 +98,8 @@ extension RequestApi:TargetType{
             return API.URL_MyAD
         case .api_CreateOrder:
             return API.URL_CreateOrder
+        case .api_LowerAD:
+            return API.URL_LowerAD
         default:
             return ""
         }
@@ -154,17 +158,25 @@ extension RequestApi:TargetType{
                       "price":price,
                       "coin_num":coin_num,
                       "member_id":member_id]
+        case let .api_LowerAD(is_del,AD_id):
+            params = ["is_del":is_del,"id":AD_id]
         }
 
+       
+        
+        return params
+    }
+    // 配置请求后台服务器 的params  主要是加密操作
+    func configPostParams(_ p:[String: Any]) -> [String: Any]{
+        var params = p
         let date = Date.init()
         let date_str =   date.toString(format: "yyyyMMddHHmmss")
         
-        
-        params["timestamp"]     = date_str
+        params["timestamp"]     = "20171013155923"
         params["client_type"]   = "ios"
         params["client_id"]     = BSUserManager.deviceToken
-        let infoDic = Bundle.main.infoDictionary
-        let appVersion = infoDic?["CFBundleShortVersionString"] ?? ""// 获取App的版本
+        let infoDic             = Bundle.main.infoDictionary
+        let appVersion          = infoDic?["CFBundleShortVersionString"] ?? ""// 获取App的版本
         params["client_version"]    = appVersion
         /*------params 为接口本身需要的参数----*/
         
@@ -172,14 +184,13 @@ extension RequestApi:TargetType{
         let encrypptString = AA3DESManager.getEncryptWith(params_str, keyString: DES_KEY, ivString: DES_IV)
         /*------post_params 为请求服务器所定义的接口格式----*/
         var post_params         = [String: Any]()
-        post_params["code"]     = "asasasasas"
+        post_params["code"]     = "testCode"
         post_params["cmd"]      = encrypptString
         post_params["action"]   = self.path
         post_params["sign"]     = self.formatParams(post_params).md5
-        
         return post_params
     }
-    
+    // 对 code cmd action  进行拼接处理
     func formatParams(_ params:[String: Any]) -> String {
         var str = ""
         let _ = params.toArray { (key, vulue)  in

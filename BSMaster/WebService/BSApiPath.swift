@@ -23,7 +23,7 @@ let urlItunes = "https://itunes.apple.com/cn/app/jian-jiao-she-ji/id1110300308?m
 /****************************API_URL接口**********************************/
 public struct API {
     //MARK:  接口加密规则： 统一调用 此 API， 然后在参数里面 指定应该调用的地址
-    static let URL_BaseURL          = "Base/code"
+    static let URL_BaseURL          = "Base"
 
     //MARK: 登录注册相关接口
     static let URL_Login            = "Login/login"
@@ -67,6 +67,8 @@ public struct API {
     static let URL_PayType          = "Server/forgot_paypass"
     //TODO: 我的广告
     static let URL_MyAD             = "server/products"
+    //TODO: 下架广告
+    static let URL_LowerAD             = "server/updata_shelves"
     //TODO: 生成订单
     static let URL_CreateOrder             = "Trade/add_order"
 }

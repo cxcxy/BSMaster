@@ -84,7 +84,12 @@ class BSPostCell: BSBaseTableViewCell {
                             strongSelf.postModel?.country_id = id.toString
                             strongSelf.postModel?.currency_code = code
                         })
-                    
+                case .Currency:
+                    print("货币")
+                    break
+                case .numberCurrency:
+                    print("数字货币")
+                    break
                 default:break
                 }
 

@@ -167,6 +167,16 @@ class VCRouter {
         vc.params = params
         topVC?.pushVC(vc)
     }
+    //TODO: 跳转融云聊天界面
+    class func toRCCloudVC(_ type:RCCloudType = .Consulting,targetId:String,title:String,buyInfoModel:BSBuyInfoModel){
+        let vc = BSRCMessageViewController()
+        vc.conversationType     =  RCConversationType.ConversationType_PRIVATE
+        vc.targetId             = targetId
+        vc.title                = title
+        vc.buyInfoModel         = buyInfoModel
+        vc.ccloudType           = type
+        topVC?.pushVC(vc)
+    }
     // MARK: - 弹出选择器视图
     class func prentPirckerMask(dataArr:[String],startIndex:Int,block:@escaping SelectRowBlock) {
         let vc = BSBasePickerViewController()

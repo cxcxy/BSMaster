@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+typealias clickLower = (_ is_del:String,_ buyModelId:Int) -> ()
 class BSMyBuyCell: BSBaseTableViewCell {
 
     @IBOutlet weak var lbTitle: UILabel!
@@ -18,6 +18,8 @@ class BSMyBuyCell: BSBaseTableViewCell {
     @IBOutlet weak var lbTime: UILabel!
     @IBOutlet weak var btnType: UIButton!
     @IBOutlet weak var viewType: UIView!
+    
+    var block : clickLower?
     
     var myBuyModel: BSMyBuyModel! {
         didSet{
@@ -36,6 +38,11 @@ class BSMyBuyCell: BSBaseTableViewCell {
         }
     }
     
+    @IBAction func lowerAction(_ sender: Any) {
+        if let block = block {
+            block(myBuyModel.is_del ?? "",myBuyModel.id ?? 0)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

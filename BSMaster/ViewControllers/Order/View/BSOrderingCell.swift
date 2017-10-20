@@ -1,14 +1,14 @@
 //
-//  BSOrderOverTableViewCell.swift
+//  BSOrderingCell.swift
 //  BSMaster
 //
-//  Created by 陈旭 on 2017/10/19.
+//  Created by 陈旭 on 2017/10/20.
 //  Copyright © 2017年 陈旭. All rights reserved.
 //
 
 import UIKit
 
-class BSOrderOverTableViewCell: BSBaseTableViewCell {
+class BSOrderingCell: BSBaseTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

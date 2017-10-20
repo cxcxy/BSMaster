@@ -130,6 +130,9 @@
                                         <state key="normal" title="下架">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="lowerAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1Zm-hL-GzS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

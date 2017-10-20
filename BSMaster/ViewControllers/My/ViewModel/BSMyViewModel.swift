@@ -53,7 +53,7 @@ class BSMyADViewModel: NSObject {
                 let arr = Mapper<BSMyBuyModel>().mapArray(JSONObject:result)
                 if let array = arr{
 
-                    let section = [SectionModel(model: "", items: array)]
+                    let section = array.transSectionModelArray()
                     observer.onNext(section)
                 }
             }) { (errorStr) in
@@ -72,7 +72,7 @@ class BSMyADViewModel: NSObject {
                 
                 let arr = Mapper<BSMyBuyModel>().mapArray(JSONObject:result)
                 if let array = arr{
-                    let section = [SectionModel(model: "", items: array)]
+                    let section = array.transSectionModelArray()
                     observer.onNext(section)
                 }
             }) { (errorStr) in
@@ -83,4 +83,21 @@ class BSMyADViewModel: NSObject {
             }
         }
     }
+    //TODO: 切换我的广告状态 下架等操作
+    class func requestLowerMyADListData(_ is_del:String,AD_id:String) -> Observable<String> {
+        return Observable.create { observer -> Disposable in
+            BSNetManager.sharedManager.requestWithTarget(.api_LowerAD(is_del:is_del,AD_id:AD_id),isShowLoding: true, successClosure: { (result, code,message)  in
+                if let str = message {
+                    observer.onNext(str)
+                }
+                
+            }) { (errorStr) in
+                observer.onError(NetError.CustomError(errorStr ?? "").handle())
+            }
+            
+            return Disposables.create {
+            }
+        }
+    }
 }
+
