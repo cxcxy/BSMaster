@@ -8,7 +8,11 @@
 
 import Foundation
 
-var BaseUrl = "http://192.168.108.141/coinmart_local/public/index.php/api/" //内网开发
+var BaseUrl = "http://192.168.108.141/coinmart/public/index.php/api/" //内网开发
+
+
+var DES_KEY = "my.oschina.net/penngo?#@"
+var DES_IV  = "01234567"
 
 //let BaseUrl = "" //外网开发
 
@@ -18,6 +22,9 @@ let urlItunes = "https://itunes.apple.com/cn/app/jian-jiao-she-ji/id1110300308?m
 
 /****************************API_URL接口**********************************/
 public struct API {
+    //MARK:  接口加密规则： 统一调用 此 API， 然后在参数里面 指定应该调用的地址
+    static let URL_BaseURL          = "Base/code"
+
     //MARK: 登录注册相关接口
     static let URL_Login            = "Login/login"
     //TODO: 注册接口

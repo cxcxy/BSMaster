@@ -156,7 +156,42 @@ extension RequestApi:TargetType{
                       "member_id":member_id]
         }
 
-        return params
+        let date = Date.init()
+        let date_str =   date.toString(format: "yyyyMMddHHmmss")
+        
+        
+        params["timestamp"]     = date_str
+        params["client_type"]   = "ios"
+        params["client_id"]     = BSUserManager.deviceToken
+        let infoDic = Bundle.main.infoDictionary
+        let appVersion = infoDic?["CFBundleShortVersionString"] ?? ""// 获取App的版本
+        params["client_version"]    = appVersion
+        /*------params 为接口本身需要的参数----*/
+        
+        let params_str =  params.formatJSON()
+        let encrypptString = AA3DESManager.getEncryptWith(params_str, keyString: DES_KEY, ivString: DES_IV)
+        /*------post_params 为请求服务器所定义的接口格式----*/
+        var post_params         = [String: Any]()
+        post_params["code"]     = "asasasasas"
+        post_params["cmd"]      = encrypptString
+        post_params["action"]   = self.path
+        post_params["sign"]     = self.formatParams(post_params).md5
+        
+        return post_params
+    }
+    
+    func formatParams(_ params:[String: Any]) -> String {
+        var str = ""
+        let _ = params.toArray { (key, vulue)  in
+            let vulue_str = vulue as? String
+            if let s = vulue_str {
+                str += (key + "=" + s)
+                str = str + "&"
+            }
+            
+        }
+        str.removeLast()
+        return str + "COIN_MART"
     }
     
     //  单元测试用
@@ -174,9 +209,8 @@ extension RequestApi:TargetType{
         let sysName = UIDevice.current.systemName //获取系统名称 例如：iPhone OS
         let sysVersion = UIDevice.current.systemVersion //获取系统版本 例如：9.2
         let deviceModel = UIDevice.current.model //获取设备的型号 例如：iPhone
-        let infoDic = Bundle.main.infoDictionary
-        let appVersion = infoDic?["CFBundleShortVersionString"] ?? ""// 获取App的版本
-        let user_Agent = String(format: "apple/%@/%@/%@/%@", deviceModel, sysName, sysVersion, appVersion as! String)
+
+        let user_Agent = String(format: "apple/%@/%@/%@/%@", deviceModel, sysName, sysVersion)
         return user_Agent
     }
 }

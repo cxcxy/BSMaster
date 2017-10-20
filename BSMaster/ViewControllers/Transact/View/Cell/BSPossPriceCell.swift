@@ -12,6 +12,9 @@ class BSPossPriceCell: BSBaseTableViewCell {
 
     @IBOutlet weak var lbPrice: UILabel!
     @IBOutlet weak var tfOverFlow: UITextField!
+    
+   
+    var postModel : BSPostModel?
     let price:Double = 37167.35
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +27,11 @@ class BSPossPriceCell: BSBaseTableViewCell {
                 }
                 if let double = $0.toDouble() {
                     let str         = (self.price * double)/100
-                    let prict_all   = str + self.price
-                    return prict_all.toString
+                    let price_all   = str + self.price
+                    let price_all_str = price_all.toString
+                    self.postModel?.price = price_all_str
+                    self.postModel?.premium_rate = $0
+                    return price_all_str
                 }else {
                     return self.lbPrice.text!
                 }

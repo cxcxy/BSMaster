@@ -31,6 +31,11 @@
 		2D0F64DF1F90E43D0005341A /* BSMyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F64DE1F90E43D0005341A /* BSMyViewModel.swift */; };
 		2D12F59D1F95E9B200CD7D44 /* BSSearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D12F59C1F95E9B200CD7D44 /* BSSearchResultController.swift */; };
 		2D38F0551F8C66E9008264E7 /* BSBuyCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */; };
+		2D3944BF1F998EB600470420 /* BSMyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3944BE1F998EB600470420 /* BSMyHeaderView.swift */; };
+		2D3944C11F998EC400470420 /* BSMyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3944C01F998EC400470420 /* BSMyHeaderView.xib */; };
+		2D3944EF1F99A71900470420 /* AA3DESManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3944EA1F99A58100470420 /* AA3DESManager.m */; };
+		2D3944F01F99A72A00470420 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3944ED1F99A58100470420 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2D3944F51F99DA2200470420 /* BSUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3944F41F99DA2200470420 /* BSUserManager.swift */; };
 		2D3B5B211F95F8D600CBE3D9 /* BSChooseBTCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B5B201F95F8D600CBE3D9 /* BSChooseBTCView.swift */; };
 		2D3B5B231F95F8DF00CBE3D9 /* BSChooseBTCView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3B5B221F95F8DF00CBE3D9 /* BSChooseBTCView.xib */; };
 		2D3F9C4E1F904C0F0050CD57 /* BSSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F9C4D1F904C0F0050CD57 /* BSSearchController.swift */; };
@@ -179,6 +184,14 @@
 		2D0F64DE1F90E43D0005341A /* BSMyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyViewModel.swift; sourceTree = "<group>"; };
 		2D12F59C1F95E9B200CD7D44 /* BSSearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSearchResultController.swift; sourceTree = "<group>"; };
 		2D38F0531F8C66E9008264E7 /* BSBuyCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBuyCoinCell.swift; sourceTree = "<group>"; };
+		2D3944BE1F998EB600470420 /* BSMyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSMyHeaderView.swift; sourceTree = "<group>"; };
+		2D3944C01F998EC400470420 /* BSMyHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSMyHeaderView.xib; sourceTree = "<group>"; };
+		2D3944E91F99A58100470420 /* AA3DESManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AA3DESManager.h; sourceTree = "<group>"; };
+		2D3944EA1F99A58100470420 /* AA3DESManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AA3DESManager.m; sourceTree = "<group>"; };
+		2D3944EC1F99A58100470420 /* GTMBase64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		2D3944ED1F99A58100470420 /* GTMBase64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		2D3944EE1F99A58100470420 /* GTMDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		2D3944F41F99DA2200470420 /* BSUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSUserManager.swift; sourceTree = "<group>"; };
 		2D3B5B201F95F8D600CBE3D9 /* BSChooseBTCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSChooseBTCView.swift; sourceTree = "<group>"; };
 		2D3B5B221F95F8DF00CBE3D9 /* BSChooseBTCView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSChooseBTCView.xib; sourceTree = "<group>"; };
 		2D3F9C4D1F904C0F0050CD57 /* BSSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSearchController.swift; sourceTree = "<group>"; };
@@ -346,6 +359,26 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2D3944E81F99A58100470420 /* AA3DES */ = {
+			isa = PBXGroup;
+			children = (
+				2D3944E91F99A58100470420 /* AA3DESManager.h */,
+				2D3944EA1F99A58100470420 /* AA3DESManager.m */,
+				2D3944EB1F99A58100470420 /* Base64 */,
+			);
+			path = AA3DES;
+			sourceTree = "<group>";
+		};
+		2D3944EB1F99A58100470420 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				2D3944EC1F99A58100470420 /* GTMBase64.h */,
+				2D3944ED1F99A58100470420 /* GTMBase64.m */,
+				2D3944EE1F99A58100470420 /* GTMDefines.h */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
 		2D3F9C511F905C560050CD57 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +416,7 @@
 				2D61A4431F8B4CCA00071D80 /* UIViewControllerRouter.swift */,
 				2DDDB4E51F96F4DA00B28480 /* BSShareManager.swift */,
 				2D52CD741F9706A6004297BB /* BSRCloudManager.swift */,
+				2D3944F41F99DA2200470420 /* BSUserManager.swift */,
 			);
 			name = BSRoute;
 			path = BSMaster/Expand/BSRoute;
@@ -605,6 +639,7 @@
 		2DDD35BE1F7DF396005DED82 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2D3944E81F99A58100470420 /* AA3DES */,
 				2D61A4D21F8B80DA00071D80 /* RunScript */,
 				2D6BDEA21F7E449F00E64452 /* NSObject+Rx.swift */,
 				2DDD35BF1F7DF3BA005DED82 /* BSUtil.swift */,
@@ -810,6 +845,8 @@
 				2DFB49D01F90D2FB007EE744 /* BSRealNameCell.xib */,
 				2DFB49D31F90D42A007EE744 /* BSRealStyleCell.swift */,
 				2DFB49D41F90D42A007EE744 /* BSRealStyleCell.xib */,
+				2D3944BE1F998EB600470420 /* BSMyHeaderView.swift */,
+				2D3944C01F998EC400470420 /* BSMyHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -967,6 +1004,7 @@
 				2DFB49D61F90D42A007EE744 /* BSRealStyleCell.xib in Resources */,
 				2D61A9D01F8B0A19004AD2B8 /* Login.storyboard in Resources */,
 				2D07A85F1F8F706600636188 /* BSPostHighTableViewCell.xib in Resources */,
+				2D3944C11F998EC400470420 /* BSMyHeaderView.xib in Resources */,
 				2D3F9C761F9096A50050CD57 /* BSScreenCollectionViewCell.xib in Resources */,
 				2D9322681F94B932002F033C /* BSPickerView.xib in Resources */,
 				2DFB49D21F90D2FB007EE744 /* BSRealNameCell.xib in Resources */,
@@ -1084,6 +1122,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3944F01F99A72A00470420 /* GTMBase64.m in Sources */,
+				2D3944EF1F99A71900470420 /* AA3DESManager.m in Sources */,
 				2DDD35BD1F7DF324005DED82 /* BSUIViewController.swift in Sources */,
 				2DFB49D11F90D2FB007EE744 /* BSRealNameCell.swift in Sources */,
 				2D3F9C701F908DED0050CD57 /* ETPopupView.swift in Sources */,
@@ -1128,6 +1168,7 @@
 				2D61A9C41F7F6D58004AD2B8 /* BSMyTableViewCell.swift in Sources */,
 				2D4E38E81F8F8F95004A16A4 /* BSAboutMeController.swift in Sources */,
 				2D3F9C541F905C770050CD57 /* BSPurseHeaderCell.swift in Sources */,
+				2D3944BF1F998EB600470420 /* BSMyHeaderView.swift in Sources */,
 				2D52CD7B1F9727BA004297BB /* BSMessageHeaderView.swift in Sources */,
 				2D423EA01F8E46F200D38418 /* BSForgetPassViewController.swift in Sources */,
 				2DA254771F94B3CC000D874C /* BSPickerView.swift in Sources */,
@@ -1146,6 +1187,7 @@
 				2D6D65611F94471C003B03AF /* BSMyBuyCell.swift in Sources */,
 				2DDF6F701F98AB0100F4695B /* BSOrderOverTableViewCell.swift in Sources */,
 				2DDD35971F7DE90C005DED82 /* BSNetManager.swift in Sources */,
+				2D3944F51F99DA2200470420 /* BSUserManager.swift in Sources */,
 				2D4E38EF1F8F9AC4004A16A4 /* BSSuggestCell.swift in Sources */,
 				2DE0E2491F8B219700DB225C /* BSPhoneLoginViewController.swift in Sources */,
 				2DDDB4E61F96F4DA00B28480 /* BSShareManager.swift in Sources */,

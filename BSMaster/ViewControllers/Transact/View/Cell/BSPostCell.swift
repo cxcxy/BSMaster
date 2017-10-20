@@ -37,12 +37,10 @@ class BSPostCell: BSBaseTableViewCell {
                 self.tfContent.text             = ""
                 self.tfContent.placeholder      = model.plactHold
             }
-            self.inputType           = model.inputType
-            if self.inputType == .payTime {
-                self.lbDes.text = "分钟"
-            }else {
-                self.lbDes.text = "CNY"
-            }
+            self.inputType           = model.inputType // 输入的类型
+
+            self.lbDes.text          = model.coinType // "%" "CNY" "分钟"
+
             self.tfContent.isEnabled = model.isInput
         }
     }
@@ -105,18 +103,7 @@ class BSPostCell: BSBaseTableViewCell {
             break
         case .numberCurrency:
             break
-        case .overFlow:
-            postModel.premium_rate  = str
-//            postModel.price         = "111"
-            
-            // 发送通知：
-            let dic = ["premium_rate":str
-                       ] as [String : Any]
-            NotificationCenter.postNotificationNameOnMainThread(Noti_RefreshPrice, object: dic)
-            break
-        case .price:
-            postModel.price         = str
-            break
+    
         case .min_price:
             postModel.min_price     = str
             break

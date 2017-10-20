@@ -17,6 +17,6 @@
 @import SwiftyJSON;
 
 #import <UMSocialCore/UMSocialCore.h>
-
+#import "AA3DESManager.h"
 #import <RongIMKit/RongIMKit.h>
-
+#import <CommonCrypto/CommonDigest.h>

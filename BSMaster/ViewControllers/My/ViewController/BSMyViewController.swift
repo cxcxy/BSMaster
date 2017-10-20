@@ -11,6 +11,9 @@ struct BSMeIcon {
     let title : String
 }
 class BSMyViewController: BSBaseTableViewController {
+    
+    let v = BSMyHeaderView.loadFromNib()
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
@@ -24,6 +27,9 @@ class BSMyViewController: BSBaseTableViewController {
         self.title = "我的"
         setUI()
         configTable()
+        v.imgPhoto.addTapGesture {[unowned self] (sender) in
+            self.showPicture()
+        }
         self.automaticallyAdjustsScrollViewInsets = false
     }
     func configTable(){
@@ -114,6 +120,12 @@ class BSMyViewController: BSBaseTableViewController {
         alertController.addAction(sureAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    //MARK:Lazy
+    lazy var imagePicker:UIImagePickerController = {
+        let v = UIImagePickerController()
+        v.delegate = self
+        return v
+    }()
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -122,5 +134,64 @@ extension BSMyViewController {
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
     }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 0 {
+         
+            v.frame = CGRect.init(x: 0, y: 0, w: MGScreenWidth, h: 110)
+            return v
+        }else {
+            return nil
+        }
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+             return 110
+        }else{
+            return 0.01
+        }
+    }
+ 
+    
 }
-
+extension BSMyViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    //选取相册
+    fileprivate func showPicture(){
+        let actionSheetController: UIAlertController = UIAlertController(title: "更改头像", message: nil, preferredStyle: .actionSheet)
+        let cancelAction: UIAlertAction = UIAlertAction(title: "取消", style: .cancel) { action -> Void in
+            
+        }
+        actionSheetController.addAction(cancelAction)
+        let takePictureAction: UIAlertAction = UIAlertAction(title: "相机拍照", style: .default) { action -> Void in
+            self.choosePhtot(.camera)
+        }
+        actionSheetController.addAction(takePictureAction)
+        let choosePictureAction: UIAlertAction = UIAlertAction(title: "相册选取", style: .default) { action -> Void in
+            self.choosePhtot(.photoLibrary)
+        }
+        actionSheetController.addAction(choosePictureAction)
+        self.present(actionSheetController, animated: true, completion: nil)
+    }
+    
+    
+    func choosePhtot(_ type:UIImagePickerControllerSourceType){
+        if UIImagePickerController.isSourceTypeAvailable(type){
+            //指定图片控制器类型
+            imagePicker.sourceType = type
+            //弹出控制器，显示界面
+            self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            self.present(imagePicker, animated: true, completion:nil)
+        }else{
+//            DLog("读取相册错误")
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        v.imgPhoto.image = image
+    
+        
+    }
+    
+    
+}

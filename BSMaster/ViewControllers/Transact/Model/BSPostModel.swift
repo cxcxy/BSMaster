@@ -10,16 +10,18 @@ import UIKit
 import ObjectMapper
 //MARK: UI 展示数据 style
 class BSPostStyleModel: NSObject {
-    var title:String        = ""  // 标题
-    var content:String      = ""  // 内容
-    var imgRight:Bool       =  false // 是否显示右边 >图标
-    var plactHold:String    = ""  // 占位字符串
-    var inputType:BSPostInputType = .Locus // 输入类型
-    var isInput:Bool        = true  // 是否可以输入
-    init(title:String, content:String,placHold:String,imgRight:Bool = false,inputType:BSPostInputType = .Locus,isInput:Bool = true) {
+    var title:String        = ""            // 标题
+    var content:String      = ""            // 内容
+    var imgRight:Bool       =  false        // 是否显示右边 >图标
+    var plactHold:String    = ""            // 占位字符串
+    var coinType:String     = ""            // 占位字符串
+    var inputType:BSPostInputType = .Locus  // 输入类型
+    var isInput:Bool        = true          // 是否可以输入
+    init(title:String, content:String,coinType:String = "",placHold:String,imgRight:Bool = false,inputType:BSPostInputType = .Locus,isInput:Bool = true) {
         self.title          = title
         self.content        = content
         self.plactHold      = placHold
+        self.coinType       = coinType
         self.imgRight       = imgRight
         self.inputType      = inputType
         self.isInput        = isInput
