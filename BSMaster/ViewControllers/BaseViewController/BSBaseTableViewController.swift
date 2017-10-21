@@ -107,6 +107,21 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         mj_header.endRefreshing()
         mj_footer.endRefreshing()
     }
+    func refreshStatus(status:RefreshStatus){
+        switch status {
+        case .PullSuccess:
+             mj_header.endRefreshing()
+        case .PushSuccess:
+            endRefresh()
+        case .PullFailure:
+            endRefresh()
+        case .PushFailure:
+            endRefresh()
+        case .NoMoreData :
+            endRefresh()
+        case .Unknown:break
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 

@@ -16,12 +16,16 @@ enum BSMyType {
     case MySoldProgress         // 我出售的-进行中
     case MySoldOver             // 我出售的-已结束
 }
-
+extension UITableView {
+   
+    
+}
 class BSMyBuyController: BSBaseTableViewController {
    let dataSourceOne  = RxTableViewSectionedReloadDataSource<SectionModel<String,BSMyBuyModel>>()
     
     var myType : BSMyType = .MyADProgress
-
+    var viewModel  = BSMyADViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +33,7 @@ class BSMyBuyController: BSBaseTableViewController {
     override func setUI() {
         super.setUI()
         tableView.cellId_register("BSMyBuyCell")
-        
+        self.cofigMjHeader()
         dataSourceOne.configureCell = {[weak self](_ , tableView , indexPath , element) in
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "BSMyBuyCell", for: indexPath) as! BSMyBuyCell
@@ -52,25 +56,29 @@ class BSMyBuyController: BSBaseTableViewController {
     }
     override func request() {
         super.request()
+//        tableView.dataSource = nil
+//        tableView.rx
+//            .setDelegate(self)
+//            .addDisposableTo(rx_disposeBag)
         // 请求我的广告接口
         switch myType {
         case .MyADProgress:
-            BSMyADViewModel.requestMyADListData("1", member_id: "13")
-                .bind(to: tableView.rx.items(dataSource: dataSourceOne))
-                .addDisposableTo(rx_disposeBag)
+//            viewModel.requestMyADListData("1", member_id: "13")
+//                .bind(to: tableView.rx.items(dataSource: dataSourceOne))
+//                .addDisposableTo(rx_disposeBag)
             break
         case .MyADOver:
-            BSMyADViewModel.requestMyADListData("2", member_id: "13")
-                .bind(to: tableView.rx.items(dataSource: dataSourceOne))
-                .addDisposableTo(rx_disposeBag)
+//            viewModel.requestMyADListData("2", member_id: "13")
+//                .bind(to: tableView.rx.items(dataSource: dataSourceOne))
+//                .addDisposableTo(rx_disposeBag)
             break
         case .MyBuyProgress:
-            BSMyADViewModel.requestMyBuyListData("1", member_id: "13")
+            viewModel.requestMyBuyListData("1", member_id: "13")
                 .bind(to: tableView.rx.items(dataSource: dataSourceOne))
                 .addDisposableTo(rx_disposeBag)
             break
         case .MyBuyOver:
-            BSMyADViewModel.requestMyBuyListData("2", member_id: "13")
+            viewModel.requestMyBuyListData("2", member_id: "13")
                 .bind(to: tableView.rx.items(dataSource: dataSourceOne))
                 .addDisposableTo(rx_disposeBag)
             break
@@ -79,17 +87,26 @@ class BSMyBuyController: BSBaseTableViewController {
         case .MySoldOver:
             break
         }
-
+        
+        viewModel.refresh.asObservable().subscribe(onNext: {[weak self] (status) in
+             guard let `self` = self else { return  }
+            self.refreshStatus(status: status)
+        }).addDisposableTo(rx_disposeBag)
         
     }
     //MARK: 下架操作
     func requestLower(_ id_del:String = "2",AD_id:String) {
         
-        BSMyADViewModel.requestLowerMyADListData(id_del, AD_id: AD_id).subscribe(onNext: { [weak self](message) in
+        viewModel.requestLowerMyADListData(id_del, AD_id: AD_id).subscribe(onNext: { [weak self](message) in
             guard let `self` = self else { return  }
             BSHud.showMsg(message)
-            self.request()
+            BSDelay.start(delay: 1.0, closure: {
+                self.request()
+            })
+            
         }).addDisposableTo(rx_disposeBag)
+        
+//        BSMyADViewModel.requestLowerMyADListData(id_del, AD_id: AD_id).observeOn(MainScheduler.instance).map
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

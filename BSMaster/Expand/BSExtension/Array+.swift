@@ -11,7 +11,7 @@ extension Array {
     //MARK:  转换 为 SectionModel 以组划分
     func transSectionModelArray() -> [SectionModel<String,Element>] {
         
-        let arr = self.map { SectionModel.init(model: "", items: [$0] )}
+        let arr = self.enumerated().map { SectionModel.init(model: String($0), items: [$1] )}
         return arr
         
     }
