@@ -16,6 +16,7 @@ enum BSTransactType:String {
 class BSTransactViewController: BSBaseTableViewController {
 
     var transactType:BSTransactType = .Buy
+    var viewModel  =  BSPostListViewModel()
     var params:[String: Any] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,7 @@ class BSTransactViewController: BSBaseTableViewController {
         
         tableView.cellId_register("BSTransactCell")
         self.cofigMjHeader()
+        self.cofigMjFooter()
         dataSource.configureCell = {(_ , tableView , indexPath , element) in
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "BSTransactCell", for: indexPath) as! BSTransactCell
@@ -50,7 +52,11 @@ class BSTransactViewController: BSBaseTableViewController {
             return cell
             
         }
-      
+        
+        viewModel.refresh.asObservable().subscribe(onNext: {[weak self] (status) in
+            guard let `self` = self else { return  }
+            self.refreshStatus(status: status)
+        }).addDisposableTo(rx_disposeBag)
         dataArr.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
@@ -69,12 +75,25 @@ class BSTransactViewController: BSBaseTableViewController {
     override func request() {
         super.request()
         params["type"] = transactType.rawValue
+        params["page"]      = pageIndex
+        params["page_size"] = 5
+        
+        viewModel.requestBuyListData(params).subscribe(onNext: { [weak self] (message) in
+             guard let `self` = self else { return  }
 
-        BSPostListViewModel.requestBuyListData(params).subscribe(onNext: { [unowned self] (message) in
-            self.endRefresh()
-            self.dataArr.value.removeAll()
-            self.dataArr.value.append(SectionModel.init(model: "section", items: message))
+                self.endRefresh()
+                if self.pageIndex == 1{// ＝1 说明操作的下拉刷新 清空数据
+                   self.mj_footer.isHidden = false
+                    self.dataArr.value.removeAll()
+                }
+                
+                message.enumerated().forEach({
+                    self.dataArr.value.append(SectionModel.init(model: String($0), items: [$1]))
+                })
+
+            
         }).addDisposableTo(rx_disposeBag)
+        
     }
     
     override func didReceiveMemoryWarning() {

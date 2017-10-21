@@ -29,9 +29,10 @@ class BSPostViewModel: NSObject {
 }
 class BSPostListViewModel: NSObject {
     
-    
+      public var refresh:Variable<RefreshStatus> = Variable(.Unknown)
+     override init() {}
     // 买币列表接口
-    class  func requestBuyListData(_ params: [String: Any]) -> Observable<[BSPostListModel]> {
+      func requestBuyListData(_ params: [String: Any]) -> Observable<[BSPostListModel]> {
         return Observable.create { observer -> Disposable in
             
             BSNetManager.sharedManager.requestWithTarget(.api_buyList(params: params),isShowLoding: true, successClosure: { (result, code,message)  in
@@ -39,6 +40,12 @@ class BSPostListViewModel: NSObject {
                 let r = JSON(result)
                 let arr = Mapper<BSPostListModel>().mapArray(JSONObject:r["list"].arrayObject)
                 if let array = arr{
+                    if array.count < 5 {// 如果拿到的数据，小于分页，则说明，无下一页
+                        self.refresh.value = .NoMoreData
+                    
+                    }else {
+                        self.refresh.value = .PushSuccess
+                    }
                     observer.onNext(array)
                 }
             }) { (errorStr) in

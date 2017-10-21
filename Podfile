@@ -19,7 +19,7 @@ target 'BSMaster' do
 	pod 'Kingfisher'
    	pod 'VTMagic'   , :git => 'https://github.com/aycgithub/VTMagic.git'
     pod 'ESTabBarController-swift'
-	pod 'MJRefresh'
+	pod 'MJRefresh', '~> 3.1.14.1'
 	pod 'DZNEmptyDataSet'
     pod 'KMNavigationBarTransition'
 #    pod 'RSKPlaceholderTextView'

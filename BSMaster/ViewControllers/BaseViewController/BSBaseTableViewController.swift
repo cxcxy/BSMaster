@@ -50,7 +50,7 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         self.tableView.backgroundColor      = tableColor
         self.tableView.emptyDataSetDelegate = self
         self.tableView.emptyDataSetSource   = self
-        tableView.estimatedRowHeight        = estimatedRowHeight ?? 44
+        tableView.estimatedRowHeight        = estimatedRowHeight ?? 400
         tableView.rowHeight                 = UITableViewAutomaticDimension
         self.tableView.separatorStyle       = .none
         self.tableView.keyboardDismissMode  = .onDrag
@@ -90,6 +90,7 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
     //MARK: MJFooter
     lazy var mj_footer:MJRefreshAutoNormalFooter = {
         let f = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction:#selector(loadMore))!
+//         f.isAutomaticallyHidden = true
         return f
     }()
    //MARK: 上拉加载， 自动加1
@@ -110,7 +111,7 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
     func refreshStatus(status:RefreshStatus){
         switch status {
         case .PullSuccess:
-             mj_header.endRefreshing()
+            endRefresh()
         case .PushSuccess:
             endRefresh()
         case .PullFailure:
@@ -118,7 +119,9 @@ class BSBaseTableViewController: UITableViewController,DZNEmptyDataSetDelegate,D
         case .PushFailure:
             endRefresh()
         case .NoMoreData :
-            endRefresh()
+//            endRefresh()
+//            mj_footer = nil
+            mj_footer.isHidden = true
         case .Unknown:break
         }
     }

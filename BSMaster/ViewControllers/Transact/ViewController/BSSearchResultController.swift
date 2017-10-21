@@ -12,6 +12,7 @@ class BSSearchResultController: BSBaseTableViewController {
 
     var transactType:BSTransactType = .Buy
     var params:[String: Any] = [:]
+    var viewModel  =  BSPostListViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "搜索结果"
@@ -53,7 +54,7 @@ class BSSearchResultController: BSBaseTableViewController {
         super.request()
 //        params["type"] = transactType.rawValue
         
-        BSPostListViewModel.requestBuyListData(params).subscribe(onNext: { [unowned self] (message) in
+        viewModel.requestBuyListData(params).subscribe(onNext: { [unowned self] (message) in
             self.endRefresh()
             self.dataArr.value.removeAll()
             self.dataArr.value.append(SectionModel.init(model: "section", items: message))
